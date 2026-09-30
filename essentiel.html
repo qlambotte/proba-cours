@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Chapitre 3 — Probabilité conditionnelle et indépendance – Probabilités</title>
+<title>L’essentiel – Probabilités</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -29,24 +29,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../ch3-probabilite-conditio/1-probabilite-conditionnelle.html" rel="next">
-<link href="../ch2-modeliser-le-hasard/6-exercices-supplementaires.html" rel="prev">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-73b0ff3878a4e6fc3716dc69a6aaefa3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-0acde44bc0d102c041e82b1c9a7c52be.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./autoeval.html" rel="next">
+<link href="./ch3-probabilite-conditio/7-exercices-supplementaires.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-73b0ff3878a4e6fc3716dc69a6aaefa3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-0acde44bc0d102c041e82b1c9a7c52be.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -86,6 +86,35 @@ ul.task-list li input[type="checkbox"] {
 })();
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -98,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ch3-probabilite-conditio/index.html">Chapitre 3 — Probabilité conditionnelle et indépendance</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./essentiel.html"><span class="chapter-title">L’essentiel</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
@@ -113,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Probabilités</a> 
+      <a href="./">Probabilités</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -125,17 +154,17 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Probabilités — cours &amp; exercices</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Probabilités — cours &amp; exercices</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../objectifs.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Objectifs</span></a>
+  <a href="./objectifs.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Objectifs</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../ch1-compter-sur-de-petit/index.html" class="sidebar-item-text sidebar-link">
+            <a href="./ch1-compter-sur-de-petit/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Chapitre 1 — Compter sur de petits ensembles</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -144,44 +173,44 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/1-lister-avant-de-compter.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lister avant de compter</span></a>
+  <a href="./ch1-compter-sur-de-petit/1-lister-avant-de-compter.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lister avant de compter</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/2-additionner-multiplier.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Additionner, multiplier</span></a>
+  <a href="./ch1-compter-sur-de-petit/2-additionner-multiplier.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Additionner, multiplier</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/3-arrangements-et-permutations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Arrangements et permutations</span></a>
+  <a href="./ch1-compter-sur-de-petit/3-arrangements-et-permutations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Arrangements et permutations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/4-combinaisons.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Combinaisons</span></a>
+  <a href="./ch1-compter-sur-de-petit/4-combinaisons.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Combinaisons</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/5-permutations-avec-repetition-les-anagram.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Permutations avec répétition : les anagrammes</span></a>
+  <a href="./ch1-compter-sur-de-petit/5-permutations-avec-repetition-les-anagram.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Permutations avec répétition : les anagrammes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/6-choisir-une-methode.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Choisir une méthode</span></a>
+  <a href="./ch1-compter-sur-de-petit/6-choisir-une-methode.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Choisir une méthode</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/7-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  <a href="./ch1-compter-sur-de-petit/7-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../ch2-modeliser-le-hasard/index.html" class="sidebar-item-text sidebar-link">
+            <a href="./ch2-modeliser-le-hasard/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Chapitre 2 — Modéliser le hasard</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -190,95 +219,95 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch2-modeliser-le-hasard/1-frequences-et-probabilite.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Fréquences et probabilité</span></a>
+  <a href="./ch2-modeliser-le-hasard/1-frequences-et-probabilite.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Fréquences et probabilité</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch2-modeliser-le-hasard/2-univers-et-evenements.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Univers et événements</span></a>
+  <a href="./ch2-modeliser-le-hasard/2-univers-et-evenements.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Univers et événements</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch2-modeliser-le-hasard/3-le-modele-dequiprobabilite.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Le modèle d’équiprobabilité</span></a>
+  <a href="./ch2-modeliser-le-hasard/3-le-modele-dequiprobabilite.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Le modèle d’équiprobabilité</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch2-modeliser-le-hasard/4-proprietes-des-probabilites.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Propriétés des probabilités</span></a>
+  <a href="./ch2-modeliser-le-hasard/4-proprietes-des-probabilites.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Propriétés des probabilités</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch2-modeliser-le-hasard/5-denombrer-pour-calculer.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Dénombrer pour calculer</span></a>
+  <a href="./ch2-modeliser-le-hasard/5-denombrer-pour-calculer.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Dénombrer pour calculer</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch2-modeliser-le-hasard/6-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  <a href="./ch2-modeliser-le-hasard/6-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../ch3-probabilite-conditio/index.html" class="sidebar-item-text sidebar-link active">
+            <a href="./ch3-probabilite-conditio/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Chapitre 3 — Probabilité conditionnelle et indépendance</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch3-probabilite-conditio/1-probabilite-conditionnelle.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Probabilité conditionnelle</span></a>
+  <a href="./ch3-probabilite-conditio/1-probabilite-conditionnelle.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Probabilité conditionnelle</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch3-probabilite-conditio/2-arbres-de-probabilites.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Arbres de probabilités</span></a>
+  <a href="./ch3-probabilite-conditio/2-arbres-de-probabilites.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Arbres de probabilités</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch3-probabilite-conditio/3-lire-un-test-de-depistage.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lire un test de dépistage</span></a>
+  <a href="./ch3-probabilite-conditio/3-lire-un-test-de-depistage.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lire un test de dépistage</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch3-probabilite-conditio/4-independance.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Indépendance</span></a>
+  <a href="./ch3-probabilite-conditio/4-independance.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Indépendance</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch3-probabilite-conditio/5-pour-aller-plus-loin.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Pour aller plus loin</span></a>
+  <a href="./ch3-probabilite-conditio/5-pour-aller-plus-loin.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Pour aller plus loin</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch3-probabilite-conditio/6-sources-des-donnees.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sources des données</span></a>
+  <a href="./ch3-probabilite-conditio/6-sources-des-donnees.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sources des données</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch3-probabilite-conditio/7-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  <a href="./ch3-probabilite-conditio/7-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../essentiel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">L’essentiel</span></a>
+  <a href="./essentiel.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">L’essentiel</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../autoeval.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">S’autoévaluer</span></a>
+  <a href="./autoeval.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">S’autoévaluer</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../nouveautes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Quoi de neuf ?</span></a>
+  <a href="./nouveautes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Quoi de neuf ?</span></a>
   </div>
 </li>
     </ul>
@@ -291,7 +320,26 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Sur cette page</h2>
    
   <ul>
-  <li><a href="#sections" id="toc-sections" class="nav-link active" data-scroll-target="#sections">Sections</a></li>
+  <li><a href="#chapitre-1-compter-sur-de-petits-ensembles" id="toc-chapitre-1-compter-sur-de-petits-ensembles" class="nav-link active" data-scroll-target="#chapitre-1-compter-sur-de-petits-ensembles">Chapitre 1 — Compter sur de petits ensembles</a>
+  <ul class="collapse">
+  <li><a href="#additionner-multiplier" id="toc-additionner-multiplier" class="nav-link" data-scroll-target="#additionner-multiplier">Additionner, multiplier</a></li>
+  <li><a href="#arrangements-et-permutations" id="toc-arrangements-et-permutations" class="nav-link" data-scroll-target="#arrangements-et-permutations">Arrangements et permutations</a></li>
+  <li><a href="#combinaisons" id="toc-combinaisons" class="nav-link" data-scroll-target="#combinaisons">Combinaisons</a></li>
+  <li><a href="#permutations-avec-répétition-les-anagrammes" id="toc-permutations-avec-répétition-les-anagrammes" class="nav-link" data-scroll-target="#permutations-avec-répétition-les-anagrammes">Permutations avec répétition : les anagrammes</a></li>
+  </ul></li>
+  <li><a href="#chapitre-2-modéliser-le-hasard" id="toc-chapitre-2-modéliser-le-hasard" class="nav-link" data-scroll-target="#chapitre-2-modéliser-le-hasard">Chapitre 2 — Modéliser le hasard</a>
+  <ul class="collapse">
+  <li><a href="#fréquences-et-probabilité" id="toc-fréquences-et-probabilité" class="nav-link" data-scroll-target="#fréquences-et-probabilité">Fréquences et probabilité</a></li>
+  <li><a href="#univers-et-événements" id="toc-univers-et-événements" class="nav-link" data-scroll-target="#univers-et-événements">Univers et événements</a></li>
+  <li><a href="#le-modèle-déquiprobabilité" id="toc-le-modèle-déquiprobabilité" class="nav-link" data-scroll-target="#le-modèle-déquiprobabilité">Le modèle d’équiprobabilité</a></li>
+  <li><a href="#propriétés-des-probabilités" id="toc-propriétés-des-probabilités" class="nav-link" data-scroll-target="#propriétés-des-probabilités">Propriétés des probabilités</a></li>
+  </ul></li>
+  <li><a href="#chapitre-3-probabilité-conditionnelle-et-indépendance" id="toc-chapitre-3-probabilité-conditionnelle-et-indépendance" class="nav-link" data-scroll-target="#chapitre-3-probabilité-conditionnelle-et-indépendance">Chapitre 3 — Probabilité conditionnelle et indépendance</a>
+  <ul class="collapse">
+  <li><a href="#probabilité-conditionnelle" id="toc-probabilité-conditionnelle" class="nav-link" data-scroll-target="#probabilité-conditionnelle">Probabilité conditionnelle</a></li>
+  <li><a href="#arbres-de-probabilités" id="toc-arbres-de-probabilités" class="nav-link" data-scroll-target="#arbres-de-probabilités">Arbres de probabilités</a></li>
+  <li><a href="#indépendance" id="toc-indépendance" class="nav-link" data-scroll-target="#indépendance">Indépendance</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -300,7 +348,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Chapitre 3 — Probabilité conditionnelle et indépendance</h1>
+<h1 class="title"><span class="chapter-title">L’essentiel</span></h1>
+<p class="subtitle lead">Définitions et propriétés du cours, pour s’y retrouver</p>
 </div>
 
 
@@ -318,20 +367,352 @@ ul.task-list li input[type="checkbox"] {
 
 
 <!-- GÉNÉRÉ par typweb à partir des notes Typst : NE PAS ÉDITER (les modifications seraient écrasées). -->
-<p>Une information peut changer une probabilité. La question à se poser devient : <em>parmi</em> quels cas calcule-t-on la proportion ?</p>
-<section id="sections" class="level2">
-<h2 class="anchored" data-anchor-id="sections">Sections</h2>
-<ol type="1">
-<li><a href="../ch3-probabilite-conditio/1-probabilite-conditionnelle.html">Probabilité conditionnelle</a> <span class="suivi-sec" data-exos="3.1 3.2"></span></li>
-<li><a href="../ch3-probabilite-conditio/2-arbres-de-probabilites.html">Arbres de probabilités</a> <span class="suivi-sec" data-exos="3.3 3.4"></span></li>
-<li><a href="../ch3-probabilite-conditio/3-lire-un-test-de-depistage.html">Lire un test de dépistage</a> <span class="suivi-sec" data-exos="3.5 3.6"></span></li>
-<li><a href="../ch3-probabilite-conditio/4-independance.html">Indépendance</a> <span class="suivi-sec" data-exos="3.7 3.8 3.9 3.10 3.11"></span></li>
-<li><a href="../ch3-probabilite-conditio/5-pour-aller-plus-loin.html">Pour aller plus loin</a> <span class="suivi-sec" data-exos="3.12"></span></li>
-<li><a href="../ch3-probabilite-conditio/6-sources-des-donnees.html">Sources des données</a></li>
-<li><a href="../ch3-probabilite-conditio/7-exercices-supplementaires.html">Exercices supplémentaires</a> <span class="suivi-sec" data-exos="S3.1 S3.2 S3.3 S3.4 S3.5"></span></li>
-</ol>
+<div class="callout callout-style-default callout-important callout-titled" title="À lire avant d'utiliser cette page">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>À lire avant d’utiliser cette page
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Cette page rassemble les énoncés du cours, <strong>sans</strong> les activités qui leur donnent du sens, sans les justifications, les exemples ni les méthodes vues en classe. Connaître ces énoncés <strong>ne suffit pas</strong> : l’essentiel, c’est de savoir les <strong>utiliser</strong>, et cela s’apprend avec les exemples et les exercices.</p>
+<p>Sers-t’en pour retrouver un énoncé ou vérifier que tu peux le <strong>redire sans regarder</strong>, puis retourne au cours (lien « dans le cours » sous chaque encadré) et aux exercices.</p>
+</div>
+</div>
+<section id="chapitre-1-compter-sur-de-petits-ensembles" class="level2">
+<h2 class="anchored" data-anchor-id="chapitre-1-compter-sur-de-petits-ensembles">Chapitre 1 — Compter sur de petits ensembles</h2>
+<section id="additionner-multiplier" class="level3">
+<h3 class="anchored" data-anchor-id="additionner-multiplier">Additionner, multiplier</h3>
+<div id="ess-propriete-1-1" class="theo theo-propriete" data-sorte="propriete" data-num="1.1" data-page="4" data-phys="7">
+<div class="theo-head">
+<p><strong>Propriété 1.1</strong> — principe multiplicatif</p>
+</div>
+<div class="theo-body">
+<p>Si un résultat se construit en <span class="math inline">\(k\)</span> étapes successives, avec</p>
+<ul>
+<li><span class="math inline">\(n_{1}\)</span> choix possibles à la première étape,</li>
+<li><span class="math inline">\(n_{2}\)</span> choix possibles à la deuxième étape, <em>quel que soit le choix fait à la première</em>,</li>
+<li>…, <span class="math inline">\(n_{k}\)</span> choix possibles à la <span class="math inline">\(k\)</span>-ième étape, <em>quels que soient les choix précédents</em>,</li>
+</ul>
+<p>et si deux suites de choix différentes donnent deux résultats différents, alors le nombre de résultats vaut</p>
+<p><span class="math display">\[
+n_{1} \cdot n_{2} \cdot \cdots \cdot n_{k}.
+\]</span></p>
+</div>
+</div>
+<div class="ess-lien">
+<p><a href="./ch1-compter-sur-de-petit/2-additionner-multiplier.html#propriete-1-1">↗ dans le cours</a></p>
+</div>
+<div id="ess-propriete-1-2" class="theo theo-propriete" data-sorte="propriete" data-num="1.2" data-page="6" data-phys="9">
+<div class="theo-head">
+<p><strong>Propriété 1.2</strong> — principe additif</p>
+</div>
+<div class="theo-body">
+<p>Pour deux ensembles finis <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> :</p>
+<p><span class="math display">\[
+\#(A \cup B) = \#A + \#B - \#(A \cap B).
+\]</span></p>
+<p>Si <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> n’ont aucun élément commun (<span class="math inline">\(A \cap B = \emptyset\)</span>), alors <span class="math inline">\(\#(A \cup B) = \#A + \#B\)</span> : on additionne les cas.</p>
+</div>
+</div>
+<div class="ess-lien">
+<p><a href="./ch1-compter-sur-de-petit/2-additionner-multiplier.html#propriete-1-2">↗ dans le cours</a></p>
+</div>
+<div id="ess-propriete-1-3" class="theo theo-propriete" data-sorte="propriete" data-num="1.3" data-page="6" data-phys="9">
+<div class="theo-head">
+<p><strong>Propriété 1.3</strong> — compter par le complémentaire</p>
+</div>
+<div class="theo-body">
+<p>Si <span class="math inline">\(A\)</span> est une partie d’un ensemble fini <span class="math inline">\(E\)</span>, le nombre d’éléments de <span class="math inline">\(E\)</span> qui ne sont pas dans <span class="math inline">\(A\)</span> vaut <span class="math inline">\(\#E - \#A\)</span>.</p>
+<div class="pb-fig pb-venn" data-n="1" data-inclus="0" data-disjoints="0" data-ombre="[&quot;dehors&quot;]" data-activite="0">
+<div class="pb-univers">
+<p><span class="math inline">\(E\)</span></p>
+</div>
+<div class="pb-nom" data-i="0">
+<p><span class="math inline">\(A\)</span></p>
+</div>
+</div>
+<p>C’est utile pour compter les résultats qui contiennent « au moins un » élément d’un certain type : on compte tout, puis on retire ceux qui n’en contiennent « aucun ».</p>
+</div>
+</div>
+<div class="ess-lien">
+<p><a href="./ch1-compter-sur-de-petit/2-additionner-multiplier.html#propriete-1-3">↗ dans le cours</a></p>
+</div>
+</section>
+<section id="arrangements-et-permutations" class="level3">
+<h3 class="anchored" data-anchor-id="arrangements-et-permutations">Arrangements et permutations</h3>
+<div id="ess-definition-1-1" class="theo theo-definition" data-sorte="definition" data-num="1.1" data-page="8" data-phys="11">
+<div class="theo-head">
+<p><strong>Définition 1.1</strong> — arrangements</p>
+</div>
+<div class="theo-body">
+<p>Un <em>arrangement de <span class="math inline">\(p\)</span> éléments pris parmi <span class="math inline">\(n\)</span></em> est une suite de <span class="math inline">\(p\)</span> éléments choisis parmi <span class="math inline">\(n\)</span> éléments donnés (l’ordre compte).</p>
+<ul>
+<li><strong>Avec répétition</strong> (un élément peut revenir) : il y en a <span class="math inline">\(n^{p}\)</span>.</li>
+<li><strong>Sans répétition</strong> (éléments distincts, <span class="math inline">\(p \leq n\)</span>) : il y en a</li>
+</ul>
+<p><span class="math display">\[
+A_{n}^{p} = \underbrace{n (n-1) (n-2) \cdots (n-p+1)}_{p \text{facteurs}}.
+\]</span></p>
+<p>Au premier choix, aucun élément n’est pris : <span class="math inline">\(n\)</span> choix. Au <span class="math inline">\(k\)</span>-ième choix, <span class="math inline">\(k - 1\)</span> éléments sont déjà pris : il reste <span class="math inline">\(n - k + 1\)</span> choix. Le dernier facteur (au <span class="math inline">\(p\)</span>-ième choix) est donc <span class="math inline">\(n - p + 1\)</span> : pour le bureau, <span class="math inline">\(18 \cdot 17 \cdot 16\)</span> et <span class="math inline">\(16 = 18 - 3 + 1\)</span>.</p>
+</div>
+</div>
+<div class="ess-lien">
+<p><a href="./ch1-compter-sur-de-petit/3-arrangements-et-permutations.html#definition-1-1">↗ dans le cours</a></p>
+</div>
+<div id="ess-definition-1-2" class="theo theo-definition" data-sorte="definition" data-num="1.2" data-page="8" data-phys="11">
+<div class="theo-head">
+<p><strong>Définition 1.2</strong> — factorielle</p>
+</div>
+<div class="theo-body">
+<p>Pour tout naturel <span class="math inline">\(n \geq 1\)</span>, <span class="math inline">\(n! = n (n-1) \cdots 2 \cdot 1\)</span> (lire « factorielle <span class="math inline">\(n\)</span> »). On pose <span class="math inline">\(0! = 1\)</span>.</p>
+</div>
+</div>
+<div class="ess-lien">
+<p><a href="./ch1-compter-sur-de-petit/3-arrangements-et-permutations.html#definition-1-2">↗ dans le cours</a></p>
+</div>
+<div id="ess-propriete-1-4" class="theo theo-propriete" data-sorte="propriete" data-num="1.4" data-page="8" data-phys="11">
+<div class="theo-head">
+<p><strong>Propriété 1.4</strong></p>
+</div>
+<div class="theo-body">
+<p>Pour <span class="math inline">\(0 \leq p \leq n\)</span> :</p>
+<p><span class="math display">\[
+A_{n}^{p} = \frac{n!}{(n-p)!}.
+\]</span></p>
+</div>
+</div>
+<div class="ess-lien">
+<p><a href="./ch1-compter-sur-de-petit/3-arrangements-et-permutations.html#propriete-1-4">↗ dans le cours</a></p>
+</div>
+<div id="ess-definition-1-3" class="theo theo-definition" data-sorte="definition" data-num="1.3" data-page="9" data-phys="12">
+<div class="theo-head">
+<p><strong>Définition 1.3</strong> — permutations</p>
+</div>
+<div class="theo-body">
+<p>Une <em>permutation</em> de <span class="math inline">\(n\)</span> éléments est une façon de les ranger tous dans un ordre : c’est un arrangement sans répétition de <span class="math inline">\(n\)</span> éléments pris parmi <span class="math inline">\(n\)</span>. Il y en a <span class="math inline">\(A_{n}^{n} = n!\)</span>.</p>
+</div>
+</div>
+<div class="ess-lien">
+<p><a href="./ch1-compter-sur-de-petit/3-arrangements-et-permutations.html#definition-1-3">↗ dans le cours</a></p>
+</div>
+</section>
+<section id="combinaisons" class="level3">
+<h3 class="anchored" data-anchor-id="combinaisons">Combinaisons</h3>
+<div id="ess-definition-1-4" class="theo theo-definition" data-sorte="definition" data-num="1.4" data-page="11" data-phys="14">
+<div class="theo-head">
+<p><strong>Définition 1.4</strong> — combinaisons</p>
+</div>
+<div class="theo-body">
+<p>Une <em>combinaison de <span class="math inline">\(p\)</span> éléments pris parmi <span class="math inline">\(n\)</span></em> est un groupe (sans ordre) de <span class="math inline">\(p\)</span> éléments distincts choisis parmi <span class="math inline">\(n\)</span>. Il y en a</p>
+<p><span class="math display">\[
+C_{n}^{p} = \frac{A_{n}^{p}}{p!} = \frac{n!}{p! \, (n-p)!}.
+\]</span></p>
+<p>Seconde forme, lue directement : on range les <span class="math inline">\(n\)</span> éléments en ligne (<span class="math inline">\(n!\)</span> façons) ; les <span class="math inline">\(p\)</span> premiers forment le groupe. Changer l’ordre des <span class="math inline">\(p\)</span> premiers (<span class="math inline">\(p!\)</span> façons) ou celui des <span class="math inline">\(n - p\)</span> derniers (<span class="math inline">\((n-p)!\)</span> façons) ne change pas le groupe : on divise par <span class="math inline">\(p! \, (n-p)!\)</span>.</p>
+</div>
+</div>
+<div class="ess-lien">
+<p><a href="./ch1-compter-sur-de-petit/4-combinaisons.html#definition-1-4">↗ dans le cours</a></p>
+</div>
+<div id="ess-propriete-1-5" class="theo theo-propriete" data-sorte="propriete" data-num="1.5" data-page="11" data-phys="14">
+<div class="theo-head">
+<p><strong>Propriété 1.5</strong> — symétrie</p>
+</div>
+<div class="theo-body">
+<p>Pour <span class="math inline">\(0 \leq p \leq n\)</span> :</p>
+<p><span class="math display">\[
+C_{n}^{p} = C_{n}^{n-p}.
+\]</span></p>
+</div>
+</div>
+<div class="ess-lien">
+<p><a href="./ch1-compter-sur-de-petit/4-combinaisons.html#propriete-1-5">↗ dans le cours</a></p>
+</div>
+</section>
+<section id="permutations-avec-répétition-les-anagrammes" class="level3">
+<h3 class="anchored" data-anchor-id="permutations-avec-répétition-les-anagrammes">Permutations avec répétition : les anagrammes</h3>
+<div id="ess-definition-1-5" class="theo theo-definition" data-sorte="definition" data-num="1.5" data-page="13" data-phys="16">
+<div class="theo-head">
+<p><strong>Définition 1.5</strong> — permutations avec répétition</p>
+</div>
+<div class="theo-body">
+<p>Une <em>permutation avec répétition</em> de <span class="math inline">\(n\)</span> objets est une façon de les ranger tous en ligne lorsque certains d’entre eux sont identiques (on ne distingue pas deux objets identiques) : par exemple, un anagramme de ANNA.</p>
+</div>
+</div>
+<div class="ess-lien">
+<p><a href="./ch1-compter-sur-de-petit/5-permutations-avec-repetition-les-anagram.html#definition-1-5">↗ dans le cours</a></p>
+</div>
+<div id="ess-propriete-1-6" class="theo theo-propriete" data-sorte="propriete" data-num="1.6" data-page="13" data-phys="16">
+<div class="theo-head">
+<p><strong>Propriété 1.6</strong></p>
+</div>
+<div class="theo-body">
+<p>Le nombre de permutations avec répétition de <span class="math inline">\(n\)</span> objets, dont <span class="math inline">\(k_{1}\)</span> sont identiques entre eux, <span class="math inline">\(k_{2}\)</span> identiques entre eux, …, <span class="math inline">\(k_{r}\)</span> identiques entre eux, vaut</p>
+<p><span class="math display">\[
+\frac{n!}{k_{1} ! \, k_{2} ! \cdots k_{r} !}.
+\]</span></p>
+<p>Avec deux sortes d’objets seulement, on retrouve les combinaisons : choisir 3 délégués parmi 5 élèves A, B, C, D, E revient à écrire O (« oui ») ou N (« non ») sous chaque nom, par exemple ONOON pour {A, C, D}. Il y a autant de délégations que d’anagrammes de OOONN : <span class="math inline">\(\frac{5!}{3! \cdot 2!} = C_{5}^{3} = 10\)</span>.</p>
+</div>
+</div>
+<div class="ess-lien">
+<p><a href="./ch1-compter-sur-de-petit/5-permutations-avec-repetition-les-anagram.html#propriete-1-6">↗ dans le cours</a></p>
+</div>
+</section>
+</section>
+<section id="chapitre-2-modéliser-le-hasard" class="level2">
+<h2 class="anchored" data-anchor-id="chapitre-2-modéliser-le-hasard">Chapitre 2 — Modéliser le hasard</h2>
+<section id="fréquences-et-probabilité" class="level3">
+<h3 class="anchored" data-anchor-id="fréquences-et-probabilité">Fréquences et probabilité</h3>
+<div id="ess-definition-2-1" class="theo theo-definition" data-sorte="definition" data-num="2.1" data-page="17" data-phys="20">
+<div class="theo-head">
+<p><strong>Définition 2.1</strong> — probabilité <em>a posteriori</em></p>
+</div>
+<div class="theo-body">
+<p>Quand on répète un grand nombre de fois une expérience dans les mêmes conditions, la fréquence relative d’un résultat se stabilise autour d’un nombre : c’est la <em>probabilité</em> de ce résultat. La fréquence observée sur un grand nombre d’expériences en est une estimation, appelée probabilité <em>a posteriori</em>.</p>
+</div>
+</div>
+<div class="ess-lien">
+<p><a href="./ch2-modeliser-le-hasard/1-frequences-et-probabilite.html#definition-2-1">↗ dans le cours</a></p>
+</div>
+</section>
+<section id="univers-et-événements" class="level3">
+<h3 class="anchored" data-anchor-id="univers-et-événements">Univers et événements</h3>
+<div id="ess-definition-2-2" class="theo theo-definition" data-sorte="definition" data-num="2.2" data-page="18" data-phys="21">
+<div class="theo-head">
+<p><strong>Définition 2.2</strong> — expérience aléatoire, issue, événement</p>
+</div>
+<div class="theo-body">
+<ul>
+<li>Une <em>expérience aléatoire</em> est une expérience dont on connaît tous les résultats possibles, mais dont on ne peut pas prévoir le résultat avec certitude.</li>
+<li>Chaque résultat possible est une <em>issue</em> (ou <em>épreuve</em>).</li>
+<li>L’ensemble de toutes les issues est l’<em>univers</em>, noté <span class="math inline">\(\Omega\)</span>. Le programme dit aussi <em>catégorie d’épreuves</em>.</li>
+<li>Un <em>événement</em> est une partie de <span class="math inline">\(\Omega\)</span>. Il est <em>réalisé</em> si l’issue obtenue lui appartient.</li>
+</ul>
+</div>
+</div>
+<div class="ess-lien">
+<p><a href="./ch2-modeliser-le-hasard/2-univers-et-evenements.html#definition-2-2">↗ dans le cours</a></p>
+</div>
+</section>
+<section id="le-modèle-déquiprobabilité" class="level3">
+<h3 class="anchored" data-anchor-id="le-modèle-déquiprobabilité">Le modèle d’équiprobabilité</h3>
+<div id="ess-definition-2-3" class="theo theo-definition" data-sorte="definition" data-num="2.3" data-page="21" data-phys="24">
+<div class="theo-head">
+<p><strong>Définition 2.3</strong> — probabilité <em>a priori</em> (règle de Laplace)</p>
+</div>
+<div class="theo-body">
+<p>Si l’on suppose que toutes les issues d’un univers fini <span class="math inline">\(\Omega\)</span> ont la même probabilité (<em>hypothèse d’équiprobabilité</em>), la probabilité d’un événement <span class="math inline">\(A\)</span> vaut</p>
+<p><span class="math display">\[
+P(A) = \frac{\#A}{\#\Omega} = \frac{\text{nombre d'issues favorables à } A}{\text{nombre d'issues possibles}}.
+\]</span></p>
+</div>
+</div>
+<div class="ess-lien">
+<p><a href="./ch2-modeliser-le-hasard/3-le-modele-dequiprobabilite.html#definition-2-3">↗ dans le cours</a></p>
+</div>
+</section>
+<section id="propriétés-des-probabilités" class="level3">
+<h3 class="anchored" data-anchor-id="propriétés-des-probabilités">Propriétés des probabilités</h3>
+<div id="ess-propriete-2-1" class="theo theo-propriete" data-sorte="propriete" data-num="2.1" data-page="23" data-phys="26">
+<div class="theo-head">
+<p><strong>Propriété 2.1</strong> — propriétés des probabilités</p>
+</div>
+<div class="theo-body">
+<p>Pour tous événements <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> :</p>
+<ul>
+<li><span class="math inline">\(0 \leq P(A) \leq 1\)</span>, <span class="math inline">\(P(\Omega) = 1\)</span>, <span class="math inline">\(P(\emptyset) = 0\)</span> ;</li>
+<li><span class="math inline">\(P(\overline{A}) = 1 - P(A)\)</span> ;</li>
+<li><span class="math inline">\(P(A \cup B) = P(A) + P(B) - P(A \cap B)\)</span> ; si <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont disjoints, <span class="math inline">\(P(A \cup B) = P(A) + P(B)\)</span>.</li>
+</ul>
+</div>
+</div>
+<div class="ess-lien">
+<p><a href="./ch2-modeliser-le-hasard/4-proprietes-des-probabilites.html#propriete-2-1">↗ dans le cours</a></p>
+</div>
+</section>
+</section>
+<section id="chapitre-3-probabilité-conditionnelle-et-indépendance" class="level2">
+<h2 class="anchored" data-anchor-id="chapitre-3-probabilité-conditionnelle-et-indépendance">Chapitre 3 — Probabilité conditionnelle et indépendance</h2>
+<section id="probabilité-conditionnelle" class="level3">
+<h3 class="anchored" data-anchor-id="probabilité-conditionnelle">Probabilité conditionnelle</h3>
+<div id="ess-definition-3-1" class="theo theo-definition" data-sorte="definition" data-num="3.1" data-page="28" data-phys="31">
+<div class="theo-head">
+<p><strong>Définition 3.1</strong> — probabilité conditionnelle</p>
+</div>
+<div class="theo-body">
+<p>Soit <span class="math inline">\(B\)</span> un événement tel que <span class="math inline">\(P(B) \neq 0\)</span>. La <em>probabilité de <span class="math inline">\(A\)</span> sachant <span class="math inline">\(B\)</span></em> est</p>
+<p><span class="math display">\[
+P(A | B) = \frac{P(A \cap B)}{P(B)}.
+\]</span></p>
+<p>Sous l’hypothèse d’équiprobabilité, <span class="math inline">\(P(A | B) = \frac{\#(A \cap B)}{\#B}\)</span> : on remplace l’univers <span class="math inline">\(\Omega\)</span> par <span class="math inline">\(B\)</span>.</p>
+<div class="pb-fig pb-venn" data-n="2" data-inclus="0" data-disjoints="0" data-ombre="[&quot;b&quot;, &quot;ab&quot;]" data-activite="0">
+<div class="pb-univers">
+<p><span class="math inline">\(\Omega\)</span></p>
+</div>
+<div class="pb-nom" data-i="0">
+<p><span class="math inline">\(A\)</span></p>
+</div>
+<div class="pb-nom" data-i="1">
+<p><span class="math inline">\(B\)</span></p>
+</div>
+</div>
+<p>Sachant <span class="math inline">\(B\)</span>, seules comptent les issues de <span class="math inline">\(B\)</span> (zone hachurée) ; parmi elles, celles de <span class="math inline">\(A\)</span> sont dans <span class="math inline">\(A \cap B\)</span>.</p>
+</div>
+</div>
+<div class="ess-lien">
+<p><a href="./ch3-probabilite-conditio/1-probabilite-conditionnelle.html#definition-3-1">↗ dans le cours</a></p>
+</div>
+</section>
+<section id="arbres-de-probabilités" class="level3">
+<h3 class="anchored" data-anchor-id="arbres-de-probabilités">Arbres de probabilités</h3>
+<div id="ess-propriete-3-1" class="theo theo-propriete" data-sorte="propriete" data-num="3.1" data-page="30" data-phys="33">
+<div class="theo-head">
+<p><strong>Propriété 3.1</strong> — calculer sur un arbre</p>
+</div>
+<div class="theo-body">
+<ul>
+<li>Sur une branche issue d’un nœud <span class="math inline">\(B\)</span>, on écrit une probabilité <em>sachant</em> <span class="math inline">\(B\)</span>. Les branches issues d’un même nœud ont une somme égale à 1.</li>
+<li>La probabilité d’un chemin est le produit des probabilités de ses branches : <span class="math inline">\(P(A \cap B) = P(B) \cdot P(A | B)\)</span>.</li>
+<li>La probabilité d’un événement est la somme des probabilités des chemins qui y mènent :</li>
+</ul>
+<p><span class="math display">\[
+P(A) = P(B) \cdot P(A | B) + P(\overline{B}) \cdot P(A | \overline{B}).
+\]</span></p>
+</div>
+</div>
+<div class="ess-lien">
+<p><a href="./ch3-probabilite-conditio/2-arbres-de-probabilites.html#propriete-3-1">↗ dans le cours</a></p>
+</div>
+</section>
+<section id="indépendance" class="level3">
+<h3 class="anchored" data-anchor-id="indépendance">Indépendance</h3>
+<div id="ess-definition-3-2" class="theo theo-definition" data-sorte="definition" data-num="3.2" data-page="32" data-phys="35">
+<div class="theo-head">
+<p><strong>Définition 3.2</strong> — événements indépendants</p>
+</div>
+<div class="theo-body">
+<p>Deux événements <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont <em>indépendants</em> si <span class="math inline">\(P(A \cap B) = P(A) \cdot P(B)\)</span>. Sinon, ils sont <em>dépendants</em>.</p>
+</div>
+</div>
+<div class="ess-lien">
+<p><a href="./ch3-probabilite-conditio/4-independance.html#definition-3-2">↗ dans le cours</a></p>
+</div>
+<div id="ess-propriete-3-2" class="theo theo-propriete" data-sorte="propriete" data-num="3.2" data-page="33" data-phys="36">
+<div class="theo-head">
+<p><strong>Propriété 3.2</strong></p>
+</div>
+<div class="theo-body">
+<p>Si <span class="math inline">\(P(B) \neq 0\)</span> : <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont indépendants <span class="math inline">\(\Longleftrightarrow\)</span> <span class="math inline">\(P(A | B) = P(A)\)</span>.</p>
+</div>
+</div>
+<div class="ess-lien">
+<p><a href="./ch3-probabilite-conditio/4-independance.html#propriete-3-2">↗ dans le cours</a></p>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -990,13 +1371,13 @@ window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.co
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../ch2-modeliser-le-hasard/6-exercices-supplementaires.html" class="pagination-link" aria-label="Exercices supplémentaires">
+      <a href="./ch3-probabilite-conditio/7-exercices-supplementaires.html" class="pagination-link" aria-label="Exercices supplémentaires">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Exercices supplémentaires</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../ch3-probabilite-conditio/1-probabilite-conditionnelle.html" class="pagination-link" aria-label="Probabilité conditionnelle">
-        <span class="nav-page-text"><span class="chapter-title">Probabilité conditionnelle</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./autoeval.html" class="pagination-link" aria-label="S'autoévaluer">
+        <span class="nav-page-text"><span class="chapter-title">S’autoévaluer</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

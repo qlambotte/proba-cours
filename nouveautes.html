@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Chapitre 3 — Probabilité conditionnelle et indépendance – Probabilités</title>
+<title>Quoi de neuf ? – Probabilités</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -29,24 +29,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../ch3-probabilite-conditio/1-probabilite-conditionnelle.html" rel="next">
-<link href="../ch2-modeliser-le-hasard/6-exercices-supplementaires.html" rel="prev">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-73b0ff3878a4e6fc3716dc69a6aaefa3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-0acde44bc0d102c041e82b1c9a7c52be.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./autoeval.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-73b0ff3878a4e6fc3716dc69a6aaefa3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-0acde44bc0d102c041e82b1c9a7c52be.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -98,7 +97,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ch3-probabilite-conditio/index.html">Chapitre 3 — Probabilité conditionnelle et indépendance</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./nouveautes.html"><span class="chapter-title">Quoi de neuf ?</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
@@ -113,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Probabilités</a> 
+      <a href="./">Probabilités</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -125,17 +124,17 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Probabilités — cours &amp; exercices</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Probabilités — cours &amp; exercices</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../objectifs.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Objectifs</span></a>
+  <a href="./objectifs.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Objectifs</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../ch1-compter-sur-de-petit/index.html" class="sidebar-item-text sidebar-link">
+            <a href="./ch1-compter-sur-de-petit/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Chapitre 1 — Compter sur de petits ensembles</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -144,44 +143,44 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/1-lister-avant-de-compter.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lister avant de compter</span></a>
+  <a href="./ch1-compter-sur-de-petit/1-lister-avant-de-compter.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lister avant de compter</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/2-additionner-multiplier.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Additionner, multiplier</span></a>
+  <a href="./ch1-compter-sur-de-petit/2-additionner-multiplier.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Additionner, multiplier</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/3-arrangements-et-permutations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Arrangements et permutations</span></a>
+  <a href="./ch1-compter-sur-de-petit/3-arrangements-et-permutations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Arrangements et permutations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/4-combinaisons.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Combinaisons</span></a>
+  <a href="./ch1-compter-sur-de-petit/4-combinaisons.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Combinaisons</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/5-permutations-avec-repetition-les-anagram.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Permutations avec répétition : les anagrammes</span></a>
+  <a href="./ch1-compter-sur-de-petit/5-permutations-avec-repetition-les-anagram.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Permutations avec répétition : les anagrammes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/6-choisir-une-methode.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Choisir une méthode</span></a>
+  <a href="./ch1-compter-sur-de-petit/6-choisir-une-methode.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Choisir une méthode</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/7-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  <a href="./ch1-compter-sur-de-petit/7-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../ch2-modeliser-le-hasard/index.html" class="sidebar-item-text sidebar-link">
+            <a href="./ch2-modeliser-le-hasard/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Chapitre 2 — Modéliser le hasard</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -190,95 +189,95 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch2-modeliser-le-hasard/1-frequences-et-probabilite.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Fréquences et probabilité</span></a>
+  <a href="./ch2-modeliser-le-hasard/1-frequences-et-probabilite.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Fréquences et probabilité</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch2-modeliser-le-hasard/2-univers-et-evenements.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Univers et événements</span></a>
+  <a href="./ch2-modeliser-le-hasard/2-univers-et-evenements.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Univers et événements</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch2-modeliser-le-hasard/3-le-modele-dequiprobabilite.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Le modèle d’équiprobabilité</span></a>
+  <a href="./ch2-modeliser-le-hasard/3-le-modele-dequiprobabilite.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Le modèle d’équiprobabilité</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch2-modeliser-le-hasard/4-proprietes-des-probabilites.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Propriétés des probabilités</span></a>
+  <a href="./ch2-modeliser-le-hasard/4-proprietes-des-probabilites.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Propriétés des probabilités</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch2-modeliser-le-hasard/5-denombrer-pour-calculer.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Dénombrer pour calculer</span></a>
+  <a href="./ch2-modeliser-le-hasard/5-denombrer-pour-calculer.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Dénombrer pour calculer</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch2-modeliser-le-hasard/6-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  <a href="./ch2-modeliser-le-hasard/6-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../ch3-probabilite-conditio/index.html" class="sidebar-item-text sidebar-link active">
+            <a href="./ch3-probabilite-conditio/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Chapitre 3 — Probabilité conditionnelle et indépendance</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch3-probabilite-conditio/1-probabilite-conditionnelle.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Probabilité conditionnelle</span></a>
+  <a href="./ch3-probabilite-conditio/1-probabilite-conditionnelle.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Probabilité conditionnelle</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch3-probabilite-conditio/2-arbres-de-probabilites.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Arbres de probabilités</span></a>
+  <a href="./ch3-probabilite-conditio/2-arbres-de-probabilites.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Arbres de probabilités</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch3-probabilite-conditio/3-lire-un-test-de-depistage.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lire un test de dépistage</span></a>
+  <a href="./ch3-probabilite-conditio/3-lire-un-test-de-depistage.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lire un test de dépistage</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch3-probabilite-conditio/4-independance.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Indépendance</span></a>
+  <a href="./ch3-probabilite-conditio/4-independance.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Indépendance</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch3-probabilite-conditio/5-pour-aller-plus-loin.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Pour aller plus loin</span></a>
+  <a href="./ch3-probabilite-conditio/5-pour-aller-plus-loin.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Pour aller plus loin</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch3-probabilite-conditio/6-sources-des-donnees.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sources des données</span></a>
+  <a href="./ch3-probabilite-conditio/6-sources-des-donnees.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sources des données</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch3-probabilite-conditio/7-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  <a href="./ch3-probabilite-conditio/7-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../essentiel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">L’essentiel</span></a>
+  <a href="./essentiel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">L’essentiel</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../autoeval.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">S’autoévaluer</span></a>
+  <a href="./autoeval.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">S’autoévaluer</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../nouveautes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Quoi de neuf ?</span></a>
+  <a href="./nouveautes.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Quoi de neuf ?</span></a>
   </div>
 </li>
     </ul>
@@ -291,7 +290,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Sur cette page</h2>
    
   <ul>
-  <li><a href="#sections" id="toc-sections" class="nav-link active" data-scroll-target="#sections">Sections</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">30/09/2026</a></li>
   </ul>
 </nav>
     </div>
@@ -300,7 +299,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Chapitre 3 — Probabilité conditionnelle et indépendance</h1>
+<h1 class="title"><span class="chapter-title">Quoi de neuf ?</span></h1>
+<p class="subtitle lead">Ce qui a changé dans le cours en ligne</p>
 </div>
 
 
@@ -318,18 +318,11 @@ ul.task-list li input[type="checkbox"] {
 
 
 <!-- GÉNÉRÉ par typweb à partir des notes Typst : NE PAS ÉDITER (les modifications seraient écrasées). -->
-<p>Une information peut changer une probabilité. La question à se poser devient : <em>parmi</em> quels cas calcule-t-on la proportion ?</p>
-<section id="sections" class="level2">
-<h2 class="anchored" data-anchor-id="sections">Sections</h2>
-<ol type="1">
-<li><a href="../ch3-probabilite-conditio/1-probabilite-conditionnelle.html">Probabilité conditionnelle</a> <span class="suivi-sec" data-exos="3.1 3.2"></span></li>
-<li><a href="../ch3-probabilite-conditio/2-arbres-de-probabilites.html">Arbres de probabilités</a> <span class="suivi-sec" data-exos="3.3 3.4"></span></li>
-<li><a href="../ch3-probabilite-conditio/3-lire-un-test-de-depistage.html">Lire un test de dépistage</a> <span class="suivi-sec" data-exos="3.5 3.6"></span></li>
-<li><a href="../ch3-probabilite-conditio/4-independance.html">Indépendance</a> <span class="suivi-sec" data-exos="3.7 3.8 3.9 3.10 3.11"></span></li>
-<li><a href="../ch3-probabilite-conditio/5-pour-aller-plus-loin.html">Pour aller plus loin</a> <span class="suivi-sec" data-exos="3.12"></span></li>
-<li><a href="../ch3-probabilite-conditio/6-sources-des-donnees.html">Sources des données</a></li>
-<li><a href="../ch3-probabilite-conditio/7-exercices-supplementaires.html">Exercices supplémentaires</a> <span class="suivi-sec" data-exos="S3.1 S3.2 S3.3 S3.4 S3.5"></span></li>
-</ol>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section">30/09/2026</h2>
+<ul>
+<li>Première version en ligne du cours.</li>
+</ul>
 
 
 </section>
@@ -990,14 +983,11 @@ window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.co
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../ch2-modeliser-le-hasard/6-exercices-supplementaires.html" class="pagination-link" aria-label="Exercices supplémentaires">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Exercices supplémentaires</span></span>
+      <a href="./autoeval.html" class="pagination-link" aria-label="S'autoévaluer">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">S’autoévaluer</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../ch3-probabilite-conditio/1-probabilite-conditionnelle.html" class="pagination-link" aria-label="Probabilité conditionnelle">
-        <span class="nav-page-text"><span class="chapter-title">Probabilité conditionnelle</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

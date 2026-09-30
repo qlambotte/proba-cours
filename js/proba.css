@@ -70,3 +70,44 @@
 .pb-den-titre { font-size: .8rem; font-weight: 600; margin-bottom: .15rem; }
 .pb-den-groupe span { font-family: var(--bs-font-monospace, monospace); margin-right: .3rem; }
 .pb-den-bilan { flex-basis: 100%; font-weight: 600; margin-top: .3rem; }
+
+/* Relevé de données (activité en classe) */
+.pb-releve { margin: 1.1rem 0; padding: .7rem .8rem; border: 1px solid var(--card-brd, #ccc); border-radius: 8px;
+  background: var(--card-bg, transparent); }
+.pb-rel-tab { overflow-x: auto; }
+table.pb-rel { border-collapse: collapse; margin: 0 auto .5rem; font-size: .85rem; }
+table.pb-rel th, table.pb-rel td { border: 1px solid var(--card-brd, #999); padding: .1rem .2rem; text-align: center; }
+table.pb-rel tbody th, table.pb-rel tfoot th { text-align: left; font-weight: 600; white-space: nowrap; }
+table.pb-rel input { width: 2.5em; padding: 0; font: inherit; text-align: center; background: transparent; color: inherit;
+  border: 1px solid var(--card-brd, #bbb); border-radius: 3px; }
+table.pb-rel tfoot td { font-weight: 600; }
+.pb-rel-opt { font-size: .85rem; margin-left: .6rem; }
+.pb-releve svg { width: 100%; max-width: 560px; height: auto; display: block; margin: .3rem auto; }
+.pb-rel-pt { fill: var(--ia-c2, #c2410c); }
+
+/* Saisie et vérification dans les figures */
+.pb-in { font: inherit; font-size: .9em; width: auto; padding: 0 .2rem; margin-right: .15rem; text-align: center;
+  background: var(--page-bg, #fff); color: inherit; border: 1px solid var(--card-brd, #999); border-radius: 3px; }
+.pb-in.pb-ok { border-color: #15803d; box-shadow: 0 0 0 1px #15803d; }
+.pb-in.pb-ko { border-color: #b91c1c; box-shadow: 0 0 0 1px #b91c1c; }
+.pb-verif { margin-top: .4rem; }
+.pb-verif .pb-btn { margin-top: 0; margin-right: .4rem; }
+.pb-verif-msg { font-size: .88rem; }
+.pb-verif-msg.pb-ok { color: #15803d; } .pb-verif-msg.pb-ko { color: #b91c1c; }
+.pb-venn svg.pb-cliquable { cursor: pointer; }
+.pb-venn .pb-hach-eleve line { stroke: var(--ia-c2, #c2410c); stroke-width: 1.1; }
+.pb-venn svg.pb-v { pointer-events: auto; }
+.pb-fig .pb-in + span.rep:not(.vu) { display: none; }
+/* Partition interactive */
+.pb-part-aide { font-size: .85rem; margin-bottom: .3rem; }
+.pb-part-reserve { display: flex; flex-wrap: wrap; gap: .3rem; min-height: 2rem; padding: .3rem; margin-bottom: .5rem;
+  border: 1px dashed var(--card-brd, #999); border-radius: 5px; }
+.pb-jeton { font: inherit; font-size: .85rem; padding: .05rem .4rem; border: 1px solid var(--card-brd, #999); border-radius: 4px;
+  background: var(--page-bg, #fff); color: inherit; cursor: pointer; }
+.pb-jeton.pb-choisi { outline: 2px solid var(--ia-c1, #1f5fbf); }
+.pb-part-case { min-height: 3.2em; cursor: pointer; display: flex; flex-wrap: wrap; gap: .2rem; align-content: flex-start; }
+.pb-part-case.pb-ok { box-shadow: 0 0 0 2px #15803d; } .pb-part-case.pb-ko { box-shadow: 0 0 0 2px #b91c1c; }
+.pb-part-solution { margin-top: .5rem; }
+.tableau .pb-in + span.rep:not(.vu) { display: none; }
+.tableau .pb-in { width: 3em; }
+.tableau > .pb-verif { text-align: center; }

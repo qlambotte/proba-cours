@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-73b0ff3878a4e6fc3716dc69a6aaefa3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-f98e6125db418fb1c6573dab25a77605.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-0acde44bc0d102c041e82b1c9a7c52be.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -155,6 +155,11 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Probabilités — cours &amp; exercices</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../objectifs.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Objectifs</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -292,7 +297,17 @@ window.Quarto = {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../essentiel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">L’essentiel</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../autoeval.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">S’autoévaluer</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../nouveautes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Quoi de neuf ?</span></a>
   </div>
 </li>
     </ul>
@@ -434,16 +449,16 @@ window.Quarto = {
 <p><span class="math inline">\(S\)</span></p>
 </div>
 <div class="pb-z" data-z="a">
-<p><span class="rep">172</span></p>
+<p><span class="rep" data-v="172">172</span></p>
 </div>
 <div class="pb-z" data-z="ab">
-<p><span class="rep">28</span></p>
+<p><span class="rep" data-v="28">28</span></p>
 </div>
 <div class="pb-z" data-z="b">
-<p><span class="rep">114</span></p>
+<p><span class="rep" data-v="114">114</span></p>
 </div>
 <div class="pb-z" data-z="dehors">
-<p><span class="rep">686</span></p>
+<p><span class="rep" data-v="686">686</span></p>
 </div>
 </div>
 <div class="rep-bloc">
@@ -862,16 +877,44 @@ window.Quarto = {
     host.appendChild(themeBtn);
   }
 
+  // « Aa » (styles à l'essai) et crayon d'annotation : sur grand écran, à côté
+  // du bouton de thème ; sur petit écran (menu latéral replié), en bas à gauche.
+  var grand = window.matchMedia('(min-width: 992px)');
+  function accrocher() {
+    var host = document.querySelector('.sidebar-tools-main');
+    var els = ['.st-menu', '.an-barre'].map(function (sel) { return document.querySelector(sel); })
+                                       .filter(Boolean);
+    if (grand.matches && host) {
+      var fin = Array.prototype.slice.call(host.children, -els.length);
+      if (fin.length !== els.length || fin.some(function (e, i) { return e !== els[i]; }))
+        els.forEach(function (el) { host.appendChild(el); });
+      els.forEach(function (el) { el.classList.add('dans-outils'); });
+    } else {
+      els.forEach(function (el) {
+        if (el.parentNode !== document.body) document.body.appendChild(el);
+        el.classList.remove('dans-outils');
+      });
+    }
+  }
+  if (grand.addEventListener) grand.addEventListener('change', accrocher);
+  // panneau « Aa » (position fixe, pour ne pas être coupé par le menu latéral) : sous le bouton
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('.dans-outils .st-btn');
+    var p = b && b.parentNode.querySelector('.st-panneau');
+    if (p) p.style.top = (b.getBoundingClientRect().bottom + 6) + 'px';
+  }, true);
+
   document.addEventListener('DOMContentLoaded', function () {
     build();
-    setTimeout(build, 100);
+    accrocher();
+    [100, 400, 1200].forEach(function (t) { setTimeout(function () { build(); accrocher(); }, t); });
   });
 })();
 </script>
 <!-- GÉNÉRÉ par typweb — ne pas éditer -->
 <script>
 /* Réglages du cours (typweb.toml) */
-window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.com/qlambotte/proba-cours", "pdfs": [{"titre": "Cours — version élève", "detail": "réponses à compléter", "fichier": "proba.pdf"}, {"titre": "Cours — avec le corrigé", "detail": "réponses en bleu", "fichier": "proba-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1", "detail": "", "fichier": "exercices-supp-ch1.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2", "detail": "", "fichier": "exercices-supp-ch2.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3", "detail": "", "fichier": "exercices-supp-ch3.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1 (corrigé)", "detail": "", "fichier": "exercices-supp-ch1-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2 (corrigé)", "detail": "", "fichier": "exercices-supp-ch2-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3 (corrigé)", "detail": "", "fichier": "exercices-supp-ch3-corrige.pdf"}], "portail": ""};
+window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.com/qlambotte/proba-cours", "pdfs": [{"titre": "Cours — version élève", "detail": "réponses à compléter", "fichier": "proba.pdf"}, {"titre": "Cours — avec le corrigé", "detail": "réponses en bleu", "fichier": "proba-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1", "detail": "", "fichier": "exercices-supp-ch1.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2", "detail": "", "fichier": "exercices-supp-ch2.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3", "detail": "", "fichier": "exercices-supp-ch3.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1 (corrigé)", "detail": "", "fichier": "exercices-supp-ch1-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2 (corrigé)", "detail": "", "fichier": "exercices-supp-ch2-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3 (corrigé)", "detail": "", "fichier": "exercices-supp-ch3-corrige.pdf"}], "portail": "", "horsLigne": true};
 /* Charge les scripts du site (js/) avec le bon chemin relatif,
    quelle que soit la profondeur de la page. */
 (function () {
@@ -883,12 +926,20 @@ window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.co
     off = u.indexOf("site_libs/") >= 0 ? u.slice(0, u.indexOf("site_libs/")) : "";
   }
   window.SITE_OFFSET = off;
+  /* mode hors-ligne (sw.js) : pas en aperçu local, où il gênerait les mises à jour */
+  if ("serviceWorker" in navigator && window.TYPWEB.horsLigne) {
+    if (/^(localhost|127\.|\[::1\])/.test(location.hostname) || location.protocol === "file:") {
+      navigator.serviceWorker.getRegistrations().then(function (rs) { rs.forEach(function (r) { r.unregister(); }); });
+    } else {
+      window.addEventListener("load", function () { navigator.serviceWorker.register(off + "sw.js").catch(function () {}); });
+    }
+  }
   ["js/autoeval.css", "js/proba.css", "js/interactif.css"].forEach(function (s) {
     var c = document.createElement("link");
     c.rel = "stylesheet"; c.href = off + s;
     document.head.appendChild(c);
   });
-  ["js/proba.js", "js/interactif.js", "js/reponses.js", "js/annot.js", "js/bulle-pdf.js", "js/autoeval.js"].forEach(function (s) {
+  ["js/proba.js", "js/interactif.js", "js/reponses.js", "js/annot.js", "js/bulle-pdf.js", "js/autoeval.js", "js/suivi.js", "js/projection.js"].forEach(function (s) {
     var e = document.createElement("script");
     e.src = off + s; e.async = false;
     document.body.appendChild(e);
@@ -1357,8 +1408,8 @@ window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.co
 <p>Probabilités — cours &amp; exercices</p>
 </div>   
     <div class="nav-footer-center">
-<p>Mêmes numéros que le cours imprimé</p>
-</div>
+      &nbsp;
+    </div>
     <div class="nav-footer-right">
 <p>© Quentin Lambotte</p>
 </div>

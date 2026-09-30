@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-73b0ff3878a4e6fc3716dc69a6aaefa3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-f98e6125db418fb1c6573dab25a77605.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-0acde44bc0d102c041e82b1c9a7c52be.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -155,6 +155,11 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Probabilités — cours &amp; exercices</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../objectifs.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Objectifs</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -292,7 +297,17 @@ window.Quarto = {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../essentiel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">L’essentiel</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../autoeval.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">S’autoévaluer</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../nouveautes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Quoi de neuf ?</span></a>
   </div>
 </li>
     </ul>
@@ -328,74 +343,40 @@ window.Quarto = {
 <!-- GÉNÉRÉ par typweb à partir des notes Typst : NE PAS ÉDITER (les modifications seraient écrasées). -->
 <div id="activite-2-1" class="theo theo-activite" data-sorte="activite" data-num="2.1" data-page="16" data-phys="19">
 <div class="theo-head">
-<p><strong>Activité 2.1</strong> — la punaise</p>
+<p><strong>Activité 2.1</strong> — la somme de deux dés</p>
 </div>
 <div class="theo-body">
-<p>On lance une punaise : elle retombe pointe en haut ou sur le côté.</p>
+<p>On lance deux dés équilibrés et on additionne les deux nombres obtenus : la somme vaut 2, 3, …, 12.</p>
 <ol type="a">
-<li>Peut-on prévoir, par un raisonnement, la chance qu’elle retombe pointe en haut ?</li>
+<li>Avant de lancer : les onze sommes ont-elles la même chance ? Laquelle obtiendra-t-on le plus souvent ? Note ta prévision et justifie-la.</li>
 </ol>
 <div class="rep-bloc">
-<p>Non : la punaise n’est pas symétrique. Aucun argument ne permet d’affirmer que les deux résultats ont la même chance.</p>
+<p>Réponse personnelle. Beaucoup d’élèves pensent que les onze sommes ont la même chance (« une chance sur 11 »). On ne sait pas encore le vérifier par un calcul : on va observer.</p>
 </div>
 <ol start="2" type="a">
-<li>Chaque binôme lance 20 fois la punaise. On cumule les résultats de la classe et on calcule la fréquence relative : nombre de « pointe en haut » divisé par le nombre de lancers.</li>
+<li>Chaque binôme lance 30 fois les deux dés et note chaque fois la somme. On rassemble les résultats de la classe : effectifs, puis fréquences relatives (effectif divisé par le nombre total de lancers). Construis le diagramme en bâtonnets des fréquences.</li>
 </ol>
-<div class="tableau">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: center;"><strong>Lancers (cumul)</strong></th>
-<th style="text-align: center;">20</th>
-<th style="text-align: center;">40</th>
-<th style="text-align: center;">60</th>
-<th style="text-align: center;">80</th>
-<th style="text-align: center;">100</th>
-<th style="text-align: center;">120</th>
-<th style="text-align: center;">140</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><strong>Pointe en haut (cumul)</strong></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><strong>Fréquence relative</strong></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-</tbody>
-</table>
-</div>
+<div class="pb-releve" data-cfg="{&quot;issues&quot;: [&quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;10&quot;, &quot;11&quot;, &quot;12&quot;], &quot;variable&quot;: &quot;somme&quot;, &quot;unite&quot;: &quot;lancers&quot;, &quot;modele&quot;: [0.027777777777777776, 0.05555555555555555, 0.08333333333333333, 0.1111111111111111, 0.1388888888888889, 0.16666666666666666, 0.1388888888888889, 0.1111111111111111, 0.08333333333333333, 0.05555555555555555, 0.027777777777777776], &quot;suivre&quot;: &quot;7&quot;, &quot;legendeModele&quot;: &quot;probabilités calculées à l’activité 2.3&quot;}"></div>
 <ol start="3" type="a">
-<li>Représente la fréquence relative en fonction du nombre de lancers. Que constates-tu ?</li>
+<li>Compare avec ta prévision. Les fréquences d’un seul binôme (30 lancers) donnent-elles la même image que celles de la classe ?</li>
 </ol>
-<div class="ia" data-ia="graphe" data-cfg="{&quot;xmin&quot;: 0.0, &quot;xmax&quot;: 140.0, &quot;ymin&quot;: 0.0, &quot;ymax&quot;: 1.0, &quot;w&quot;: 558, &quot;h&quot;: 309, &quot;xpas&quot;: 20.0, &quot;ypas&quot;: 0.1, &quot;xlabel&quot;: &quot;lancers&quot;, &quot;ylabel&quot;: &quot;fréquence&quot;, &quot;courbes&quot;: [], &quot;points&quot;: []}"></div>
+<div class="rep-bloc">
+<p>Sur les lancers de la classe, les sommes ne sont pas également fréquentes : les sommes du milieu (6, 7, 8) sortent bien plus souvent que 2 ou 12. Sur 30 lancers seulement, les fréquences d’un binôme peuvent être très différentes de celles de la classe.</p>
+</div>
+<ol start="4" type="a">
+<li>Sur le site, la courbe montre la fréquence de la somme 7 quand on ajoute les binômes l’un après l’autre. Que constates-tu ?</li>
+</ol>
 <div class="rep-bloc">
 <p>Les fréquences varient beaucoup au début, puis de moins en moins : elles se stabilisent autour d’une valeur.</p>
 </div>
-<ol start="4" type="a">
-<li>On simule des lancers d’un dé équilibré au tableur avec la formule <code>=ALEA.ENTRE.BORNES(1;6)</code>, recopiée sur 1 000 lignes. Que suppose-t-on en simulant ainsi ?</li>
+<ol start="5" type="a">
+<li>On simule le lancer d’un dé au tableur avec la formule <code>=ALEA.ENTRE.BORNES(1;6)</code>, recopiée sur 1 000 lignes. Que suppose-t-on en simulant ainsi ?</li>
 </ol>
 <div class="rep-bloc">
 <p>On suppose que les six faces ont la même chance (dé équilibré). La simulation reproduit ce modèle ; elle ne le démontre pas.</p>
 </div>
 </div>
 </div>
-<p><strong>fréquence du 6 quand on répète les lancers</strong></p>
-<div class="pb-sim" data-cfg="{&quot;experience&quot;: &quot;de&quot;, &quot;suivre&quot;: &quot;6&quot;}"></div>
 <div id="definition-2-1" class="theo theo-definition" data-sorte="definition" data-num="2.1" data-page="17" data-phys="20">
 <div class="theo-head">
 <p><strong>Définition 2.1</strong> — probabilité <em>a posteriori</em></p>
@@ -422,9 +403,9 @@ window.Quarto = {
 <p><span class="exo-titre">✎ Exercice 2.1</span> <span class="exo-meta"><span class="exo-comp">A6</span> ★☆☆</span></p>
 </div>
 <div class="exo-corps">
-<p>Avec les données de la classe (activité 2.1), estime la probabilité qu’une punaise retombe pointe en haut. Pourquoi cette estimation est-elle plus fiable que celle d’un seul binôme ?</p>
+<p>Avec les données de la classe (activité 2.1), estime la probabilité d’obtenir une somme de 7 en lançant deux dés. Pourquoi cette estimation est-elle plus fiable que celle d’un seul binôme ?</p>
 <div class="rep-bloc">
-<p>On prend la fréquence relative sur l’ensemble des lancers de la classe. Elle repose sur beaucoup plus de lancers que celle d’un binôme ; or les fréquences se stabilisent quand le nombre de lancers augmente.</p>
+<p>On prend la fréquence relative de la somme 7 sur l’ensemble des lancers de la classe. Elle repose sur beaucoup plus de lancers que celle d’un binôme ; or les fréquences se stabilisent quand le nombre de lancers augmente.</p>
 </div>
 </div>
 </div>
@@ -439,14 +420,15 @@ window.Quarto = {
 <p>Quelle fréquence repose sur le plus grand nombre de lancers ?</p>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<p>Divise le nombre total de « pointe en haut » par le nombre total de lancers de la classe.</p>
+<p>Divise le nombre de lancers dont la somme vaut 7 par le nombre total de lancers de la classe.</p>
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-<p>On estime la probabilité par la fréquence relative sur l’ensemble des lancers de la classe : nombre de « pointe en haut » divisé par le nombre de lancers. Cette estimation repose sur beaucoup plus de lancers que celle d’un binôme ; or la fréquence se stabilise quand le nombre de lancers augmente. Elle est donc plus fiable.</p>
+<p>On estime la probabilité par la fréquence relative de la somme 7 sur l’ensemble des lancers de la classe : effectif de « 7 » divisé par le nombre total de lancers. Cette estimation repose sur beaucoup plus de lancers que celle d’un binôme ; or la fréquence se stabilise quand le nombre de lancers augmente. Elle est donc plus fiable.</p>
 </div>
 <div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
 <ul>
-<li>Faire la moyenne des fréquences des binômes sans tenir compte du nombre de lancers de chacun (ici, tous en font 20 : les deux calculs coïncident).</li>
+<li>Répondre <span class="math inline">\(\frac{1}{11}\)</span> : les onze sommes n’ont pas la même chance ; la question porte sur les données.</li>
+<li>Faire la moyenne des fréquences des binômes sans tenir compte du nombre de lancers de chacun (ici, tous en font 30 : les deux calculs coïncident).</li>
 </ul>
 </div>
 </div>
@@ -671,16 +653,44 @@ window.Quarto = {
     host.appendChild(themeBtn);
   }
 
+  // « Aa » (styles à l'essai) et crayon d'annotation : sur grand écran, à côté
+  // du bouton de thème ; sur petit écran (menu latéral replié), en bas à gauche.
+  var grand = window.matchMedia('(min-width: 992px)');
+  function accrocher() {
+    var host = document.querySelector('.sidebar-tools-main');
+    var els = ['.st-menu', '.an-barre'].map(function (sel) { return document.querySelector(sel); })
+                                       .filter(Boolean);
+    if (grand.matches && host) {
+      var fin = Array.prototype.slice.call(host.children, -els.length);
+      if (fin.length !== els.length || fin.some(function (e, i) { return e !== els[i]; }))
+        els.forEach(function (el) { host.appendChild(el); });
+      els.forEach(function (el) { el.classList.add('dans-outils'); });
+    } else {
+      els.forEach(function (el) {
+        if (el.parentNode !== document.body) document.body.appendChild(el);
+        el.classList.remove('dans-outils');
+      });
+    }
+  }
+  if (grand.addEventListener) grand.addEventListener('change', accrocher);
+  // panneau « Aa » (position fixe, pour ne pas être coupé par le menu latéral) : sous le bouton
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('.dans-outils .st-btn');
+    var p = b && b.parentNode.querySelector('.st-panneau');
+    if (p) p.style.top = (b.getBoundingClientRect().bottom + 6) + 'px';
+  }, true);
+
   document.addEventListener('DOMContentLoaded', function () {
     build();
-    setTimeout(build, 100);
+    accrocher();
+    [100, 400, 1200].forEach(function (t) { setTimeout(function () { build(); accrocher(); }, t); });
   });
 })();
 </script>
 <!-- GÉNÉRÉ par typweb — ne pas éditer -->
 <script>
 /* Réglages du cours (typweb.toml) */
-window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.com/qlambotte/proba-cours", "pdfs": [{"titre": "Cours — version élève", "detail": "réponses à compléter", "fichier": "proba.pdf"}, {"titre": "Cours — avec le corrigé", "detail": "réponses en bleu", "fichier": "proba-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1", "detail": "", "fichier": "exercices-supp-ch1.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2", "detail": "", "fichier": "exercices-supp-ch2.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3", "detail": "", "fichier": "exercices-supp-ch3.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1 (corrigé)", "detail": "", "fichier": "exercices-supp-ch1-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2 (corrigé)", "detail": "", "fichier": "exercices-supp-ch2-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3 (corrigé)", "detail": "", "fichier": "exercices-supp-ch3-corrige.pdf"}], "portail": ""};
+window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.com/qlambotte/proba-cours", "pdfs": [{"titre": "Cours — version élève", "detail": "réponses à compléter", "fichier": "proba.pdf"}, {"titre": "Cours — avec le corrigé", "detail": "réponses en bleu", "fichier": "proba-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1", "detail": "", "fichier": "exercices-supp-ch1.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2", "detail": "", "fichier": "exercices-supp-ch2.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3", "detail": "", "fichier": "exercices-supp-ch3.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1 (corrigé)", "detail": "", "fichier": "exercices-supp-ch1-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2 (corrigé)", "detail": "", "fichier": "exercices-supp-ch2-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3 (corrigé)", "detail": "", "fichier": "exercices-supp-ch3-corrige.pdf"}], "portail": "", "horsLigne": true};
 /* Charge les scripts du site (js/) avec le bon chemin relatif,
    quelle que soit la profondeur de la page. */
 (function () {
@@ -692,12 +702,20 @@ window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.co
     off = u.indexOf("site_libs/") >= 0 ? u.slice(0, u.indexOf("site_libs/")) : "";
   }
   window.SITE_OFFSET = off;
+  /* mode hors-ligne (sw.js) : pas en aperçu local, où il gênerait les mises à jour */
+  if ("serviceWorker" in navigator && window.TYPWEB.horsLigne) {
+    if (/^(localhost|127\.|\[::1\])/.test(location.hostname) || location.protocol === "file:") {
+      navigator.serviceWorker.getRegistrations().then(function (rs) { rs.forEach(function (r) { r.unregister(); }); });
+    } else {
+      window.addEventListener("load", function () { navigator.serviceWorker.register(off + "sw.js").catch(function () {}); });
+    }
+  }
   ["js/autoeval.css", "js/proba.css", "js/interactif.css"].forEach(function (s) {
     var c = document.createElement("link");
     c.rel = "stylesheet"; c.href = off + s;
     document.head.appendChild(c);
   });
-  ["js/proba.js", "js/interactif.js", "js/reponses.js", "js/annot.js", "js/bulle-pdf.js", "js/autoeval.js"].forEach(function (s) {
+  ["js/proba.js", "js/interactif.js", "js/reponses.js", "js/annot.js", "js/bulle-pdf.js", "js/autoeval.js", "js/suivi.js", "js/projection.js"].forEach(function (s) {
     var e = document.createElement("script");
     e.src = off + s; e.async = false;
     document.body.appendChild(e);
@@ -1166,8 +1184,8 @@ window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.co
 <p>Probabilités — cours &amp; exercices</p>
 </div>   
     <div class="nav-footer-center">
-<p>Mêmes numéros que le cours imprimé</p>
-</div>
+      &nbsp;
+    </div>
     <div class="nav-footer-right">
 <p>© Quentin Lambotte</p>
 </div>

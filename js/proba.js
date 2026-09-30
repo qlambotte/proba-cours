@@ -120,6 +120,152 @@
     });
   }
 
+
+  // ---------------------------------------------------------------- saisie et vérification
+  // Dans les figures (arbres, Venn), une réponse courte [x]{.rep data-v="…"}
+  // reçoit une case à remplir ; un bouton « Vérifier » par figure compare les
+  // valeurs (fractions et décimales équivalentes acceptées : 3/5 = 6/10 = 0,6 ;
+  // listes comparées sans tenir compte de l'ordre). Dans un Venn à hachurer
+  // (activité), on clique sur les zones pour les hachurer.
+  function nombre(t) {
+    t = String(t).replace(/\s/g, "").replace(",", ".");
+    var m = t.match(/^(-?\d+(?:\.\d+)?)(?:\/(\d+(?:\.\d+)?))?$/);
+    if (!m) return NaN;
+    return m[2] ? parseFloat(m[1]) / parseFloat(m[2]) : parseFloat(m[1]);
+  }
+  function egal(saisi, attendu) {
+    if (attendu.indexOf(";") >= 0) {
+      var a = attendu.split(";").map(Number).sort(function (x, y) { return x - y; });
+      var b = String(saisi).split(/[;,\s]+/).filter(Boolean).map(Number).sort(function (x, y) { return x - y; });
+      return a.length === b.length && a.every(function (v, i) { return v === b[i]; });
+    }
+    var x = nombre(saisi), y = nombre(attendu);
+    return !isNaN(x) && Math.abs(x - y) < 1e-9 * Math.max(1, Math.abs(y));
+  }
+  function verificateur(fig, controle) {
+    var zone = fig.querySelector(":scope > .pb-verif");
+    if (zone) return;
+    // la vérification est placée après le bouton « Voir la réponse » éventuel
+    zone = document.createElement("div"); zone.className = "pb-verif";
+    zone.innerHTML = '<button type="button" class="pb-btn">Vérifier</button> <span class="pb-verif-msg" aria-live="polite"></span>';
+    fig.appendChild(zone);
+    if (fig.classList.contains("pb-arbre") || fig.classList.contains("pb-double") || fig.classList.contains("tableau")) {
+      var vr = document.createElement("button"); vr.type = "button"; vr.className = "pb-btn"; vr.textContent = "Voir la réponse";
+      vr.addEventListener("click", function () {
+        var ouvrir = vr.textContent === "Voir la réponse";
+        enfants(fig, ".rep").forEach(function (r) { r.classList.toggle("vu", ouvrir); });
+        vr.textContent = ouvrir ? "Cacher la réponse" : "Voir la réponse";
+        plusTard();
+      });
+      zone.appendChild(vr);
+    }
+    zone.querySelector("button").addEventListener("click", function () {
+      var r = controle(), msg = zone.querySelector(".pb-verif-msg");
+      if (r.total === 0) { msg.textContent = "Complète d'abord la figure."; msg.className = "pb-verif-msg"; return; }
+      msg.textContent = r.faux === 0 ? "Tout est correct." : r.faux + " réponse" + (r.faux > 1 ? "s" : "") + " à revoir" + (r.detail ? " " + r.detail : "") + ".";
+      msg.className = "pb-verif-msg " + (r.faux === 0 ? "pb-ok" : "pb-ko");
+    });
+  }
+  function saisies(fig) {
+    if (fig.dataset.saisie) return;
+    fig.dataset.saisie = "1";
+    if (fig.classList.contains("tableau")) {        // tableaux des notes : réponses numériques simples
+      fig.querySelectorAll("span.rep:not([data-v])").forEach(function (r) {
+        var t = r.textContent.trim();
+        if (!r.querySelector("mjx-container, math") && /^-?\d+(,\d+)?$/.test(t)) r.dataset.v = t;
+      });
+      if (fig.querySelectorAll("span.rep[data-v]").length < 3) return;   // tableau sans vraie saisie
+    }
+    var reps = Array.prototype.filter.call(fig.querySelectorAll("span.rep[data-v]"), function () { return true; });
+    reps.forEach(function (r) {
+      var inp = document.createElement("input");
+      inp.type = "text"; inp.className = "pb-in"; inp.setAttribute("inputmode", "decimal");
+      inp.setAttribute("aria-label", "ta réponse"); inp.placeholder = "?";
+      inp.size = Math.max(3, Math.min(8, r.dataset.v.length + 1));
+      r.parentNode.insertBefore(inp, r);
+      inp.addEventListener("input", function () { inp.classList.remove("pb-ok", "pb-ko"); plusTard(); });
+    });
+    if (!reps.length) return;
+    verificateur(fig, function () {
+      var total = 0, faux = 0;
+      reps.forEach(function (r) {
+        var inp = r.previousSibling;
+        if (!inp || !inp.classList || !inp.classList.contains("pb-in")) return;
+        if (inp.value.trim() === "") { inp.classList.remove("pb-ok", "pb-ko"); faux++; total++; return; }
+        total++;
+        var ok = egal(inp.value, r.dataset.v);
+        inp.classList.toggle("pb-ok", ok); inp.classList.toggle("pb-ko", !ok);
+        if (!ok) faux++;
+      });
+      var vides = reps.filter(function (r) { var i = r.previousSibling; return i && i.value !== undefined && i.value.trim() === ""; }).length;
+      if (vides === reps.length) total = 0;
+      return { total: total, faux: faux };
+    });
+  }
+
+
+  // ---------------------------------------------------------------- partition (activité)
+  // Les éléments de tous les paquets sont mélangés dans une réserve ; l'élève
+  // clique un élément, puis une case, pour former les paquets. « Vérifier » :
+  // chaque case doit contenir exactement un paquet complet (dans n'importe
+  // quelle case). La réponse reste disponible (cases « Voir la réponse »).
+  function partition(fig) {
+    if (fig.dataset.pret) return;
+    var cases = enfants(fig, ".pb-paquet"), blocs = cases.map(function (c) { return c.querySelector(".rep-bloc"); });
+    if (!cases.length || blocs.some(function (b) { return !b; })) return;
+    fig.dataset.pret = "1";
+    var paquets = blocs.map(function (b) {
+      return b.textContent.split(/\n|\\/).map(function (t) { return t.trim(); }).filter(Boolean);
+    });
+    var tous = [].concat.apply([], paquets), choisi = null;
+    for (var i = tous.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), t = tous[i]; tous[i] = tous[j]; tous[j] = t; }
+    var jeu = document.createElement("div"); jeu.className = "pb-part-jeu";
+    jeu.innerHTML = '<div class="pb-part-aide">Clique sur un élément, puis sur une case pour l\'y ranger (clique sur un élément rangé pour le remettre dans la réserve).</div>' +
+      '<div class="pb-part-reserve"></div><div class="pb-paquets" style="' + (fig.querySelector(".pb-paquets").getAttribute("style") || "") + '">' +
+      cases.map(function (_, k) { return '<div class="pb-paquet pb-part-case" data-k="' + k + '"></div>'; }).join("") + "</div>";
+    var reserve = jeu.querySelector(".pb-part-reserve");
+    tous.forEach(function (x) {
+      var b = document.createElement("button"); b.type = "button"; b.className = "pb-jeton"; b.textContent = x; reserve.appendChild(b);
+    });
+    var titre = fig.querySelector(".pb-part-titre");
+    fig.insertBefore(jeu, titre ? titre.nextSibling : fig.firstChild);
+    var sol = fig.querySelector(":scope > .pb-paquets");
+    sol.classList.add("pb-part-solution"); sol.style.display = "none";
+    var voir = document.createElement("button"); voir.type = "button"; voir.className = "pb-btn"; voir.textContent = "Voir la réponse";
+    voir.addEventListener("click", function () {
+      var cache = sol.style.display === "none";
+      sol.style.display = cache ? "" : "none";
+      blocs.forEach(function (b) { b.classList.toggle("vu", cache); });
+      voir.textContent = cache ? "Cacher la réponse" : "Voir la réponse";
+    });
+    jeu.addEventListener("click", function (ev) {
+      var j = ev.target.closest(".pb-jeton"), c = ev.target.closest(".pb-part-case");
+      if (c && choisi) { choisi.classList.remove("pb-choisi"); c.appendChild(choisi); choisi = null; return; }
+      if (j && j.parentNode === reserve) {
+        if (choisi) choisi.classList.remove("pb-choisi");
+        choisi = choisi === j ? null : j;
+        if (choisi) choisi.classList.add("pb-choisi");
+        return;
+      }
+      if (j && j.parentNode.classList.contains("pb-part-case")) { reserve.appendChild(j); j.classList.remove("pb-ok", "pb-ko"); return; }
+      if (c && choisi) { choisi.classList.remove("pb-choisi"); c.appendChild(choisi); choisi = null; }
+    });
+    verificateur(fig, function () {
+      var rangés = jeu.querySelectorAll(".pb-part-case .pb-jeton").length;
+      if (!rangés) return { total: 0, faux: 0 };
+      var faux = 0;
+      Array.prototype.forEach.call(jeu.querySelectorAll(".pb-part-case"), function (c) {
+        var cont = Array.prototype.map.call(c.querySelectorAll(".pb-jeton"), function (x) { return x.textContent; }).sort();
+        var ok = cont.length > 0 && paquets.some(function (p) { return p.length === cont.length && p.slice().sort().every(function (v, i) { return v === cont[i]; }); });
+        c.classList.toggle("pb-ok", ok); c.classList.toggle("pb-ko", !ok && cont.length > 0);
+        if (!ok) faux++;
+      });
+      var reste = reserve.children.length;
+      return { total: 1, faux: faux, detail: reste ? "(encore " + reste + " élément" + (reste > 1 ? "s" : "") + " dans la réserve)" : "" };
+    });
+    fig.appendChild(voir);
+  }
+
   // ---------------------------------------------------------------- Venn
   function geo(n, inclus, disjoints) {
     if (disjoints) return { W: 8, H: 4.2, c: [[2.45, 2.1, 1.4], [5.55, 2.1, 1.4]],
@@ -173,6 +319,45 @@
       }
       el("rect", { x: 1, y: 1, width: g.W * S - 2, height: g.H * S - 2, "class": "pb-cadre" }, s);
       g.c.forEach(function (c) { el("circle", { cx: X(c[0]), cy: Y(c[1]), r: c[2] * S, "class": "pb-cercle" }, s); });
+      if (act && ombre.length) {                 // l'élève hachure en cliquant sur les zones
+        var gEl = el("g", { "class": "pb-hach-eleve" }, s), choix = [];
+        s.classList.add("pb-cliquable");
+        s.setAttribute("aria-label", "Clique sur une zone pour la hachurer ou l'effacer");
+        var dessinerChoix = function () {
+          while (gEl.firstChild) gEl.removeChild(gEl.firstChild);
+          if (!choix.length) return;
+          for (var k2 = 0; k2 < g.W + g.H; k2 += 0.22) {
+            var deb = null;
+            for (var i2 = 0; i2 <= 200; i2++) {
+              var x2 = g.W * i2 / 200, y2 = k2 - x2;         // droites y = −x + k (sens opposé au corrigé)
+              var ded = y2 > 0 && y2 < g.H && choix.indexOf(zone(g, inclus, x2, y2)) >= 0;
+              if (ded && !deb) deb = [x2, y2];
+              if ((!ded || i2 === 200) && deb) {
+                var fx2 = ded ? x2 : x2 - g.W / 200, fy2 = ded ? y2 : y2 + g.W / 200;
+                el("line", { x1: X(deb[0]), y1: Y(deb[1]), x2: X(fx2), y2: Y(fy2) }, gEl);
+                deb = null;
+              }
+            }
+          }
+        };
+        s.addEventListener("click", function (ev) {
+          var r = s.getBoundingClientRect();
+          var x = (ev.clientX - r.left) / r.width * g.W, y = g.H - (ev.clientY - r.top) / r.height * g.H;
+          var z = zone(g, inclus, x, y), i = choix.indexOf(z);
+          if (i >= 0) choix.splice(i, 1); else choix.push(z);
+          dessinerChoix();
+          var m = fig.querySelector(".pb-verif-msg"); if (m) { m.textContent = ""; m.className = "pb-verif-msg"; }
+        });
+        verificateur(fig, function () {
+          if (!choix.length) return { total: 0, faux: 0 };
+          var manque = ombre.filter(function (z) { return choix.indexOf(z) < 0; }).length;
+          var trop = choix.filter(function (z) { return ombre.indexOf(z) < 0; }).length;
+          var d = [];
+          if (manque) d.push(manque + " zone" + (manque > 1 ? "s" : "") + " manquante" + (manque > 1 ? "s" : ""));
+          if (trop) d.push(trop + " zone" + (trop > 1 ? "s" : "") + " en trop");
+          return { total: 1, faux: (manque || trop) ? 1 : 0, detail: d.length ? "(" + d.join(", ") + ")" : "" };
+        });
+      }
       if (act && (ombre.length || enfants(fig, ".pb-z").length)) {
         fig.classList.add("pb-cache");
         var b = document.createElement("button");
@@ -221,6 +406,12 @@
       for (i = 0; i <= 6; i++) { iss2.push(String(i)); p2.push(C(6, i) * C(39, 6 - i) / C(45, 6)); }
       return { issues: iss2, p: p2 };
     }
+    if (c.experience === "compter") {                     // nombre de « face » parmi n dés
+      var nd5 = c.des || 5, Cb = function (n, k) { var r = 1; for (var t = 1; t <= k; t++) r = r * (n - k + t) / t; return r; };
+      var iss3 = [], p3 = [];
+      for (i = 0; i <= nd5; i++) { iss3.push(String(i)); p3.push(Cb(nd5, i) * Math.pow(1 / 6, i) * Math.pow(5 / 6, nd5 - i)); }
+      return { issues: iss3, p: p3 };
+    }
     if (c.experience === "urne") {
       var tot = c.poids.reduce(function (a, b) { return a + b; }, 0);
       return { issues: c.issues.slice(), p: c.poids.map(function (w) { return w / tot; }) };
@@ -262,6 +453,11 @@
         if (urne[r] <= 6) bons++;                 // la grille jouée : 1, 2, 3, 4, 5, 6
       }
       return bons;
+    }
+    if (c.experience === "compter") {
+      var nb = 0, f6 = (c.face || 6) - 1;
+      for (var q = 0; q < (c.des || 5); q++) if (Math.floor(Math.random() * 6) === f6) nb++;
+      return nb;
     }
     if (c.experience === "des") {
       var s = 0, k = Math.max(1, Math.min(6, c.des || 2));
@@ -462,12 +658,133 @@
   }
 
   // ---------------------------------------------------------------- lancement
+
+  // ---------------------------------------------------------------- relevé de données
+  // Tableau à remplir (une ligne par binôme), effectifs et fréquences de la
+  // classe, diagramme en bâtonnets et courbe de stabilisation construits en
+  // direct ; modèle théorique à la demande. Données gardées dans le navigateur.
+  var nReleve = 0;
+  function releve(div) {
+    if (div.dataset.pret) return;
+    div.dataset.pret = "1";
+    var c = {};
+    try { c = JSON.parse(div.dataset.cfg || "{}"); } catch (e) { c = {}; }
+    var I = c.issues || ["0", "1"], K = I.length, mod = c.modele || [];
+    var iS = c.suivre != null ? I.indexOf(String(c.suivre)) : -1;
+    var cle = "pb-releve:" + location.pathname + ":" + (nReleve++);
+    var lignes = null, voirMod = false, confirmer = false;
+    try { lignes = JSON.parse(localStorage.getItem(cle) || "null"); } catch (e) { lignes = null; }
+    if (!Array.isArray(lignes) || !lignes.length) lignes = [];
+    while (lignes.length < 10) lignes.push(I.map(function () { return ""; }));
+    function garder() { try { localStorage.setItem(cle, JSON.stringify(lignes)); } catch (e) { /* stockage indisponible */ } }
+    function val(x) { var v = parseInt(x, 10); return isNaN(v) || v < 0 ? 0 : v; }
+    div.innerHTML =
+      '<div class="pb-rel-tab"></div>' +
+      '<div class="pb-sim-cmd"><button type="button" data-a="ligne">+ une ligne</button>' +
+      '<button type="button" data-a="effacer">Tout effacer</button>' +
+      (mod.length ? '<label class="pb-rel-opt"><input type="checkbox" data-a="mod"> ' + (c.legendeModele || "modèle") + "</label>" : "") +
+      '</div>' +
+      '<svg class="pb-rel-histo" viewBox="0 0 560 250"></svg>' +
+      (iS >= 0 ? '<svg class="pb-rel-courbe" viewBox="0 0 560 190"></svg>' : "");
+    var tab = div.querySelector(".pb-rel-tab"), svgH = div.querySelector(".pb-rel-histo"), svgC = div.querySelector(".pb-rel-courbe");
+    function construireTableau() {
+      var h = '<table class="pb-rel"><thead><tr><th>' + (c.variable || "valeur") + "</th>" +
+        I.map(function (x) { return "<th>" + x + "</th>"; }).join("") + "<th>Total</th></tr></thead><tbody>";
+      lignes.forEach(function (L, r) {
+        h += "<tr><th>Binôme " + (r + 1) + "</th>" + L.map(function (v, k) {
+          return '<td><input type="number" min="0" step="1" inputmode="numeric" data-r="' + r + '" data-k="' + k + '" value="' + v + '"></td>';
+        }).join("") + '<td class="pb-rel-tl" data-r="' + r + '"></td></tr>';
+      });
+      h += '</tbody><tfoot><tr class="pb-rel-eff"><th>Effectif (classe)</th>' + I.map(function () { return "<td></td>"; }).join("") + "<td></td></tr>" +
+        '<tr class="pb-rel-freq"><th>Fréquence relative</th>' + I.map(function () { return "<td></td>"; }).join("") + "<td></td></tr></tfoot></table>";
+      tab.innerHTML = h;
+    }
+    function dessiner() {
+      var eff = I.map(function () { return 0; }), N = 0, courbe = [], cumS = 0;
+      lignes.forEach(function (L, r) {
+        var t = 0;
+        L.forEach(function (v, k) { var x = val(v); eff[k] += x; t += x; });
+        var td = tab.querySelector('.pb-rel-tl[data-r="' + r + '"]');
+        if (td) td.textContent = t ? String(t) : "";
+        if (t) { N += t; if (iS >= 0) { cumS += val(L[iS]); courbe.push([N, cumS / N]); } }
+      });
+      var fr = eff.map(function (e) { return N ? e / N : 0; });
+      var tdE = tab.querySelectorAll(".pb-rel-eff td"), tdF = tab.querySelectorAll(".pb-rel-freq td");
+      eff.forEach(function (e, k) { tdE[k].textContent = String(e); tdF[k].textContent = N ? (Math.round(e * 1000 / N) / 1000).toFixed(3).replace(".", ",") : ""; });
+      tdE[K].textContent = String(N); tdF[K].textContent = N ? "1" : "";
+      // diagramme en bâtonnets des fréquences
+      while (svgH.firstChild) svgH.removeChild(svgH.firstChild);
+      var g0 = 46, d0 = 550, h0 = 215, t0 = 12, larg = (d0 - g0) / K;
+      var ymax = Math.max(0.1, Math.max.apply(null, fr.concat(voirMod ? mod : []))) * 1.15;
+      function Y(v) { return h0 - (h0 - t0) * v / ymax; }
+      el("line", { x1: g0, y1: h0, x2: d0, y2: h0, "class": "pb-sim-axe" }, svgH);
+      el("line", { x1: g0, y1: h0, x2: g0, y2: t0, "class": "pb-sim-axe" }, svgH);
+      for (var q = 0; q <= 4; q++) {
+        var v = ymax * q / 4, y = Y(v);
+        el("line", { x1: g0 - 4, y1: y, x2: d0, y2: y, "class": "pb-sim-grille" }, svgH);
+        el("text", { x: g0 - 6, y: y + 4, "class": "pb-sim-grad", "text-anchor": "end" }, svgH).textContent = fmt(v, 2);
+      }
+      var tt = el("text", { x: g0 + 4, y: t0 + 2, "class": "pb-sim-grad" }, svgH);
+      tt.textContent = "fréquence relative" + (N ? " (N = " + N.toLocaleString("fr-BE") + ")" : " : encode les résultats dans le tableau");
+      fr.forEach(function (f, k) {
+        var xc = g0 + (k + 0.5) * larg, w = Math.min(14, larg * 0.25);
+        if (N) el("rect", { x: xc - w / 2, y: Y(f), width: w, height: h0 - Y(f), "class": "pb-sim-barre" + (k === iS ? " pb-suivi" : "") }, svgH);
+        if (voirMod && mod[k] != null) el("line", { x1: xc - larg * 0.3, y1: Y(mod[k]), x2: xc + larg * 0.3, y2: Y(mod[k]), "class": "pb-sim-mod" }, svgH);
+        el("text", { x: xc, y: h0 + 16, "class": "pb-sim-grad", "text-anchor": "middle" }, svgH).textContent = I[k];
+        if (N) el("text", { x: xc, y: Y(f) - 4, "class": "pb-sim-val", "text-anchor": "middle" }, svgH).textContent = (Math.round(eff[k] * 1000 / N) / 1000).toFixed(3).replace(".", ",");
+      });
+      el("text", { x: d0, y: h0 + 32, "class": "pb-sim-grad", "text-anchor": "end" }, svgH).textContent = c.variable || "";
+      if (!svgC) return;
+      // stabilisation : fréquence cumulée de l'issue suivie, binôme après binôme
+      while (svgC.firstChild) svgC.removeChild(svgC.firstChild);
+      var g1 = 46, d1 = 550, h1 = 160, t1 = 12, nmax = Math.max(20, N);
+      var fm = Math.min(1, Math.max(0.1, Math.max.apply(null, courbe.map(function (p) { return p[1]; }).concat(voirMod && mod[iS] != null ? [mod[iS]] : [])) * 1.2));
+      function CX(k) { return g1 + (d1 - g1) * k / nmax; }
+      function CY(f) { return h1 - (h1 - t1) * f / fm; }
+      el("line", { x1: g1, y1: h1, x2: d1, y2: h1, "class": "pb-sim-axe" }, svgC);
+      el("line", { x1: g1, y1: h1, x2: g1, y2: t1, "class": "pb-sim-axe" }, svgC);
+      [0, 0.5, 1].forEach(function (qq) {
+        el("text", { x: g1 - 6, y: CY(fm * qq) + 4, "class": "pb-sim-grad", "text-anchor": "end" }, svgC).textContent = fmt(fm * qq, 2);
+      });
+      el("text", { x: d1, y: h1 + 18, "class": "pb-sim-grad", "text-anchor": "end" }, svgC).textContent = "nombre de " + (c.unite || "lancers") + " : " + nmax.toLocaleString("fr-BE");
+      el("text", { x: g1 + 6, y: t1 + 4, "class": "pb-sim-grad" }, svgC).textContent = "fréquence de « " + I[iS] + " » (" + (c.variable || "valeur") + ") quand on ajoute les binômes un à un";
+      if (voirMod && mod[iS] != null) el("line", { x1: g1, y1: CY(mod[iS]), x2: d1, y2: CY(mod[iS]), "class": "pb-sim-mod" }, svgC);
+      if (courbe.length > 1) el("polyline", { points: courbe.map(function (p) { return CX(p[0]) + "," + CY(p[1]); }).join(" "), "class": "pb-sim-trace" }, svgC);
+      courbe.forEach(function (p) { el("circle", { cx: CX(p[0]), cy: CY(p[1]), r: 3, "class": "pb-rel-pt" }, svgC); });
+    }
+    div.addEventListener("input", function (ev) {
+      var t = ev.target;
+      if (t.dataset.r == null) return;
+      lignes[+t.dataset.r][+t.dataset.k] = t.value === "" ? "" : String(val(t.value));
+      garder(); dessiner();
+    });
+    div.addEventListener("change", function (ev) {
+      if (ev.target.dataset.a === "mod") { voirMod = ev.target.checked; dessiner(); }
+    });
+    div.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button");
+      if (!b) return;
+      if (b.dataset.a === "ligne") { lignes.push(I.map(function () { return ""; })); garder(); construireTableau(); dessiner(); }
+      if (b.dataset.a === "effacer") {
+        if (!confirmer) { confirmer = true; b.textContent = "Confirmer l'effacement ?"; setTimeout(function () { confirmer = false; b.textContent = "Tout effacer"; }, 4000); return; }
+        confirmer = false; b.textContent = "Tout effacer";
+        lignes = []; while (lignes.length < 10) lignes.push(I.map(function () { return ""; }));
+        garder(); construireTableau(); dessiner();
+      }
+    });
+    construireTableau();
+    dessiner();
+  }
+
   function tout() {
+    document.querySelectorAll(".pb-arbre, .pb-double, .pb-venn, .tableau").forEach(function (f) { try { saisies(f); } catch (e) { console.error(e); } });
+    document.querySelectorAll(".pb-partition").forEach(function (f) { try { partition(f); } catch (e) { console.error(e); } });
     document.querySelectorAll(".pb-arbre").forEach(function (f) { try { arbre(f); } catch (e) { console.error(e); } });
     document.querySelectorAll(".pb-double").forEach(function (f) { try { double(f); } catch (e) { console.error(e); } });
     document.querySelectorAll(".pb-venn").forEach(function (f) { try { venn(f); } catch (e) { console.error(e); } });
     document.querySelectorAll(".pb-denombreur").forEach(function (f) { try { denombreur(f); } catch (e) { console.error(e); } });
     document.querySelectorAll(".pb-sim").forEach(function (f) { try { simulation(f); } catch (e) { console.error(e); } });
+    document.querySelectorAll(".pb-releve").forEach(function (f) { try { releve(f); } catch (e) { console.error(e); } });
   }
   var attente = null;
   function plusTard() { clearTimeout(attente); attente = setTimeout(tout, 60); }

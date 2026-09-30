@@ -1,0 +1,47 @@
+# Réglages du site « Probabilités » (voir ../../../typweb/gabarit/typweb.toml)
+
+[cours]
+titre      = "Probabilités"
+sous-titre = "Cours & exercices — 6e, 4 périodes (6UAA1)"
+auteur     = "Quentin Lambotte"
+annee      = "6e"
+uaa        = "6UAA1"
+depot      = ""                   # ex. "https://github.com/qlambotte/proba-cours"
+site-url   = ""                   # ex. "https://qlambotte.github.io/proba-cours/"
+
+[notes]
+dossier    = "../notes"
+principal  = "proba.typ"
+# Exercices supplémentaires : en fin de chapitre sur le site (numéros S1.1…)
+[[notes.complements]]
+fichier  = "fiches/exercices-supp-ch1.typ"
+chapitre = 1
+titre    = "Exercices supplémentaires"
+[[notes.complements]]
+fichier  = "fiches/exercices-supp-ch2.typ"
+chapitre = 2
+titre    = "Exercices supplémentaires"
+[[notes.complements]]
+fichier  = "fiches/exercices-supp-ch3.typ"
+chapitre = 3
+titre    = "Exercices supplémentaires"
+
+[pdf]
+corrige    = true
+# Fiches d'exercices supplémentaires (élève ; corrigé = réponses en bleu)
+[[pdf.autres]]
+titre   = "Exercices supplémentaires — chapitre 1"
+fichier = "exercices-supp-ch1.pdf"
+source  = "fiches/exercices-supp-ch1.typ"
+[[pdf.autres]]
+titre   = "Exercices supplémentaires — chapitre 2"
+fichier = "exercices-supp-ch2.pdf"
+source  = "fiches/exercices-supp-ch2.typ"
+[[pdf.autres]]
+titre   = "Exercices supplémentaires — chapitre 3"
+fichier = "exercices-supp-ch3.pdf"
+source  = "fiches/exercices-supp-ch3.typ"
+
+[modules]
+# proba : arbres, Venn, partitions, simulateur, dénombreur ; reperes : repère de la punaise
+actifs = ["proba", "reperes"]

@@ -1,0 +1,12 @@
+---
+title: "Probabilités — cours & exercices"
+---
+
+Ce site accompagne le **cours imprimé** de probabilités (6e, 6UAA1). On y trouve le même texte, avec les **mêmes numéros**, et en plus :
+
+- des **simulations** (dés, pièce, Lotto, anniversaires, Monty Hall…) : on répète une expérience 10, 100 ou 1 000 fois et on voit l'histogramme des fréquences se stabiliser ;
+- un **dénombreur**, qui liste tous les cas d'une situation, les compte et les regroupe ;
+- des **coups de pouce** pour chaque exercice (trois indices, puis la solution et les pièges) ;
+- une page pour **s'autoévaluer**.
+
+Les exercices marqués *à faire à la maison* dans le cours ont eux aussi leurs coups de pouce ici.

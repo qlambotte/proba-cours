@@ -36,7 +36,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../ch1-compter-sur-de-petit/7-exercices-supplementaires.html" rel="next">
-<link href="../ch1-compter-sur-de-petit/5-objets-identiques-les-anagrammes.html" rel="prev">
+<link href="../ch1-compter-sur-de-petit/5-permutations-avec-repetition-les-anagram.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -188,7 +188,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/5-objets-identiques-les-anagrammes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Objets identiques : les anagrammes</span></a>
+  <a href="../ch1-compter-sur-de-petit/5-permutations-avec-repetition-les-anagram.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Permutations avec répétition : les anagrammes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -351,9 +351,9 @@ window.Quarto = {
 </tbody>
 </table>
 </div>
-<p>Objets identiques à ranger (anagrammes) : <span class="math inline">\(\frac{n!}{k_{1} ! \cdots k_{r} !}\)</span>. Plusieurs cas sans élément commun : on additionne. « Au moins un » : tout moins « aucun ».</p>
+<p>Permutations avec répétition (objets identiques à ranger, anagrammes) : <span class="math inline">\(\frac{n!}{k_{1} ! \cdots k_{r} !}\)</span>. Plusieurs cas sans élément commun : on additionne. « Au moins un » : tout moins « aucun ».</p>
 </div>
-<div id="remarque-1-5" class="theo theo-remarque" data-sorte="remarque" data-num="1.5" data-page="13" data-phys="16">
+<div id="remarque-1-5" class="theo theo-remarque" data-sorte="remarque" data-num="1.5" data-page="14" data-phys="17">
 <div class="theo-head">
 <p><strong>Remarque 1.5</strong></p>
 </div>
@@ -367,18 +367,18 @@ window.Quarto = {
 </ul>
 </div>
 </div>
-<div id="exercice-1-17" class="exo" data-sorte="exercice" data-num="1.17" data-page="13" data-phys="16">
+<div id="exercice-1-20" class="exo" data-sorte="exercice" data-num="1.20" data-page="14" data-phys="17">
 <div class="exo-tete">
-<p><span class="exo-titre">✎ Exercice 1.17</span> <span class="exo-meta"><span class="exo-comp">C1</span> ★☆☆</span></p>
+<p><span class="exo-titre">✎ Exercice 1.20</span> <span class="exo-meta"><span class="exo-comp">C1</span> ★☆☆</span></p>
 </div>
 <div class="exo-corps">
 <p>Pour chaque situation, dis si l’ordre compte, si la répétition est possible, et donne la formule qui compte les résultats.</p>
 <ol type="a">
-<li>Les trois premiers d’une course de 12 coureurs, dans l’ordre. b) Quatre livres à emporter en vacances parmi dix. c) Le code d’un cadenas à trois roues de chiffres (de 0 à 9). d) L’ordre de cinq livres sur une étagère.</li>
+<li>Les trois premiers d’une course de 12 coureurs, dans l’ordre. b) Quatre livres à emporter en vacances parmi dix. c) Le code d’un cadenas à trois roues de chiffres (de 0 à 9). d) L’ordre de cinq livres sur une étagère. e) L’ordre de 3 boules rouges et 2 boules blanches (identiques par couleur) alignées.</li>
 </ol>
 <div class="rep-bloc">
 <ol type="a">
-<li>Ordre, sans répétition : <span class="math inline">\(A_{12}^{3} = 1320\)</span>. b) Sans ordre, sans répétition : <span class="math inline">\(C_{10}^{4} = 210\)</span>. c) Ordre, répétition : <span class="math inline">\(10^{3} = 1000\)</span>. d) Permutation : <span class="math inline">\(5! = 120\)</span>.</li>
+<li>Ordre, sans répétition : <span class="math inline">\(A_{12}^{3} = 1320\)</span>. b) Sans ordre, sans répétition : <span class="math inline">\(C_{10}^{4} = 210\)</span>. c) Ordre, répétition : <span class="math inline">\(10^{3} = 1000\)</span>. d) Permutation : <span class="math inline">\(5! = 120\)</span>. e) Permutation avec répétition : <span class="math inline">\(\frac{5!}{3! \cdot 2!} = 10\)</span>.</li>
 </ol>
 </div>
 </div>
@@ -400,7 +400,7 @@ window.Quarto = {
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
 <ol type="a">
-<li>L’ordre compte, sans répétition : <span class="math inline">\(A_{12}^{3} = 1320\)</span>. b) L’ordre ne compte pas, sans répétition : <span class="math inline">\(C_{10}^{4} = 210\)</span>. c) L’ordre compte, avec répétition : <span class="math inline">\(10^{3} = 1000\)</span>. d) On range les 5 livres : permutation, <span class="math inline">\(5! = 120\)</span>.</li>
+<li>L’ordre compte, sans répétition : <span class="math inline">\(A_{12}^{3} = 1320\)</span>. b) L’ordre ne compte pas, sans répétition : <span class="math inline">\(C_{10}^{4} = 210\)</span>. c) L’ordre compte, avec répétition : <span class="math inline">\(10^{3} = 1000\)</span>. d) On range les 5 livres : permutation, <span class="math inline">\(5! = 120\)</span>. e) On range 5 boules dont 3 identiques et 2 identiques : permutation avec répétition, <span class="math inline">\(\frac{5!}{3! \cdot 2!} = 10\)</span>.</li>
 </ol>
 </div>
 <div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
@@ -408,14 +408,17 @@ window.Quarto = {
 <li><ol start="3" type="a">
 <li>Oublier qu’un chiffre peut revenir (code 007).</li>
 </ol></li>
+<li><ol start="5" type="a">
+<li>Répondre <span class="math inline">\(5! = 120\)</span> : échanger deux boules de même couleur ne change pas l’alignement.</li>
+</ol></li>
 </ul>
 </div>
 </div>
 </div>
 </div>
-<div id="exercice-1-18" class="exo" data-sorte="exercice" data-num="1.18" data-page="14" data-phys="17">
+<div id="exercice-1-21" class="exo" data-sorte="exercice" data-num="1.21" data-page="15" data-phys="18">
 <div class="exo-tete">
-<p><span class="exo-titre">✎ Exercice 1.18</span> <span class="exo-meta"><span class="exo-comp">C1</span> ★★☆</span></p>
+<p><span class="exo-titre">✎ Exercice 1.21</span> <span class="exo-meta"><span class="exo-comp">C1</span> ★★☆</span></p>
 </div>
 <div class="exo-corps">
 <p>Sans calculer, associe à chaque situation la formule qui convient : <span class="math inline">\(5^{3}\)</span>, <span class="math inline">\(A_{5}^{3}\)</span>, <span class="math inline">\(C_{5}^{3}\)</span>, <span class="math inline">\(C_{6}^{3}\)</span>.</p>
@@ -457,9 +460,9 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<div id="exercice-1-19" class="exo" data-sorte="exercice" data-num="1.19" data-page="14" data-phys="17">
+<div id="exercice-1-22" class="exo" data-sorte="exercice" data-num="1.22" data-page="15" data-phys="18">
 <div class="exo-tete">
-<p><span class="exo-titre">✎ Exercice 1.19</span> <span class="exo-maison">⟵ à faire à la maison</span> <span class="exo-meta"><span class="exo-comp">T1</span> ★★☆</span></p>
+<p><span class="exo-titre">✎ Exercice 1.22</span> <span class="exo-maison">⟵ à faire à la maison</span> <span class="exo-meta"><span class="exo-comp">T1</span> ★★☆</span></p>
 </div>
 <div class="exo-corps">
 <p>Six élèves, dont Alice et Bilal, se placent en ligne pour une photo. Combien de placements sont possibles ? Dans combien d’entre eux Alice et Bilal sont-ils côte à côte ?</p>
@@ -533,7 +536,7 @@ window.Quarto = {
 <script>
 // Trois outils à côté du titre (comme « bookup ») : GitHub · Téléchargement · Thème clair/sombre.
 (function () {
-  var GITHUB_URL = "";   // [cours] depot de typweb.toml
+  var GITHUB_URL = "https://github.com/qlambotte/proba-cours";   // [cours] depot de typweb.toml
 
   var SVG = {
     maison: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.2 1 7.1l.9 1.1L3 7.3V14a1 1 0 0 0 1 1h3v-4h2v4h3a1 1 0 0 0 1-1V7.3l1.1.9.9-1.1L8 1.2z"/></svg>',
@@ -649,7 +652,7 @@ window.Quarto = {
 <!-- GÉNÉRÉ par typweb — ne pas éditer -->
 <script>
 /* Réglages du cours (typweb.toml) */
-window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "", "pdfs": [{"titre": "Cours — version élève", "detail": "réponses à compléter", "fichier": "proba.pdf"}, {"titre": "Cours — avec le corrigé", "detail": "réponses en bleu", "fichier": "proba-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1", "detail": "", "fichier": "exercices-supp-ch1.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2", "detail": "", "fichier": "exercices-supp-ch2.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3", "detail": "", "fichier": "exercices-supp-ch3.pdf"}], "portail": ""};
+window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.com/qlambotte/proba-cours", "pdfs": [{"titre": "Cours — version élève", "detail": "réponses à compléter", "fichier": "proba.pdf"}, {"titre": "Cours — avec le corrigé", "detail": "réponses en bleu", "fichier": "proba-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1", "detail": "", "fichier": "exercices-supp-ch1.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2", "detail": "", "fichier": "exercices-supp-ch2.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3", "detail": "", "fichier": "exercices-supp-ch3.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1 (corrigé)", "detail": "", "fichier": "exercices-supp-ch1-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2 (corrigé)", "detail": "", "fichier": "exercices-supp-ch2-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3 (corrigé)", "detail": "", "fichier": "exercices-supp-ch3-corrige.pdf"}], "portail": ""};
 /* Charge les scripts du site (js/) avec le bon chemin relatif,
    quelle que soit la profondeur de la page. */
 (function () {
@@ -789,7 +792,7 @@ window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "", "pdfs": [{"tit
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/qlambotte\.github\.io\/proba-cours\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -1118,8 +1121,8 @@ window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "", "pdfs": [{"tit
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../ch1-compter-sur-de-petit/5-objets-identiques-les-anagrammes.html" class="pagination-link" aria-label="Objets identiques : les anagrammes">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Objets identiques : les anagrammes</span></span>
+      <a href="../ch1-compter-sur-de-petit/5-permutations-avec-repetition-les-anagram.html" class="pagination-link" aria-label="Permutations avec répétition : les anagrammes">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Permutations avec répétition : les anagrammes</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

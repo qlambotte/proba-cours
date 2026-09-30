@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Objets identiques : les anagrammes – Probabilités</title>
+<title>Permutations avec répétition : les anagrammes – Probabilités</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -127,7 +127,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/index.html">Chapitre 1 — Compter sur de petits ensembles</a></li><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/5-objets-identiques-les-anagrammes.html"><span class="chapter-title">Objets identiques : les anagrammes</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/index.html">Chapitre 1 — Compter sur de petits ensembles</a></li><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/5-permutations-avec-repetition-les-anagram.html"><span class="chapter-title">Permutations avec répétition : les anagrammes</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
@@ -188,7 +188,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/5-objets-identiques-les-anagrammes.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Objets identiques : les anagrammes</span></a>
+  <a href="../ch1-compter-sur-de-petit/5-permutations-avec-repetition-les-anagram.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Permutations avec répétition : les anagrammes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -306,9 +306,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/index.html">Chapitre 1 — Compter sur de petits ensembles</a></li><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/5-objets-identiques-les-anagrammes.html"><span class="chapter-title">Objets identiques : les anagrammes</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/index.html">Chapitre 1 — Compter sur de petits ensembles</a></li><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/5-permutations-avec-repetition-les-anagram.html"><span class="chapter-title">Permutations avec répétition : les anagrammes</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Objets identiques : les anagrammes</span></h1>
+<h1 class="title"><span class="chapter-title">Permutations avec répétition : les anagrammes</span></h1>
 </div>
 
 
@@ -403,22 +403,31 @@ N₂N₁A₂A₁</p>
 <li>Autre méthode : choisis les places des deux A parmi les quatre places.</li>
 </ol>
 <div class="rep-bloc">
-<p><span class="math inline">\(C_{4}^{2} = 6\)</span> ; les N occupent les places restantes.</p>
+<p><span class="math inline">\(C_{4}^{2} = 6\)</span> ; les N occupent les places restantes. Les deux méthodes donnent <span class="math inline">\(\frac{4!}{2! \cdot 2!} = C_{4}^{2}\)</span> : choisir les places des A, c’est choisir un groupe de 2 places parmi 4.</p>
 </div>
 </div>
 </div>
-<div id="propriete-1-6" class="theo theo-propriete" data-sorte="propriete" data-num="1.6" data-page="12" data-phys="15">
+<div id="definition-1-5" class="theo theo-definition" data-sorte="definition" data-num="1.5" data-page="13" data-phys="16">
+<div class="theo-head">
+<p><strong>Définition 1.5</strong> — permutations avec répétition</p>
+</div>
+<div class="theo-body">
+<p>Une <em>permutation avec répétition</em> de <span class="math inline">\(n\)</span> objets est une façon de les ranger tous en ligne lorsque certains d’entre eux sont identiques (on ne distingue pas deux objets identiques) : par exemple, un anagramme de ANNA.</p>
+</div>
+</div>
+<div id="propriete-1-6" class="theo theo-propriete" data-sorte="propriete" data-num="1.6" data-page="13" data-phys="16">
 <div class="theo-head">
 <p><strong>Propriété 1.6</strong></p>
 </div>
 <div class="theo-body">
-<p>Le nombre de façons de ranger en ligne <span class="math inline">\(n\)</span> objets, dont <span class="math inline">\(k_{1}\)</span> sont identiques entre eux, <span class="math inline">\(k_{2}\)</span> identiques entre eux, …, <span class="math inline">\(k_{r}\)</span> identiques entre eux, vaut</p>
+<p>Le nombre de permutations avec répétition de <span class="math inline">\(n\)</span> objets, dont <span class="math inline">\(k_{1}\)</span> sont identiques entre eux, <span class="math inline">\(k_{2}\)</span> identiques entre eux, …, <span class="math inline">\(k_{r}\)</span> identiques entre eux, vaut</p>
 <p><span class="math display">\[
 \frac{n!}{k_{1} ! \, k_{2} ! \cdots k_{r} !}.
 \]</span></p>
+<p>Avec deux sortes d’objets seulement, on retrouve les combinaisons : choisir 3 délégués parmi 5 élèves A, B, C, D, E revient à écrire O (« oui ») ou N (« non ») sous chaque nom, par exemple ONOON pour {A, C, D}. Il y a autant de délégations que d’anagrammes de OOONN : <span class="math inline">\(\frac{5!}{3! \cdot 2!} = C_{5}^{3} = 10\)</span>.</p>
 </div>
 </div>
-<div id="exemple-1-4" class="theo theo-exemple" data-sorte="exemple" data-num="1.4" data-page="12" data-phys="15">
+<div id="exemple-1-4" class="theo theo-exemple" data-sorte="exemple" data-num="1.4" data-page="13" data-phys="16">
 <div class="theo-head">
 <p><strong>Exemple 1.4</strong> — URSULINES</p>
 </div>
@@ -430,9 +439,9 @@ N₂N₁A₂A₁</p>
 <p>Les deux méthodes donnent le même nombre.</p>
 </div>
 </div>
-<div id="exercice-1-14" class="exo" data-sorte="exercice" data-num="1.14" data-page="12" data-phys="15">
+<div id="exercice-1-16" class="exo" data-sorte="exercice" data-num="1.16" data-page="13" data-phys="16">
 <div class="exo-tete">
-<p><span class="exo-titre">✎ Exercice 1.14</span> <span class="exo-meta"><span class="exo-comp">A5</span> ★☆☆</span></p>
+<p><span class="exo-titre">✎ Exercice 1.16</span> <span class="exo-meta"><span class="exo-comp">A5</span> ★☆☆</span></p>
 </div>
 <div class="exo-corps">
 <p>Combien d’anagrammes du mot MONS ? du mot BELGIQUE ? Parmi ces derniers, combien commencent par B ?</p>
@@ -446,7 +455,7 @@ N₂N₁A₂A₁</p>
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false" href="">Pièges</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>Relis la <a href="#propriete-1-6">propriété des objets identiques</a>.</p>
+<p>Relis la <a href="#definition-1-5">définition des permutations avec répétition</a> et la <a href="#propriete-1-6">propriété 1.6</a>.</p>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <p>Quelles lettres de BELGIQUE sont répétées ?</p>
@@ -465,9 +474,49 @@ N₂N₁A₂A₁</p>
 </div>
 </div>
 </div>
-<div id="exercice-1-15" class="exo" data-sorte="exercice" data-num="1.15" data-page="13" data-phys="16">
+<div id="exercice-1-17" class="exo" data-sorte="exercice" data-num="1.17" data-page="13" data-phys="16">
 <div class="exo-tete">
-<p><span class="exo-titre">✎ Exercice 1.15</span> <span class="exo-maison">⟵ à faire à la maison</span> <span class="exo-meta"><span class="exo-comp">A5</span> ★★☆</span></p>
+<p><span class="exo-titre">✎ Exercice 1.17</span> <span class="exo-meta"><span class="exo-comp">A5</span> ★☆☆</span></p>
+</div>
+<div class="exo-corps">
+<p>Combien d’anagrammes des mots a) PROPORTION ; b) ANAGRAMME ; c) RECHERCHER ?</p>
+<div class="rep-bloc">
+<ol type="a">
+<li>10 lettres : O trois fois, P et R deux fois : <span class="math inline">\(\frac{10!}{3! \cdot 2! \cdot 2!} = 151 \, 200\)</span>. b) 9 lettres : A trois fois, M deux fois : <span class="math inline">\(\frac{9!}{3! \cdot 2!} = 30 \, 240\)</span>. c) 10 lettres : R et E trois fois, C et H deux fois : <span class="math inline">\(\frac{10!}{3! \cdot 3! \cdot 2! \cdot 2!} = 25 \, 200\)</span>.</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-5" role="tab" aria-controls="tabset-2-5" aria-selected="false" href="">Pièges</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>Relis la <a href="#definition-1-5">définition des permutations avec répétition</a> et la <a href="#propriete-1-6">propriété 1.6</a>.</p>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>Combien de fois chaque lettre apparaît-elle ?</p>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<p>PROPORTION : 10 lettres ; O trois fois, P deux fois, R deux fois.</p>
+</div>
+<div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
+<ol type="a">
+<li>PROPORTION : 10 lettres dont O trois fois, P et R deux fois : <span class="math inline">\(\frac{10!}{3! \cdot 2! \cdot 2!} = 151 \, 200\)</span>. b) ANAGRAMME : 9 lettres dont A trois fois, M deux fois : <span class="math inline">\(\frac{9!}{3! \cdot 2!} = 30 \, 240\)</span>. c) RECHERCHER : 10 lettres dont R et E trois fois, C et H deux fois : <span class="math inline">\(\frac{10!}{3! \cdot 3! \cdot 2! \cdot 2!} = 25 \, 200\)</span>.</li>
+</ol>
+</div>
+<div id="tabset-2-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-5-tab">
+<ul>
+<li>Compter les lettres trop vite : ANAGRAMME contient trois A et deux M.</li>
+<li>Diviser par <span class="math inline">\(3 \cdot 2\)</span> au lieu de <span class="math inline">\(3! \cdot 2!\)</span>.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="exercice-1-18" class="exo" data-sorte="exercice" data-num="1.18" data-page="14" data-phys="17">
+<div class="exo-tete">
+<p><span class="exo-titre">✎ Exercice 1.18</span> <span class="exo-maison">⟵ à faire à la maison</span> <span class="exo-meta"><span class="exo-comp">A5</span> ★★☆</span></p>
 </div>
 <div class="exo-corps">
 <p>Combien d’anagrammes du mot MISSISSIPPI ? Réponds par deux méthodes.</p>
@@ -478,23 +527,23 @@ N₂N₁A₂A₁</p>
 </div>
 <div class="aides">
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-5" role="tab" aria-controls="tabset-2-5" aria-selected="false" href="">Pièges</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-4" role="tab" aria-controls="tabset-3-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-5" role="tab" aria-controls="tabset-3-5" aria-selected="false" href="">Pièges</a></li></ul>
 <div class="tab-content">
-<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-<p>Relis la <a href="#propriete-1-6">propriété des objets identiques</a> et l’<a href="#exemple-1-4">exemple URSULINES</a>.</p>
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<p>Relis la <a href="#propriete-1-6">propriété des permutations avec répétition</a> et l’<a href="#exemple-1-4">exemple URSULINES</a>.</p>
 </div>
-<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
 <p>Combien de fois apparaît chaque lettre ?</p>
 </div>
-<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
 <p>M : 1 ; I : 4 ; S : 4 ; P : 2 ; en tout 11 lettres.</p>
 </div>
-<div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
+<div id="tabset-3-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-4-tab">
 <p>Le mot compte 11 lettres : M une fois, I quatre fois, S quatre fois, P deux fois.</p>
 <p>Méthode 1 : <span class="math inline">\(\frac{11!}{4! \cdot 4! \cdot 2!} = 34 \, 650\)</span>.</p>
 <p>Méthode 2 : on choisit les places des I (<span class="math inline">\(C_{11}^{4} = 330\)</span>), puis celles des S parmi les 7 restantes (<span class="math inline">\(C_{7}^{4} = 35\)</span>), puis celles des P parmi les 3 restantes (<span class="math inline">\(C_{3}^{2} = 3\)</span>) ; M prend la dernière place. <span class="math inline">\(330 \cdot 35 \cdot 3 = 34 \, 650\)</span>. Les deux méthodes concordent.</p>
 </div>
-<div id="tabset-2-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-5-tab">
+<div id="tabset-3-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-5-tab">
 <ul>
 <li>Compter 3 S ou 3 I : recompter les lettres une par une.</li>
 </ul>
@@ -502,9 +551,9 @@ N₂N₁A₂A₁</p>
 </div>
 </div>
 </div>
-<div id="exercice-1-16" class="exo" data-sorte="exercice" data-num="1.16" data-page="13" data-phys="16">
+<div id="exercice-1-19" class="exo" data-sorte="exercice" data-num="1.19" data-page="14" data-phys="17">
 <div class="exo-tete">
-<p><span class="exo-titre">✎ Exercice 1.16</span> <span class="exo-meta"><span class="exo-comp">T1</span> ★★★</span></p>
+<p><span class="exo-titre">✎ Exercice 1.19</span> <span class="exo-meta"><span class="exo-comp">T1</span> ★★★</span></p>
 </div>
 <div class="exo-corps">
 <p><em>Défi.</em> Sur un quadrillage, on va du coin inférieur gauche au coin supérieur droit d’un rectangle de 4 cases sur 3, en ne se déplaçant que d’une case vers la droite (D) ou vers le haut (H). Combien de chemins sont possibles ?</p>
@@ -515,21 +564,21 @@ N₂N₁A₂A₁</p>
 </div>
 <div class="aides">
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-4" role="tab" aria-controls="tabset-3-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-5" role="tab" aria-controls="tabset-3-5" aria-selected="false" href="">Pièges</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-4" role="tab" aria-controls="tabset-4-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-5" role="tab" aria-controls="tabset-4-5" aria-selected="false" href="">Pièges</a></li></ul>
 <div class="tab-content">
-<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
 <p>Relis la <a href="#activite-1-6">activité 1.6</a>, méthode c) : choisir les places.</p>
 </div>
-<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
 <p>Combien de pas vers la droite et vers le haut faut-il en tout ?</p>
 </div>
-<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
+<div id="tabset-4-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-3-tab">
 <p>Un chemin est un mot de 7 lettres formé de 4 D et 3 H.</p>
 </div>
-<div id="tabset-3-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-4-tab">
+<div id="tabset-4-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-4-tab">
 <p>Tout chemin compte 4 pas vers la droite et 3 vers le haut : c’est un mot de 7 lettres formé de 4 D et 3 H. Un tel mot est déterminé par les places des H : il y a <span class="math inline">\(C_{7}^{3} = 35\)</span> chemins.</p>
 </div>
-<div id="tabset-3-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-5-tab">
+<div id="tabset-4-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-5-tab">
 <ul>
 <li>Calculer <span class="math inline">\(2^{7}\)</span> : ce nombre compte aussi des mots qui n’ont pas exactement 4 D.</li>
 </ul>
@@ -538,7 +587,7 @@ N₂N₁A₂A₁</p>
 </div>
 </div>
 <div class="ae-lien">
-<p><a href="../autoeval.html#sections=sec-anagrammes">✔ S’autoévaluer sur cette section (2 questions) →</a></p>
+<p><a href="../autoeval.html#sections=sec-anagrammes">✔ S’autoévaluer sur cette section (5 questions) →</a></p>
 </div>
 
 
@@ -578,7 +627,7 @@ N₂N₁A₂A₁</p>
 <script>
 // Trois outils à côté du titre (comme « bookup ») : GitHub · Téléchargement · Thème clair/sombre.
 (function () {
-  var GITHUB_URL = "";   // [cours] depot de typweb.toml
+  var GITHUB_URL = "https://github.com/qlambotte/proba-cours";   // [cours] depot de typweb.toml
 
   var SVG = {
     maison: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.2 1 7.1l.9 1.1L3 7.3V14a1 1 0 0 0 1 1h3v-4h2v4h3a1 1 0 0 0 1-1V7.3l1.1.9.9-1.1L8 1.2z"/></svg>',
@@ -694,7 +743,7 @@ N₂N₁A₂A₁</p>
 <!-- GÉNÉRÉ par typweb — ne pas éditer -->
 <script>
 /* Réglages du cours (typweb.toml) */
-window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "", "pdfs": [{"titre": "Cours — version élève", "detail": "réponses à compléter", "fichier": "proba.pdf"}, {"titre": "Cours — avec le corrigé", "detail": "réponses en bleu", "fichier": "proba-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1", "detail": "", "fichier": "exercices-supp-ch1.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2", "detail": "", "fichier": "exercices-supp-ch2.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3", "detail": "", "fichier": "exercices-supp-ch3.pdf"}], "portail": ""};
+window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.com/qlambotte/proba-cours", "pdfs": [{"titre": "Cours — version élève", "detail": "réponses à compléter", "fichier": "proba.pdf"}, {"titre": "Cours — avec le corrigé", "detail": "réponses en bleu", "fichier": "proba-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1", "detail": "", "fichier": "exercices-supp-ch1.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2", "detail": "", "fichier": "exercices-supp-ch2.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3", "detail": "", "fichier": "exercices-supp-ch3.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1 (corrigé)", "detail": "", "fichier": "exercices-supp-ch1-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2 (corrigé)", "detail": "", "fichier": "exercices-supp-ch2-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3 (corrigé)", "detail": "", "fichier": "exercices-supp-ch3-corrige.pdf"}], "portail": ""};
 /* Charge les scripts du site (js/) avec le bon chemin relatif,
    quelle que soit la profondeur de la page. */
 (function () {
@@ -834,7 +883,7 @@ window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "", "pdfs": [{"tit
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/qlambotte\.github\.io\/proba-cours\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

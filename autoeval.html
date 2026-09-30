@@ -187,7 +187,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch1-compter-sur-de-petit/5-objets-identiques-les-anagrammes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Objets identiques : les anagrammes</span></a>
+  <a href="./ch1-compter-sur-de-petit/5-permutations-avec-repetition-les-anagram.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Permutations avec répétition : les anagrammes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -337,14 +337,14 @@ window.Quarto = {
 <div class="ae-sec" data-id="sec-multiplicatif" data-chap="1" data-url="ch1-compter-sur-de-petit/2-additionner-multiplier.html" data-n="4">
 <p>Additionner, multiplier</p>
 </div>
-<div class="ae-sec" data-id="sec-arrangements" data-chap="1" data-url="ch1-compter-sur-de-petit/3-arrangements-et-permutations.html" data-n="3">
+<div class="ae-sec" data-id="sec-arrangements" data-chap="1" data-url="ch1-compter-sur-de-petit/3-arrangements-et-permutations.html" data-n="6">
 <p>Arrangements et permutations</p>
 </div>
 <div class="ae-sec" data-id="sec-combinaisons" data-chap="1" data-url="ch1-compter-sur-de-petit/4-combinaisons.html" data-n="4">
 <p>Combinaisons</p>
 </div>
-<div class="ae-sec" data-id="sec-anagrammes" data-chap="1" data-url="ch1-compter-sur-de-petit/5-objets-identiques-les-anagrammes.html" data-n="2">
-<p>Objets identiques : les anagrammes</p>
+<div class="ae-sec" data-id="sec-anagrammes" data-chap="1" data-url="ch1-compter-sur-de-petit/5-permutations-avec-repetition-les-anagram.html" data-n="5">
+<p>Permutations avec répétition : les anagrammes</p>
 </div>
 <div class="ae-sec" data-id="sec-choisir" data-chap="1" data-url="ch1-compter-sur-de-petit/6-choisir-une-methode.html" data-n="3">
 <p>Choisir une méthode</p>
@@ -361,7 +361,7 @@ window.Quarto = {
 <div class="ae-sec" data-id="sec-laplace" data-chap="2" data-url="ch2-modeliser-le-hasard/3-le-modele-dequiprobabilite.html" data-n="4">
 <p>Le modèle d’équiprobabilité</p>
 </div>
-<div class="ae-sec" data-id="sec-proprietes" data-chap="2" data-url="ch2-modeliser-le-hasard/4-proprietes-des-probabilites.html" data-n="5">
+<div class="ae-sec" data-id="sec-proprietes" data-chap="2" data-url="ch2-modeliser-le-hasard/4-proprietes-des-probabilites.html" data-n="7">
 <p>Propriétés des probabilités</p>
 </div>
 <div class="ae-sec" data-id="sec-denombrer-calculer" data-chap="2" data-url="ch2-modeliser-le-hasard/5-denombrer-pour-calculer.html" data-n="4">
@@ -828,6 +828,117 @@ window.Quarto = {
 </div>
 </div>
 </div>
+<div class="ae-q" data-id="den-factorielle-simplifier" data-type="qcm" data-section="sec-arrangements" data-obj="A5" data-niveau="2" data-ordre="melange">
+<div class="ae-enonce">
+<p>Pour <span class="math inline">\(n \geq 2\)</span>, que vaut <span class="math inline">\(\frac{n!}{(n-2)!}\)</span> ?</p>
+</div>
+<div class="ae-prop ae-bonne">
+<div class="ae-r">
+<p><span class="math inline">\(n(n-1)\)</span></p>
+</div>
+<div class="ae-fb">
+<p>Oui : <span class="math inline">\(n! = n(n-1) \cdot (n-2)!\)</span> (<a href="./ch1-compter-sur-de-petit/3-arrangements-et-permutations.html#definition-1-2">factorielle</a>).</p>
+</div>
+</div>
+<div class="ae-prop">
+<div class="ae-r">
+<p><span class="math inline">\(2\)</span></p>
+</div>
+<div class="ae-fb">
+<p>On ne simplifie pas les nombres sous le « ! » : écris <span class="math inline">\(n! = n(n-1)(n-2)!\)</span>.</p>
+</div>
+</div>
+<div class="ae-prop">
+<div class="ae-r">
+<p><span class="math inline">\(2!\)</span></p>
+</div>
+<div class="ae-fb">
+<p><span class="math inline">\(\frac{n!}{(n-2)!} \neq (n - (n-2))!\)</span>. Écris <span class="math inline">\(n!\)</span> comme un produit.</p>
+</div>
+</div>
+<div class="ae-prop">
+<div class="ae-r">
+<p><span class="math inline">\(\frac{n}{n-2}\)</span></p>
+</div>
+<div class="ae-fb">
+<p><span class="math inline">\(n! = n(n-1)(n-2) \cdots 1\)</span> : après simplification par <span class="math inline">\((n-2)!\)</span>, il reste deux facteurs.</p>
+</div>
+</div>
+</div>
+<div class="ae-q" data-id="den-arrangement-sens" data-type="qcm" data-section="sec-arrangements" data-obj="A5" data-niveau="2" data-ordre="melange">
+<div class="ae-enonce">
+<p>On classe les 10 coureurs d’une course. Combien de classements complets donnent le même podium (les 3 premiers, dans l’ordre) ?</p>
+</div>
+<div class="ae-prop ae-bonne">
+<div class="ae-r">
+<p><span class="math inline">\(7!\)</span></p>
+</div>
+<div class="ae-fb">
+<p>Oui : seul l’ordre des 7 derniers change. Chaque podium provient de <span class="math inline">\(7!\)</span> classements, d’où <span class="math inline">\(A_{10}^{3} = \frac{10!}{7!}\)</span> (<a href="./ch1-compter-sur-de-petit/3-arrangements-et-permutations.html#propriete-1-4">propriété 1.4</a>).</p>
+</div>
+</div>
+<div class="ae-prop">
+<div class="ae-r">
+<p><span class="math inline">\(3!\)</span></p>
+</div>
+<div class="ae-fb">
+<p>Le podium est fixé, dans l’ordre : ses 3 coureurs ne peuvent plus être échangés. Ce sont les 7 autres qui peuvent l’être.</p>
+</div>
+</div>
+<div class="ae-prop">
+<div class="ae-r">
+<p><span class="math inline">\(7\)</span></p>
+</div>
+<div class="ae-fb">
+<p>Il y a 7 coureurs hors du podium, mais ils peuvent être rangés de plusieurs façons : combien ?</p>
+</div>
+</div>
+<div class="ae-prop">
+<div class="ae-r">
+<p><span class="math inline">\(\frac{10!}{3!}\)</span></p>
+</div>
+<div class="ae-fb">
+<p>Ce quotient ne compte pas les classements d’un podium donné. Échange les 7 derniers coureurs : combien d’ordres ?</p>
+</div>
+</div>
+</div>
+<div class="ae-q" data-id="den-contrainte-premier" data-type="qcm" data-section="sec-arrangements" data-obj="A5" data-niveau="2" data-ordre="melange">
+<div class="ae-enonce">
+<p>Six enfants, dont Arnaud, descendent un toboggan l’un après l’autre. Combien d’ordres de passage sont possibles si Arnaud passe en premier ?</p>
+</div>
+<div class="ae-prop ae-bonne">
+<div class="ae-r">
+<p><span class="math inline">\(5! = 120\)</span></p>
+</div>
+<div class="ae-fb">
+<p>Oui : la première place est fixée ; on range les 5 autres enfants (<a href="./ch1-compter-sur-de-petit/3-arrangements-et-permutations.html#definition-1-3">permutations</a>).</p>
+</div>
+</div>
+<div class="ae-prop">
+<div class="ae-r">
+<p><span class="math inline">\(6! = 720\)</span></p>
+</div>
+<div class="ae-fb">
+<p><span class="math inline">\(6!\)</span> compte aussi les ordres où Arnaud n’est pas le premier.</p>
+</div>
+</div>
+<div class="ae-prop">
+<div class="ae-r">
+<p><span class="math inline">\(6! - 1 = 719\)</span></p>
+</div>
+<div class="ae-fb">
+<p>Les ordres interdits sont nombreux : tous ceux où Arnaud n’est pas en tête.</p>
+</div>
+</div>
+<div class="ae-prop">
+<div class="ae-r">
+<p><span class="math inline">\(6 \cdot 5! = 720\)</span></p>
+</div>
+<div class="ae-fb">
+<p>Il n’y a qu’un choix pour la première place : Arnaud.</p>
+</div>
+</div>
+</div>
 <div class="ae-q" data-id="den-combinaison-lotto" data-type="qcm" data-section="sec-combinaisons" data-obj="A5" data-niveau="1" data-ordre="melange">
 <div class="ae-enonce">
 <p>Au Lotto, on coche 6 numéros parmi 45. Quelle expression compte les grilles ?</p>
@@ -965,7 +1076,7 @@ window.Quarto = {
 <p><span class="math inline">\(\frac{5!}{2!} = 60\)</span></p>
 </div>
 <div class="ae-fb">
-<p>Oui : 5 lettres dont L deux fois (<a href="./ch1-compter-sur-de-petit/5-objets-identiques-les-anagrammes.html#propriete-1-6">propriété 1.6</a>).</p>
+<p>Oui : 5 lettres dont L deux fois (<a href="./ch1-compter-sur-de-petit/5-permutations-avec-repetition-les-anagram.html#propriete-1-6">propriété 1.6</a>).</p>
 </div>
 </div>
 <div class="ae-prop">
@@ -993,6 +1104,117 @@ window.Quarto = {
 </div>
 </div>
 </div>
+<div class="ae-q" data-id="den-permutation-repetition" data-type="qcm" data-section="sec-anagrammes" data-obj="C1" data-niveau="1" data-ordre="melange">
+<div class="ae-enonce">
+<p>On aligne 4 jetons noirs identiques et 3 jetons blancs identiques. De quel type de groupement s’agit-il, et combien d’alignements différents ?</p>
+</div>
+<div class="ae-prop ae-bonne">
+<div class="ae-r">
+<p>Permutations avec répétition : <span class="math inline">\(\frac{7!}{4! \cdot 3!} = 35\)</span>.</p>
+</div>
+<div class="ae-fb">
+<p>Oui : on range les 7 jetons, dont 4 identiques et 3 identiques (<a href="./ch1-compter-sur-de-petit/5-permutations-avec-repetition-les-anagram.html#definition-1-5">définition 1.5</a>).</p>
+</div>
+</div>
+<div class="ae-prop">
+<div class="ae-r">
+<p>Permutations : <span class="math inline">\(7! = 5040\)</span>.</p>
+</div>
+<div class="ae-fb">
+<p>Échanger deux jetons de même couleur ne change pas l’alignement : il faut diviser par <span class="math inline">\(4!\)</span> et par <span class="math inline">\(3!\)</span>.</p>
+</div>
+</div>
+<div class="ae-prop">
+<div class="ae-r">
+<p>Arrangements avec répétition : <span class="math inline">\(2^{7} = 128\)</span>.</p>
+</div>
+<div class="ae-fb">
+<p><span class="math inline">\(2^{7}\)</span> compte aussi des alignements qui n’ont pas exactement 4 jetons noirs.</p>
+</div>
+</div>
+<div class="ae-prop">
+<div class="ae-r">
+<p>Combinaisons : <span class="math inline">\(C_{7}^{4} \cdot C_{7}^{3} = 1225\)</span>.</p>
+</div>
+<div class="ae-fb">
+<p>Une fois les places des 4 noirs choisies (<span class="math inline">\(C_{7}^{4}\)</span>), les blancs occupent les 3 places restantes : on ne choisit pas à nouveau parmi 7.</p>
+</div>
+</div>
+</div>
+<div class="ae-q" data-id="den-anagramme-radar" data-type="qcm" data-section="sec-anagrammes" data-obj="A5" data-niveau="1" data-ordre="melange">
+<div class="ae-enonce">
+<p>Combien d’anagrammes du mot RADAR ?</p>
+</div>
+<div class="ae-prop ae-bonne">
+<div class="ae-r">
+<p><span class="math inline">\(\frac{5!}{2! \cdot 2!} = 30\)</span></p>
+</div>
+<div class="ae-fb">
+<p>Oui : 5 lettres, R deux fois et A deux fois (<a href="./ch1-compter-sur-de-petit/5-permutations-avec-repetition-les-anagram.html#definition-1-5">permutations avec répétition</a>).</p>
+</div>
+</div>
+<div class="ae-prop">
+<div class="ae-r">
+<p><span class="math inline">\(5! = 120\)</span></p>
+</div>
+<div class="ae-fb">
+<p>Échanger les deux R (ou les deux A) donne le même mot : divise par <span class="math inline">\(2!\)</span> pour chacune.</p>
+</div>
+</div>
+<div class="ae-prop">
+<div class="ae-r">
+<p><span class="math inline">\(\frac{5!}{2!} = 60\)</span></p>
+</div>
+<div class="ae-fb">
+<p>Tu as tenu compte d’une seule lettre répétée ; R et A apparaissent chacune deux fois.</p>
+</div>
+</div>
+<div class="ae-prop">
+<div class="ae-r">
+<p><span class="math inline">\(C_{5}^{2} = 10\)</span></p>
+</div>
+<div class="ae-fb">
+<p><span class="math inline">\(C_{5}^{2}\)</span> place les deux R ; il faut encore placer les deux A parmi les 3 places restantes (<span class="math inline">\(C_{3}^{2} = 3\)</span>) : <span class="math inline">\(10 \cdot 3 = 30\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="ae-q" data-id="den-groupe-mot" data-type="qcm" data-section="sec-anagrammes" data-obj="C1" data-niveau="2" data-ordre="melange">
+<div class="ae-enonce">
+<p>Choisir 3 délégués parmi 5 élèves revient à compter les anagrammes de quel mot ? (O : « délégué », N : « pas délégué ».)</p>
+</div>
+<div class="ae-prop ae-bonne">
+<div class="ae-r">
+<p>OOONN</p>
+</div>
+<div class="ae-fb">
+<p>Oui : on écrit O ou N sous chaque élève ; une délégation = un anagramme de OOONN, et <span class="math inline">\(\frac{5!}{3! \cdot 2!} = C_{5}^{3} = 10\)</span>.</p>
+</div>
+</div>
+<div class="ae-prop">
+<div class="ae-r">
+<p>OOO</p>
+</div>
+<div class="ae-fb">
+<p>Il faut une lettre par élève : 5 lettres, dont 3 O.</p>
+</div>
+</div>
+<div class="ae-prop">
+<div class="ae-r">
+<p>ABCDE</p>
+</div>
+<div class="ae-fb">
+<p>Les anagrammes de ABCDE sont les <span class="math inline">\(5! = 120\)</span> rangements des élèves : l’ordre y compte.</p>
+</div>
+</div>
+<div class="ae-prop">
+<div class="ae-r">
+<p>OOOOO</p>
+</div>
+<div class="ae-fb">
+<p>Ce mot n’a qu’un seul anagramme : il correspondrait à 5 délégués. Il faut 3 O et 2 N.</p>
+</div>
+</div>
+</div>
 <div class="ae-q" data-id="den-anagrammes-deux-methodes" data-type="ouverte" data-section="sec-anagrammes" data-obj="A5" data-niveau="2" data-forme="longue">
 <div class="ae-enonce">
 <p>Combien d’anagrammes du mot COCCINELLE ? Réponds par deux méthodes.</p>
@@ -1004,7 +1226,7 @@ window.Quarto = {
 <p>J’ai compté correctement les lettres répétées (C : 3, E : 2, L : 2).</p>
 </div>
 <div class="ae-crit">
-<p>J’ai appliqué la propriété des objets identiques.</p>
+<p>J’ai reconnu des permutations avec répétition et appliqué la propriété 1.6.</p>
 </div>
 <div class="ae-crit">
 <p>J’ai retrouvé le même nombre, 151 200, par le choix des places.</p>
@@ -1684,6 +1906,80 @@ window.Quarto = {
 <p>J’ai vérifié que la somme des zones vaut 1.</p>
 </div>
 </div>
+<div class="ae-q" data-id="hasard-de-truque" data-type="qcm" data-section="sec-proprietes" data-obj="C5" data-niveau="2" data-ordre="melange">
+<div class="ae-enonce">
+<p>Un dé est truqué : <span class="math inline">\(P(6) = \frac{1}{2}\)</span>, et les cinq autres faces ont la même probabilité. Que vaut <span class="math inline">\(P(1)\)</span> ?</p>
+</div>
+<div class="ae-prop ae-bonne">
+<div class="ae-r">
+<p><span class="math inline">\(\frac{1}{10}\)</span></p>
+</div>
+<div class="ae-fb">
+<p>Oui : les faces 1 à 5 se partagent <span class="math inline">\(1 - \frac{1}{2} = \frac{1}{2}\)</span>, donc <span class="math inline">\(P(1) = \frac{\frac{1}{2}}{5} = \frac{1}{10}\)</span> (<a href="./ch2-modeliser-le-hasard/4-proprietes-des-probabilites.html#propriete-2-1"><span class="math inline">\(P(\Omega) = 1\)</span></a>).</p>
+</div>
+</div>
+<div class="ae-prop">
+<div class="ae-r">
+<p><span class="math inline">\(\frac{1}{6}\)</span></p>
+</div>
+<div class="ae-fb">
+<p>Le dé n’est pas équilibré : la règle de Laplace ne s’applique pas.</p>
+</div>
+</div>
+<div class="ae-prop">
+<div class="ae-r">
+<p><span class="math inline">\(\frac{1}{5}\)</span></p>
+</div>
+<div class="ae-fb">
+<p>Les cinq faces ne se partagent pas 1, mais ce qui reste après <span class="math inline">\(P(6)\)</span>.</p>
+</div>
+</div>
+<div class="ae-prop">
+<div class="ae-r">
+<p><span class="math inline">\(\frac{1}{12}\)</span></p>
+</div>
+<div class="ae-fb">
+<p>Tu as divisé <span class="math inline">\(\frac{1}{2}\)</span> par 6 ; seules cinq faces se partagent <span class="math inline">\(\frac{1}{2}\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="ae-q" data-id="hasard-tableau-venn" data-type="qcm" data-section="sec-proprietes" data-obj="A2" data-niveau="1" data-ordre="melange">
+<div class="ae-enonce">
+<p>Dans un tableau à double entrée (<span class="math inline">\(A\)</span>, <span class="math inline">\(\overline{A}\)</span> en lignes ; <span class="math inline">\(B\)</span>, <span class="math inline">\(\overline{B}\)</span> en colonnes), quelle case correspond à la zone « <span class="math inline">\(A\)</span> seulement » d’un diagramme de Venn ?</p>
+</div>
+<div class="ae-prop ae-bonne">
+<div class="ae-r">
+<p>La case <span class="math inline">\(A \cap \overline{B}\)</span>.</p>
+</div>
+<div class="ae-fb">
+<p>Oui : dans <span class="math inline">\(A\)</span>, mais pas dans <span class="math inline">\(B\)</span> ; c’est <span class="math inline">\(A \setminus B\)</span>.</p>
+</div>
+</div>
+<div class="ae-prop">
+<div class="ae-r">
+<p>La case <span class="math inline">\(A \cap B\)</span>.</p>
+</div>
+<div class="ae-fb">
+<p><span class="math inline">\(A \cap B\)</span> est la zone commune aux deux cercles.</p>
+</div>
+</div>
+<div class="ae-prop">
+<div class="ae-r">
+<p>Le total de la ligne <span class="math inline">\(A\)</span>.</p>
+</div>
+<div class="ae-fb">
+<p>Le total de la ligne <span class="math inline">\(A\)</span> compte tout <span class="math inline">\(A\)</span>, zone commune comprise.</p>
+</div>
+</div>
+<div class="ae-prop">
+<div class="ae-r">
+<p>La case <span class="math inline">\(\overline{A} \cap B\)</span>.</p>
+</div>
+<div class="ae-fb">
+<p>Cette case correspond à « <span class="math inline">\(B\)</span> seulement ».</p>
+</div>
+</div>
+</div>
 <div class="ae-q" data-id="hasard-mere" data-type="qcm" data-section="sec-proprietes" data-obj="A3" data-niveau="2" data-ordre="melange">
 <div class="ae-enonce">
 <p>On lance 3 fois un dé équilibré. Quelle est la probabilité d’obtenir au moins un 6 ?</p>
@@ -1730,7 +2026,7 @@ window.Quarto = {
 <p><span class="math inline">\(\frac{6}{45}\)</span></p>
 </div>
 <div class="ae-fb">
-<p>Oui : <span class="math inline">\(\frac{C_{44}^{5}}{C_{45}^{6}} = \frac{6}{45}\)</span> (<a href="./ch2-modeliser-le-hasard/5-denombrer-pour-calculer.html#exercice-2-11">exercice 2.11</a>).</p>
+<p>Oui : <span class="math inline">\(\frac{C_{44}^{5}}{C_{45}^{6}} = \frac{6}{45}\)</span> (<a href="./ch2-modeliser-le-hasard/5-denombrer-pour-calculer.html#exercice-2-14">exercice 2.14</a>).</p>
 </div>
 </div>
 <div class="ae-prop">
@@ -2360,7 +2656,7 @@ window.Quarto = {
 <script>
 // Trois outils à côté du titre (comme « bookup ») : GitHub · Téléchargement · Thème clair/sombre.
 (function () {
-  var GITHUB_URL = "";   // [cours] depot de typweb.toml
+  var GITHUB_URL = "https://github.com/qlambotte/proba-cours";   // [cours] depot de typweb.toml
 
   var SVG = {
     maison: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.2 1 7.1l.9 1.1L3 7.3V14a1 1 0 0 0 1 1h3v-4h2v4h3a1 1 0 0 0 1-1V7.3l1.1.9.9-1.1L8 1.2z"/></svg>',
@@ -2476,7 +2772,7 @@ window.Quarto = {
 <!-- GÉNÉRÉ par typweb — ne pas éditer -->
 <script>
 /* Réglages du cours (typweb.toml) */
-window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "", "pdfs": [{"titre": "Cours — version élève", "detail": "réponses à compléter", "fichier": "proba.pdf"}, {"titre": "Cours — avec le corrigé", "detail": "réponses en bleu", "fichier": "proba-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1", "detail": "", "fichier": "exercices-supp-ch1.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2", "detail": "", "fichier": "exercices-supp-ch2.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3", "detail": "", "fichier": "exercices-supp-ch3.pdf"}], "portail": ""};
+window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.com/qlambotte/proba-cours", "pdfs": [{"titre": "Cours — version élève", "detail": "réponses à compléter", "fichier": "proba.pdf"}, {"titre": "Cours — avec le corrigé", "detail": "réponses en bleu", "fichier": "proba-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1", "detail": "", "fichier": "exercices-supp-ch1.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2", "detail": "", "fichier": "exercices-supp-ch2.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3", "detail": "", "fichier": "exercices-supp-ch3.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1 (corrigé)", "detail": "", "fichier": "exercices-supp-ch1-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2 (corrigé)", "detail": "", "fichier": "exercices-supp-ch2-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3 (corrigé)", "detail": "", "fichier": "exercices-supp-ch3-corrige.pdf"}], "portail": ""};
 /* Charge les scripts du site (js/) avec le bon chemin relatif,
    quelle que soit la profondeur de la page. */
 (function () {
@@ -2616,7 +2912,7 @@ window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "", "pdfs": [{"tit
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/qlambotte\.github\.io\/proba-cours\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

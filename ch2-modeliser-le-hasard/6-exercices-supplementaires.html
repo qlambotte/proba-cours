@@ -188,7 +188,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/5-objets-identiques-les-anagrammes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Objets identiques : les anagrammes</span></a>
+  <a href="../ch1-compter-sur-de-petit/5-permutations-avec-repetition-les-anagram.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Permutations avec répétition : les anagrammes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -307,6 +307,7 @@ window.Quarto = {
   <ul>
   <li><a href="#univers-événements-équiprobabilité" id="toc-univers-événements-équiprobabilité" class="nav-link active" data-scroll-target="#univers-événements-équiprobabilité">Univers, événements, équiprobabilité</a></li>
   <li><a href="#fréquences-et-simulations" id="toc-fréquences-et-simulations" class="nav-link" data-scroll-target="#fréquences-et-simulations">Fréquences et simulations</a></li>
+  <li><a href="#entraînement-complémentaire" id="toc-entraînement-complémentaire" class="nav-link" data-scroll-target="#entraînement-complémentaire">Entraînement complémentaire</a></li>
   </ul>
 </nav>
     </div>
@@ -515,6 +516,120 @@ window.Quarto = {
 </div>
 </div>
 </div>
+</section>
+<section id="entraînement-complémentaire" class="level1">
+<h1>Entraînement complémentaire</h1>
+<div id="exercice-S2-6" class="exo" data-sorte="exercice" data-num="S2.6">
+<div class="exo-tete">
+<p><span class="exo-titre">✎ Exercice S2.6</span> <span class="exo-meta"><span class="exo-comp">C6</span> ★☆☆</span></p>
+</div>
+<div class="exo-corps">
+<p>La bataille navale se joue sur une grille de 10 cases sur 10. On y place un porte-avions (4 cases), deux croiseurs (3 cases chacun), trois torpilleurs (2 cases chacun) et quatre sous-marins (1 case chacun). On tire au hasard sur une case. Calcule la probabilité a) de toucher le porte-avions ; b) de toucher un torpilleur ; c) de tirer dans l’eau.</p>
+<div class="rep-bloc">
+<p>On suppose les 100 cases équiprobables. Les bateaux occupent <span class="math inline">\(4 + 2 \cdot 3 + 3 \cdot 2 + 4 \cdot 1 = 20\)</span> cases. a) <span class="math inline">\(\frac{4}{100} = \frac{1}{25}\)</span> ; b) <span class="math inline">\(\frac{6}{100} = \frac{3}{50}\)</span> ; c) <span class="math inline">\(\frac{80}{100} = \frac{4}{5}\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-3" role="tab" aria-controls="tabset-6-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-4" role="tab" aria-controls="tabset-6-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-5" role="tab" aria-controls="tabset-6-5" aria-selected="false" href="">Pièges</a></li></ul>
+<div class="tab-content">
+<div id="tabset-6-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-6-1-tab">
+<p>Relis la <a href="../ch2-modeliser-le-hasard/3-le-modele-dequiprobabilite.html#definition-2-3">règle de Laplace</a>.</p>
+</div>
+<div id="tabset-6-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-2-tab">
+<p>Combien de cases sont occupées par chaque sorte de bateau ?</p>
+</div>
+<div id="tabset-6-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-3-tab">
+<p>Les bateaux occupent <span class="math inline">\(4 + 2 \cdot 3 + 3 \cdot 2 + 4 \cdot 1\)</span> cases.</p>
+</div>
+<div id="tabset-6-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-4-tab">
+<p>On suppose les 100 cases équiprobables. Les bateaux occupent 20 cases. a) <span class="math inline">\(\frac{4}{100} = \frac{1}{25}\)</span> ; b) trois torpilleurs de 2 cases : <span class="math inline">\(\frac{6}{100} = \frac{3}{50}\)</span> ; c) <span class="math inline">\(\frac{80}{100} = \frac{4}{5}\)</span>.</p>
+</div>
+<div id="tabset-6-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-5-tab">
+<ul>
+<li><ol start="2" type="a">
+<li>Compter 2 cases au lieu de <span class="math inline">\(3 \cdot 2\)</span> : « un torpilleur » signifie n’importe lequel des trois.</li>
+</ol></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="exercice-S2-7" class="exo" data-sorte="exercice" data-num="S2.7">
+<div class="exo-tete">
+<p><span class="exo-titre">✎ Exercice S2.7</span> <span class="exo-meta"><span class="exo-comp">T1</span> ★★☆</span></p>
+</div>
+<div class="exo-corps">
+<p>Sam lance un dé à 6 faces, Célia un dé à 8 faces (numérotées de 1 à 8), en même temps. Celui qui obtient le plus petit nombre gagne ; en cas d’égalité, personne ne gagne. Qui a le plus de chances de gagner ?</p>
+<div class="rep-bloc">
+<p>On suppose les <span class="math inline">\(6 \cdot 8 = 48\)</span> couples équiprobables (tableau à double entrée). Sam gagne si son nombre <span class="math inline">\(s\)</span> est plus petit que celui de Célia : pour <span class="math inline">\(s = 1\)</span>, 7 cas ; <span class="math inline">\(s = 2\)</span>, 6 cas ; … ; <span class="math inline">\(s = 6\)</span>, 2 cas : <span class="math inline">\(7 + 6 + 5 + 4 + 3 + 2 = 27\)</span> cas. Égalités : 6 cas ; Célia gagne : <span class="math inline">\(48 - 27 - 6 = 15\)</span> cas. <span class="math inline">\(P(\text{Sam gagne}) = \frac{27}{48} = \frac{9}{16}\)</span> et <span class="math inline">\(P(\text{Célia gagne}) = \frac{15}{48} = \frac{5}{16}\)</span> : Sam a plus de chances de gagner.</p>
+</div>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-7-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-1" role="tab" aria-controls="tabset-7-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-2" role="tab" aria-controls="tabset-7-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-3" role="tab" aria-controls="tabset-7-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-4" role="tab" aria-controls="tabset-7-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-5" role="tab" aria-controls="tabset-7-5" aria-selected="false" href="">Pièges</a></li></ul>
+<div class="tab-content">
+<div id="tabset-7-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-7-1-tab">
+<p>Relis la <a href="../ch2-modeliser-le-hasard/3-le-modele-dequiprobabilite.html#definition-2-3">règle de Laplace</a> et l’<a href="../ch2-modeliser-le-hasard/3-le-modele-dequiprobabilite.html#activite-2-3">activité des deux dés</a>.</p>
+</div>
+<div id="tabset-7-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-2-tab">
+<p>Comment représenter tous les couples (dé de Sam, dé de Célia) ?</p>
+</div>
+<div id="tabset-7-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-3-tab">
+<p>Tableau à double entrée de 6 lignes et 8 colonnes : 48 cases.</p>
+</div>
+<div id="tabset-7-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-4-tab">
+<p>On suppose les 48 couples équiprobables. Sam gagne si son nombre <span class="math inline">\(s\)</span> est plus petit : <span class="math inline">\(7 + 6 + 5 + 4 + 3 + 2 = 27\)</span> cas ; égalités : 6 cas ; Célia gagne : 15 cas. <span class="math inline">\(P(\text{Sam}) = \frac{27}{48} = \frac{9}{16}\)</span> ; <span class="math inline">\(P(\text{Célia}) = \frac{15}{48} = \frac{5}{16}\)</span> : Sam a plus de chances.</p>
+</div>
+<div id="tabset-7-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-5-tab">
+<ul>
+<li>Penser que Célia est avantagée parce que son dé a plus de faces : ici, c’est le plus petit nombre qui gagne.</li>
+<li>Oublier les égalités : <span class="math inline">\(P(\text{Sam}) + P(\text{Célia}) \neq 1\)</span>.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="exercice-S2-8" class="exo" data-sorte="exercice" data-num="S2.8">
+<div class="exo-tete">
+<p><span class="exo-titre">✎ Exercice S2.8</span> <span class="exo-meta"><span class="exo-comp">T1</span> ★★★</span></p>
+</div>
+<div class="exo-corps">
+<p><em>Défi.</em> Pour un oral, le professeur a préparé 60 sujets ; chaque élève en tire 4 au hasard. Un élève n’a étudié que 20 sujets. Calcule la probabilité qu’il connaisse a) les 4 sujets tirés ; b) aucun des sujets tirés ; c) exactement 3 des sujets tirés.</p>
+<div class="rep-bloc">
+<p>Une issue est un groupe de 4 sujets parmi 60 : <span class="math inline">\(C_{60}^{4} = 487 \, 635\)</span> groupes, supposés équiprobables. a) <span class="math inline">\(\frac{C_{20}^{4}}{C_{60}^{4}} = \frac{4845}{487 \, 635} \approx 0{,}0099\)</span>. b) 4 sujets parmi les 40 non étudiés : <span class="math inline">\(\frac{C_{40}^{4}}{C_{60}^{4}} = \frac{91 \, 390}{487 \, 635} \approx 0{,}187\)</span>. c) 3 parmi 20 et 1 parmi 40 : <span class="math inline">\(\frac{C_{20}^{3} \cdot 40}{C_{60}^{4}} = \frac{45 \, 600}{487 \, 635} \approx 0{,}094\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-8-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-1" role="tab" aria-controls="tabset-8-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-2" role="tab" aria-controls="tabset-8-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-3" role="tab" aria-controls="tabset-8-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-4" role="tab" aria-controls="tabset-8-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-5" role="tab" aria-controls="tabset-8-5" aria-selected="false" href="">Pièges</a></li></ul>
+<div class="tab-content">
+<div id="tabset-8-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-8-1-tab">
+<p>Relis l’<a href="../ch2-modeliser-le-hasard/5-denombrer-pour-calculer.html#exemple-2-5">exemple du Lotto</a> et la <a href="../ch1-compter-sur-de-petit/4-combinaisons.html#definition-1-4">définition des combinaisons</a>.</p>
+</div>
+<div id="tabset-8-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-2-tab">
+<p>L’ordre des sujets tirés compte-t-il ? Qu’est-ce qu’une issue ?</p>
+</div>
+<div id="tabset-8-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-3-tab">
+<p><span class="math inline">\(\#\Omega = C_{60}^{4} = 487 \, 635\)</span>.</p>
+</div>
+<div id="tabset-8-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-4-tab">
+<p>Une issue est un groupe de 4 sujets parmi 60 : <span class="math inline">\(C_{60}^{4} = 487 \, 635\)</span> groupes, supposés équiprobables. a) <span class="math inline">\(\frac{C_{20}^{4}}{C_{60}^{4}} = \frac{4845}{487 \, 635} \approx 0{,}0099\)</span>. b) <span class="math inline">\(\frac{C_{40}^{4}}{C_{60}^{4}} = \frac{91 \, 390}{487 \, 635} \approx 0{,}187\)</span>. c) <span class="math inline">\(\frac{C_{20}^{3} \cdot C_{40}^{1}}{C_{60}^{4}} = \frac{45 \, 600}{487 \, 635} \approx 0{,}094\)</span>.</p>
+</div>
+<div id="tabset-8-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-5-tab">
+<ul>
+<li><ol start="3" type="a">
+<li>Oublier de choisir le quatrième sujet parmi les 40 non étudiés.</li>
+</ol></li>
+<li>Utiliser des arrangements au numérateur et des combinaisons au dénominateur.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 
 
 </section>
@@ -554,7 +669,7 @@ window.Quarto = {
 <script>
 // Trois outils à côté du titre (comme « bookup ») : GitHub · Téléchargement · Thème clair/sombre.
 (function () {
-  var GITHUB_URL = "";   // [cours] depot de typweb.toml
+  var GITHUB_URL = "https://github.com/qlambotte/proba-cours";   // [cours] depot de typweb.toml
 
   var SVG = {
     maison: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.2 1 7.1l.9 1.1L3 7.3V14a1 1 0 0 0 1 1h3v-4h2v4h3a1 1 0 0 0 1-1V7.3l1.1.9.9-1.1L8 1.2z"/></svg>',
@@ -670,7 +785,7 @@ window.Quarto = {
 <!-- GÉNÉRÉ par typweb — ne pas éditer -->
 <script>
 /* Réglages du cours (typweb.toml) */
-window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "", "pdfs": [{"titre": "Cours — version élève", "detail": "réponses à compléter", "fichier": "proba.pdf"}, {"titre": "Cours — avec le corrigé", "detail": "réponses en bleu", "fichier": "proba-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1", "detail": "", "fichier": "exercices-supp-ch1.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2", "detail": "", "fichier": "exercices-supp-ch2.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3", "detail": "", "fichier": "exercices-supp-ch3.pdf"}], "portail": ""};
+window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.com/qlambotte/proba-cours", "pdfs": [{"titre": "Cours — version élève", "detail": "réponses à compléter", "fichier": "proba.pdf"}, {"titre": "Cours — avec le corrigé", "detail": "réponses en bleu", "fichier": "proba-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1", "detail": "", "fichier": "exercices-supp-ch1.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2", "detail": "", "fichier": "exercices-supp-ch2.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3", "detail": "", "fichier": "exercices-supp-ch3.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1 (corrigé)", "detail": "", "fichier": "exercices-supp-ch1-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2 (corrigé)", "detail": "", "fichier": "exercices-supp-ch2-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3 (corrigé)", "detail": "", "fichier": "exercices-supp-ch3-corrige.pdf"}], "portail": ""};
 /* Charge les scripts du site (js/) avec le bon chemin relatif,
    quelle que soit la profondeur de la page. */
 (function () {
@@ -810,7 +925,7 @@ window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "", "pdfs": [{"tit
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/qlambotte\.github\.io\/proba-cours\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

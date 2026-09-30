@@ -6,8 +6,8 @@ sous-titre = "Cours & exercices — 6e, 4 périodes (6UAA1)"
 auteur     = "Quentin Lambotte"
 annee      = "6e"
 uaa        = "6UAA1"
-depot      = ""                   # ex. "https://github.com/qlambotte/proba-cours"
-site-url   = ""                   # ex. "https://qlambotte.github.io/proba-cours/"
+depot      = "https://github.com/qlambotte/proba-cours"
+site-url   = "https://qlambotte.github.io/proba-cours/"
 
 [notes]
 dossier    = "../notes"
@@ -42,6 +42,22 @@ titre   = "Exercices supplémentaires — chapitre 3"
 fichier = "exercices-supp-ch3.pdf"
 source  = "fiches/exercices-supp-ch3.typ"
 
+[[pdf.autres]]
+titre   = "Exercices supplémentaires — chapitre 1 (corrigé)"
+fichier = "exercices-supp-ch1-corrige.pdf"
+source  = "fiches/exercices-supp-ch1.typ"
+corrige = true
+[[pdf.autres]]
+titre   = "Exercices supplémentaires — chapitre 2 (corrigé)"
+fichier = "exercices-supp-ch2-corrige.pdf"
+source  = "fiches/exercices-supp-ch2.typ"
+corrige = true
+[[pdf.autres]]
+titre   = "Exercices supplémentaires — chapitre 3 (corrigé)"
+fichier = "exercices-supp-ch3-corrige.pdf"
+source  = "fiches/exercices-supp-ch3.typ"
+corrige = true
+
 [modules]
-# proba : arbres, Venn, partitions, simulateur, dénombreur ; reperes : repère de la punaise
+# proba : arbres, Venn, partitions, simulateur, dénombreur ; reperes : repères cetz-plot ; relevé des sommes de deux dés dans proba
 actifs = ["proba", "reperes"]

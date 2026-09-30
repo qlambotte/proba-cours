@@ -2,3 +2,5 @@
 /_book/
 /_data/
 _rapport.txt
+
+**/*.quarto_ipynb

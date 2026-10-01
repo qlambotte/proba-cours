@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Arrangements et permutations – Probabilités</title>
+<title>Exercices supplémentaires – Probabilités</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -35,8 +35,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../ch1-compter-sur-de-petit/4-combinaisons.html" rel="next">
-<link href="../ch1-compter-sur-de-petit/2-additionner-multiplier.html" rel="prev">
+<link href="../ch3-probabilite-conditio/7-references.html" rel="next">
+<link href="../ch3-probabilite-conditio/5-pour-aller-plus-loin.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-73b0ff3878a4e6fc3716dc69a6aaefa3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-94cb1ee365b8c2bebb8400336c7455e1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-4f25214d2c0aa817e35f237ded488e3e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -82,6 +82,8 @@ ul.task-list li input[type="checkbox"] {
     if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
     var st = localStorage.getItem('typweb-style');
     if (st) document.documentElement.setAttribute('data-style', st);   // styles à l'essai (menu « Aa »)
+    var tx = parseFloat(localStorage.getItem('typweb-taille'));          // taille du texte (menu « Aa »)
+    if (tx && tx !== 1) document.documentElement.style.fontSize = (100 * tx) + '%';
   } catch (e) {}
 })();
 </script>
@@ -127,7 +129,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/index.html">Chapitre 1 — Compter sur de petits ensembles</a></li><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/3-arrangements-et-permutations.html"><span class="chapter-title">Arrangements et permutations</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ch3-probabilite-conditio/index.html">Chapitre 3 — Probabilité conditionnelle et indépendance</a></li><li class="breadcrumb-item"><a href="../ch3-probabilite-conditio/6-exercices-supplementaires.html"><span class="chapter-title">Exercices supplémentaires</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
@@ -166,44 +168,49 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../ch1-compter-sur-de-petit/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Chapitre 1 — Compter sur de petits ensembles</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/1-lister-avant-de-compter.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lister avant de compter</span></a>
+  <a href="../ch1-compter-sur-de-petit/1-le-langage-des-ensembles.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Le langage des ensembles</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/2-additionner-multiplier.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Additionner, multiplier</span></a>
+  <a href="../ch1-compter-sur-de-petit/2-lister-avant-de-compter.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lister avant de compter</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/3-arrangements-et-permutations.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Arrangements et permutations</span></a>
+  <a href="../ch1-compter-sur-de-petit/3-additionner-multiplier.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Additionner, multiplier</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/4-combinaisons.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Combinaisons</span></a>
+  <a href="../ch1-compter-sur-de-petit/4-arrangements-et-permutations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Arrangements et permutations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/5-permutations-avec-repetition-les-anagram.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Permutations avec répétition : les anagrammes</span></a>
+  <a href="../ch1-compter-sur-de-petit/5-combinaisons.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Combinaisons</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/6-choisir-une-methode.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Choisir une méthode</span></a>
+  <a href="../ch1-compter-sur-de-petit/6-permutations-avec-repetition-les-anagram.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Permutations avec répétition : les anagrammes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/7-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  <a href="../ch1-compter-sur-de-petit/7-choisir-une-methode.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Choisir une méthode</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ch1-compter-sur-de-petit/8-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
   </div>
 </li>
       </ul>
@@ -253,11 +260,11 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../ch3-probabilite-conditio/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Chapitre 3 — Probabilité conditionnelle et indépendance</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../ch3-probabilite-conditio/1-probabilite-conditionnelle.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Probabilité conditionnelle</span></a>
@@ -285,12 +292,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch3-probabilite-conditio/6-sources-des-donnees.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sources des données</span></a>
+  <a href="../ch3-probabilite-conditio/6-exercices-supplementaires.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Exercices supplémentaires</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch3-probabilite-conditio/7-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  <a href="../ch3-probabilite-conditio/7-references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Références</span></a>
   </div>
 </li>
       </ul>
@@ -315,15 +322,23 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#conditionner" id="toc-conditionner" class="nav-link active" data-scroll-target="#conditionner">Conditionner</a></li>
+  <li><a href="#indépendance-et-dépistage" id="toc-indépendance-et-dépistage" class="nav-link" data-scroll-target="#indépendance-et-dépistage">Indépendance et dépistage</a></li>
+  <li><a href="#entraînement-complémentaire" id="toc-entraînement-complémentaire" class="nav-link" data-scroll-target="#entraînement-complémentaire">Entraînement complémentaire</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/index.html">Chapitre 1 — Compter sur de petits ensembles</a></li><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/3-arrangements-et-permutations.html"><span class="chapter-title">Arrangements et permutations</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ch3-probabilite-conditio/index.html">Chapitre 3 — Probabilité conditionnelle et indépendance</a></li><li class="breadcrumb-item"><a href="../ch3-probabilite-conditio/6-exercices-supplementaires.html"><span class="chapter-title">Exercices supplémentaires</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Arrangements et permutations</span></h1>
+<h1 class="title"><span class="chapter-title">Exercices supplémentaires</span></h1>
 </div>
 
 
@@ -341,117 +356,16 @@ window.Quarto = {
 
 
 <!-- GÉNÉRÉ par typweb à partir des notes Typst : NE PAS ÉDITER (les modifications seraient écrasées). -->
-<div id="activite-1-4" class="theo theo-activite" data-sorte="activite" data-num="1.4" data-page="8" data-phys="11">
-<div class="theo-head">
-<p><strong>Activité 1.4</strong> — élire un bureau</p>
-</div>
-<div class="theo-body">
-<p>Le conseil des élèves élit un président, un vice-président et un secrétaire parmi 18 candidats.</p>
-<ol type="a">
-<li>Décris un résultat. L’ordre compte-t-il ? Un élève peut-il revenir ?</li>
-</ol>
-<div class="rep-bloc">
-<p>Un bureau est une suite de 3 élèves : (président, vice-président, secrétaire). L’ordre compte, car les fonctions sont différentes. Un élève ne peut pas cumuler deux fonctions.</p>
-</div>
-<ol start="2" type="a">
-<li>Combien de bureaux différents sont possibles ?</li>
-</ol>
-<div class="rep-bloc">
-<p><span class="math inline">\(18 \cdot 17 \cdot 16 = 4896\)</span> bureaux.</p>
-</div>
-<ol start="3" type="a">
-<li>Et si un même élève pouvait cumuler les fonctions ?</li>
-</ol>
-<div class="rep-bloc">
-<p><span class="math inline">\(18 \cdot 18 \cdot 18 = 18^{3} = 5832\)</span> bureaux.</p>
-</div>
-</div>
-</div>
-<div id="definition-1-1" class="theo theo-definition" data-sorte="definition" data-num="1.1" data-page="8" data-phys="11">
-<div class="theo-head">
-<p><strong>Définition 1.1</strong> — arrangements</p>
-</div>
-<div class="theo-body">
-<p>Un <em>arrangement de <span class="math inline">\(p\)</span> éléments pris parmi <span class="math inline">\(n\)</span></em> est une suite de <span class="math inline">\(p\)</span> éléments choisis parmi <span class="math inline">\(n\)</span> éléments donnés (l’ordre compte).</p>
-<ul>
-<li><strong>Avec répétition</strong> (un élément peut revenir) : il y en a <span class="math inline">\(n^{p}\)</span>.</li>
-<li><strong>Sans répétition</strong> (éléments distincts, <span class="math inline">\(p \leq n\)</span>) : il y en a</li>
-</ul>
-<p><span class="math display">\[
-A_{n}^{p} = \underbrace{n (n-1) (n-2) \cdots (n-p+1)}_{p \text{facteurs}}.
-\]</span></p>
-<p>Au premier choix, aucun élément n’est pris : <span class="math inline">\(n\)</span> choix. Au <span class="math inline">\(k\)</span>-ième choix, <span class="math inline">\(k - 1\)</span> éléments sont déjà pris : il reste <span class="math inline">\(n - k + 1\)</span> choix. Le dernier facteur (au <span class="math inline">\(p\)</span>-ième choix) est donc <span class="math inline">\(n - p + 1\)</span> : pour le bureau, <span class="math inline">\(18 \cdot 17 \cdot 16\)</span> et <span class="math inline">\(16 = 18 - 3 + 1\)</span>.</p>
-</div>
-</div>
-<div id="definition-1-2" class="theo theo-definition" data-sorte="definition" data-num="1.2" data-page="8" data-phys="11">
-<div class="theo-head">
-<p><strong>Définition 1.2</strong> — factorielle</p>
-</div>
-<div class="theo-body">
-<p>Pour tout naturel <span class="math inline">\(n \geq 1\)</span>, <span class="math inline">\(n! = n (n-1) \cdots 2 \cdot 1\)</span> (lire « factorielle <span class="math inline">\(n\)</span> »). On pose <span class="math inline">\(0! = 1\)</span>.</p>
-</div>
-</div>
-<div id="propriete-1-4" class="theo theo-propriete" data-sorte="propriete" data-num="1.4" data-page="8" data-phys="11">
-<div class="theo-head">
-<p><strong>Propriété 1.4</strong></p>
-</div>
-<div class="theo-body">
-<p>Pour <span class="math inline">\(0 \leq p \leq n\)</span> :</p>
-<p><span class="math display">\[
-A_{n}^{p} = \frac{n!}{(n-p)!}.
-\]</span></p>
-</div>
-</div>
-<div id="preuve-1-1" class="theo theo-preuve" data-sorte="preuve" data-num="1.1">
-<div class="theo-head">
-<p><strong>Démonstration 1.1</strong></p>
-</div>
-<div class="theo-body">
-<p>On range les <span class="math inline">\(n\)</span> éléments en ligne : <span class="math inline">\(n!\)</span> rangements. Seules les <span class="math inline">\(p\)</span> premières places comptent (pour le bureau : les 3 premiers d’un classement des 18 candidats). Deux rangements qui ne diffèrent que par l’ordre des <span class="math inline">\(n - p\)</span> derniers donnent le même arrangement : chaque arrangement provient de <span class="math inline">\((n-p)!\)</span> rangements (pour le bureau, de <span class="math inline">\(15!\)</span> classements). On regroupe, puis on divise : <span class="math inline">\(A_{n}^{p} = \frac{n!}{(n-p)!}\)</span>. Par le calcul, les facteurs de <span class="math inline">\(n - p\)</span> à <span class="math inline">\(1\)</span> se simplifient et il reste les <span class="math inline">\(p\)</span> premiers facteurs de <span class="math inline">\(n!\)</span>.</p>
-</div>
-</div>
-<div id="definition-1-3" class="theo theo-definition" data-sorte="definition" data-num="1.3" data-page="9" data-phys="12">
-<div class="theo-head">
-<p><strong>Définition 1.3</strong> — permutations</p>
-</div>
-<div class="theo-body">
-<p>Une <em>permutation</em> de <span class="math inline">\(n\)</span> éléments est une façon de les ranger tous dans un ordre : c’est un arrangement sans répétition de <span class="math inline">\(n\)</span> éléments pris parmi <span class="math inline">\(n\)</span>. Il y en a <span class="math inline">\(A_{n}^{n} = n!\)</span>.</p>
-</div>
-</div>
-<div id="remarque-1-3" class="theo theo-remarque" data-sorte="remarque" data-num="1.3" data-page="9" data-phys="12">
-<div class="theo-head">
-<p><strong>Remarque 1.3</strong></p>
-</div>
-<div class="theo-body">
-<p>Avec <span class="math inline">\(p = n\)</span>, la formule donne <span class="math inline">\(A_{n}^{n} = \frac{n!}{0!}\)</span>. Pour retrouver <span class="math inline">\(n!\)</span>, il faut <span class="math inline">\(0! = 1\)</span> : c’est ce qui justifie cette convention. Elle a aussi un sens : <span class="math inline">\(0!\)</span> compte les façons de ranger zéro objet, et il y en a exactement une (ne rien ranger). À la calculatrice : touches <span class="math inline">\(x!\)</span> et nPr ; on écrit toujours la formule avant le résultat.</p>
-</div>
-</div>
-<div id="exercice-1-7" class="exo" data-sorte="exercice" data-num="1.7" data-page="9" data-phys="12">
+<section id="conditionner" class="level1">
+<h1>Conditionner</h1>
+<div id="exercice-S3-1" class="exo" data-sorte="exercice" data-num="S3.1">
 <div class="exo-tete">
-<p><span class="exo-titre">✎ Exercice 1.7</span> <span class="exo-meta"><span class="exo-comp">A5</span> ★☆☆</span></p>
+<p><span class="exo-titre">✎ Exercice S3.1</span> <span class="exo-meta"><span class="exo-comp">A1</span> ★☆☆</span></p>
 </div>
 <div class="exo-corps">
-<p>Combien de codes PIN à 4 chiffres existe-t-il ? Combien ont leurs quatre chiffres différents ? Représente les deux ensembles de codes par un diagramme.</p>
-<div class="pb-fig pb-venn" data-n="2" data-inclus="1" data-disjoints="0" data-ombre="[]" data-activite="1">
-<div class="pb-univers">
-<p>codes à 4 chiffres</p>
-</div>
-<div class="pb-nom" data-i="0">
-<p><span class="math inline">\(T\)</span></p>
-</div>
-<div class="pb-nom" data-i="1">
-<p><span class="math inline">\(D\)</span></p>
-</div>
-<div class="pb-z" data-z="b">
-<p><span class="rep" data-v="5040">5040</span></p>
-</div>
-<div class="pb-z" data-z="a">
-<p><span class="rep" data-v="4960">4960</span></p>
-</div>
-</div>
-<p>(<span class="math inline">\(T\)</span> : tous les codes ; <span class="math inline">\(D\)</span> : les codes à quatre chiffres différents.)</p>
+<p>Au Titanic (tableau de l’activité 3.1), on note <span class="math inline">\(T\)</span> : « voyager en 3<sup>e</sup> classe ». Écris en mots, puis calcule <span class="math inline">\(P(S | T)\)</span> et <span class="math inline">\(P(T | S)\)</span>.</p>
 <div class="rep-bloc">
-<p>Codes : suites de 4 chiffres avec répétition, <span class="math inline">\(10^{4} = 10 \, 000\)</span>. Chiffres différents : sans répétition, <span class="math inline">\(A_{10}^{4} = 10 \cdot 9 \cdot 8 \cdot 7 = 5040\)</span>. Les codes à chiffres différents font partie de tous les codes ; les autres sont <span class="math inline">\(10 \, 000 - 5040 = 4960\)</span>.</p>
+<p><span class="math inline">\(P(S | T)\)</span> : parmi les passagers de 3<sup>e</sup> classe, proportion de survivants, <span class="math inline">\(\frac{178}{706} \approx 0{,}252\)</span>. <span class="math inline">\(P(T | S)\)</span> : parmi les survivants, proportion de passagers de 3<sup>e</sup> classe, <span class="math inline">\(\frac{178}{711} \approx 0{,}250\)</span>.</p>
 </div>
 </div>
 </div>
@@ -460,34 +374,33 @@ A_{n}^{p} = \frac{n!}{(n-p)!}.
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false" href="">Pièges</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>Relis la <a href="#definition-1-1">définition des arrangements</a>.</p>
+<p>Relis l’<a href="../ch3-probabilite-conditio/1-probabilite-conditionnelle.html#activite-3-1">activité 3.1</a> et la <a href="../ch3-probabilite-conditio/1-probabilite-conditionnelle.html#definition-3-1">définition 3.1</a>.</p>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>Un chiffre peut-il revenir ? Dans chacune des deux questions ?</p>
+<p>Parmi qui calcule-t-on chaque proportion ?</p>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<p>Codes à chiffres différents : 10 choix, puis 9, puis 8, puis 7.</p>
+<p><span class="math inline">\(P(S | T)\)</span> : parmi les 706 passagers de 3<sup>e</sup> classe.</p>
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-<p>Un code est une suite de 4 chiffres (l’ordre compte). Avec répétition : <span class="math inline">\(10^{4} = 10 \, 000\)</span> codes. Sans répétition : <span class="math inline">\(A_{10}^{4} = 10 \cdot 9 \cdot 8 \cdot 7 = 5040\)</span> codes. Les codes à chiffres différents font partie de tous les codes ; il reste <span class="math inline">\(10 \, 000 - 5040 = 4960\)</span> codes ayant au moins un chiffre répété.</p>
+<p><span class="math inline">\(P(S | T)\)</span> : parmi les 706 passagers de 3<sup>e</sup> classe, 178 ont survécu, <span class="math inline">\(P(S | T) = \frac{178}{706} \approx 0{,}252\)</span>. <span class="math inline">\(P(T | S)\)</span> : parmi les 711 survivants, 178 voyageaient en 3<sup>e</sup> classe, <span class="math inline">\(P(T | S) = \frac{178}{711} \approx 0{,}250\)</span>. Ces deux probabilités sont proches ici parce que 706 et 711 sont proches ; ce n’est pas une règle.</p>
 </div>
 <div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
 <ul>
-<li>Utiliser <span class="math inline">\(C_{10}^{4}\)</span> : 1234 et 4321 sont deux codes différents.</li>
-<li>Compter 9 choix pour le premier chiffre : un code PIN peut commencer par 0.</li>
+<li>Conclure que <span class="math inline">\(P(S | T) = P(T | S)\)</span> en général.</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
-<div id="exercice-1-8" class="exo" data-sorte="exercice" data-num="1.8" data-page="9" data-phys="12">
+<div id="exercice-S3-2" class="exo" data-sorte="exercice" data-num="S3.2">
 <div class="exo-tete">
-<p><span class="exo-titre">✎ Exercice 1.8</span> <span class="exo-maison">⟵ à faire à la maison</span> <span class="exo-meta"><span class="exo-comp">A5</span> ★☆☆</span></p>
+<p><span class="exo-titre">✎ Exercice S3.2</span> <span class="exo-meta"><span class="exo-comp">A2</span> ★★☆</span></p>
 </div>
 <div class="exo-corps">
-<p>Douze coureurs prennent le départ d’une course. Combien de podiums (premier, deuxième, troisième) sont possibles ? De combien de façons les douze coureurs peuvent-ils franchir la ligne d’arrivée (sans ex æquo) ?</p>
+<p>Une urne contient 2 boules rouges et 3 boules bleues. On tire deux boules sans remise. Construis l’arbre et calcule la probabilité que les deux boules soient de couleurs différentes.</p>
 <div class="rep-bloc">
-<p>Un podium est une suite de 3 coureurs distincts : <span class="math inline">\(A_{12}^{3} = 12 \cdot 11 \cdot 10 = 1320\)</span>. Un classement complet est une permutation des 12 coureurs : <span class="math inline">\(12! = 479 \, 001 \, 600\)</span>.</p>
+<p>On suppose chaque boule équiprobable. <span class="math inline">\(P(R_{1} \cap B_{2}) = \frac{2}{5} \cdot \frac{3}{4} = \frac{6}{20}\)</span> ; <span class="math inline">\(P(B_{1} \cap R_{2}) = \frac{3}{5} \cdot \frac{2}{4} = \frac{6}{20}\)</span>. <span class="math inline">\(P(\text{couleurs différentes}) = \frac{12}{20} = \frac{3}{5}\)</span>.</p>
 </div>
 </div>
 </div>
@@ -496,33 +409,36 @@ A_{n}^{p} = \frac{n!}{(n-p)!}.
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-5" role="tab" aria-controls="tabset-2-5" aria-selected="false" href="">Pièges</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-<p>Relis la <a href="#definition-1-1">définition des arrangements</a> et celle des <a href="#definition-1-3">permutations</a>.</p>
+<p>Relis la <a href="../ch3-probabilite-conditio/2-arbres-de-probabilites.html#propriete-3-1">propriété « calculer sur un arbre »</a>.</p>
 </div>
 <div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
-<p>Un podium est-il une suite ou un groupe ? Un coureur peut-il y figurer deux fois ?</p>
+<p>Quels chemins mènent à « couleurs différentes » ?</p>
 </div>
 <div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
-<p>Premier : 12 choix ; deuxième : 11 ; troisième : 10.</p>
+<p>Chemin rouge puis bleue : <span class="math inline">\(\frac{2}{5} \cdot \frac{3}{4}\)</span>.</p>
 </div>
 <div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
-<p>Un podium est une suite de 3 coureurs distincts : <span class="math inline">\(A_{12}^{3} = 12 \cdot 11 \cdot 10 = 1320\)</span> podiums. Un classement complet range les 12 coureurs : c’est une permutation, <span class="math inline">\(12! = 479 \, 001 \, 600\)</span> classements.</p>
+<p>On suppose chaque boule équiprobable. Deux chemins mènent à « couleurs différentes » : <span class="math inline">\(P(R_{1} \cap B_{2}) = \frac{2}{5} \cdot \frac{3}{4} = \frac{6}{20}\)</span> et <span class="math inline">\(P(B_{1} \cap R_{2}) = \frac{3}{5} \cdot \frac{2}{4} = \frac{6}{20}\)</span>. <span class="math inline">\(P(\text{couleurs différentes}) = \frac{6}{20} + \frac{6}{20} = \frac{12}{20} = \frac{3}{5}\)</span>.</p>
 </div>
 <div id="tabset-2-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-5-tab">
 <ul>
-<li>Utiliser <span class="math inline">\(C_{12}^{3}\)</span> : le podium (A, B, C) diffère du podium (B, A, C).</li>
+<li>Oublier l’un des deux chemins.</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
-<div id="exercice-1-9" class="exo" data-sorte="exercice" data-num="1.9" data-page="9" data-phys="12">
+</section>
+<section id="indépendance-et-dépistage" class="level1">
+<h1>Indépendance et dépistage</h1>
+<div id="exercice-S3-3" class="exo" data-sorte="exercice" data-num="S3.3">
 <div class="exo-tete">
-<p><span class="exo-titre">✎ Exercice 1.9</span> <span class="exo-meta"><span class="exo-comp">A5</span> ★★☆</span></p>
+<p><span class="exo-titre">✎ Exercice S3.3</span> <span class="exo-meta"><span class="exo-comp">A4</span> ★★☆</span></p>
 </div>
 <div class="exo-corps">
-<p>Calcule sans calculatrice : <span class="math inline">\(\frac{10!}{8!}\)</span> ; <span class="math inline">\(\frac{7!}{5! \cdot 2!}\)</span> ; <span class="math inline">\(\frac{(n+1)!}{n!}\)</span>.</p>
+<p>On lance un dé équilibré. <span class="math inline">\(A\)</span> : « obtenir un nombre pair » ; <span class="math inline">\(B\)</span> : « obtenir au plus 2 ». <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont-ils indépendants ?</p>
 <div class="rep-bloc">
-<p><span class="math inline">\(\frac{10!}{8!} = 10 \cdot 9 = 90\)</span> ; <span class="math inline">\(\frac{7!}{5! \cdot 2!} = \frac{7 \cdot 6}{2} = 21\)</span> ; <span class="math inline">\(\frac{(n+1)!}{n!} = n + 1\)</span>.</p>
+<p><span class="math inline">\(P(A) = \frac{1}{2}\)</span>, <span class="math inline">\(P(B) = \frac{2}{6} = \frac{1}{3}\)</span>, <span class="math inline">\(A \cap B = \{2\}\)</span>, <span class="math inline">\(P(A \cap B) = \frac{1}{6}\)</span>. <span class="math inline">\(P(A) \cdot P(B) = \frac{1}{2} \cdot \frac{1}{3} = \frac{1}{6} = P(A \cap B)\)</span> : <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont indépendants.</p>
 </div>
 </div>
 </div>
@@ -531,37 +447,33 @@ A_{n}^{p} = \frac{n!}{(n-p)!}.
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-4" role="tab" aria-controls="tabset-3-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-5" role="tab" aria-controls="tabset-3-5" aria-selected="false" href="">Pièges</a></li></ul>
 <div class="tab-content">
 <div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
-<p>Relis la <a href="#definition-1-2">définition de la factorielle</a>.</p>
+<p>Relis la <a href="../ch3-probabilite-conditio/4-independance.html#definition-3-2">définition 3.2</a>.</p>
 </div>
 <div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
-<p>Quels facteurs sont communs au numérateur et au dénominateur ?</p>
+<p>Que vaut <span class="math inline">\(A \cap B\)</span> ?</p>
 </div>
 <div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
-<p><span class="math inline">\(10! = 10 \cdot 9 \cdot 8!\)</span>.</p>
+<p><span class="math inline">\(A \cap B = \{2\}\)</span>.</p>
 </div>
 <div id="tabset-3-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-4-tab">
-<ul>
-<li><span class="math inline">\(\frac{10!}{8!} = \frac{10 \cdot 9 \cdot 8!}{8!} = 90\)</span>.</li>
-<li><span class="math inline">\(\frac{7!}{5! \cdot 2!} = \frac{7 \cdot 6 \cdot 5!}{5! \cdot 2} = \frac{42}{2} = 21\)</span>.</li>
-<li><span class="math inline">\(\frac{(n+1)!}{n!} = \frac{(n+1) \cdot n!}{n!} = n + 1\)</span>.</li>
-</ul>
+<p>On suppose les 6 faces équiprobables. <span class="math inline">\(P(A) = \frac{3}{6} = \frac{1}{2}\)</span>, <span class="math inline">\(P(B) = \frac{2}{6} = \frac{1}{3}\)</span>, <span class="math inline">\(A \cap B = \{2\}\)</span> et <span class="math inline">\(P(A \cap B) = \frac{1}{6}\)</span>. <span class="math inline">\(P(A) \cdot P(B) = \frac{1}{2} \cdot \frac{1}{3} = \frac{1}{6} = P(A \cap B)\)</span> : <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont indépendants.</p>
 </div>
 <div id="tabset-3-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-5-tab">
 <ul>
-<li>Simplifier <span class="math inline">\(\frac{10!}{8!}\)</span> en <span class="math inline">\(\frac{10}{8}\)</span> : on simplifie des facteurs, pas les nombres sous le « ! ».</li>
+<li>Penser que <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont dépendants parce qu’ils ont une issue commune.</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
-<div id="exercice-1-10" class="exo" data-sorte="exercice" data-num="1.10" data-page="10" data-phys="13">
+<div id="exercice-S3-4" class="exo" data-sorte="exercice" data-num="S3.4">
 <div class="exo-tete">
-<p><span class="exo-titre">✎ Exercice 1.10</span> <span class="exo-maison">⟵ à faire à la maison</span> <span class="exo-meta"><span class="exo-comp">A5</span> ★☆☆</span></p>
+<p><span class="exo-titre">✎ Exercice S3.4</span> <span class="exo-meta"><span class="exo-comp">T2</span> ★★★</span></p>
 </div>
 <div class="exo-corps">
-<p>Sans calculatrice, calcule : <span class="math inline">\(6!\)</span> ; <span class="math inline">\(\frac{9!}{7!}\)</span> ; <span class="math inline">\(\frac{8!}{6! \cdot 2!}\)</span> ; <span class="math inline">\(\frac{5!}{0!}\)</span>. Simplifie <span class="math inline">\(\frac{n!}{(n-2)!}\)</span>.</p>
+<p><em>Défi.</em> On reprend le dépistage de l’activité 3.3 (test positif chez 90 % des malades et chez 9 % des non-malades), mais pour une maladie qui touche 0,1 % des personnes testées. Calcule <span class="math inline">\(P(M | T)\)</span> et commente.</p>
 <div class="rep-bloc">
-<p><span class="math inline">\(6! = 720\)</span> ; <span class="math inline">\(\frac{9!}{7!} = 9 \cdot 8 = 72\)</span> ; <span class="math inline">\(\frac{8!}{6! \cdot 2!} = \frac{8 \cdot 7}{2} = 28\)</span> ; <span class="math inline">\(\frac{5!}{0!} = \frac{120}{1} = 120\)</span> ; <span class="math inline">\(\frac{n!}{(n-2)!} = n(n-1)\)</span>.</p>
+<p>Sur 10 000 personnes : 10 malades, dont 9 positives ; 9 990 non malades, dont <span class="math inline">\(9990 \cdot 0{,}09 \approx 899\)</span> positives. <span class="math inline">\(P(M | T) \approx \frac{9}{908} \approx 0{,}0099\)</span> : moins d’une personne positive sur 100 est malade. Plus la maladie est rare, moins un test positif est informatif à lui seul.</p>
 </div>
 </div>
 </div>
@@ -570,38 +482,36 @@ A_{n}^{p} = \frac{n!}{(n-p)!}.
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-4" role="tab" aria-controls="tabset-4-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-5" role="tab" aria-controls="tabset-4-5" aria-selected="false" href="">Pièges</a></li></ul>
 <div class="tab-content">
 <div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
-<p>Relis la <a href="#definition-1-2">définition de la factorielle</a> et la convention <span class="math inline">\(0! = 1\)</span>.</p>
+<p>Relis l’<a href="../ch3-probabilite-conditio/3-lire-un-test-de-depistage.html#activite-3-3">activité 3.3</a> et l’<a href="../ch3-probabilite-conditio/3-lire-un-test-de-depistage.html#exercice-3-5">exercice 3.5</a>.</p>
 </div>
 <div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
-<p>Dans un quotient de factorielles, quels facteurs se simplifient ?</p>
+<p>Pour combien de personnes faut-il construire l’arbre pour n’avoir que des effectifs raisonnables ?</p>
 </div>
 <div id="tabset-4-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-3-tab">
-<p><span class="math inline">\(9! = 9 \cdot 8 \cdot 7!\)</span>.</p>
+<p>Sur 10 000 personnes : 10 malades, dont 9 positives.</p>
 </div>
 <div id="tabset-4-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-4-tab">
-<p><span class="math inline">\(6! = 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 = 720\)</span> ; <span class="math inline">\(\frac{9!}{7!} = \frac{9 \cdot 8 \cdot 7!}{7!} = 72\)</span> ; <span class="math inline">\(\frac{8!}{6! \cdot 2!} = \frac{8 \cdot 7}{2} = 28\)</span> ; <span class="math inline">\(\frac{5!}{0!} = \frac{120}{1} = 120\)</span> ; <span class="math inline">\(\frac{n!}{(n-2)!} = \frac{n(n-1)(n-2)!}{(n-2)!} = n(n-1)\)</span>.</p>
+<p>Sur 10 000 personnes : 10 malades, dont <span class="math inline">\(10 \cdot 0{,}9 = 9\)</span> positives ; 9 990 non malades, dont <span class="math inline">\(9990 \cdot 0{,}09 \approx 899\)</span> positives. <span class="math inline">\(P(M | T) \approx \frac{9}{9 + 899} = \frac{9}{908} \approx 0{,}0099\)</span> : moins d’une personne positive sur 100 est malade. Plus la maladie est rare, moins un test positif renseigne à lui seul.</p>
 </div>
 <div id="tabset-4-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-5-tab">
 <ul>
-<li>Simplifier <span class="math inline">\(\frac{9!}{7!}\)</span> en <span class="math inline">\(\frac{9}{7}\)</span> : on ne simplifie pas « les points d’exclamation ».</li>
-<li>Prendre <span class="math inline">\(0! = 0\)</span> : on convient que <span class="math inline">\(0! = 1\)</span>.</li>
+<li>Construire l’arbre sur 1 000 personnes : on obtient 1 malade et des effectifs non entiers.</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
-<div id="exercice-1-11" class="exo" data-sorte="exercice" data-num="1.11" data-page="10" data-phys="13">
+</section>
+<section id="entraînement-complémentaire" class="level1">
+<h1>Entraînement complémentaire</h1>
+<div id="exercice-S3-5" class="exo" data-sorte="exercice" data-num="S3.5">
 <div class="exo-tete">
-<p><span class="exo-titre">✎ Exercice 1.11</span> <span class="exo-meta"><span class="exo-comp">A5</span> ★★☆</span></p>
+<p><span class="exo-titre">✎ Exercice S3.5</span> <span class="exo-meta"><span class="exo-comp">A3</span> ★★☆</span></p>
 </div>
 <div class="exo-corps">
-<p>Arnaud fête son anniversaire avec 3 copains et 2 copines. Les 6 enfants descendent le toboggan l’un après l’autre. Combien d’ordres de passage sont possibles</p>
-<ol type="a">
-<li><p>sans contrainte ? b) si Arnaud passe en premier ?</p></li>
-<li><p>si les deux filles passent en premier ? d) si les deux filles passent l’une juste après l’autre ?</p></li>
-</ol>
+<p>Un gardien a 5 clés indiscernables ; une seule ouvre la porte. Il les essaie l’une après l’autre, en mettant de côté chaque clé essayée. Construis un arbre, puis calcule la probabilité qu’il ouvre la porte a) au premier essai ; b) au troisième essai ; c) au dernier essai ; d) en au plus deux essais.</p>
 <div class="rep-bloc">
-<p>Un ordre de passage est une permutation des enfants. a) <span class="math inline">\(6! = 720\)</span>. b) Arnaud est placé ; on range les 5 autres : <span class="math inline">\(5! = 120\)</span>. c) Les deux filles aux deux premières places : <span class="math inline">\(2!\)</span> ; les 4 garçons ensuite : <span class="math inline">\(4!\)</span> ; <span class="math inline">\(2! \cdot 4! = 48\)</span>. d) On colle les deux filles en un seul bloc : on range 5 objets (<span class="math inline">\(5!\)</span>), puis les filles dans le bloc (<span class="math inline">\(2!\)</span>) : <span class="math inline">\(5! \cdot 2! = 240\)</span>.</p>
+<p>On suppose qu’à chaque essai, les clés restantes sont équiprobables. a) <span class="math inline">\(\frac{1}{5}\)</span>. b) Deux échecs puis la bonne clé : <span class="math inline">\(\frac{4}{5} \cdot \frac{3}{4} \cdot \frac{1}{3} = \frac{1}{5}\)</span>. c) <span class="math inline">\(\frac{4}{5} \cdot \frac{3}{4} \cdot \frac{2}{3} \cdot \frac{1}{2} \cdot 1 = \frac{1}{5}\)</span> : chaque rang a la même probabilité. d) Premier ou deuxième essai (événements disjoints) : <span class="math inline">\(\frac{1}{5} + \frac{1}{5} = \frac{2}{5}\)</span>.</p>
 </div>
 </div>
 </div>
@@ -610,37 +520,30 @@ A_{n}^{p} = \frac{n!}{(n-p)!}.
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-3" role="tab" aria-controls="tabset-5-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-4" role="tab" aria-controls="tabset-5-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-5" role="tab" aria-controls="tabset-5-5" aria-selected="false" href="">Pièges</a></li></ul>
 <div class="tab-content">
 <div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
-<p>Relis la <a href="#definition-1-3">définition des permutations</a> et le <a href="../ch1-compter-sur-de-petit/2-additionner-multiplier.html#propriete-1-1">principe multiplicatif</a>.</p>
+<p>Relis la <a href="../ch3-probabilite-conditio/2-arbres-de-probabilites.html#propriete-3-1">règle des arbres</a>.</p>
 </div>
 <div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
-<p>Quelle est la place la plus contrainte ? Par quoi commencer ?</p>
+<p>Après un échec, combien de clés reste-t-il, et combien sont bonnes ?</p>
 </div>
 <div id="tabset-5-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-3-tab">
-<ol start="4" type="a">
-<li>Colle les deux filles en un seul « bloc » : combien d’objets faut-il ranger ?</li>
-</ol>
+<p>Au 3<sup>e</sup> essai : deux échecs, puis la bonne clé : <span class="math inline">\(\frac{4}{5} \cdot \frac{3}{4} \cdot \frac{1}{3}\)</span>.</p>
 </div>
 <div id="tabset-5-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-4-tab">
-<p>Un ordre de passage est une permutation des 6 enfants. a) <span class="math inline">\(6! = 720\)</span>. b) Arnaud occupe la première place ; on range les 5 autres : <span class="math inline">\(5! = 120\)</span>. c) Les filles aux places 1 et 2 : <span class="math inline">\(2!\)</span> façons ; les 4 garçons ensuite : <span class="math inline">\(4!\)</span> façons ; <span class="math inline">\(2! \cdot 4! = 48\)</span>. d) Le bloc des deux filles et les 4 garçons font 5 objets : <span class="math inline">\(5!\)</span> ; dans le bloc, deux ordres : <span class="math inline">\(5! \cdot 2! = 240\)</span>.</p>
+<p>On suppose qu’à chaque essai, les clés restantes sont équiprobables. a) <span class="math inline">\(\frac{1}{5}\)</span>. b) <span class="math inline">\(\frac{4}{5} \cdot \frac{3}{4} \cdot \frac{1}{3} = \frac{1}{5}\)</span>. c) <span class="math inline">\(\frac{4}{5} \cdot \frac{3}{4} \cdot \frac{2}{3} \cdot \frac{1}{2} \cdot 1 = \frac{1}{5}\)</span>. d) Ouvrir au 1<sup>er</sup> ou au 2<sup>e</sup> essai (disjoints) : <span class="math inline">\(\frac{1}{5} + \frac{4}{5} \cdot \frac{1}{4} = \frac{2}{5}\)</span>.</p>
 </div>
 <div id="tabset-5-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-5-tab">
 <ul>
-<li><ol start="3" type="a">
-<li>Oublier que les deux filles peuvent échanger leurs places (<span class="math inline">\(2!\)</span>).</li>
-</ol></li>
-<li><ol start="4" type="a">
-<li>Compter <span class="math inline">\(6!\)</span> en oubliant que le bloc ne forme qu’un seul objet à ranger.</li>
+<li><ol start="2" type="a">
+<li>Répondre <span class="math inline">\(\frac{1}{3}\)</span> : c’est la probabilité au 3<sup>e</sup> essai <em>sachant</em> que les deux premiers ont échoué.</li>
 </ol></li>
 </ul>
 </div>
 </div>
 </div>
 </div>
-<div class="ae-lien">
-<p><a href="../autoeval.html#sections=sec-arrangements">✔ S’autoévaluer sur cette section : test de 6 questions →</a></p>
-</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script>
@@ -825,7 +728,7 @@ A_{n}^{p} = \frac{n!}{(n-p)!}.
 <!-- GÉNÉRÉ par typweb — ne pas éditer -->
 <script>
 /* Réglages du cours (typweb.toml) */
-window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.com/qlambotte/proba-cours", "pdfs": [{"titre": "Cours — version élève", "detail": "réponses à compléter", "fichier": "proba.pdf"}, {"titre": "Cours — avec le corrigé", "detail": "réponses en bleu", "fichier": "proba-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1", "detail": "", "fichier": "exercices-supp-ch1.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2", "detail": "", "fichier": "exercices-supp-ch2.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3", "detail": "", "fichier": "exercices-supp-ch3.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1 (corrigé)", "detail": "", "fichier": "exercices-supp-ch1-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2 (corrigé)", "detail": "", "fichier": "exercices-supp-ch2-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3 (corrigé)", "detail": "", "fichier": "exercices-supp-ch3-corrige.pdf"}], "portail": "https://qlambotte.github.io/6e.html", "horsLigne": true};
+window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.com/qlambotte/proba-cours", "pdfs": [{"titre": "Cours — version élève", "detail": "réponses à compléter", "fichier": "proba.pdf"}, {"titre": "Cours — avec le corrigé", "detail": "réponses en bleu", "fichier": "proba-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1", "detail": "", "fichier": "exercices-supp-ch1.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2", "detail": "", "fichier": "exercices-supp-ch2.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3", "detail": "", "fichier": "exercices-supp-ch3.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1 (corrigé)", "detail": "", "fichier": "exercices-supp-ch1-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2 (corrigé)", "detail": "", "fichier": "exercices-supp-ch2-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3 (corrigé)", "detail": "", "fichier": "exercices-supp-ch3-corrige.pdf"}], "portail": "https://qlambotte.github.io/6e.html", "horsLigne": true, "stylesEssai": true, "minuteur": [3, 5, 10, 15, 20]};
 /* Charge les scripts du site (js/) avec le bon chemin relatif,
    quelle que soit la profondeur de la page. */
 (function () {
@@ -858,7 +761,7 @@ window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.co
 })();
 </script>
 <script>
-// Menu « Aa » (en bas à gauche) : essayer les styles du site. Le choix est
+// Menu « Aa » : taille du texte (toujours) et styles du site à l'essai. Le choix est
 // mémorisé dans ce navigateur (localStorage « typweb-style »). À retirer quand
 // un style est retenu (typweb.toml : [site] styles-essai = false).
 (function () {
@@ -880,22 +783,50 @@ window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.co
     document.querySelectorAll(".st-panneau button").forEach(function (b) { b.classList.toggle("on", b.dataset.s === s); });
     window.dispatchEvent(new Event("resize"));      // figures : se redessiner
   }
+  var TAILLES = [0.85, 0.92, 1, 1.08, 1.16, 1.25, 1.35, 1.5];
+  function tailleCourante() { try { return parseFloat(localStorage.getItem("typweb-taille")) || 1; } catch (e) { return 1; } }
+  function poserTaille(t) {
+    document.documentElement.style.fontSize = t === 1 ? "" : (100 * t) + "%";
+    try { if (t === 1) localStorage.removeItem("typweb-taille"); else localStorage.setItem("typweb-taille", t); } catch (e) {}
+    var l = document.querySelector(".st-taille span"); if (l) l.textContent = Math.round(t * 100) + " %";
+    window.dispatchEvent(new Event("resize"));      // figures : se redessiner
+  }
+  function pas(d) {
+    var t = tailleCourante(), k = 0;
+    TAILLES.forEach(function (x, j) { if (Math.abs(x - t) < Math.abs(TAILLES[k] - t)) k = j; });
+    poserTaille(TAILLES[Math.max(0, Math.min(TAILLES.length - 1, k + d))]);
+  }
   function build() {
     if (document.querySelector(".st-menu")) return;
+    var essai = !window.TYPWEB || window.TYPWEB.stylesEssai !== false;
     var m = document.createElement("div"); m.className = "st-menu";
     var b = document.createElement("button"); b.className = "st-btn"; b.type = "button"; b.textContent = "Aa";
-    b.title = "Essayer un autre style"; b.setAttribute("aria-label", "Essayer un autre style");
+    b.title = "Taille du texte" + (essai ? " et style du site" : ""); b.setAttribute("aria-label", b.title);
     var p = document.createElement("div"); p.className = "st-panneau"; p.hidden = true;
-    p.innerHTML = "<p>Style du site (mode clair)</p>";
-    STYLES.forEach(function (s) {
-      var x = document.createElement("button"); x.type = "button"; x.dataset.s = s[0]; x.textContent = s[1];
-      x.addEventListener("click", function () { appliquer(s[0]); });
-      p.appendChild(x);
-    });
+    p.innerHTML = "<p>Taille du texte</p>";
+    var tl = document.createElement("div"); tl.className = "st-taille";
+    var moins = document.createElement("button"); moins.type = "button"; moins.textContent = "A−"; moins.title = "Réduire le texte";
+    var val = document.createElement("span"); val.textContent = Math.round(tailleCourante() * 100) + " %";
+    val.title = "Revenir à 100 %"; val.style.cursor = "pointer";
+    var plus = document.createElement("button"); plus.type = "button"; plus.textContent = "A+"; plus.title = "Agrandir le texte";
+    moins.addEventListener("click", function () { pas(-1); });
+    plus.addEventListener("click", function () { pas(1); });
+    val.addEventListener("click", function () { poserTaille(1); });
+    tl.appendChild(moins); tl.appendChild(val); tl.appendChild(plus);
+    p.appendChild(tl);
+    if (essai) {
+      var sep = document.createElement("div"); sep.className = "st-sep"; p.appendChild(sep);
+      var t = document.createElement("p"); t.textContent = "Style du site (mode clair)"; p.appendChild(t);
+      STYLES.forEach(function (s) {
+        var x = document.createElement("button"); x.type = "button"; x.dataset.s = s[0]; x.textContent = s[1];
+        x.addEventListener("click", function () { appliquer(s[0]); });
+        p.appendChild(x);
+      });
+    }
     b.addEventListener("click", function () { p.hidden = !p.hidden; });
     document.addEventListener("click", function (e) { if (!m.contains(e.target)) p.hidden = true; });
     m.appendChild(p); m.appendChild(b); document.body.appendChild(m);
-    appliquer(courant());
+    if (essai) appliquer(courant());
   }
   if (document.readyState !== "loading") build(); else document.addEventListener("DOMContentLoaded", build);
 })();
@@ -1302,13 +1233,13 @@ window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.co
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../ch1-compter-sur-de-petit/2-additionner-multiplier.html" class="pagination-link" aria-label="Additionner, multiplier">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Additionner, multiplier</span></span>
+      <a href="../ch3-probabilite-conditio/5-pour-aller-plus-loin.html" class="pagination-link" aria-label="Pour aller plus loin">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Pour aller plus loin</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../ch1-compter-sur-de-petit/4-combinaisons.html" class="pagination-link" aria-label="Combinaisons">
-        <span class="nav-page-text"><span class="chapter-title">Combinaisons</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../ch3-probabilite-conditio/7-references.html" class="pagination-link" aria-label="Références">
+        <span class="nav-page-text"><span class="chapter-title">Références</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

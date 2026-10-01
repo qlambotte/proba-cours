@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Additionner, multiplier – Probabilités</title>
+<title>Lister avant de compter – Probabilités</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -35,8 +35,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../ch1-compter-sur-de-petit/3-arrangements-et-permutations.html" rel="next">
-<link href="../ch1-compter-sur-de-petit/1-lister-avant-de-compter.html" rel="prev">
+<link href="../ch1-compter-sur-de-petit/3-additionner-multiplier.html" rel="next">
+<link href="../ch1-compter-sur-de-petit/1-le-langage-des-ensembles.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-73b0ff3878a4e6fc3716dc69a6aaefa3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-94cb1ee365b8c2bebb8400336c7455e1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-4f25214d2c0aa817e35f237ded488e3e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -82,6 +82,8 @@ ul.task-list li input[type="checkbox"] {
     if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
     var st = localStorage.getItem('typweb-style');
     if (st) document.documentElement.setAttribute('data-style', st);   // styles à l'essai (menu « Aa »)
+    var tx = parseFloat(localStorage.getItem('typweb-taille'));          // taille du texte (menu « Aa »)
+    if (tx && tx !== 1) document.documentElement.style.fontSize = (100 * tx) + '%';
   } catch (e) {}
 })();
 </script>
@@ -127,7 +129,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/index.html">Chapitre 1 — Compter sur de petits ensembles</a></li><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/2-additionner-multiplier.html"><span class="chapter-title">Additionner, multiplier</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/index.html">Chapitre 1 — Compter sur de petits ensembles</a></li><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/2-lister-avant-de-compter.html"><span class="chapter-title">Lister avant de compter</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
@@ -173,37 +175,42 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/1-lister-avant-de-compter.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lister avant de compter</span></a>
+  <a href="../ch1-compter-sur-de-petit/1-le-langage-des-ensembles.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Le langage des ensembles</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/2-additionner-multiplier.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Additionner, multiplier</span></a>
+  <a href="../ch1-compter-sur-de-petit/2-lister-avant-de-compter.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Lister avant de compter</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/3-arrangements-et-permutations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Arrangements et permutations</span></a>
+  <a href="../ch1-compter-sur-de-petit/3-additionner-multiplier.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Additionner, multiplier</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/4-combinaisons.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Combinaisons</span></a>
+  <a href="../ch1-compter-sur-de-petit/4-arrangements-et-permutations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Arrangements et permutations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/5-permutations-avec-repetition-les-anagram.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Permutations avec répétition : les anagrammes</span></a>
+  <a href="../ch1-compter-sur-de-petit/5-combinaisons.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Combinaisons</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/6-choisir-une-methode.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Choisir une méthode</span></a>
+  <a href="../ch1-compter-sur-de-petit/6-permutations-avec-repetition-les-anagram.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Permutations avec répétition : les anagrammes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/7-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  <a href="../ch1-compter-sur-de-petit/7-choisir-une-methode.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Choisir une méthode</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ch1-compter-sur-de-petit/8-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
   </div>
 </li>
       </ul>
@@ -285,12 +292,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch3-probabilite-conditio/6-sources-des-donnees.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sources des données</span></a>
+  <a href="../ch3-probabilite-conditio/6-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch3-probabilite-conditio/7-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  <a href="../ch3-probabilite-conditio/7-references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Références</span></a>
   </div>
 </li>
       </ul>
@@ -321,9 +328,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/index.html">Chapitre 1 — Compter sur de petits ensembles</a></li><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/2-additionner-multiplier.html"><span class="chapter-title">Additionner, multiplier</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/index.html">Chapitre 1 — Compter sur de petits ensembles</a></li><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/2-lister-avant-de-compter.html"><span class="chapter-title">Lister avant de compter</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Additionner, multiplier</span></h1>
+<h1 class="title"><span class="chapter-title">Lister avant de compter</span></h1>
 </div>
 
 
@@ -343,214 +350,138 @@ window.Quarto = {
 <!-- GÉNÉRÉ par typweb à partir des notes Typst : NE PAS ÉDITER (les modifications seraient écrasées). -->
 <div id="activite-1-2" class="theo theo-activite" data-sorte="activite" data-num="1.2" data-page="4" data-phys="7">
 <div class="theo-head">
-<p><strong>Activité 1.2</strong> — un arbre pour compter</p>
+<p><strong>Activité 1.2</strong> — quatre questions, un seul groupe</p>
 </div>
 <div class="theo-body">
-<p>On reprend la question d) de l’activité 1.1 : l’ordre de passage des quatre élèves. Voici le début de l’arbre des ordres qui commencent par A.</p>
-<div class="pb-fig pb-arbre" data-feuilles="9">
-<div class="pb-n" data-id="n0" data-parent="" data-niv="0" data-y="4.0">
-<p>&nbsp;</p>
-</div>
-<div class="pb-n" data-id="n1" data-parent="n0" data-niv="1" data-y="2.5">
-<p>A</p>
-</div>
-<div class="pb-n" data-id="n2" data-parent="n1" data-niv="2" data-y="0.5">
-<p>B</p>
-</div>
-<div class="pb-n" data-id="n3" data-parent="n2" data-niv="3" data-y="0.0">
-<p>C</p>
-</div>
-<div class="pb-n" data-id="n4" data-parent="n3" data-niv="4" data-y="0.0">
-<p>D</p>
-</div>
-<div class="pb-n" data-id="n5" data-parent="n2" data-niv="3" data-y="1.0">
-<p>D</p>
-</div>
-<div class="pb-n" data-id="n6" data-parent="n5" data-niv="4" data-y="1.0">
-<p>C</p>
-</div>
-<div class="pb-n" data-id="n7" data-parent="n1" data-niv="2" data-y="2.5">
-<p>C</p>
-</div>
-<div class="pb-n" data-id="n8" data-parent="n7" data-niv="3" data-y="2.0">
-<p>B</p>
-</div>
-<div class="pb-n" data-id="n9" data-parent="n8" data-niv="4" data-y="2.0">
-<p>D</p>
-</div>
-<div class="pb-n" data-id="n10" data-parent="n7" data-niv="3" data-y="3.0">
-<p>D</p>
-</div>
-<div class="pb-n" data-id="n11" data-parent="n10" data-niv="4" data-y="3.0">
-<p>B</p>
-</div>
-<div class="pb-n" data-id="n12" data-parent="n1" data-niv="2" data-y="4.5">
-<p>D</p>
-</div>
-<div class="pb-n" data-id="n13" data-parent="n12" data-niv="3" data-y="4.0">
-<p>B</p>
-</div>
-<div class="pb-n" data-id="n14" data-parent="n13" data-niv="4" data-y="4.0">
-<p>C</p>
-</div>
-<div class="pb-n" data-id="n15" data-parent="n12" data-niv="3" data-y="5.0">
-<p>C</p>
-</div>
-<div class="pb-n" data-id="n16" data-parent="n15" data-niv="4" data-y="5.0">
-<p>B</p>
-</div>
-<div class="pb-n" data-id="n17" data-parent="n0" data-niv="1" data-y="6.0">
-<p>B (idem)</p>
-</div>
-<div class="pb-n" data-id="n18" data-parent="n0" data-niv="1" data-y="7.0">
-<p>C (idem)</p>
-</div>
-<div class="pb-n" data-id="n19" data-parent="n0" data-niv="1" data-y="8.0">
-<p>D (idem)</p>
-</div>
-</div>
+<p>Un groupe de quatre élèves : Alice, Bilal, Chloé et Dries, notés A, B, C, D. Pour chaque question, écris d’abord deux résultats possibles, puis la liste complète des résultats, organisée de façon à être sûr de n’en oublier aucun.</p>
 <ol type="a">
-<li>Combien de branches partent de la racine ? de chaque nœud du deuxième niveau ? du troisième ?</li>
+<li>Élire un délégué et un suppléant.</li>
 </ol>
 <div class="rep-bloc">
-<p>4 branches, puis 3 depuis chaque nœud du deuxième niveau, puis 2, puis 1.</p>
+<p>AB, AC, AD, BA, BC, BD, CA, CB, CD, DA, DB, DC : 12 résultats (AB : Alice déléguée, Bilal suppléant).</p>
 </div>
 <ol start="2" type="a">
-<li>Pourquoi le nombre d’ordres est-il un produit ?</li>
+<li>Former un binôme.</li>
 </ol>
 <div class="rep-bloc">
-<p>À chaque étape, le nombre de choix est le même pour toutes les branches : 4, puis 3, puis 2, puis 1. L’arbre a donc <span class="math inline">\(4 \cdot 3 \cdot 2 \cdot 1 = 24\)</span> feuilles, et chaque feuille est un ordre différent.</p>
-</div>
-</div>
-</div>
-<div id="propriete-1-1" class="theo theo-propriete" data-sorte="propriete" data-num="1.1" data-page="4" data-phys="7">
-<div class="theo-head">
-<p><strong>Propriété 1.1</strong> — principe multiplicatif</p>
-</div>
-<div class="theo-body">
-<p>Si un résultat se construit en <span class="math inline">\(k\)</span> étapes successives, avec</p>
-<ul>
-<li><span class="math inline">\(n_{1}\)</span> choix possibles à la première étape,</li>
-<li><span class="math inline">\(n_{2}\)</span> choix possibles à la deuxième étape, <em>quel que soit le choix fait à la première</em>,</li>
-<li>…, <span class="math inline">\(n_{k}\)</span> choix possibles à la <span class="math inline">\(k\)</span>-ième étape, <em>quels que soient les choix précédents</em>,</li>
-</ul>
-<p>et si deux suites de choix différentes donnent deux résultats différents, alors le nombre de résultats vaut</p>
-<p><span class="math display">\[
-n_{1} \cdot n_{2} \cdot \cdots \cdot n_{k}.
-\]</span></p>
-</div>
-</div>
-<div id="exemple-1-1" class="theo theo-exemple" data-sorte="exemple" data-num="1.1" data-page="5" data-phys="8">
-<div class="theo-head">
-<p><strong>Exemple 1.1</strong> — plaques belges</p>
-</div>
-<div class="theo-body">
-<p>Les plaques d’immatriculation belges de la série 1 (mises en circulation à partir de 2010) ont le format 1-ABC-123 : trois lettres, puis un nombre de 001 à 999. La presse annonçait « plus de 17,5 millions de combinaisons possibles » (RTBF (21/12/2020). Les nouvelles plaques d’immatriculation débutant par 2 seront sur les routes fin janvier). Vérifions.</p>
-<p>Une plaque est une suite de trois lettres (l’ordre compte, une lettre peut revenir) suivie d’un nombre de 001 à 999. Chaque étape offre toujours le même nombre de choix : 26, 26, 26, puis 999. Par le principe multiplicatif, il y a <span class="math inline">\(26 \cdot 26 \cdot 26 \cdot 999 = 17 \, 558 \, 424\)</span> plaques : un peu plus de 17,5 millions.</p>
-</div>
-</div>
-<div id="remarque-1-2" class="theo theo-remarque" data-sorte="remarque" data-num="1.2" data-page="5" data-phys="8">
-<div class="theo-head">
-<p><strong>Remarque 1.2</strong></p>
-</div>
-<div class="theo-body">
-<p>Les <em>choix</em> peuvent changer d’une branche à l’autre ; c’est leur <em>nombre</em> qui doit rester le même. Nombres de trois chiffres distincts : 9 choix pour les centaines (pas 0), puis 9 pour les dizaines (0 redevient possible, mais pas le chiffre des centaines), puis 8 pour les unités : <span class="math inline">\(9 \cdot 9 \cdot 8 = 648\)</span>.</p>
-<p>La dernière condition du principe compte aussi. Pour former un binôme, « 4 choix pour le premier élève, puis 3 pour le second » donne <span class="math inline">\(4 \cdot 3 = 12\)</span> ; mais choisir A puis B et choisir B puis A donnent le même binôme {A, B}. Deux suites de choix différentes donnent ici le même résultat : chaque binôme est compté deux fois, et il y en a <span class="math inline">\(\frac{12}{2} = 6\)</span> (activité 1.1).</p>
-</div>
-</div>
-<p>Quand les résultats se répartissent en plusieurs cas, on compte chaque cas, puis on rassemble. Un diagramme montre si les cas se recouvrent.</p>
-<div id="activite-1-3" class="theo theo-activite" data-sorte="activite" data-num="1.3" data-page="5" data-phys="8">
-<div class="theo-head">
-<p><strong>Activité 1.3</strong> — compter une réunion</p>
-</div>
-<div class="theo-body">
-<p>Parmi les nombres entiers de 1 à 100, on note <span class="math inline">\(A\)</span> l’ensemble des multiples de 2 et <span class="math inline">\(B\)</span> l’ensemble des multiples de 3.</p>
-<ol type="a">
-<li>Calcule <span class="math inline">\(\#A\)</span>, <span class="math inline">\(\#B\)</span> et le nombre de multiples de 6. Que représentent ces derniers dans le diagramme ?</li>
-</ol>
-<div class="rep-bloc">
-<p><span class="math inline">\(\#A = 50\)</span> ; <span class="math inline">\(\#B = 33\)</span> (<span class="math inline">\(3 \cdot 33 = 99\)</span>) ; multiples de 6 : 16 (<span class="math inline">\(6 \cdot 16 = 96\)</span>). Ce sont les nombres qui sont à la fois dans <span class="math inline">\(A\)</span> et dans <span class="math inline">\(B\)</span> : l’intersection <span class="math inline">\(A \cap B\)</span>.</p>
-</div>
-<ol start="2" type="a">
-<li>Complète le diagramme avec le nombre d’éléments de chaque zone.</li>
-</ol>
-<div class="pb-fig pb-venn" data-n="2" data-inclus="0" data-disjoints="0" data-ombre="[]" data-activite="1">
-<div class="pb-univers">
-<p><span class="math inline">\(1, 2, …, 100\)</span></p>
-</div>
-<div class="pb-nom" data-i="0">
-<p><span class="math inline">\(A\)</span></p>
-</div>
-<div class="pb-nom" data-i="1">
-<p><span class="math inline">\(B\)</span></p>
-</div>
-<div class="pb-z" data-z="a">
-<p><span class="rep" data-v="34">34</span></p>
-</div>
-<div class="pb-z" data-z="ab">
-<p><span class="rep" data-v="16">16</span></p>
-</div>
-<div class="pb-z" data-z="b">
-<p><span class="rep" data-v="17">17</span></p>
-</div>
-<div class="pb-z" data-z="dehors">
-<p><span class="rep" data-v="33">33</span></p>
-</div>
+<p>{A, B}, {A, C}, {A, D}, {B, C}, {B, D}, {C, D} : 6 résultats.</p>
 </div>
 <ol start="3" type="a">
-<li>Combien de nombres de 1 à 100 sont multiples de 2 ou de 3 ? Pourquoi <span class="math inline">\(50 + 33\)</span> est-il faux ?</li>
+<li>Tirer au sort, lundi puis mardi, l’élève qui efface le tableau (le même élève peut être tiré deux fois).</li>
 </ol>
 <div class="rep-bloc">
-<p><span class="math inline">\(34 + 16 + 17 = 67\)</span>. Dans <span class="math inline">\(50 + 33 = 83\)</span>, les 16 multiples de 6 sont comptés deux fois : une fois dans <span class="math inline">\(A\)</span>, une fois dans <span class="math inline">\(B\)</span>. Donc <span class="math inline">\(\#(A \cup B) = 50 + 33 - 16 = 67\)</span>.</p>
+<p>AA, AB, AC, AD, BA, BB, BC, BD, CA, CB, CC, CD, DA, DB, DC, DD : 16 résultats.</p>
+</div>
+<ol start="4" type="a">
+<li>Fixer l’ordre de passage des quatre élèves au tableau.</li>
+</ol>
+<div class="rep-bloc">
+<p>ABCD, ABDC, ACBD, ACDB, ADBC, ADCB, puis 6 ordres commençant par B, 6 par C et 6 par D : 24 résultats.</p>
+</div>
+<ol start="5" type="a">
+<li>Pourquoi la liste a) est-elle deux fois plus longue que la liste b) ? Complète le schéma : chaque case regroupe les résultats de a) qui donnent le même binôme.</li>
+</ol>
+<div class="pb-fig pb-partition">
+<div class="pb-part-titre">
+<p><strong>les 12 résultats de a)</strong></p>
+</div>
+<div class="pb-paquets" style="--n:6">
+<div class="pb-paquet">
+<div class="rep-bloc">
+<p>AB<br>
+BA</p>
+</div>
+</div>
+<div class="pb-paquet">
+<div class="rep-bloc">
+<p>AC<br>
+CA</p>
+</div>
+</div>
+<div class="pb-paquet">
+<div class="rep-bloc">
+<p>AD<br>
+DA</p>
+</div>
+</div>
+<div class="pb-paquet">
+<div class="rep-bloc">
+<p>BC<br>
+CB</p>
+</div>
+</div>
+<div class="pb-paquet">
+<div class="rep-bloc">
+<p>BD<br>
+DB</p>
+</div>
+</div>
+<div class="pb-paquet">
+<div class="rep-bloc">
+<p>CD<br>
+DC</p>
 </div>
 </div>
 </div>
-<div id="propriete-1-2" class="theo theo-propriete" data-sorte="propriete" data-num="1.2" data-page="6" data-phys="9">
-<div class="theo-head">
-<p><strong>Propriété 1.2</strong> — principe additif</p>
 </div>
-<div class="theo-body">
-<p>Pour deux ensembles finis <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> :</p>
-<p><span class="math display">\[
-\#(A \cup B) = \#A + \#B - \#(A \cap B).
-\]</span></p>
-<p>Si <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> n’ont aucun élément commun (<span class="math inline">\(A \cap B = \emptyset\)</span>), alors <span class="math inline">\(\#(A \cup B) = \#A + \#B\)</span> : on additionne les cas.</p>
+<div class="rep-bloc">
+<p>Chaque binôme de b), par exemple {A, B}, donne deux résultats de a) : AB et BA. Dans a), l’ordre compte ; dans b), non. Les 12 résultats se regroupent en 6 paquets de 2 : <span class="math inline">\(12 = 6 \cdot 2\)</span>.</p>
 </div>
-</div>
-<div id="propriete-1-3" class="theo theo-propriete" data-sorte="propriete" data-num="1.3" data-page="6" data-phys="9">
-<div class="theo-head">
-<p><strong>Propriété 1.3</strong> — compter par le complémentaire</p>
-</div>
-<div class="theo-body">
-<p>Si <span class="math inline">\(A\)</span> est une partie d’un ensemble fini <span class="math inline">\(E\)</span>, le nombre d’éléments de <span class="math inline">\(E\)</span> qui ne sont pas dans <span class="math inline">\(A\)</span> vaut <span class="math inline">\(\#E - \#A\)</span>.</p>
-<div class="pb-fig pb-venn" data-n="1" data-inclus="0" data-disjoints="0" data-ombre="[&quot;dehors&quot;]" data-activite="0">
+<ol start="6" type="a">
+<li>Quels résultats de c) ne sont pas dans a) ? Complète le diagramme.</li>
+</ol>
+<div class="pb-fig pb-venn" data-n="2" data-inclus="1" data-disjoints="0" data-ombre="[]" data-activite="1">
 <div class="pb-univers">
-<p><span class="math inline">\(E\)</span></p>
+<p><span class="math inline">\(\Omega\)</span></p>
 </div>
 <div class="pb-nom" data-i="0">
-<p><span class="math inline">\(A\)</span></p>
+<ol start="3" type="a">
+<li></li>
+</ol>
+</div>
+<div class="pb-nom" data-i="1">
+<ol type="a">
+<li></li>
+</ol>
+</div>
+<div class="pb-z" data-z="b">
+<p><span class="rep" data-v="12">12</span></p>
+</div>
+<div class="pb-z" data-z="a">
+<p><span class="rep" data-v="4">4</span></p>
 </div>
 </div>
-<p>C’est utile pour compter les résultats qui contiennent « au moins un » élément d’un certain type : on compte tout, puis on retire ceux qui n’en contiennent « aucun ».</p>
+<div class="rep-bloc">
+<p>AA, BB, CC et DD : en c), un même élève peut revenir ; en a), non. La liste a) est contenue dans la liste c) : <span class="math inline">\(16 = 12 + 4\)</span>.</p>
 </div>
 </div>
-<div id="exemple-1-2" class="theo theo-exemple" data-sorte="exemple" data-num="1.2" data-page="6" data-phys="9">
+</div>
+<div class="pb-denombreur" data-cfg="{&quot;elements&quot;: [&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;], &quot;p&quot;: 2, &quot;ordre&quot;: true, &quot;repetition&quot;: false}"></div>
+<div id="cadre-compter-en-quatre-temps" class="cadre-info">
+<p><strong>Compter en quatre temps.</strong></p>
+<ol type="1">
+<li><strong>Décrire.</strong> Écrire deux ou trois résultats possibles. Un résultat est-il une <em>suite</em> (l’ordre compte : AB ≠ BA) ou un <em>groupe</em> (l’ordre ne compte pas : {A, B} = {B, A}) ?</li>
+<li><strong>Questionner.</strong> Un élément peut-il revenir (répétition) ?</li>
+<li><strong>Compter.</strong> Liste organisée, arbre ou diagramme si l’ensemble est petit ; principe multiplicatif ou formule sinon.</li>
+<li><strong>Contrôler.</strong> Sur un cas plus petit, lister les résultats et vérifier que le calcul donne le même nombre.</li>
+</ol>
+</div>
+<div id="remarque-1-1" class="theo theo-remarque" data-sorte="remarque" data-num="1.1" data-page="3" data-phys="6">
 <div class="theo-head">
-<p><strong>Exemple 1.2</strong> — au moins un zéro</p>
+<p><strong>Remarque 1.1</strong></p>
 </div>
 <div class="theo-body">
-<p>Combien de codes PIN à 4 chiffres (de 0000 à 9999) contiennent au moins un 0 ?</p>
-<p>Un code est une suite de 4 chiffres, avec répétition : il y en a <span class="math inline">\(10 \cdot 10 \cdot 10 \cdot 10 = 10 \, 000\)</span>. Les codes sans aucun 0 ont 9 choix à chaque position : <span class="math inline">\(9^{4} = 6561\)</span>. Il y a donc <span class="math inline">\(10 \, 000 - 6561 = 3439\)</span> codes contenant au moins un 0.</p>
+<p>On note une suite entre parenthèses, <span class="math inline">\((A, B)\)</span>, ou simplement AB : l’ordre compte. Un groupe est un ensemble, noté entre accolades, <span class="math inline">\(\{A, B\}\)</span> : l’ordre ne compte pas, <span class="math inline">\(\{A, B\} = \{B, A\}\)</span>.</p>
 </div>
 </div>
-<div id="exercice-1-3" class="exo" data-sorte="exercice" data-num="1.3" data-page="7" data-phys="10">
+<div id="exercice-1-2" class="exo" data-sorte="exercice" data-num="1.2" data-page="4" data-phys="7">
 <div class="exo-tete">
-<p><span class="exo-titre">✎ Exercice 1.3</span> <span class="exo-meta"><span class="exo-comp">A5</span> ★☆☆</span></p>
+<p><span class="exo-titre">✎ Exercice 1.2</span> <span class="exo-meta"><span class="exo-comp">A5</span> ★☆☆</span></p>
 </div>
 <div class="exo-corps">
-<p>Pour s’habiller, Mehdi choisit un pull parmi 3 et un pantalon parmi 2. Construis l’arbre des tenues possibles et donne leur nombre.</p>
+<p>Écris tous les codes formés d’une lettre parmi X, Y, Z suivie d’un chiffre parmi 1, 2. Combien y en a-t-il ?</p>
 <div class="rep-bloc">
-<p>L’arbre a 3 branches (les pulls), puis 2 branches depuis chaque pull (les pantalons) : <span class="math inline">\(3 \cdot 2 = 6\)</span> tenues.</p>
+<p>X1, X2, Y1, Y2, Z1, Z2 : 6 codes.</p>
 </div>
 </div>
 </div>
@@ -559,56 +490,33 @@ n_{1} \cdot n_{2} \cdot \cdots \cdot n_{k}.
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false" href="">Pièges</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>Relis l’<a href="#activite-1-2">activité 1.2</a> et le <a href="#propriete-1-1">principe multiplicatif</a>.</p>
+<p>Relis l’<a href="#activite-1-2">activité 1.2</a> et le <a href="#cadre-compter-en-quatre-temps">cadre « Compter en quatre temps »</a>.</p>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>Combien de branches partent de la racine ? de chaque pull ?</p>
+<p>Comment organiser la liste pour être sûr de n’oublier aucun code ?</p>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<p>Première étape : 3 branches (les pulls). Chaque pull porte ensuite 2 branches.</p>
+<p>Écris d’abord tous les codes qui commencent par X : X1, X2.</p>
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-<p>Une tenue est un couple (pull, pantalon). L’arbre a 3 branches au premier niveau et 2 branches depuis chaque pull ; le nombre de pantalons ne dépend pas du pull choisi. Par le principe multiplicatif, il y a <span class="math inline">\(3 \cdot 2 = 6\)</span> tenues.</p>
+<p>On organise la liste par lettre : X1, X2, Y1, Y2, Z1, Z2. Il y a 6 codes.</p>
 </div>
 <div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
 <ul>
-<li>Additionner <span class="math inline">\(3 + 2\)</span> : on choisit un pull <em>et</em> un pantalon, pas l’un <em>ou</em> l’autre.</li>
+<li>Écrire aussi les codes « chiffre puis lettre » (1X…) : l’énoncé impose la lettre en premier.</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
-<div id="exercice-1-4" class="exo" data-sorte="exercice" data-num="1.4" data-page="7" data-phys="10">
+<div id="exercice-1-3" class="exo" data-sorte="exercice" data-num="1.3" data-page="7" data-phys="10">
 <div class="exo-tete">
-<p><span class="exo-titre">✎ Exercice 1.4</span> <span class="exo-meta"><span class="exo-comp">A5</span> ★★☆</span></p>
+<p><span class="exo-titre">✎ Exercice 1.3</span> <span class="exo-maison">⟵ à faire à la maison</span> <span class="exo-meta"><span class="exo-comp">A5</span> ★☆☆</span></p>
 </div>
 <div class="exo-corps">
-<p>Parmi les nombres entiers de 1 à 60, combien sont multiples de 4 ou de 6 ? Représente la situation par un diagramme de Venn complété.</p>
-<div class="pb-fig pb-venn" data-n="2" data-inclus="0" data-disjoints="0" data-ombre="[]" data-activite="1">
-<div class="pb-univers">
-<p><span class="math inline">\(1, 2, …, 60\)</span></p>
-</div>
-<div class="pb-nom" data-i="0">
-<p><span class="math inline">\(Q\)</span></p>
-</div>
-<div class="pb-nom" data-i="1">
-<p><span class="math inline">\(S\)</span></p>
-</div>
-<div class="pb-z" data-z="a">
-<p><span class="rep" data-v="10">10</span></p>
-</div>
-<div class="pb-z" data-z="ab">
-<p><span class="rep" data-v="5">5</span></p>
-</div>
-<div class="pb-z" data-z="b">
-<p><span class="rep" data-v="5">5</span></p>
-</div>
-<div class="pb-z" data-z="dehors">
-<p><span class="rep" data-v="40">40</span></p>
-</div>
-</div>
+<p>On lance une pièce trois fois de suite et on note la suite des faces obtenues (P pour pile, F pour face). Écris la liste organisée de tous les résultats. Combien de résultats contiennent exactement deux « pile » ?</p>
 <div class="rep-bloc">
-<p>Multiples de 4 : <span class="math inline">\(\#Q = 15\)</span>. Multiples de 6 : <span class="math inline">\(\#S = 10\)</span>. Multiples des deux, c’est-à-dire de 12 : 5. Donc <span class="math inline">\(\#(Q \cup S) = 15 + 10 - 5 = 20\)</span>.</p>
+<p>PPP, PPF, PFP, PFF, FPP, FPF, FFP, FFF : 8 résultats. Exactement deux « pile » : PPF, PFP, FPP, soit 3 résultats.</p>
 </div>
 </div>
 </div>
@@ -617,122 +525,28 @@ n_{1} \cdot n_{2} \cdot \cdots \cdot n_{k}.
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-5" role="tab" aria-controls="tabset-2-5" aria-selected="false" href="">Pièges</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-<p>Relis l’<a href="#activite-1-3">activité 1.3</a> et le <a href="#propriete-1-2">principe additif</a>.</p>
+<p>Relis l’<a href="#activite-1-2">activité 1.2</a> : une liste organisée par premier élément.</p>
 </div>
 <div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
-<p>Quels nombres sont à la fois multiples de 4 et de 6 ?</p>
+<p>Combien de résultats commencent par P ? par F ?</p>
 </div>
 <div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
-<p>Les multiples communs de 4 et de 6 sont les multiples de 12 : 12, 24, 36, 48, 60.</p>
+<p>Commence par PPP, PPF, PFP, PFF : ce sont les résultats qui commencent par P.</p>
 </div>
 <div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
-<p><span class="math inline">\(Q\)</span> : multiples de 4 ; <span class="math inline">\(\#Q = 15\)</span> (<span class="math inline">\(4 \cdot 15 = 60\)</span>). <span class="math inline">\(S\)</span> : multiples de 6 ; <span class="math inline">\(\#S = 10\)</span>. Les multiples de 4 et de 6 sont les multiples de 12 : <span class="math inline">\(\#(Q \cap S) = 5\)</span>. Par le principe additif, <span class="math inline">\(\#(Q \cup S) = 15 + 10 - 5 = 20\)</span>. Dans le diagramme : <span class="math inline">\(Q\)</span> seulement 10, <span class="math inline">\(Q \cap S\)</span> 5, <span class="math inline">\(S\)</span> seulement 5, hors des deux 40.</p>
+<p>Un résultat est une suite de trois faces. Liste organisée par première face : PPP, PPF, PFP, PFF, FPP, FPF, FFP, FFF : 8 résultats. Exactement deux « pile » : PPF, PFP, FPP, soit 3 résultats.</p>
 </div>
 <div id="tabset-2-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-5-tab">
 <ul>
-<li>Répondre <span class="math inline">\(15 + 10 = 25\)</span> : les multiples de 12 sont comptés deux fois.</li>
-<li>Prendre les multiples de 24 (<span class="math inline">\(4 \cdot 6\)</span>) comme multiples communs : 12 est déjà multiple de 4 et de 6.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div id="exercice-1-5" class="exo" data-sorte="exercice" data-num="1.5" data-page="7" data-phys="10">
-<div class="exo-tete">
-<p><span class="exo-titre">✎ Exercice 1.5</span> <span class="exo-maison">⟵ à faire à la maison</span> <span class="exo-meta"><span class="exo-comp">A5</span> ★★☆</span></p>
-</div>
-<div class="exo-corps">
-<p>Un cadenas a trois roues portant chacune les chiffres de 0 à 9. Combien de codes possèdent au moins un 7 ?</p>
-<div class="rep-bloc">
-<p>Codes : <span class="math inline">\(10^{3} = 1000\)</span>. Codes sans 7 : <span class="math inline">\(9^{3} = 729\)</span>. Codes avec au moins un 7 : <span class="math inline">\(1000 - 729 = 271\)</span>.</p>
-</div>
-</div>
-</div>
-<div class="aides">
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-4" role="tab" aria-controls="tabset-3-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-5" role="tab" aria-controls="tabset-3-5" aria-selected="false" href="">Pièges</a></li></ul>
-<div class="tab-content">
-<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
-<p>Relis la <a href="#propriete-1-3">propriété « compter par le complémentaire »</a> et l’<a href="#exemple-1-2">exemple 1.2</a>.</p>
-</div>
-<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
-<p>Est-il plus simple de compter les codes avec au moins un 7, ou ceux sans aucun 7 ?</p>
-</div>
-<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
-<p>Codes sans aucun 7 : chaque roue a 9 chiffres possibles.</p>
-</div>
-<div id="tabset-3-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-4-tab">
-<p>Un code est une suite de 3 chiffres, avec répétition : <span class="math inline">\(10^{3} = 1000\)</span> codes. Codes sans aucun 7 : <span class="math inline">\(9^{3} = 729\)</span>. Par le complémentaire, <span class="math inline">\(1000 - 729 = 271\)</span> codes contiennent au moins un 7.</p>
-</div>
-<div id="tabset-3-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-5-tab">
-<ul>
-<li>Calculer <span class="math inline">\(3 \cdot 10 \cdot 10\)</span> en plaçant « un 7 » sur chaque roue : les codes à deux ou trois 7 sont comptés plusieurs fois.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div id="exercice-1-6" class="exo" data-sorte="exercice" data-num="1.6" data-page="7" data-phys="10">
-<div class="exo-tete">
-<p><span class="exo-titre">✎ Exercice 1.6</span> <span class="exo-meta"><span class="exo-comp">T1</span> ★★★</span></p>
-</div>
-<div class="exo-corps">
-<p><em>Défi.</em> Combien existe-t-il de nombres pairs de trois chiffres distincts ? Indication : distingue deux cas selon le chiffre des unités et représente-les dans un diagramme.</p>
-<div class="pb-fig pb-venn" data-n="2" data-inclus="0" data-disjoints="1" data-ombre="[]" data-activite="1">
-<div class="pb-univers">
-<p>nombres pairs à chiffres distincts</p>
-</div>
-<div class="pb-nom" data-i="0">
-<p><span class="math inline">\(Z\)</span></p>
-</div>
-<div class="pb-nom" data-i="1">
-<p><span class="math inline">\(Q\)</span></p>
-</div>
-<div class="pb-z" data-z="a">
-<p><span class="rep" data-v="72">72</span></p>
-</div>
-<div class="pb-z" data-z="b">
-<p><span class="rep" data-v="256">256</span></p>
-</div>
-</div>
-<p>(<span class="math inline">\(Z\)</span> : chiffre des unités 0 ; <span class="math inline">\(Q\)</span> : chiffre des unités 2, 4, 6 ou 8.)</p>
-<div class="rep-bloc">
-<p>On commence par les unités, qui imposent la parité. Unités 0 : 9 choix pour les centaines, 8 pour les dizaines : <span class="math inline">\(9 \cdot 8 = 72\)</span>. Unités 2, 4, 6 ou 8 (4 choix) : 8 choix pour les centaines (ni 0, ni le chiffre des unités), puis 8 pour les dizaines : <span class="math inline">\(4 \cdot 8 \cdot 8 = 256\)</span>. Les deux cas n’ont aucun nombre commun : <span class="math inline">\(72 + 256 = 328\)</span>.</p>
-</div>
-</div>
-</div>
-<div class="aides">
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-4" role="tab" aria-controls="tabset-4-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-5" role="tab" aria-controls="tabset-4-5" aria-selected="false" href="">Pièges</a></li></ul>
-<div class="tab-content">
-<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
-<p>Relis la <a href="#remarque-1-2">remarque 1.2</a> (nombres à chiffres distincts) et le <a href="#propriete-1-2">principe additif</a>.</p>
-</div>
-<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
-<p>Par quel chiffre vaut-il mieux commencer : les centaines ou les unités ?</p>
-</div>
-<div id="tabset-4-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-3-tab">
-<p>Si les unités valent 0, il reste 9 choix pour les centaines et 8 pour les dizaines.</p>
-</div>
-<div id="tabset-4-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-4-tab">
-<p>On commence par les unités, qui imposent la parité, et on distingue deux cas sans nombre commun.</p>
-<ul>
-<li>Unités 0 : 9 choix pour les centaines (1 à 9), puis 8 pour les dizaines : <span class="math inline">\(9 \cdot 8 = 72\)</span>.</li>
-<li>Unités 2, 4, 6 ou 8 (4 choix) : 8 choix pour les centaines (ni 0, ni le chiffre des unités), puis 8 pour les dizaines : <span class="math inline">\(4 \cdot 8 \cdot 8 = 256\)</span>.</li>
-</ul>
-<p>Il y a <span class="math inline">\(72 + 256 = 328\)</span> nombres pairs de trois chiffres distincts.</p>
-</div>
-<div id="tabset-4-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-5-tab">
-<ul>
-<li>Calculer <span class="math inline">\(9 \cdot 9 \cdot 5\)</span> : le nombre de choix pour les unités dépend alors des chiffres déjà utilisés (0, pair ou non).</li>
-<li>Oublier que 0 est interdit aux centaines, mais permis aux unités.</li>
+<li>Oublier que PPF, PFP et FPP sont trois résultats différents : l’ordre des lancers compte.</li>
+<li>Compter PPP parmi les résultats à deux « pile » : il en contient trois.</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 <div class="ae-lien">
-<p><a href="../autoeval.html#sections=sec-multiplicatif">✔ S’autoévaluer sur cette section : test de 4 questions →</a></p>
+<p><a href="../autoeval.html#sections=sec-lister">✔ S’autoévaluer sur cette section : test de 3 questions →</a></p>
 </div>
 
 
@@ -920,7 +734,7 @@ n_{1} \cdot n_{2} \cdot \cdots \cdot n_{k}.
 <!-- GÉNÉRÉ par typweb — ne pas éditer -->
 <script>
 /* Réglages du cours (typweb.toml) */
-window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.com/qlambotte/proba-cours", "pdfs": [{"titre": "Cours — version élève", "detail": "réponses à compléter", "fichier": "proba.pdf"}, {"titre": "Cours — avec le corrigé", "detail": "réponses en bleu", "fichier": "proba-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1", "detail": "", "fichier": "exercices-supp-ch1.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2", "detail": "", "fichier": "exercices-supp-ch2.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3", "detail": "", "fichier": "exercices-supp-ch3.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1 (corrigé)", "detail": "", "fichier": "exercices-supp-ch1-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2 (corrigé)", "detail": "", "fichier": "exercices-supp-ch2-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3 (corrigé)", "detail": "", "fichier": "exercices-supp-ch3-corrige.pdf"}], "portail": "https://qlambotte.github.io/6e.html", "horsLigne": true};
+window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.com/qlambotte/proba-cours", "pdfs": [{"titre": "Cours — version élève", "detail": "réponses à compléter", "fichier": "proba.pdf"}, {"titre": "Cours — avec le corrigé", "detail": "réponses en bleu", "fichier": "proba-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1", "detail": "", "fichier": "exercices-supp-ch1.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2", "detail": "", "fichier": "exercices-supp-ch2.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3", "detail": "", "fichier": "exercices-supp-ch3.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1 (corrigé)", "detail": "", "fichier": "exercices-supp-ch1-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2 (corrigé)", "detail": "", "fichier": "exercices-supp-ch2-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3 (corrigé)", "detail": "", "fichier": "exercices-supp-ch3-corrige.pdf"}], "portail": "https://qlambotte.github.io/6e.html", "horsLigne": true, "stylesEssai": true, "minuteur": [3, 5, 10, 15, 20]};
 /* Charge les scripts du site (js/) avec le bon chemin relatif,
    quelle que soit la profondeur de la page. */
 (function () {
@@ -953,7 +767,7 @@ window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.co
 })();
 </script>
 <script>
-// Menu « Aa » (en bas à gauche) : essayer les styles du site. Le choix est
+// Menu « Aa » : taille du texte (toujours) et styles du site à l'essai. Le choix est
 // mémorisé dans ce navigateur (localStorage « typweb-style »). À retirer quand
 // un style est retenu (typweb.toml : [site] styles-essai = false).
 (function () {
@@ -975,22 +789,50 @@ window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.co
     document.querySelectorAll(".st-panneau button").forEach(function (b) { b.classList.toggle("on", b.dataset.s === s); });
     window.dispatchEvent(new Event("resize"));      // figures : se redessiner
   }
+  var TAILLES = [0.85, 0.92, 1, 1.08, 1.16, 1.25, 1.35, 1.5];
+  function tailleCourante() { try { return parseFloat(localStorage.getItem("typweb-taille")) || 1; } catch (e) { return 1; } }
+  function poserTaille(t) {
+    document.documentElement.style.fontSize = t === 1 ? "" : (100 * t) + "%";
+    try { if (t === 1) localStorage.removeItem("typweb-taille"); else localStorage.setItem("typweb-taille", t); } catch (e) {}
+    var l = document.querySelector(".st-taille span"); if (l) l.textContent = Math.round(t * 100) + " %";
+    window.dispatchEvent(new Event("resize"));      // figures : se redessiner
+  }
+  function pas(d) {
+    var t = tailleCourante(), k = 0;
+    TAILLES.forEach(function (x, j) { if (Math.abs(x - t) < Math.abs(TAILLES[k] - t)) k = j; });
+    poserTaille(TAILLES[Math.max(0, Math.min(TAILLES.length - 1, k + d))]);
+  }
   function build() {
     if (document.querySelector(".st-menu")) return;
+    var essai = !window.TYPWEB || window.TYPWEB.stylesEssai !== false;
     var m = document.createElement("div"); m.className = "st-menu";
     var b = document.createElement("button"); b.className = "st-btn"; b.type = "button"; b.textContent = "Aa";
-    b.title = "Essayer un autre style"; b.setAttribute("aria-label", "Essayer un autre style");
+    b.title = "Taille du texte" + (essai ? " et style du site" : ""); b.setAttribute("aria-label", b.title);
     var p = document.createElement("div"); p.className = "st-panneau"; p.hidden = true;
-    p.innerHTML = "<p>Style du site (mode clair)</p>";
-    STYLES.forEach(function (s) {
-      var x = document.createElement("button"); x.type = "button"; x.dataset.s = s[0]; x.textContent = s[1];
-      x.addEventListener("click", function () { appliquer(s[0]); });
-      p.appendChild(x);
-    });
+    p.innerHTML = "<p>Taille du texte</p>";
+    var tl = document.createElement("div"); tl.className = "st-taille";
+    var moins = document.createElement("button"); moins.type = "button"; moins.textContent = "A−"; moins.title = "Réduire le texte";
+    var val = document.createElement("span"); val.textContent = Math.round(tailleCourante() * 100) + " %";
+    val.title = "Revenir à 100 %"; val.style.cursor = "pointer";
+    var plus = document.createElement("button"); plus.type = "button"; plus.textContent = "A+"; plus.title = "Agrandir le texte";
+    moins.addEventListener("click", function () { pas(-1); });
+    plus.addEventListener("click", function () { pas(1); });
+    val.addEventListener("click", function () { poserTaille(1); });
+    tl.appendChild(moins); tl.appendChild(val); tl.appendChild(plus);
+    p.appendChild(tl);
+    if (essai) {
+      var sep = document.createElement("div"); sep.className = "st-sep"; p.appendChild(sep);
+      var t = document.createElement("p"); t.textContent = "Style du site (mode clair)"; p.appendChild(t);
+      STYLES.forEach(function (s) {
+        var x = document.createElement("button"); x.type = "button"; x.dataset.s = s[0]; x.textContent = s[1];
+        x.addEventListener("click", function () { appliquer(s[0]); });
+        p.appendChild(x);
+      });
+    }
     b.addEventListener("click", function () { p.hidden = !p.hidden; });
     document.addEventListener("click", function (e) { if (!m.contains(e.target)) p.hidden = true; });
     m.appendChild(p); m.appendChild(b); document.body.appendChild(m);
-    appliquer(courant());
+    if (essai) appliquer(courant());
   }
   if (document.readyState !== "loading") build(); else document.addEventListener("DOMContentLoaded", build);
 })();
@@ -1397,13 +1239,13 @@ window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.co
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../ch1-compter-sur-de-petit/1-lister-avant-de-compter.html" class="pagination-link" aria-label="Lister avant de compter">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Lister avant de compter</span></span>
+      <a href="../ch1-compter-sur-de-petit/1-le-langage-des-ensembles.html" class="pagination-link" aria-label="Le langage des ensembles">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Le langage des ensembles</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../ch1-compter-sur-de-petit/3-arrangements-et-permutations.html" class="pagination-link" aria-label="Arrangements et permutations">
-        <span class="nav-page-text"><span class="chapter-title">Arrangements et permutations</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../ch1-compter-sur-de-petit/3-additionner-multiplier.html" class="pagination-link" aria-label="Additionner, multiplier">
+        <span class="nav-page-text"><span class="chapter-title">Additionner, multiplier</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

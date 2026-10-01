@@ -36,7 +36,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./autoeval.html" rel="next">
-<link href="./ch3-probabilite-conditio/7-exercices-supplementaires.html" rel="prev">
+<link href="./ch3-probabilite-conditio/7-references.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-73b0ff3878a4e6fc3716dc69a6aaefa3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-94cb1ee365b8c2bebb8400336c7455e1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-4f25214d2c0aa817e35f237ded488e3e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -82,6 +82,8 @@ ul.task-list li input[type="checkbox"] {
     if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
     var st = localStorage.getItem('typweb-style');
     if (st) document.documentElement.setAttribute('data-style', st);   // styles à l'essai (menu « Aa »)
+    var tx = parseFloat(localStorage.getItem('typweb-taille'));          // taille du texte (menu « Aa »)
+    if (tx && tx !== 1) document.documentElement.style.fontSize = (100 * tx) + '%';
   } catch (e) {}
 })();
 </script>
@@ -173,37 +175,42 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch1-compter-sur-de-petit/1-lister-avant-de-compter.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lister avant de compter</span></a>
+  <a href="./ch1-compter-sur-de-petit/1-le-langage-des-ensembles.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Le langage des ensembles</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch1-compter-sur-de-petit/2-additionner-multiplier.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Additionner, multiplier</span></a>
+  <a href="./ch1-compter-sur-de-petit/2-lister-avant-de-compter.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lister avant de compter</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch1-compter-sur-de-petit/3-arrangements-et-permutations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Arrangements et permutations</span></a>
+  <a href="./ch1-compter-sur-de-petit/3-additionner-multiplier.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Additionner, multiplier</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch1-compter-sur-de-petit/4-combinaisons.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Combinaisons</span></a>
+  <a href="./ch1-compter-sur-de-petit/4-arrangements-et-permutations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Arrangements et permutations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch1-compter-sur-de-petit/5-permutations-avec-repetition-les-anagram.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Permutations avec répétition : les anagrammes</span></a>
+  <a href="./ch1-compter-sur-de-petit/5-combinaisons.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Combinaisons</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch1-compter-sur-de-petit/6-choisir-une-methode.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Choisir une méthode</span></a>
+  <a href="./ch1-compter-sur-de-petit/6-permutations-avec-repetition-les-anagram.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Permutations avec répétition : les anagrammes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch1-compter-sur-de-petit/7-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  <a href="./ch1-compter-sur-de-petit/7-choisir-une-methode.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Choisir une méthode</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ch1-compter-sur-de-petit/8-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
   </div>
 </li>
       </ul>
@@ -285,12 +292,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch3-probabilite-conditio/6-sources-des-donnees.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sources des données</span></a>
+  <a href="./ch3-probabilite-conditio/6-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch3-probabilite-conditio/7-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  <a href="./ch3-probabilite-conditio/7-references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Références</span></a>
   </div>
 </li>
       </ul>
@@ -403,7 +410,7 @@ n_{1} \cdot n_{2} \cdot \cdots \cdot n_{k}.
 </div>
 </div>
 <div class="ess-lien">
-<p><a href="./ch1-compter-sur-de-petit/2-additionner-multiplier.html#propriete-1-1">↗ dans le cours</a></p>
+<p><a href="./ch1-compter-sur-de-petit/3-additionner-multiplier.html#propriete-1-1">↗ dans le cours</a></p>
 </div>
 <div id="ess-propriete-1-2" class="theo theo-propriete" data-sorte="propriete" data-num="1.2" data-page="6" data-phys="9">
 <div class="theo-head">
@@ -418,7 +425,7 @@ n_{1} \cdot n_{2} \cdot \cdots \cdot n_{k}.
 </div>
 </div>
 <div class="ess-lien">
-<p><a href="./ch1-compter-sur-de-petit/2-additionner-multiplier.html#propriete-1-2">↗ dans le cours</a></p>
+<p><a href="./ch1-compter-sur-de-petit/3-additionner-multiplier.html#propriete-1-2">↗ dans le cours</a></p>
 </div>
 <div id="ess-propriete-1-3" class="theo theo-propriete" data-sorte="propriete" data-num="1.3" data-page="6" data-phys="9">
 <div class="theo-head">
@@ -438,7 +445,7 @@ n_{1} \cdot n_{2} \cdot \cdots \cdot n_{k}.
 </div>
 </div>
 <div class="ess-lien">
-<p><a href="./ch1-compter-sur-de-petit/2-additionner-multiplier.html#propriete-1-3">↗ dans le cours</a></p>
+<p><a href="./ch1-compter-sur-de-petit/3-additionner-multiplier.html#propriete-1-3">↗ dans le cours</a></p>
 </div>
 </section>
 <section id="arrangements-et-permutations" class="level3">
@@ -460,7 +467,7 @@ A_{n}^{p} = \underbrace{n (n-1) (n-2) \cdots (n-p+1)}_{p \text{facteurs}}.
 </div>
 </div>
 <div class="ess-lien">
-<p><a href="./ch1-compter-sur-de-petit/3-arrangements-et-permutations.html#definition-1-1">↗ dans le cours</a></p>
+<p><a href="./ch1-compter-sur-de-petit/4-arrangements-et-permutations.html#definition-1-1">↗ dans le cours</a></p>
 </div>
 <div id="ess-definition-1-2" class="theo theo-definition" data-sorte="definition" data-num="1.2" data-page="8" data-phys="11">
 <div class="theo-head">
@@ -471,7 +478,7 @@ A_{n}^{p} = \underbrace{n (n-1) (n-2) \cdots (n-p+1)}_{p \text{facteurs}}.
 </div>
 </div>
 <div class="ess-lien">
-<p><a href="./ch1-compter-sur-de-petit/3-arrangements-et-permutations.html#definition-1-2">↗ dans le cours</a></p>
+<p><a href="./ch1-compter-sur-de-petit/4-arrangements-et-permutations.html#definition-1-2">↗ dans le cours</a></p>
 </div>
 <div id="ess-propriete-1-4" class="theo theo-propriete" data-sorte="propriete" data-num="1.4" data-page="8" data-phys="11">
 <div class="theo-head">
@@ -485,7 +492,7 @@ A_{n}^{p} = \frac{n!}{(n-p)!}.
 </div>
 </div>
 <div class="ess-lien">
-<p><a href="./ch1-compter-sur-de-petit/3-arrangements-et-permutations.html#propriete-1-4">↗ dans le cours</a></p>
+<p><a href="./ch1-compter-sur-de-petit/4-arrangements-et-permutations.html#propriete-1-4">↗ dans le cours</a></p>
 </div>
 <div id="ess-definition-1-3" class="theo theo-definition" data-sorte="definition" data-num="1.3" data-page="9" data-phys="12">
 <div class="theo-head">
@@ -496,7 +503,7 @@ A_{n}^{p} = \frac{n!}{(n-p)!}.
 </div>
 </div>
 <div class="ess-lien">
-<p><a href="./ch1-compter-sur-de-petit/3-arrangements-et-permutations.html#definition-1-3">↗ dans le cours</a></p>
+<p><a href="./ch1-compter-sur-de-petit/4-arrangements-et-permutations.html#definition-1-3">↗ dans le cours</a></p>
 </div>
 </section>
 <section id="combinaisons" class="level3">
@@ -514,7 +521,7 @@ C_{n}^{p} = \frac{A_{n}^{p}}{p!} = \frac{n!}{p! \, (n-p)!}.
 </div>
 </div>
 <div class="ess-lien">
-<p><a href="./ch1-compter-sur-de-petit/4-combinaisons.html#definition-1-4">↗ dans le cours</a></p>
+<p><a href="./ch1-compter-sur-de-petit/5-combinaisons.html#definition-1-4">↗ dans le cours</a></p>
 </div>
 <div id="ess-propriete-1-5" class="theo theo-propriete" data-sorte="propriete" data-num="1.5" data-page="11" data-phys="14">
 <div class="theo-head">
@@ -528,7 +535,7 @@ C_{n}^{p} = C_{n}^{n-p}.
 </div>
 </div>
 <div class="ess-lien">
-<p><a href="./ch1-compter-sur-de-petit/4-combinaisons.html#propriete-1-5">↗ dans le cours</a></p>
+<p><a href="./ch1-compter-sur-de-petit/5-combinaisons.html#propriete-1-5">↗ dans le cours</a></p>
 </div>
 </section>
 <section id="permutations-avec-répétition-les-anagrammes" class="level3">
@@ -542,7 +549,7 @@ C_{n}^{p} = C_{n}^{n-p}.
 </div>
 </div>
 <div class="ess-lien">
-<p><a href="./ch1-compter-sur-de-petit/5-permutations-avec-repetition-les-anagram.html#definition-1-5">↗ dans le cours</a></p>
+<p><a href="./ch1-compter-sur-de-petit/6-permutations-avec-repetition-les-anagram.html#definition-1-5">↗ dans le cours</a></p>
 </div>
 <div id="ess-propriete-1-6" class="theo theo-propriete" data-sorte="propriete" data-num="1.6" data-page="13" data-phys="16">
 <div class="theo-head">
@@ -557,7 +564,7 @@ C_{n}^{p} = C_{n}^{n-p}.
 </div>
 </div>
 <div class="ess-lien">
-<p><a href="./ch1-compter-sur-de-petit/5-permutations-avec-repetition-les-anagram.html#propriete-1-6">↗ dans le cours</a></p>
+<p><a href="./ch1-compter-sur-de-petit/6-permutations-avec-repetition-les-anagram.html#propriete-1-6">↗ dans le cours</a></p>
 </div>
 </section>
 </section>
@@ -570,7 +577,7 @@ C_{n}^{p} = C_{n}^{n-p}.
 <p><strong>Définition 2.1</strong> — probabilité <em>a posteriori</em></p>
 </div>
 <div class="theo-body">
-<p>Quand on répète un grand nombre de fois une expérience dans les mêmes conditions, la fréquence relative d’un résultat se stabilise autour d’un nombre : c’est la <em>probabilité</em> de ce résultat. La fréquence observée sur un grand nombre d’expériences en est une estimation, appelée probabilité <em>a posteriori</em>.</p>
+<p>La <em>probabilité</em> d’un résultat est un nombre entre 0 et 1 qui mesure ses chances de se produire : c’est un nombre du <em>modèle</em>, pas une observation. Quand on répète un grand nombre de fois l’expérience dans les mêmes conditions, la fréquence relative du résultat varie de moins en moins : elle fournit une <em>estimation</em> de sa probabilité, appelée probabilité <em>a posteriori</em>. Plus le nombre de répétitions est grand, plus l’estimation est en général fiable ; elle n’est jamais certaine.</p>
 </div>
 </div>
 <div class="ess-lien">
@@ -611,6 +618,21 @@ P(A) = \frac{\#A}{\#\Omega} = \frac{\text{nombre d'issues favorables à } A}{\te
 </div>
 <div class="ess-lien">
 <p><a href="./ch2-modeliser-le-hasard/3-le-modele-dequiprobabilite.html#definition-2-3">↗ dans le cours</a></p>
+</div>
+<div id="ess-definition-2-4" class="theo theo-definition" data-sorte="definition" data-num="2.4">
+<div class="theo-head">
+<p><strong>Définition 2.4</strong> — probabilité sur un univers fini</p>
+</div>
+<div class="theo-body">
+<p>Soit <span class="math inline">\(\Omega = \{\omega_{1}, \omega_{2}, …, \omega_{n}\}\)</span> un univers fini. Définir une probabilité sur <span class="math inline">\(\Omega\)</span>, c’est associer à chaque issue <span class="math inline">\(\omega_{i}\)</span> un nombre <span class="math inline">\(p_{i}\)</span>, sa probabilité, de sorte que</p>
+<p><span class="math display">\[
+p_{i} \geq 0 \quad \text{et} \quad p_{1} + p_{2} + \cdots + p_{n} = 1.
+\]</span></p>
+<p>La probabilité d’un événement <span class="math inline">\(A\)</span> est alors la somme des probabilités des issues de <span class="math inline">\(A\)</span>. Si toutes les issues ont la même probabilité, chaque <span class="math inline">\(p_{i}\)</span> vaut <span class="math inline">\(\frac{1}{n}\)</span> et l’on retrouve la règle de Laplace : <span class="math inline">\(P(A) = \#A \cdot \frac{1}{n} = \frac{\#A}{\#\Omega}\)</span>.</p>
+</div>
+</div>
+<div class="ess-lien">
+<p><a href="./ch2-modeliser-le-hasard/3-le-modele-dequiprobabilite.html#definition-2-4">↗ dans le cours</a></p>
 </div>
 </section>
 <section id="propriétés-des-probabilités" class="level3">
@@ -672,9 +694,50 @@ P(A | B) = \frac{P(A \cap B)}{P(B)}.
 <p><strong>Propriété 3.1</strong> — calculer sur un arbre</p>
 </div>
 <div class="theo-body">
+<div class="pb-fig pb-arbre" data-feuilles="4">
+<div class="pb-n" data-id="n0" data-parent="" data-niv="0" data-y="1.5">
+<p>&nbsp;</p>
+</div>
+<div class="pb-n" data-id="n1" data-parent="n0" data-niv="1" data-y="0.5">
+<p><span class="math inline">\(B\)</span></p>
+</div>
+<div class="pb-p" data-pour="n1">
+<p><span class="math inline">\(P(B)\)</span></p>
+</div>
+<div class="pb-n" data-id="n2" data-parent="n1" data-niv="2" data-y="0.0">
+<p><span class="math inline">\(A\)</span></p>
+</div>
+<div class="pb-p" data-pour="n2">
+<p><span class="math inline">\(P(A | B)\)</span></p>
+</div>
+<div class="pb-n" data-id="n3" data-parent="n1" data-niv="2" data-y="1.0">
+<p><span class="math inline">\(\overline{A}\)</span></p>
+</div>
+<div class="pb-p" data-pour="n3">
+<p><span class="math inline">\(P(\overline{A} | B)\)</span></p>
+</div>
+<div class="pb-n" data-id="n4" data-parent="n0" data-niv="1" data-y="2.5">
+<p><span class="math inline">\(\overline{B}\)</span></p>
+</div>
+<div class="pb-p" data-pour="n4">
+<p><span class="math inline">\(P(\overline{B})\)</span></p>
+</div>
+<div class="pb-n" data-id="n5" data-parent="n4" data-niv="2" data-y="2.0">
+<p><span class="math inline">\(A\)</span></p>
+</div>
+<div class="pb-p" data-pour="n5">
+<p><span class="math inline">\(P(A | \overline{B})\)</span></p>
+</div>
+<div class="pb-n" data-id="n6" data-parent="n4" data-niv="2" data-y="3.0">
+<p><span class="math inline">\(\overline{A}\)</span></p>
+</div>
+<div class="pb-p" data-pour="n6">
+<p><span class="math inline">\(P(\overline{A} | \overline{B})\)</span></p>
+</div>
+</div>
 <ul>
 <li>Sur une branche issue d’un nœud <span class="math inline">\(B\)</span>, on écrit une probabilité <em>sachant</em> <span class="math inline">\(B\)</span>. Les branches issues d’un même nœud ont une somme égale à 1.</li>
-<li>La probabilité d’un chemin est le produit des probabilités de ses branches : <span class="math inline">\(P(A \cap B) = P(B) \cdot P(A | B)\)</span>.</li>
+<li>La probabilité d’un chemin est le produit des probabilités de ses branches : <span class="math inline">\(P(A \cap B) = P(B) \cdot P(A | B)\)</span>. C’est la définition 3.1, <span class="math inline">\(P(A | B) = \frac{P(A \cap B)}{P(B)}\)</span>, réécrite.</li>
 <li>La probabilité d’un événement est la somme des probabilités des chemins qui y mènent :</li>
 </ul>
 <p><span class="math display">\[
@@ -898,7 +961,7 @@ P(A) = P(B) \cdot P(A | B) + P(\overline{B}) \cdot P(A | \overline{B}).
 <!-- GÉNÉRÉ par typweb — ne pas éditer -->
 <script>
 /* Réglages du cours (typweb.toml) */
-window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.com/qlambotte/proba-cours", "pdfs": [{"titre": "Cours — version élève", "detail": "réponses à compléter", "fichier": "proba.pdf"}, {"titre": "Cours — avec le corrigé", "detail": "réponses en bleu", "fichier": "proba-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1", "detail": "", "fichier": "exercices-supp-ch1.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2", "detail": "", "fichier": "exercices-supp-ch2.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3", "detail": "", "fichier": "exercices-supp-ch3.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1 (corrigé)", "detail": "", "fichier": "exercices-supp-ch1-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2 (corrigé)", "detail": "", "fichier": "exercices-supp-ch2-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3 (corrigé)", "detail": "", "fichier": "exercices-supp-ch3-corrige.pdf"}], "portail": "https://qlambotte.github.io/6e.html", "horsLigne": true};
+window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.com/qlambotte/proba-cours", "pdfs": [{"titre": "Cours — version élève", "detail": "réponses à compléter", "fichier": "proba.pdf"}, {"titre": "Cours — avec le corrigé", "detail": "réponses en bleu", "fichier": "proba-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1", "detail": "", "fichier": "exercices-supp-ch1.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2", "detail": "", "fichier": "exercices-supp-ch2.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3", "detail": "", "fichier": "exercices-supp-ch3.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1 (corrigé)", "detail": "", "fichier": "exercices-supp-ch1-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2 (corrigé)", "detail": "", "fichier": "exercices-supp-ch2-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3 (corrigé)", "detail": "", "fichier": "exercices-supp-ch3-corrige.pdf"}], "portail": "https://qlambotte.github.io/6e.html", "horsLigne": true, "stylesEssai": true, "minuteur": [3, 5, 10, 15, 20]};
 /* Charge les scripts du site (js/) avec le bon chemin relatif,
    quelle que soit la profondeur de la page. */
 (function () {
@@ -931,7 +994,7 @@ window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.co
 })();
 </script>
 <script>
-// Menu « Aa » (en bas à gauche) : essayer les styles du site. Le choix est
+// Menu « Aa » : taille du texte (toujours) et styles du site à l'essai. Le choix est
 // mémorisé dans ce navigateur (localStorage « typweb-style »). À retirer quand
 // un style est retenu (typweb.toml : [site] styles-essai = false).
 (function () {
@@ -953,22 +1016,50 @@ window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.co
     document.querySelectorAll(".st-panneau button").forEach(function (b) { b.classList.toggle("on", b.dataset.s === s); });
     window.dispatchEvent(new Event("resize"));      // figures : se redessiner
   }
+  var TAILLES = [0.85, 0.92, 1, 1.08, 1.16, 1.25, 1.35, 1.5];
+  function tailleCourante() { try { return parseFloat(localStorage.getItem("typweb-taille")) || 1; } catch (e) { return 1; } }
+  function poserTaille(t) {
+    document.documentElement.style.fontSize = t === 1 ? "" : (100 * t) + "%";
+    try { if (t === 1) localStorage.removeItem("typweb-taille"); else localStorage.setItem("typweb-taille", t); } catch (e) {}
+    var l = document.querySelector(".st-taille span"); if (l) l.textContent = Math.round(t * 100) + " %";
+    window.dispatchEvent(new Event("resize"));      // figures : se redessiner
+  }
+  function pas(d) {
+    var t = tailleCourante(), k = 0;
+    TAILLES.forEach(function (x, j) { if (Math.abs(x - t) < Math.abs(TAILLES[k] - t)) k = j; });
+    poserTaille(TAILLES[Math.max(0, Math.min(TAILLES.length - 1, k + d))]);
+  }
   function build() {
     if (document.querySelector(".st-menu")) return;
+    var essai = !window.TYPWEB || window.TYPWEB.stylesEssai !== false;
     var m = document.createElement("div"); m.className = "st-menu";
     var b = document.createElement("button"); b.className = "st-btn"; b.type = "button"; b.textContent = "Aa";
-    b.title = "Essayer un autre style"; b.setAttribute("aria-label", "Essayer un autre style");
+    b.title = "Taille du texte" + (essai ? " et style du site" : ""); b.setAttribute("aria-label", b.title);
     var p = document.createElement("div"); p.className = "st-panneau"; p.hidden = true;
-    p.innerHTML = "<p>Style du site (mode clair)</p>";
-    STYLES.forEach(function (s) {
-      var x = document.createElement("button"); x.type = "button"; x.dataset.s = s[0]; x.textContent = s[1];
-      x.addEventListener("click", function () { appliquer(s[0]); });
-      p.appendChild(x);
-    });
+    p.innerHTML = "<p>Taille du texte</p>";
+    var tl = document.createElement("div"); tl.className = "st-taille";
+    var moins = document.createElement("button"); moins.type = "button"; moins.textContent = "A−"; moins.title = "Réduire le texte";
+    var val = document.createElement("span"); val.textContent = Math.round(tailleCourante() * 100) + " %";
+    val.title = "Revenir à 100 %"; val.style.cursor = "pointer";
+    var plus = document.createElement("button"); plus.type = "button"; plus.textContent = "A+"; plus.title = "Agrandir le texte";
+    moins.addEventListener("click", function () { pas(-1); });
+    plus.addEventListener("click", function () { pas(1); });
+    val.addEventListener("click", function () { poserTaille(1); });
+    tl.appendChild(moins); tl.appendChild(val); tl.appendChild(plus);
+    p.appendChild(tl);
+    if (essai) {
+      var sep = document.createElement("div"); sep.className = "st-sep"; p.appendChild(sep);
+      var t = document.createElement("p"); t.textContent = "Style du site (mode clair)"; p.appendChild(t);
+      STYLES.forEach(function (s) {
+        var x = document.createElement("button"); x.type = "button"; x.dataset.s = s[0]; x.textContent = s[1];
+        x.addEventListener("click", function () { appliquer(s[0]); });
+        p.appendChild(x);
+      });
+    }
     b.addEventListener("click", function () { p.hidden = !p.hidden; });
     document.addEventListener("click", function (e) { if (!m.contains(e.target)) p.hidden = true; });
     m.appendChild(p); m.appendChild(b); document.body.appendChild(m);
-    appliquer(courant());
+    if (essai) appliquer(courant());
   }
   if (document.readyState !== "loading") build(); else document.addEventListener("DOMContentLoaded", build);
 })();
@@ -1375,8 +1466,8 @@ window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.co
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./ch3-probabilite-conditio/7-exercices-supplementaires.html" class="pagination-link" aria-label="Exercices supplémentaires">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Exercices supplémentaires</span></span>
+      <a href="./ch3-probabilite-conditio/7-references.html" class="pagination-link" aria-label="Références">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Références</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

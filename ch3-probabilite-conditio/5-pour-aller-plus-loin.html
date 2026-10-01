@@ -35,7 +35,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../ch3-probabilite-conditio/6-sources-des-donnees.html" rel="next">
+<link href="../ch3-probabilite-conditio/6-exercices-supplementaires.html" rel="next">
 <link href="../ch3-probabilite-conditio/4-independance.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-73b0ff3878a4e6fc3716dc69a6aaefa3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-94cb1ee365b8c2bebb8400336c7455e1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-4f25214d2c0aa817e35f237ded488e3e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -82,6 +82,8 @@ ul.task-list li input[type="checkbox"] {
     if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
     var st = localStorage.getItem('typweb-style');
     if (st) document.documentElement.setAttribute('data-style', st);   // styles à l'essai (menu « Aa »)
+    var tx = parseFloat(localStorage.getItem('typweb-taille'));          // taille du texte (menu « Aa »)
+    if (tx && tx !== 1) document.documentElement.style.fontSize = (100 * tx) + '%';
   } catch (e) {}
 })();
 </script>
@@ -173,37 +175,42 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/1-lister-avant-de-compter.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lister avant de compter</span></a>
+  <a href="../ch1-compter-sur-de-petit/1-le-langage-des-ensembles.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Le langage des ensembles</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/2-additionner-multiplier.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Additionner, multiplier</span></a>
+  <a href="../ch1-compter-sur-de-petit/2-lister-avant-de-compter.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lister avant de compter</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/3-arrangements-et-permutations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Arrangements et permutations</span></a>
+  <a href="../ch1-compter-sur-de-petit/3-additionner-multiplier.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Additionner, multiplier</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/4-combinaisons.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Combinaisons</span></a>
+  <a href="../ch1-compter-sur-de-petit/4-arrangements-et-permutations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Arrangements et permutations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/5-permutations-avec-repetition-les-anagram.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Permutations avec répétition : les anagrammes</span></a>
+  <a href="../ch1-compter-sur-de-petit/5-combinaisons.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Combinaisons</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/6-choisir-une-methode.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Choisir une méthode</span></a>
+  <a href="../ch1-compter-sur-de-petit/6-permutations-avec-repetition-les-anagram.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Permutations avec répétition : les anagrammes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/7-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  <a href="../ch1-compter-sur-de-petit/7-choisir-une-methode.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Choisir une méthode</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ch1-compter-sur-de-petit/8-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
   </div>
 </li>
       </ul>
@@ -285,12 +292,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch3-probabilite-conditio/6-sources-des-donnees.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sources des données</span></a>
+  <a href="../ch3-probabilite-conditio/6-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch3-probabilite-conditio/7-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  <a href="../ch3-probabilite-conditio/7-references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Références</span></a>
   </div>
 </li>
       </ul>
@@ -408,18 +415,73 @@ window.Quarto = {
 <li>Quel est le gain net moyen par billet ? En pourcentage de la mise ?</li>
 </ol>
 <div class="rep-bloc">
-<p><span class="math inline">\(7{,}28 - 10 = -2{,}72\)</span> € par billet, soit <span class="math inline">\(-27{,}2 \%\)</span> de la mise : le joueur perd en moyenne un peu plus du quart de ce qu’il mise.</p>
+<p><span class="math inline">\(7{,}28 - 10 = -2{,}72\)</span> € par billet, soit <span class="math inline">\(-27{,}2 \%\)</span> de la mise.</p>
+</div>
+<ol start="3" type="a">
+<li>D’où vient ce nombre ? Prenons un jeu imaginaire : on mise 1 €, on lance un dé équilibré et l’on reçoit 3 € si l’on obtient 6, rien sinon. Calcule la moyenne des gains, chaque gain étant pondéré par sa probabilité.</li>
+</ol>
+<div class="rep-bloc">
+<p><span class="math inline">\(3 \cdot \frac{1}{6} + 0 \cdot \frac{5}{6} = 0{,}5\)</span> € par partie. Pour le Subito, l’analyse fait le même calcul avec la liste des lots et leurs probabilités.</p>
+</div>
+<ol start="4" type="a">
+<li>Un joueur peut-il gagner exactement 7,28 € avec un billet ? Que nous apprend ce nombre sur <em>son</em> billet ?</li>
+</ol>
+<div class="rep-bloc">
+<p>Non : un billet rapporte 0 € ou l’un des lots prévus, jamais 7,28 €. Ce nombre ne dit presque rien d’un billet isolé, ni même de quelques billets. Il ne décrit que le total des gains sur un très grand nombre de billets, ce qui intéresse surtout l’organisateur du jeu.</p>
 </div>
 </div>
 </div>
-<div id="exercice-3-12" class="exo" data-sorte="exercice" data-num="3.12" data-page="35" data-phys="38">
+<div id="remarque-3-5" class="theo theo-remarque" data-sorte="remarque" data-num="3.5">
+<div class="theo-head">
+<p><strong>Remarque 3.5</strong></p>
+</div>
+<div class="theo-body">
+<p>Le « gain moyen » se calcule comme une moyenne pondérée par les probabilités, mais son interprétation est fragile : ce n’est pas un gain que l’on peut obtenir, et il ne prévoit rien pour un joueur qui achète peu de billets. On y reviendra avec les lois de probabilité.</p>
+</div>
+</div>
+<div id="activite-3-7" class="theo theo-activite" data-sorte="activite" data-num="3.7">
+<div class="theo-head">
+<p><strong>Activité 3.7</strong> — une autre façon de voir la probabilité : l’approche bayésienne</p>
+</div>
+<div class="theo-body">
+<p>Jusqu’ici, une probabilité a été estimée par la fréquence d’un résultat quand on répète une expérience (approche <em>fréquentiste</em>). Cette approche a une limite : beaucoup de questions portent sur un événement <em>unique</em>, qu’on ne peut pas répéter. « Cette patiente est-elle malade ? » « L’accusé est-il coupable ? » Une pièce lancée une seule fois donne une fréquence de « pile » égale à 0 ou à 1, quelle que soit la pièce (Hájek, A. (2023). Interpretations of Probability. <em>Stanford Encyclopedia of Philosophy</em> (révision du 16/11/2023), § 3.3 et 3.4).</p>
+<p>L’approche <em>bayésienne</em> répond à cette critique : la probabilité y mesure le <em>degré de confiance</em> que l’on accorde à un événement, compte tenu de l’information dont on dispose. Quand une nouvelle information arrive, on <em>met à jour</em> cette confiance par une probabilité conditionnelle : la confiance devient <span class="math inline">\(P(\text{événement} | \text{information})\)</span>.</p>
+<p>On reprend la mammographie de l’activité 3.3 (1 % de malades ; test positif chez 90 % des malades et 9 % des non-malades). On suppose qu’un second test, de mêmes caractéristiques, est fait indépendamment du premier chez les personnes positives.</p>
+<ol type="a">
+<li>Avant tout test, quelle confiance accorder à « cette femme est malade » ?</li>
+</ol>
+<div class="rep-bloc">
+<p><span class="math inline">\(P(M) = 0{,}01\)</span> : c’est la probabilité <em>a priori</em>, fondée sur la proportion de malades dans la région.</p>
+</div>
+<ol start="2" type="a">
+<li>Après un premier test positif ? (Reprends l’activité 3.3.)</li>
+</ol>
+<div class="rep-bloc">
+<p><span class="math inline">\(P(M | T_{1}) = \frac{9}{9 + 89} \approx 0{,}09\)</span> (sur 1 000 femmes : 9 malades positives, 89 non malades positives) : la confiance passe de 1 % à environ 9 %.</p>
+</div>
+<ol start="3" type="a">
+<li>Après un second test positif ? Construis l’arbre des effectifs pour 1 000 000 de femmes.</li>
+</ol>
+<div class="rep-bloc">
+<p>10 000 malades, dont 9 000 positives au premier test et <span class="math inline">\(9000 \cdot 0{,}9 = 8100\)</span> au second ; 990 000 non malades, dont 89 100 positives au premier test et <span class="math inline">\(89 \, 100 \cdot 0{,}09 = 8019\)</span> au second. <span class="math inline">\(P(M | T_{1} \cap T_{2}) = \frac{8100}{8100 + 8019} \approx 0{,}50\)</span> : la confiance passe à environ 50 %.</p>
+</div>
+<ol start="4" type="a">
+<li>Quelle est la critique adressée à l’approche bayésienne ?</li>
+</ol>
+<div class="rep-bloc">
+<p>Il faut choisir une probabilité de départ (<em>a priori</em>). Ici, elle vient d’une fréquence (la proportion de malades) ; quand on n’a pas de telles données, deux personnes peuvent partir de probabilités différentes et aboutir à des conclusions différentes. Les deux approches coexistent : les fréquences servent souvent à choisir ou à contrôler les probabilités de départ.</p>
+</div>
+<p><em>Pour aller beaucoup plus loin</em> (niveau universitaire) : un cours complet de statistique construit sur l’approche bayésienne, avec des exemples programmés (McElreath, R. (2020). <em>Statistical Rethinking: A Bayesian Course with Examples in R and Stan</em> (2<sup>e</sup> éd.). Chapman and Hall/CRC).</p>
+</div>
+</div>
+<div id="exercice-3-13" class="exo" data-sorte="exercice" data-num="3.13">
 <div class="exo-tete">
-<p><span class="exo-titre">✎ Exercice 3.12</span> <span class="exo-meta"><span class="exo-comp">T1</span> ★★★</span></p>
+<p><span class="exo-titre">✎ Exercice 3.13</span> <span class="exo-meta"><span class="exo-comp">T1</span> ★★★</span></p>
 </div>
 <div class="exo-corps">
 <p>À l’EuroMillions, on choisit 5 numéros parmi 50 et 2 « étoiles » parmi 12 (La finance pour tous (23/07/2026). Combien de chances de gagner au Loto ou à l’EuroMillions ?). Calcule la probabilité de trouver les 5 numéros et les 2 étoiles, et compare-la à celle du gros lot du Lotto.</p>
 <div class="rep-bloc">
-<p>On suppose les tirages équiprobables. Grilles : <span class="math inline">\(C_{50}^{5} \cdot C_{12}^{2} = 2 \, 118 \, 760 \cdot 66 = 139 \, 838 \, 160\)</span>, donc <span class="math inline">\(P = \frac{1}{139 \, 838 \, 160}\)</span>. Au Lotto, <span class="math inline">\(P = \frac{1}{8 \, 145 \, 060}\)</span> : le gros lot de l’EuroMillions est environ 17 fois moins probable.</p>
+<p>On suppose les tirages équiprobables. Grilles : <span class="math inline">\(C_{50}^{5} \cdot C_{12}^{2} = 2 \, 118 \, 760 \cdot 66 = 139 \, 838 \, 160\)</span>, donc <span class="math inline">\(P(\text{gros lot EuroMillions}) = \frac{1}{139 \, 838 \, 160}\)</span>. Au Lotto, <span class="math inline">\(P(\text{gros lot Lotto}) = \frac{1}{8 \, 145 \, 060}\)</span> : le gros lot de l’EuroMillions est environ 17 fois moins probable.</p>
 </div>
 </div>
 </div>
@@ -428,7 +490,7 @@ window.Quarto = {
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false" href="">Pièges</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>Relis la <a href="../ch1-compter-sur-de-petit/4-combinaisons.html#definition-1-4">définition des combinaisons</a> et l’<a href="../ch2-modeliser-le-hasard/5-denombrer-pour-calculer.html#exemple-2-5">exemple 2.5</a>.</p>
+<p>Relis la <a href="../ch1-compter-sur-de-petit/5-combinaisons.html#definition-1-4">définition des combinaisons</a> et l’<a href="../ch2-modeliser-le-hasard/5-denombrer-pour-calculer.html#exemple-2-6">exemple 2.6</a>.</p>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <p>Une grille se construit-elle en choisissant les numéros, puis les étoiles ?</p>
@@ -437,7 +499,7 @@ window.Quarto = {
 <p>Numéros : <span class="math inline">\(C_{50}^{5} = 2 \, 118 \, 760\)</span> ; étoiles : <span class="math inline">\(C_{12}^{2} = 66\)</span>.</p>
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-<p>Une grille est formée d’un groupe de 5 numéros parmi 50 et d’un groupe de 2 étoiles parmi 12 : <span class="math inline">\(C_{50}^{5} \cdot C_{12}^{2} = 2 \, 118 \, 760 \cdot 66 = 139 \, 838 \, 160\)</span> grilles. On suppose les tirages équiprobables : <span class="math inline">\(P = \frac{1}{139 \, 838 \, 160}\)</span>. Au Lotto, <span class="math inline">\(P = \frac{1}{8 \, 145 \, 060}\)</span> ; comme <span class="math inline">\(139 \, 838 \, \frac{160}{8} \, 145 \, 060 \approx 17\)</span>, le gros lot de l’EuroMillions est environ 17 fois moins probable.</p>
+<p>Une grille est formée d’un groupe de 5 numéros parmi 50 et d’un groupe de 2 étoiles parmi 12 : <span class="math inline">\(C_{50}^{5} \cdot C_{12}^{2} = 2 \, 118 \, 760 \cdot 66 = 139 \, 838 \, 160\)</span> grilles. On suppose les tirages équiprobables : <span class="math inline">\(P(\text{gros lot EuroMillions}) = \frac{1}{139 \, 838 \, 160}\)</span>. Au Lotto, <span class="math inline">\(P(\text{gros lot Lotto}) = \frac{1}{8 \, 145 \, 060}\)</span> ; comme <span class="math inline">\(139 \, 838 \, \frac{160}{8} \, 145 \, 060 \approx 17\)</span>, le gros lot de l’EuroMillions est environ 17 fois moins probable.</p>
 </div>
 <div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
 <ul>
@@ -633,7 +695,7 @@ window.Quarto = {
 <!-- GÉNÉRÉ par typweb — ne pas éditer -->
 <script>
 /* Réglages du cours (typweb.toml) */
-window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.com/qlambotte/proba-cours", "pdfs": [{"titre": "Cours — version élève", "detail": "réponses à compléter", "fichier": "proba.pdf"}, {"titre": "Cours — avec le corrigé", "detail": "réponses en bleu", "fichier": "proba-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1", "detail": "", "fichier": "exercices-supp-ch1.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2", "detail": "", "fichier": "exercices-supp-ch2.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3", "detail": "", "fichier": "exercices-supp-ch3.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1 (corrigé)", "detail": "", "fichier": "exercices-supp-ch1-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2 (corrigé)", "detail": "", "fichier": "exercices-supp-ch2-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3 (corrigé)", "detail": "", "fichier": "exercices-supp-ch3-corrige.pdf"}], "portail": "https://qlambotte.github.io/6e.html", "horsLigne": true};
+window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.com/qlambotte/proba-cours", "pdfs": [{"titre": "Cours — version élève", "detail": "réponses à compléter", "fichier": "proba.pdf"}, {"titre": "Cours — avec le corrigé", "detail": "réponses en bleu", "fichier": "proba-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1", "detail": "", "fichier": "exercices-supp-ch1.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2", "detail": "", "fichier": "exercices-supp-ch2.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3", "detail": "", "fichier": "exercices-supp-ch3.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1 (corrigé)", "detail": "", "fichier": "exercices-supp-ch1-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2 (corrigé)", "detail": "", "fichier": "exercices-supp-ch2-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3 (corrigé)", "detail": "", "fichier": "exercices-supp-ch3-corrige.pdf"}], "portail": "https://qlambotte.github.io/6e.html", "horsLigne": true, "stylesEssai": true, "minuteur": [3, 5, 10, 15, 20]};
 /* Charge les scripts du site (js/) avec le bon chemin relatif,
    quelle que soit la profondeur de la page. */
 (function () {
@@ -666,7 +728,7 @@ window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.co
 })();
 </script>
 <script>
-// Menu « Aa » (en bas à gauche) : essayer les styles du site. Le choix est
+// Menu « Aa » : taille du texte (toujours) et styles du site à l'essai. Le choix est
 // mémorisé dans ce navigateur (localStorage « typweb-style »). À retirer quand
 // un style est retenu (typweb.toml : [site] styles-essai = false).
 (function () {
@@ -688,22 +750,50 @@ window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.co
     document.querySelectorAll(".st-panneau button").forEach(function (b) { b.classList.toggle("on", b.dataset.s === s); });
     window.dispatchEvent(new Event("resize"));      // figures : se redessiner
   }
+  var TAILLES = [0.85, 0.92, 1, 1.08, 1.16, 1.25, 1.35, 1.5];
+  function tailleCourante() { try { return parseFloat(localStorage.getItem("typweb-taille")) || 1; } catch (e) { return 1; } }
+  function poserTaille(t) {
+    document.documentElement.style.fontSize = t === 1 ? "" : (100 * t) + "%";
+    try { if (t === 1) localStorage.removeItem("typweb-taille"); else localStorage.setItem("typweb-taille", t); } catch (e) {}
+    var l = document.querySelector(".st-taille span"); if (l) l.textContent = Math.round(t * 100) + " %";
+    window.dispatchEvent(new Event("resize"));      // figures : se redessiner
+  }
+  function pas(d) {
+    var t = tailleCourante(), k = 0;
+    TAILLES.forEach(function (x, j) { if (Math.abs(x - t) < Math.abs(TAILLES[k] - t)) k = j; });
+    poserTaille(TAILLES[Math.max(0, Math.min(TAILLES.length - 1, k + d))]);
+  }
   function build() {
     if (document.querySelector(".st-menu")) return;
+    var essai = !window.TYPWEB || window.TYPWEB.stylesEssai !== false;
     var m = document.createElement("div"); m.className = "st-menu";
     var b = document.createElement("button"); b.className = "st-btn"; b.type = "button"; b.textContent = "Aa";
-    b.title = "Essayer un autre style"; b.setAttribute("aria-label", "Essayer un autre style");
+    b.title = "Taille du texte" + (essai ? " et style du site" : ""); b.setAttribute("aria-label", b.title);
     var p = document.createElement("div"); p.className = "st-panneau"; p.hidden = true;
-    p.innerHTML = "<p>Style du site (mode clair)</p>";
-    STYLES.forEach(function (s) {
-      var x = document.createElement("button"); x.type = "button"; x.dataset.s = s[0]; x.textContent = s[1];
-      x.addEventListener("click", function () { appliquer(s[0]); });
-      p.appendChild(x);
-    });
+    p.innerHTML = "<p>Taille du texte</p>";
+    var tl = document.createElement("div"); tl.className = "st-taille";
+    var moins = document.createElement("button"); moins.type = "button"; moins.textContent = "A−"; moins.title = "Réduire le texte";
+    var val = document.createElement("span"); val.textContent = Math.round(tailleCourante() * 100) + " %";
+    val.title = "Revenir à 100 %"; val.style.cursor = "pointer";
+    var plus = document.createElement("button"); plus.type = "button"; plus.textContent = "A+"; plus.title = "Agrandir le texte";
+    moins.addEventListener("click", function () { pas(-1); });
+    plus.addEventListener("click", function () { pas(1); });
+    val.addEventListener("click", function () { poserTaille(1); });
+    tl.appendChild(moins); tl.appendChild(val); tl.appendChild(plus);
+    p.appendChild(tl);
+    if (essai) {
+      var sep = document.createElement("div"); sep.className = "st-sep"; p.appendChild(sep);
+      var t = document.createElement("p"); t.textContent = "Style du site (mode clair)"; p.appendChild(t);
+      STYLES.forEach(function (s) {
+        var x = document.createElement("button"); x.type = "button"; x.dataset.s = s[0]; x.textContent = s[1];
+        x.addEventListener("click", function () { appliquer(s[0]); });
+        p.appendChild(x);
+      });
+    }
     b.addEventListener("click", function () { p.hidden = !p.hidden; });
     document.addEventListener("click", function (e) { if (!m.contains(e.target)) p.hidden = true; });
     m.appendChild(p); m.appendChild(b); document.body.appendChild(m);
-    appliquer(courant());
+    if (essai) appliquer(courant());
   }
   if (document.readyState !== "loading") build(); else document.addEventListener("DOMContentLoaded", build);
 })();
@@ -1115,8 +1205,8 @@ window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.co
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../ch3-probabilite-conditio/6-sources-des-donnees.html" class="pagination-link" aria-label="Sources des données">
-        <span class="nav-page-text"><span class="chapter-title">Sources des données</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../ch3-probabilite-conditio/6-exercices-supplementaires.html" class="pagination-link" aria-label="Exercices supplémentaires">
+        <span class="nav-page-text"><span class="chapter-title">Exercices supplémentaires</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

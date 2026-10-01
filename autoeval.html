@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-73b0ff3878a4e6fc3716dc69a6aaefa3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-94cb1ee365b8c2bebb8400336c7455e1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-4f25214d2c0aa817e35f237ded488e3e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -82,6 +82,8 @@ ul.task-list li input[type="checkbox"] {
     if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
     var st = localStorage.getItem('typweb-style');
     if (st) document.documentElement.setAttribute('data-style', st);   // styles à l'essai (menu « Aa »)
+    var tx = parseFloat(localStorage.getItem('typweb-taille'));          // taille du texte (menu « Aa »)
+    if (tx && tx !== 1) document.documentElement.style.fontSize = (100 * tx) + '%';
   } catch (e) {}
 })();
 </script>
@@ -173,37 +175,42 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch1-compter-sur-de-petit/1-lister-avant-de-compter.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lister avant de compter</span></a>
+  <a href="./ch1-compter-sur-de-petit/1-le-langage-des-ensembles.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Le langage des ensembles</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch1-compter-sur-de-petit/2-additionner-multiplier.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Additionner, multiplier</span></a>
+  <a href="./ch1-compter-sur-de-petit/2-lister-avant-de-compter.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lister avant de compter</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch1-compter-sur-de-petit/3-arrangements-et-permutations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Arrangements et permutations</span></a>
+  <a href="./ch1-compter-sur-de-petit/3-additionner-multiplier.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Additionner, multiplier</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch1-compter-sur-de-petit/4-combinaisons.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Combinaisons</span></a>
+  <a href="./ch1-compter-sur-de-petit/4-arrangements-et-permutations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Arrangements et permutations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch1-compter-sur-de-petit/5-permutations-avec-repetition-les-anagram.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Permutations avec répétition : les anagrammes</span></a>
+  <a href="./ch1-compter-sur-de-petit/5-combinaisons.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Combinaisons</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch1-compter-sur-de-petit/6-choisir-une-methode.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Choisir une méthode</span></a>
+  <a href="./ch1-compter-sur-de-petit/6-permutations-avec-repetition-les-anagram.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Permutations avec répétition : les anagrammes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch1-compter-sur-de-petit/7-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  <a href="./ch1-compter-sur-de-petit/7-choisir-une-methode.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Choisir une méthode</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ch1-compter-sur-de-petit/8-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
   </div>
 </li>
       </ul>
@@ -285,12 +292,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch3-probabilite-conditio/6-sources-des-donnees.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sources des données</span></a>
+  <a href="./ch3-probabilite-conditio/6-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch3-probabilite-conditio/7-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  <a href="./ch3-probabilite-conditio/7-references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Références</span></a>
   </div>
 </li>
       </ul>
@@ -347,25 +354,28 @@ window.Quarto = {
 </div>
 </div>
 <div id="ae-banque" class="ae-cache">
-<div class="ae-sec" data-id="sec-lister" data-chap="1" data-url="ch1-compter-sur-de-petit/1-lister-avant-de-compter.html" data-n="3">
+<div class="ae-sec" data-id="sec-ensembles" data-chap="1" data-url="ch1-compter-sur-de-petit/1-le-langage-des-ensembles.html" data-n="2">
+<p>Le langage des ensembles</p>
+</div>
+<div class="ae-sec" data-id="sec-lister" data-chap="1" data-url="ch1-compter-sur-de-petit/2-lister-avant-de-compter.html" data-n="3">
 <p>Lister avant de compter</p>
 </div>
-<div class="ae-sec" data-id="sec-multiplicatif" data-chap="1" data-url="ch1-compter-sur-de-petit/2-additionner-multiplier.html" data-n="4">
+<div class="ae-sec" data-id="sec-multiplicatif" data-chap="1" data-url="ch1-compter-sur-de-petit/3-additionner-multiplier.html" data-n="4">
 <p>Additionner, multiplier</p>
 </div>
-<div class="ae-sec" data-id="sec-arrangements" data-chap="1" data-url="ch1-compter-sur-de-petit/3-arrangements-et-permutations.html" data-n="6">
+<div class="ae-sec" data-id="sec-arrangements" data-chap="1" data-url="ch1-compter-sur-de-petit/4-arrangements-et-permutations.html" data-n="6">
 <p>Arrangements et permutations</p>
 </div>
-<div class="ae-sec" data-id="sec-combinaisons" data-chap="1" data-url="ch1-compter-sur-de-petit/4-combinaisons.html" data-n="4">
+<div class="ae-sec" data-id="sec-combinaisons" data-chap="1" data-url="ch1-compter-sur-de-petit/5-combinaisons.html" data-n="4">
 <p>Combinaisons</p>
 </div>
-<div class="ae-sec" data-id="sec-anagrammes" data-chap="1" data-url="ch1-compter-sur-de-petit/5-permutations-avec-repetition-les-anagram.html" data-n="5">
+<div class="ae-sec" data-id="sec-anagrammes" data-chap="1" data-url="ch1-compter-sur-de-petit/6-permutations-avec-repetition-les-anagram.html" data-n="5">
 <p>Permutations avec répétition : les anagrammes</p>
 </div>
-<div class="ae-sec" data-id="sec-choisir" data-chap="1" data-url="ch1-compter-sur-de-petit/6-choisir-une-methode.html" data-n="3">
+<div class="ae-sec" data-id="sec-choisir" data-chap="1" data-url="ch1-compter-sur-de-petit/7-choisir-une-methode.html" data-n="3">
 <p>Choisir une méthode</p>
 </div>
-<div class="ae-sec" data-id="sec-exercices-supplementaires" data-chap="3" data-url="ch3-probabilite-conditio/7-exercices-supplementaires.html" data-n="0">
+<div class="ae-sec" data-id="sec-exercices-supplementaires" data-chap="3" data-url="ch3-probabilite-conditio/6-exercices-supplementaires.html" data-n="0">
 <p>Exercices supplémentaires</p>
 </div>
 <div class="ae-sec" data-id="sec-frequences" data-chap="2" data-url="ch2-modeliser-le-hasard/1-frequences-et-probabilite.html" data-n="4">
@@ -398,8 +408,8 @@ window.Quarto = {
 <div class="ae-sec" data-id="sec-plus-loin" data-chap="3" data-url="ch3-probabilite-conditio/5-pour-aller-plus-loin.html" data-n="0">
 <p>Pour aller plus loin</p>
 </div>
-<div class="ae-sec" data-id="sec-sources" data-chap="3" data-url="ch3-probabilite-conditio/6-sources-des-donnees.html" data-n="0">
-<p>Sources des données</p>
+<div class="ae-sec" data-id="sec-references" data-chap="3" data-url="ch3-probabilite-conditio/7-references.html" data-n="0">
+<p>Références</p>
 </div>
 <div class="ae-obj" data-code="A5" data-cat="Appliquer">
 <p>…</p>
@@ -446,7 +456,7 @@ window.Quarto = {
 <div class="ae-obj" data-code="T2" data-cat="Transférer">
 <p>Utiliser le calcul des probabilités pour analyser et critiquer des informations chiffrées (santé, presse, jeux de hasard). <sup>†</sup></p>
 </div>
-<div class="ae-qa" data-id="qa-denombrer" data-spec="{&quot;questions&quot;: null, &quot;tirage&quot;: {&quot;nombre&quot;: 10, &quot;sections&quot;: [&quot;sec-lister&quot;, &quot;sec-multiplicatif&quot;, &quot;sec-arrangements&quot;, &quot;sec-combinaisons&quot;, &quot;sec-anagrammes&quot;, &quot;sec-choisir&quot;], &quot;obj&quot;: [], &quot;types&quot;: [], &quot;niveaux&quot;: []}}">
+<div class="ae-qa" data-id="qa-denombrer" data-spec="{&quot;questions&quot;: null, &quot;tirage&quot;: {&quot;nombre&quot;: 10, &quot;sections&quot;: [&quot;sec-ensembles&quot;, &quot;sec-lister&quot;, &quot;sec-multiplicatif&quot;, &quot;sec-arrangements&quot;, &quot;sec-combinaisons&quot;, &quot;sec-anagrammes&quot;, &quot;sec-choisir&quot;], &quot;obj&quot;: [], &quot;types&quot;: [], &quot;niveaux&quot;: []}}">
 <div class="ae-qa-titre">
 <p>Chapitre 1 : Compter sur de petits ensembles</p>
 </div>
@@ -486,12 +496,182 @@ window.Quarto = {
 <p>Tests de dépistage, Lotto, erreur du joueur : lire un chiffre sans se tromper de condition.</p>
 </div>
 </div>
+<div class="ae-qa" data-id="ticket-s1" data-spec="{&quot;questions&quot;: null, &quot;tirage&quot;: {&quot;nombre&quot;: 3, &quot;sections&quot;: [&quot;sec-ensembles&quot;, &quot;sec-lister&quot;], &quot;obj&quot;: [], &quot;types&quot;: [], &quot;niveaux&quot;: []}}">
+<div class="ae-qa-titre">
+<p>Ticket de sortie — séance S1 : Ensembles ; lister avant de compter</p>
+</div>
+<div class="ae-qa-desc">
+<p>Trois questions tirées au hasard, en fin de séance.</p>
+</div>
+</div>
+<div class="ae-qa" data-id="ticket-s2" data-spec="{&quot;questions&quot;: null, &quot;tirage&quot;: {&quot;nombre&quot;: 3, &quot;sections&quot;: [&quot;sec-multiplicatif&quot;], &quot;obj&quot;: [], &quot;types&quot;: [], &quot;niveaux&quot;: []}}">
+<div class="ae-qa-titre">
+<p>Ticket de sortie — séance S2 : Additionner, multiplier</p>
+</div>
+<div class="ae-qa-desc">
+<p>Trois questions tirées au hasard, en fin de séance.</p>
+</div>
+</div>
+<div class="ae-qa" data-id="ticket-s3" data-spec="{&quot;questions&quot;: null, &quot;tirage&quot;: {&quot;nombre&quot;: 3, &quot;sections&quot;: [&quot;sec-arrangements&quot;, &quot;sec-combinaisons&quot;], &quot;obj&quot;: [], &quot;types&quot;: [], &quot;niveaux&quot;: []}}">
+<div class="ae-qa-titre">
+<p>Ticket de sortie — séance S3 : Arrangements, permutations, combinaisons</p>
+</div>
+<div class="ae-qa-desc">
+<p>Trois questions tirées au hasard, en fin de séance.</p>
+</div>
+</div>
+<div class="ae-qa" data-id="ticket-s4" data-spec="{&quot;questions&quot;: null, &quot;tirage&quot;: {&quot;nombre&quot;: 3, &quot;sections&quot;: [&quot;sec-anagrammes&quot;, &quot;sec-choisir&quot;], &quot;obj&quot;: [], &quot;types&quot;: [], &quot;niveaux&quot;: []}}">
+<div class="ae-qa-titre">
+<p>Ticket de sortie — séance S4 : Anagrammes ; choisir une méthode</p>
+</div>
+<div class="ae-qa-desc">
+<p>Trois questions tirées au hasard, en fin de séance.</p>
+</div>
+</div>
+<div class="ae-qa" data-id="ticket-s6" data-spec="{&quot;questions&quot;: null, &quot;tirage&quot;: {&quot;nombre&quot;: 3, &quot;sections&quot;: [&quot;sec-frequences&quot;], &quot;obj&quot;: [], &quot;types&quot;: [], &quot;niveaux&quot;: []}}">
+<div class="ae-qa-titre">
+<p>Ticket de sortie — séance S6 : Fréquences et probabilité</p>
+</div>
+<div class="ae-qa-desc">
+<p>Trois questions tirées au hasard, en fin de séance.</p>
+</div>
+</div>
+<div class="ae-qa" data-id="ticket-s7" data-spec="{&quot;questions&quot;: null, &quot;tirage&quot;: {&quot;nombre&quot;: 3, &quot;sections&quot;: [&quot;sec-vocabulaire&quot;, &quot;sec-laplace&quot;], &quot;obj&quot;: [], &quot;types&quot;: [], &quot;niveaux&quot;: []}}">
+<div class="ae-qa-titre">
+<p>Ticket de sortie — séance S7 : Univers, événements ; équiprobabilité</p>
+</div>
+<div class="ae-qa-desc">
+<p>Trois questions tirées au hasard, en fin de séance.</p>
+</div>
+</div>
+<div class="ae-qa" data-id="ticket-s8" data-spec="{&quot;questions&quot;: null, &quot;tirage&quot;: {&quot;nombre&quot;: 3, &quot;sections&quot;: [&quot;sec-proprietes&quot;], &quot;obj&quot;: [], &quot;types&quot;: [], &quot;niveaux&quot;: []}}">
+<div class="ae-qa-titre">
+<p>Ticket de sortie — séance S8 : Propriétés des probabilités</p>
+</div>
+<div class="ae-qa-desc">
+<p>Trois questions tirées au hasard, en fin de séance.</p>
+</div>
+</div>
+<div class="ae-qa" data-id="ticket-s9" data-spec="{&quot;questions&quot;: null, &quot;tirage&quot;: {&quot;nombre&quot;: 3, &quot;sections&quot;: [&quot;sec-denombrer-calculer&quot;], &quot;obj&quot;: [], &quot;types&quot;: [], &quot;niveaux&quot;: []}}">
+<div class="ae-qa-titre">
+<p>Ticket de sortie — séance S9 : Dénombrer pour calculer</p>
+</div>
+<div class="ae-qa-desc">
+<p>Trois questions tirées au hasard, en fin de séance.</p>
+</div>
+</div>
+<div class="ae-qa" data-id="ticket-s11" data-spec="{&quot;questions&quot;: null, &quot;tirage&quot;: {&quot;nombre&quot;: 3, &quot;sections&quot;: [&quot;sec-conditionnelle&quot;], &quot;obj&quot;: [], &quot;types&quot;: [], &quot;niveaux&quot;: []}}">
+<div class="ae-qa-titre">
+<p>Ticket de sortie — séance S11 : Probabilité conditionnelle</p>
+</div>
+<div class="ae-qa-desc">
+<p>Trois questions tirées au hasard, en fin de séance.</p>
+</div>
+</div>
+<div class="ae-qa" data-id="ticket-s12" data-spec="{&quot;questions&quot;: null, &quot;tirage&quot;: {&quot;nombre&quot;: 3, &quot;sections&quot;: [&quot;sec-arbres&quot;], &quot;obj&quot;: [], &quot;types&quot;: [], &quot;niveaux&quot;: []}}">
+<div class="ae-qa-titre">
+<p>Ticket de sortie — séance S12 : Arbres de probabilités</p>
+</div>
+<div class="ae-qa-desc">
+<p>Trois questions tirées au hasard, en fin de séance.</p>
+</div>
+</div>
+<div class="ae-qa" data-id="ticket-s13" data-spec="{&quot;questions&quot;: null, &quot;tirage&quot;: {&quot;nombre&quot;: 3, &quot;sections&quot;: [&quot;sec-depistage&quot;], &quot;obj&quot;: [], &quot;types&quot;: [], &quot;niveaux&quot;: []}}">
+<div class="ae-qa-titre">
+<p>Ticket de sortie — séance S13 : Lire un test de dépistage</p>
+</div>
+<div class="ae-qa-desc">
+<p>Trois questions tirées au hasard, en fin de séance.</p>
+</div>
+</div>
+<div class="ae-qa" data-id="ticket-s14" data-spec="{&quot;questions&quot;: null, &quot;tirage&quot;: {&quot;nombre&quot;: 3, &quot;sections&quot;: [&quot;sec-independance&quot;], &quot;obj&quot;: [], &quot;types&quot;: [], &quot;niveaux&quot;: []}}">
+<div class="ae-qa-titre">
+<p>Ticket de sortie — séance S14 : Indépendance</p>
+</div>
+<div class="ae-qa-desc">
+<p>Trois questions tirées au hasard, en fin de séance.</p>
+</div>
+</div>
 <div class="ae-qa" data-id="qa-bases" data-spec="{&quot;questions&quot;: null, &quot;tirage&quot;: {&quot;nombre&quot;: 10, &quot;sections&quot;: [], &quot;obj&quot;: [], &quot;types&quot;: [], &quot;niveaux&quot;: [1]}}">
 <div class="ae-qa-titre">
 <p>Les bases, pour démarrer</p>
 </div>
 <div class="ae-qa-desc">
 <p>Dix questions de niveau ★ sur tout le cours.</p>
+</div>
+</div>
+<div class="ae-q" data-id="ens-operations" data-type="qcm" data-section="sec-ensembles" data-obj="C4" data-niveau="1" data-ordre="melange">
+<div class="ae-enonce">
+<p>Dans <span class="math inline">\(E = \{1, 2, …, 10\}\)</span>, <span class="math inline">\(A = \{2, 4, 6, 8, 10\}\)</span> et <span class="math inline">\(B = \{1, 2, 3, 4\}\)</span>. Que vaut <span class="math inline">\(A \setminus B\)</span> ?</p>
+</div>
+<div class="ae-prop ae-bonne">
+<div class="ae-r">
+<p><span class="math inline">\(\{6, 8, 10\}\)</span></p>
+</div>
+<div class="ae-fb">
+<p>Oui : les éléments de <span class="math inline">\(A\)</span> qui ne sont pas dans <span class="math inline">\(B\)</span> (<a href="./ch1-compter-sur-de-petit/1-le-langage-des-ensembles.html#activite-1-1">activité 1.1</a>).</p>
+</div>
+</div>
+<div class="ae-prop">
+<div class="ae-r">
+<p><span class="math inline">\(\{2, 4\}\)</span></p>
+</div>
+<div class="ae-fb">
+<p>C’est <span class="math inline">\(A \cap B\)</span> : les éléments communs.</p>
+</div>
+</div>
+<div class="ae-prop">
+<div class="ae-r">
+<p><span class="math inline">\(\{1, 3\}\)</span></p>
+</div>
+<div class="ae-fb">
+<p>C’est <span class="math inline">\(B \setminus A\)</span> : les éléments de <span class="math inline">\(B\)</span> qui ne sont pas dans <span class="math inline">\(A\)</span>.</p>
+</div>
+</div>
+<div class="ae-prop">
+<div class="ae-r">
+<p><span class="math inline">\(\{1, 3, 6, 8, 10\}\)</span></p>
+</div>
+<div class="ae-fb">
+<p>Ce sont les éléments qui sont dans un seul des deux ensembles. <span class="math inline">\(A \setminus B\)</span> ne garde que ceux de <span class="math inline">\(A\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="ae-q" data-id="ens-cardinal" data-type="qcm" data-section="sec-ensembles" data-obj="C4" data-niveau="1" data-ordre="melange">
+<div class="ae-enonce">
+<p><span class="math inline">\(\#A = 7\)</span>, <span class="math inline">\(\#B = 5\)</span> et <span class="math inline">\(\#(A \cap B) = 2\)</span>. Que vaut <span class="math inline">\(\#(A \cup B)\)</span> ?</p>
+</div>
+<div class="ae-prop ae-bonne">
+<div class="ae-r">
+<p><span class="math inline">\(10\)</span></p>
+</div>
+<div class="ae-fb">
+<p>Oui : <span class="math inline">\(7 + 5 - 2 = 10\)</span> ; les 2 éléments communs ne sont comptés qu’une fois.</p>
+</div>
+</div>
+<div class="ae-prop">
+<div class="ae-r">
+<p><span class="math inline">\(12\)</span></p>
+</div>
+<div class="ae-fb">
+<p>Les 2 éléments communs sont alors comptés deux fois.</p>
+</div>
+</div>
+<div class="ae-prop">
+<div class="ae-r">
+<p><span class="math inline">\(2\)</span></p>
+</div>
+<div class="ae-fb">
+<p>C’est <span class="math inline">\(\#(A \cap B)\)</span>, pas <span class="math inline">\(\#(A \cup B)\)</span>.</p>
+</div>
+</div>
+<div class="ae-prop">
+<div class="ae-r">
+<p><span class="math inline">\(14\)</span></p>
+</div>
+<div class="ae-fb">
+<p>On n’ajoute pas les éléments communs : on les retire une fois.</p>
+</div>
 </div>
 </div>
 <div class="ae-q" data-id="den-binomes" data-type="qcm" data-section="sec-lister" data-obj="A5" data-niveau="1" data-ordre="melange">
@@ -503,7 +683,7 @@ window.Quarto = {
 <p><span class="math inline">\(6\)</span></p>
 </div>
 <div class="ae-fb">
-<p>Oui : {A, B}, {A, C}, {A, D}, {B, C}, {B, D}, {C, D}. Dans un binôme, l’ordre ne compte pas (<a href="./ch1-compter-sur-de-petit/1-lister-avant-de-compter.html#activite-1-1">activité 1.1</a>).</p>
+<p>Oui : {A, B}, {A, C}, {A, D}, {B, C}, {B, D}, {C, D}. Dans un binôme, l’ordre ne compte pas (<a href="./ch1-compter-sur-de-petit/2-lister-avant-de-compter.html#activite-1-2">activité 1.2</a>).</p>
 </div>
 </div>
 <div class="ae-prop">
@@ -614,7 +794,7 @@ window.Quarto = {
 <p><span class="math inline">\(24\)</span></p>
 </div>
 <div class="ae-fb">
-<p>Oui : <span class="math inline">\(3 \cdot 4 \cdot 2 = 24\)</span> par le <a href="./ch1-compter-sur-de-petit/2-additionner-multiplier.html#propriete-1-1">principe multiplicatif</a>.</p>
+<p>Oui : <span class="math inline">\(3 \cdot 4 \cdot 2 = 24\)</span> par le <a href="./ch1-compter-sur-de-petit/3-additionner-multiplier.html#propriete-1-1">principe multiplicatif</a>.</p>
 </div>
 </div>
 <div class="ae-prop">
@@ -651,7 +831,7 @@ window.Quarto = {
 <p><span class="math inline">\(17\)</span></p>
 </div>
 <div class="ae-fb">
-<p>Oui : <span class="math inline">\(12 + 9 - 4 = 17\)</span> (<a href="./ch1-compter-sur-de-petit/2-additionner-multiplier.html#propriete-1-2">principe additif</a>).</p>
+<p>Oui : <span class="math inline">\(12 + 9 - 4 = 17\)</span> (<a href="./ch1-compter-sur-de-petit/3-additionner-multiplier.html#propriete-1-2">principe additif</a>).</p>
 </div>
 </div>
 <div class="ae-prop">
@@ -688,7 +868,7 @@ window.Quarto = {
 <p><span class="math inline">\(1000 - 9^{3} = 271\)</span></p>
 </div>
 <div class="ae-fb">
-<p>Oui : on compte tout, puis on retire ceux qui n’ont aucun 5 (<a href="./ch1-compter-sur-de-petit/2-additionner-multiplier.html#propriete-1-3">propriété 1.3</a>).</p>
+<p>Oui : on compte tout, puis on retire ceux qui n’ont aucun 5 (<a href="./ch1-compter-sur-de-petit/3-additionner-multiplier.html#propriete-1-3">propriété 1.3</a>).</p>
 </div>
 </div>
 <div class="ae-prop">
@@ -742,7 +922,7 @@ window.Quarto = {
 <p><span class="math inline">\(A_{8}^{3} = 336\)</span></p>
 </div>
 <div class="ae-fb">
-<p>Oui : une suite de 3 coureurs distincts, <span class="math inline">\(8 \cdot 7 \cdot 6\)</span> (<a href="./ch1-compter-sur-de-petit/3-arrangements-et-permutations.html#definition-1-1">arrangements</a>).</p>
+<p>Oui : une suite de 3 coureurs distincts, <span class="math inline">\(8 \cdot 7 \cdot 6\)</span> (<a href="./ch1-compter-sur-de-petit/4-arrangements-et-permutations.html#definition-1-1">arrangements</a>).</p>
 </div>
 </div>
 <div class="ae-prop">
@@ -779,7 +959,7 @@ window.Quarto = {
 <p><span class="math inline">\(72\)</span></p>
 </div>
 <div class="ae-fb">
-<p>Oui : <span class="math inline">\(\frac{9!}{7!} = 9 \cdot 8 = 72\)</span> (<a href="./ch1-compter-sur-de-petit/3-arrangements-et-permutations.html#definition-1-2">factorielle</a>).</p>
+<p>Oui : <span class="math inline">\(\frac{9!}{7!} = 9 \cdot 8 = 72\)</span> (<a href="./ch1-compter-sur-de-petit/4-arrangements-et-permutations.html#definition-1-2">factorielle</a>).</p>
 </div>
 </div>
 <div class="ae-prop">
@@ -816,7 +996,7 @@ window.Quarto = {
 <p><span class="math inline">\(5! = 120\)</span></p>
 </div>
 <div class="ae-fb">
-<p>Oui : une permutation des 5 livres (<a href="./ch1-compter-sur-de-petit/3-arrangements-et-permutations.html#definition-1-3">permutations</a>).</p>
+<p>Oui : une permutation des 5 livres (<a href="./ch1-compter-sur-de-petit/4-arrangements-et-permutations.html#definition-1-3">permutations</a>).</p>
 </div>
 </div>
 <div class="ae-prop">
@@ -853,7 +1033,7 @@ window.Quarto = {
 <p><span class="math inline">\(n(n-1)\)</span></p>
 </div>
 <div class="ae-fb">
-<p>Oui : <span class="math inline">\(n! = n(n-1) \cdot (n-2)!\)</span> (<a href="./ch1-compter-sur-de-petit/3-arrangements-et-permutations.html#definition-1-2">factorielle</a>).</p>
+<p>Oui : <span class="math inline">\(n! = n(n-1) \cdot (n-2)!\)</span> (<a href="./ch1-compter-sur-de-petit/4-arrangements-et-permutations.html#definition-1-2">factorielle</a>).</p>
 </div>
 </div>
 <div class="ae-prop">
@@ -890,7 +1070,7 @@ window.Quarto = {
 <p><span class="math inline">\(7!\)</span></p>
 </div>
 <div class="ae-fb">
-<p>Oui : seul l’ordre des 7 derniers change. Chaque podium provient de <span class="math inline">\(7!\)</span> classements, d’où <span class="math inline">\(A_{10}^{3} = \frac{10!}{7!}\)</span> (<a href="./ch1-compter-sur-de-petit/3-arrangements-et-permutations.html#propriete-1-4">propriété 1.4</a>).</p>
+<p>Oui : seul l’ordre des 7 derniers change. Chaque podium provient de <span class="math inline">\(7!\)</span> classements, d’où <span class="math inline">\(A_{10}^{3} = \frac{10!}{7!}\)</span> (<a href="./ch1-compter-sur-de-petit/4-arrangements-et-permutations.html#propriete-1-4">propriété 1.4</a>).</p>
 </div>
 </div>
 <div class="ae-prop">
@@ -927,7 +1107,7 @@ window.Quarto = {
 <p><span class="math inline">\(5! = 120\)</span></p>
 </div>
 <div class="ae-fb">
-<p>Oui : la première place est fixée ; on range les 5 autres enfants (<a href="./ch1-compter-sur-de-petit/3-arrangements-et-permutations.html#definition-1-3">permutations</a>).</p>
+<p>Oui : la première place est fixée ; on range les 5 autres enfants (<a href="./ch1-compter-sur-de-petit/4-arrangements-et-permutations.html#definition-1-3">permutations</a>).</p>
 </div>
 </div>
 <div class="ae-prop">
@@ -964,7 +1144,7 @@ window.Quarto = {
 <p><span class="math inline">\(C_{45}^{6}\)</span></p>
 </div>
 <div class="ae-fb">
-<p>Oui : une grille est un groupe de 6 numéros distincts (<a href="./ch1-compter-sur-de-petit/4-combinaisons.html#exemple-1-3">exemple 1.3</a>).</p>
+<p>Oui : une grille est un groupe de 6 numéros distincts (<a href="./ch1-compter-sur-de-petit/5-combinaisons.html#exemple-1-3">exemple 1.3</a>).</p>
 </div>
 </div>
 <div class="ae-prop">
@@ -1001,7 +1181,7 @@ window.Quarto = {
 <p><span class="math inline">\(6\)</span> suites par paquet, <span class="math inline">\(35\)</span> paquets</p>
 </div>
 <div class="ae-fb">
-<p>Oui : 3 élèves s’ordonnent de <span class="math inline">\(3! = 6\)</span> façons ; <span class="math inline">\(\frac{210}{6} = 35 = C_{7}^{3}\)</span> (<a href="./ch1-compter-sur-de-petit/4-combinaisons.html#activite-1-5">activité 1.5</a>).</p>
+<p>Oui : 3 élèves s’ordonnent de <span class="math inline">\(3! = 6\)</span> façons ; <span class="math inline">\(\frac{210}{6} = 35 = C_{7}^{3}\)</span> (<a href="./ch1-compter-sur-de-petit/5-combinaisons.html#activite-1-6">activité 1.6</a>).</p>
 </div>
 </div>
 <div class="ae-prop">
@@ -1038,7 +1218,7 @@ window.Quarto = {
 <p><span class="math inline">\(C_{10}^{3} = C_{10}^{7}\)</span></p>
 </div>
 <div class="ae-fb">
-<p>Oui : choisir les 3 qui partent revient à choisir les 7 qui restent (<a href="./ch1-compter-sur-de-petit/4-combinaisons.html#propriete-1-5">symétrie</a>).</p>
+<p>Oui : choisir les 3 qui partent revient à choisir les 7 qui restent (<a href="./ch1-compter-sur-de-petit/5-combinaisons.html#propriete-1-5">symétrie</a>).</p>
 </div>
 </div>
 <div class="ae-prop">
@@ -1092,7 +1272,7 @@ window.Quarto = {
 <p><span class="math inline">\(\frac{5!}{2!} = 60\)</span></p>
 </div>
 <div class="ae-fb">
-<p>Oui : 5 lettres dont L deux fois (<a href="./ch1-compter-sur-de-petit/5-permutations-avec-repetition-les-anagram.html#propriete-1-6">propriété 1.6</a>).</p>
+<p>Oui : 5 lettres dont L deux fois (<a href="./ch1-compter-sur-de-petit/6-permutations-avec-repetition-les-anagram.html#propriete-1-6">propriété 1.6</a>).</p>
 </div>
 </div>
 <div class="ae-prop">
@@ -1129,7 +1309,7 @@ window.Quarto = {
 <p>Permutations avec répétition : <span class="math inline">\(\frac{7!}{4! \cdot 3!} = 35\)</span>.</p>
 </div>
 <div class="ae-fb">
-<p>Oui : on range les 7 jetons, dont 4 identiques et 3 identiques (<a href="./ch1-compter-sur-de-petit/5-permutations-avec-repetition-les-anagram.html#definition-1-5">définition 1.5</a>).</p>
+<p>Oui : on range les 7 jetons, dont 4 identiques et 3 identiques (<a href="./ch1-compter-sur-de-petit/6-permutations-avec-repetition-les-anagram.html#definition-1-5">définition 1.5</a>).</p>
 </div>
 </div>
 <div class="ae-prop">
@@ -1166,7 +1346,7 @@ window.Quarto = {
 <p><span class="math inline">\(\frac{5!}{2! \cdot 2!} = 30\)</span></p>
 </div>
 <div class="ae-fb">
-<p>Oui : 5 lettres, R deux fois et A deux fois (<a href="./ch1-compter-sur-de-petit/5-permutations-avec-repetition-les-anagram.html#definition-1-5">permutations avec répétition</a>).</p>
+<p>Oui : 5 lettres, R deux fois et A deux fois (<a href="./ch1-compter-sur-de-petit/6-permutations-avec-repetition-les-anagram.html#definition-1-5">permutations avec répétition</a>).</p>
 </div>
 </div>
 <div class="ae-prop">
@@ -1257,7 +1437,7 @@ window.Quarto = {
 <p><span class="math inline">\(10^{4}\)</span></p>
 </div>
 <div class="ae-fb">
-<p>Oui : l’ordre compte et un chiffre peut revenir (<a href="./ch1-compter-sur-de-petit/6-choisir-une-methode.html#cadre-situations-de-reference">situations de référence</a>).</p>
+<p>Oui : l’ordre compte et un chiffre peut revenir (<a href="./ch1-compter-sur-de-petit/7-choisir-une-methode.html#cadre-situations-de-reference">situations de référence</a>).</p>
 </div>
 </div>
 <div class="ae-prop">
@@ -1398,7 +1578,7 @@ window.Quarto = {
 </div>
 <div class="ae-prop">
 <div class="ae-r">
-<p>La valeur exacte de <span class="math inline">\(P(6)\)</span>.</p>
+<p>La valeur exacte de <span class="math inline">\(P(\text{obtenir 6})\)</span>.</p>
 </div>
 <div class="ae-fb">
 <p>Une simulation donne une fréquence, donc une estimation.</p>
@@ -1745,7 +1925,7 @@ window.Quarto = {
 <p>On lance trois fois une pièce équilibrée. Quelle est la probabilité d’obtenir exactement un « pile » ? Écris l’hypothèse de modélisation.</p>
 </div>
 <div class="ae-rep">
-<p>Une issue est une suite de trois faces : <span class="math inline">\(2^{3} = 8\)</span> issues, que l’on suppose équiprobables (pièce équilibrée, lancers indépendants). Exactement un « pile » : PFF, FPF, FFP. <span class="math inline">\(P = \frac{3}{8}\)</span>.</p>
+<p>Une issue est une suite de trois faces : <span class="math inline">\(2^{3} = 8\)</span> issues, que l’on suppose équiprobables (pièce équilibrée, lancers indépendants). Exactement un « pile » : PFF, FPF, FFP. <span class="math inline">\(P(\text{exactement un pile}) = \frac{3}{8}\)</span>.</p>
 </div>
 <div class="ae-crit">
 <p>J’ai écrit l’hypothèse d’équiprobabilité des 8 suites.</p>
@@ -1766,7 +1946,7 @@ window.Quarto = {
 <p><span class="math inline">\(27\)</span></p>
 </div>
 <div class="ae-fb">
-<p>Oui : 1+3+6 (6 suites), 1+4+5 (6), 2+2+6 (3), 2+3+5 (6), 2+4+4 (3), 3+3+4 (3) (<a href="./ch2-modeliser-le-hasard/3-le-modele-dequiprobabilite.html#exemple-2-3">exemple 2.3</a>).</p>
+<p>Oui : 1+3+6 (6 suites), 1+4+5 (6), 2+2+6 (3), 2+3+5 (6), 2+4+4 (3), 3+3+4 (3) (<a href="./ch2-modeliser-le-hasard/3-le-modele-dequiprobabilite.html#exemple-2-4">exemple 2.4</a>).</p>
 </div>
 </div>
 <div class="ae-prop">
@@ -1924,14 +2104,14 @@ window.Quarto = {
 </div>
 <div class="ae-q" data-id="hasard-de-truque" data-type="qcm" data-section="sec-proprietes" data-obj="C5" data-niveau="2" data-ordre="melange">
 <div class="ae-enonce">
-<p>Un dé est truqué : <span class="math inline">\(P(6) = \frac{1}{2}\)</span>, et les cinq autres faces ont la même probabilité. Que vaut <span class="math inline">\(P(1)\)</span> ?</p>
+<p>Un dé est truqué : <span class="math inline">\(P(\text{obtenir 6}) = \frac{1}{2}\)</span>, et les cinq autres faces ont la même probabilité. Que vaut <span class="math inline">\(P(\text{obtenir 1})\)</span> ?</p>
 </div>
 <div class="ae-prop ae-bonne">
 <div class="ae-r">
 <p><span class="math inline">\(\frac{1}{10}\)</span></p>
 </div>
 <div class="ae-fb">
-<p>Oui : les faces 1 à 5 se partagent <span class="math inline">\(1 - \frac{1}{2} = \frac{1}{2}\)</span>, donc <span class="math inline">\(P(1) = \frac{\frac{1}{2}}{5} = \frac{1}{10}\)</span> (<a href="./ch2-modeliser-le-hasard/4-proprietes-des-probabilites.html#propriete-2-1"><span class="math inline">\(P(\Omega) = 1\)</span></a>).</p>
+<p>Oui : les faces 1 à 5 se partagent <span class="math inline">\(1 - \frac{1}{2} = \frac{1}{2}\)</span>, donc <span class="math inline">\(P(\text{obtenir 1}) = \frac{\frac{1}{2}}{5} = \frac{1}{10}\)</span> (<a href="./ch2-modeliser-le-hasard/4-proprietes-des-probabilites.html#propriete-2-1"><span class="math inline">\(P(\Omega) = 1\)</span></a>).</p>
 </div>
 </div>
 <div class="ae-prop">
@@ -1947,7 +2127,7 @@ window.Quarto = {
 <p><span class="math inline">\(\frac{1}{5}\)</span></p>
 </div>
 <div class="ae-fb">
-<p>Les cinq faces ne se partagent pas 1, mais ce qui reste après <span class="math inline">\(P(6)\)</span>.</p>
+<p>Les cinq faces ne se partagent pas 1, mais ce qui reste après <span class="math inline">\(P(\text{obtenir 6})\)</span>.</p>
 </div>
 </div>
 <div class="ae-prop">
@@ -2005,7 +2185,7 @@ window.Quarto = {
 <p><span class="math inline">\(1 - (\frac{5}{6})^{3} = \frac{91}{216}\)</span></p>
 </div>
 <div class="ae-fb">
-<p>Oui : on passe par le contraire « aucun 6 » (<a href="./ch2-modeliser-le-hasard/4-proprietes-des-probabilites.html#exemple-2-4">exemple 2.4</a>).</p>
+<p>Oui : on passe par le contraire « aucun 6 » (<a href="./ch2-modeliser-le-hasard/4-proprietes-des-probabilites.html#exemple-2-5">exemple 2.5</a>).</p>
 </div>
 </div>
 <div class="ae-prop">
@@ -2075,7 +2255,7 @@ window.Quarto = {
 <p>Au Lotto, on coche 6 numéros parmi 45. Calcule la probabilité d’avoir exactement 2 bons numéros.</p>
 </div>
 <div class="ae-rep">
-<p>Une issue est le groupe des 6 numéros tirés ; on suppose les <span class="math inline">\(C_{45}^{6} = 8 \, 145 \, 060\)</span> tirages équiprobables. Tirages favorables : 2 numéros parmi les 6 cochés et 4 parmi les 39 autres, <span class="math inline">\(C_{6}^{2} \cdot C_{39}^{4} = 15 \cdot 82 \, 251 = 1 \, 233 \, 765\)</span>. <span class="math inline">\(P = \frac{1 \, 233 \, 765}{8 \, 145 \, 060} \approx 0{,}151\)</span>.</p>
+<p>Une issue est le groupe des 6 numéros tirés ; on suppose les <span class="math inline">\(C_{45}^{6} = 8 \, 145 \, 060\)</span> tirages équiprobables. Tirages favorables : 2 numéros parmi les 6 cochés et 4 parmi les 39 autres, <span class="math inline">\(C_{6}^{2} \cdot C_{39}^{4} = 15 \cdot 82 \, 251 = 1 \, 233 \, 765\)</span>. <span class="math inline">\(P(\text{exactement 2 bons numéros}) = \frac{1 \, 233 \, 765}{8 \, 145 \, 060} \approx 0{,}151\)</span>.</p>
 </div>
 <div class="ae-crit">
 <p>J’ai écrit l’hypothèse d’équiprobabilité et <span class="math inline">\(\#\Omega = C_{45}^{6}\)</span>.</p>
@@ -2096,7 +2276,7 @@ window.Quarto = {
 <p><span class="math inline">\(1 - \frac{A_{365}^{30}}{365^{30}}\)</span></p>
 </div>
 <div class="ae-fb">
-<p>Oui : contraire de « tous différents » (<a href="./ch2-modeliser-le-hasard/5-denombrer-pour-calculer.html#exemple-2-6">exemple 2.6</a>).</p>
+<p>Oui : contraire de « tous différents » (<a href="./ch2-modeliser-le-hasard/5-denombrer-pour-calculer.html#exemple-2-7">exemple 2.7</a>).</p>
 </div>
 </div>
 <div class="ae-prop">
@@ -2634,6 +2814,7 @@ window.Quarto = {
 </div>
 </div>
 </div>
+<script type="application/json" id="ae-exos">[{"num": "1.1", "url": "ch1-compter-sur-de-petit/1-le-langage-des-ensembles.html#exercice-1-1", "obj": ["C4"], "page": "3", "niveau": 1, "section": "Le langage des ensembles"}, {"num": "1.2", "url": "ch1-compter-sur-de-petit/2-lister-avant-de-compter.html#exercice-1-2", "obj": ["A5"], "page": "4", "niveau": 1, "section": "Lister avant de compter"}, {"num": "1.3", "url": "ch1-compter-sur-de-petit/2-lister-avant-de-compter.html#exercice-1-3", "obj": ["A5"], "page": "7", "niveau": 1, "section": "Lister avant de compter"}, {"num": "1.4", "url": "ch1-compter-sur-de-petit/3-additionner-multiplier.html#exercice-1-4", "obj": ["A5"], "page": "7", "niveau": 1, "section": "Additionner, multiplier"}, {"num": "1.5", "url": "ch1-compter-sur-de-petit/3-additionner-multiplier.html#exercice-1-5", "obj": ["A5"], "page": "7", "niveau": 2, "section": "Additionner, multiplier"}, {"num": "1.6", "url": "ch1-compter-sur-de-petit/3-additionner-multiplier.html#exercice-1-6", "obj": ["A5"], "page": "7", "niveau": 2, "section": "Additionner, multiplier"}, {"num": "1.7", "url": "ch1-compter-sur-de-petit/3-additionner-multiplier.html#exercice-1-7", "obj": ["T1"], "page": "9", "niveau": 3, "section": "Additionner, multiplier"}, {"num": "1.8", "url": "ch1-compter-sur-de-petit/4-arrangements-et-permutations.html#exercice-1-8", "obj": ["A5"], "page": "9", "niveau": 1, "section": "Arrangements et permutations"}, {"num": "1.9", "url": "ch1-compter-sur-de-petit/4-arrangements-et-permutations.html#exercice-1-9", "obj": ["A5"], "page": "9", "niveau": 1, "section": "Arrangements et permutations"}, {"num": "1.10", "url": "ch1-compter-sur-de-petit/4-arrangements-et-permutations.html#exercice-1-10", "obj": ["A5"], "page": "10", "niveau": 2, "section": "Arrangements et permutations"}, {"num": "1.11", "url": "ch1-compter-sur-de-petit/4-arrangements-et-permutations.html#exercice-1-11", "obj": ["A5"], "page": "10", "niveau": 1, "section": "Arrangements et permutations"}, {"num": "1.12", "url": "ch1-compter-sur-de-petit/4-arrangements-et-permutations.html#exercice-1-12", "obj": ["A5"], "page": "12", "niveau": 2, "section": "Arrangements et permutations"}, {"num": "1.13", "url": "ch1-compter-sur-de-petit/5-combinaisons.html#exercice-1-13", "obj": ["A5"], "page": "12", "niveau": 1, "section": "Combinaisons"}, {"num": "1.14", "url": "ch1-compter-sur-de-petit/5-combinaisons.html#exercice-1-14", "obj": ["A5"], "page": "12", "niveau": 1, "section": "Combinaisons"}, {"num": "1.15", "url": "ch1-compter-sur-de-petit/5-combinaisons.html#exercice-1-15", "obj": ["A5"], "page": "12", "niveau": 2, "section": "Combinaisons"}, {"num": "1.16", "url": "ch1-compter-sur-de-petit/5-combinaisons.html#exercice-1-16", "obj": ["T1"], "page": "13", "niveau": 3, "section": "Combinaisons"}, {"num": "1.17", "url": "ch1-compter-sur-de-petit/6-permutations-avec-repetition-les-anagram.html#exercice-1-17", "obj": ["A5"], "page": "14", "niveau": 1, "section": "Permutations avec répétition : les anagrammes"}, {"num": "1.18", "url": "ch1-compter-sur-de-petit/6-permutations-avec-repetition-les-anagram.html#exercice-1-18", "obj": ["A5"], "page": "14", "niveau": 1, "section": "Permutations avec répétition : les anagrammes"}, {"num": "1.19", "url": "ch1-compter-sur-de-petit/6-permutations-avec-repetition-les-anagram.html#exercice-1-19", "obj": ["A5"], "page": "14", "niveau": 2, "section": "Permutations avec répétition : les anagrammes"}, {"num": "1.20", "url": "ch1-compter-sur-de-petit/6-permutations-avec-repetition-les-anagram.html#exercice-1-20", "obj": ["T1"], "page": "15", "niveau": 3, "section": "Permutations avec répétition : les anagrammes"}, {"num": "1.21", "url": "ch1-compter-sur-de-petit/7-choisir-une-methode.html#exercice-1-21", "obj": ["C1"], "page": "15", "niveau": 1, "section": "Choisir une méthode"}, {"num": "1.22", "url": "ch1-compter-sur-de-petit/7-choisir-une-methode.html#exercice-1-22", "obj": ["C1"], "page": "15", "niveau": 2, "section": "Choisir une méthode"}, {"num": "1.23", "url": "ch1-compter-sur-de-petit/7-choisir-une-methode.html#exercice-1-23", "obj": ["T1"], "page": null, "niveau": 2, "section": "Choisir une méthode"}, {"num": "1.24", "url": "ch1-compter-sur-de-petit/7-choisir-une-methode.html#exercice-1-24", "obj": ["C1"], "page": null, "niveau": 2, "section": "Choisir une méthode"}, {"num": "S1.1", "url": "ch1-compter-sur-de-petit/8-exercices-supplementaires.html#exercice-S1-1", "obj": ["A5"], "page": null, "niveau": 1, "section": "Exercices supplémentaires"}, {"num": "S1.2", "url": "ch1-compter-sur-de-petit/8-exercices-supplementaires.html#exercice-S1-2", "obj": ["C1"], "page": null, "niveau": 1, "section": "Exercices supplémentaires"}, {"num": "S1.3", "url": "ch1-compter-sur-de-petit/8-exercices-supplementaires.html#exercice-S1-3", "obj": ["A5"], "page": null, "niveau": 2, "section": "Exercices supplémentaires"}, {"num": "S1.4", "url": "ch1-compter-sur-de-petit/8-exercices-supplementaires.html#exercice-S1-4", "obj": ["A5"], "page": null, "niveau": 2, "section": "Exercices supplémentaires"}, {"num": "S1.5", "url": "ch1-compter-sur-de-petit/8-exercices-supplementaires.html#exercice-S1-5", "obj": ["T1"], "page": null, "niveau": 3, "section": "Exercices supplémentaires"}, {"num": "S1.6", "url": "ch1-compter-sur-de-petit/8-exercices-supplementaires.html#exercice-S1-6", "obj": ["A5"], "page": null, "niveau": 1, "section": "Exercices supplémentaires"}, {"num": "S1.7", "url": "ch1-compter-sur-de-petit/8-exercices-supplementaires.html#exercice-S1-7", "obj": ["A5"], "page": null, "niveau": 1, "section": "Exercices supplémentaires"}, {"num": "S1.8", "url": "ch1-compter-sur-de-petit/8-exercices-supplementaires.html#exercice-S1-8", "obj": ["A5"], "page": null, "niveau": 2, "section": "Exercices supplémentaires"}, {"num": "S1.9", "url": "ch1-compter-sur-de-petit/8-exercices-supplementaires.html#exercice-S1-9", "obj": ["A5"], "page": null, "niveau": 2, "section": "Exercices supplémentaires"}, {"num": "2.1", "url": "ch2-modeliser-le-hasard/1-frequences-et-probabilite.html#exercice-2-1", "obj": ["A6"], "page": "18", "niveau": 1, "section": "Fréquences et probabilité"}, {"num": "2.2", "url": "ch2-modeliser-le-hasard/1-frequences-et-probabilite.html#exercice-2-2", "obj": ["A6"], "page": "18", "niveau": 1, "section": "Fréquences et probabilité"}, {"num": "2.3", "url": "ch2-modeliser-le-hasard/1-frequences-et-probabilite.html#exercice-2-3", "obj": ["C2"], "page": "18", "niveau": 2, "section": "Fréquences et probabilité"}, {"num": "2.4", "url": "ch2-modeliser-le-hasard/2-univers-et-evenements.html#exercice-2-4", "obj": ["C3"], "page": "20", "niveau": 1, "section": "Univers et événements"}, {"num": "2.5", "url": "ch2-modeliser-le-hasard/2-univers-et-evenements.html#exercice-2-5", "obj": ["C4"], "page": "20", "niveau": 1, "section": "Univers et événements"}, {"num": "2.6", "url": "ch2-modeliser-le-hasard/2-univers-et-evenements.html#exercice-2-6", "obj": ["C4"], "page": "20", "niveau": 2, "section": "Univers et événements"}, {"num": "2.7", "url": "ch2-modeliser-le-hasard/3-le-modele-dequiprobabilite.html#exercice-2-7", "obj": ["A3"], "page": "22", "niveau": 1, "section": "Le modèle d’équiprobabilité"}, {"num": "2.8", "url": "ch2-modeliser-le-hasard/3-le-modele-dequiprobabilite.html#exercice-2-8", "obj": ["T1"], "page": "22", "niveau": 2, "section": "Le modèle d’équiprobabilité"}, {"num": "2.9", "url": "ch2-modeliser-le-hasard/4-proprietes-des-probabilites.html#exercice-2-9", "obj": ["A2"], "page": "24", "niveau": 1, "section": "Propriétés des probabilités"}, {"num": "2.10", "url": "ch2-modeliser-le-hasard/4-proprietes-des-probabilites.html#exercice-2-10", "obj": ["A2"], "page": "24", "niveau": 2, "section": "Propriétés des probabilités"}, {"num": "2.11", "url": "ch2-modeliser-le-hasard/4-proprietes-des-probabilites.html#exercice-2-11", "obj": ["C5"], "page": "25", "niveau": 2, "section": "Propriétés des probabilités"}, {"num": "2.12", "url": "ch2-modeliser-le-hasard/4-proprietes-des-probabilites.html#exercice-2-12", "obj": ["C5"], "page": "25", "niveau": 1, "section": "Propriétés des probabilités"}, {"num": "2.13", "url": "ch2-modeliser-le-hasard/4-proprietes-des-probabilites.html#exercice-2-13", "obj": ["C5"], "page": "25", "niveau": 2, "section": "Propriétés des probabilités"}, {"num": "2.14", "url": "ch2-modeliser-le-hasard/5-denombrer-pour-calculer.html#exercice-2-14", "obj": ["A3"], "page": "26", "niveau": 2, "section": "Dénombrer pour calculer"}, {"num": "2.15", "url": "ch2-modeliser-le-hasard/5-denombrer-pour-calculer.html#exercice-2-15", "obj": ["T1"], "page": "26", "niveau": 2, "section": "Dénombrer pour calculer"}, {"num": "2.16", "url": "ch2-modeliser-le-hasard/5-denombrer-pour-calculer.html#exercice-2-16", "obj": ["T1"], "page": "26", "niveau": 3, "section": "Dénombrer pour calculer"}, {"num": "2.17", "url": "ch2-modeliser-le-hasard/5-denombrer-pour-calculer.html#exercice-2-17", "obj": ["T2"], "page": "26", "niveau": 2, "section": "Dénombrer pour calculer"}, {"num": "2.18", "url": "ch2-modeliser-le-hasard/5-denombrer-pour-calculer.html#exercice-2-18", "obj": ["C5"], "page": null, "niveau": 2, "section": "Dénombrer pour calculer"}, {"num": "S2.1", "url": "ch2-modeliser-le-hasard/6-exercices-supplementaires.html#exercice-S2-1", "obj": ["C3"], "page": null, "niveau": 1, "section": "Exercices supplémentaires"}, {"num": "S2.2", "url": "ch2-modeliser-le-hasard/6-exercices-supplementaires.html#exercice-S2-2", "obj": ["C6"], "page": null, "niveau": 1, "section": "Exercices supplémentaires"}, {"num": "S2.3", "url": "ch2-modeliser-le-hasard/6-exercices-supplementaires.html#exercice-S2-3", "obj": ["A3"], "page": null, "niveau": 2, "section": "Exercices supplémentaires"}, {"num": "S2.4", "url": "ch2-modeliser-le-hasard/6-exercices-supplementaires.html#exercice-S2-4", "obj": ["A6"], "page": null, "niveau": 2, "section": "Exercices supplémentaires"}, {"num": "S2.5", "url": "ch2-modeliser-le-hasard/6-exercices-supplementaires.html#exercice-S2-5", "obj": ["T1"], "page": null, "niveau": 3, "section": "Exercices supplémentaires"}, {"num": "S2.6", "url": "ch2-modeliser-le-hasard/6-exercices-supplementaires.html#exercice-S2-6", "obj": ["C6"], "page": null, "niveau": 1, "section": "Exercices supplémentaires"}, {"num": "S2.7", "url": "ch2-modeliser-le-hasard/6-exercices-supplementaires.html#exercice-S2-7", "obj": ["T1"], "page": null, "niveau": 2, "section": "Exercices supplémentaires"}, {"num": "S2.8", "url": "ch2-modeliser-le-hasard/6-exercices-supplementaires.html#exercice-S2-8", "obj": ["T1"], "page": null, "niveau": 3, "section": "Exercices supplémentaires"}, {"num": "3.1", "url": "ch3-probabilite-conditio/1-probabilite-conditionnelle.html#exercice-3-1", "obj": ["A1"], "page": "28", "niveau": 1, "section": "Probabilité conditionnelle"}, {"num": "3.2", "url": "ch3-probabilite-conditio/1-probabilite-conditionnelle.html#exercice-3-2", "obj": ["A2"], "page": "29", "niveau": 2, "section": "Probabilité conditionnelle"}, {"num": "3.3", "url": "ch3-probabilite-conditio/2-arbres-de-probabilites.html#exercice-3-3", "obj": ["A2"], "page": "30", "niveau": 1, "section": "Arbres de probabilités"}, {"num": "3.4", "url": "ch3-probabilite-conditio/2-arbres-de-probabilites.html#exercice-3-4", "obj": ["A3"], "page": "30", "niveau": 2, "section": "Arbres de probabilités"}, {"num": "3.5", "url": "ch3-probabilite-conditio/3-lire-un-test-de-depistage.html#exercice-3-5", "obj": ["A3"], "page": "32", "niveau": 2, "section": "Lire un test de dépistage"}, {"num": "3.6", "url": "ch3-probabilite-conditio/3-lire-un-test-de-depistage.html#exercice-3-6", "obj": ["T2"], "page": "32", "niveau": 2, "section": "Lire un test de dépistage"}, {"num": "3.7", "url": "ch3-probabilite-conditio/4-independance.html#exercice-3-7", "obj": ["A4"], "page": "33", "niveau": 1, "section": "Indépendance"}, {"num": "3.8", "url": "ch3-probabilite-conditio/4-independance.html#exercice-3-8", "obj": ["A4"], "page": "33", "niveau": 2, "section": "Indépendance"}, {"num": "3.9", "url": "ch3-probabilite-conditio/4-independance.html#exercice-3-9", "obj": ["A6"], "page": "34", "niveau": 2, "section": "Indépendance"}, {"num": "3.10", "url": "ch3-probabilite-conditio/4-independance.html#exercice-3-10", "obj": ["A4"], "page": "34", "niveau": 2, "section": "Indépendance"}, {"num": "3.11", "url": "ch3-probabilite-conditio/4-independance.html#exercice-3-11", "obj": ["T1"], "page": "34", "niveau": 3, "section": "Indépendance"}, {"num": "3.12", "url": "ch3-probabilite-conditio/4-independance.html#exercice-3-12", "obj": ["T2"], "page": "35", "niveau": 2, "section": "Indépendance"}, {"num": "3.13", "url": "ch3-probabilite-conditio/5-pour-aller-plus-loin.html#exercice-3-13", "obj": ["T1"], "page": null, "niveau": 3, "section": "Pour aller plus loin"}, {"num": "S3.1", "url": "ch3-probabilite-conditio/6-exercices-supplementaires.html#exercice-S3-1", "obj": ["A1"], "page": null, "niveau": 1, "section": "Exercices supplémentaires"}, {"num": "S3.2", "url": "ch3-probabilite-conditio/6-exercices-supplementaires.html#exercice-S3-2", "obj": ["A2"], "page": null, "niveau": 2, "section": "Exercices supplémentaires"}, {"num": "S3.3", "url": "ch3-probabilite-conditio/6-exercices-supplementaires.html#exercice-S3-3", "obj": ["A4"], "page": null, "niveau": 2, "section": "Exercices supplémentaires"}, {"num": "S3.4", "url": "ch3-probabilite-conditio/6-exercices-supplementaires.html#exercice-S3-4", "obj": ["T2"], "page": null, "niveau": 3, "section": "Exercices supplémentaires"}, {"num": "S3.5", "url": "ch3-probabilite-conditio/6-exercices-supplementaires.html#exercice-S3-5", "obj": ["A3"], "page": null, "niveau": 2, "section": "Exercices supplémentaires"}]</script>
 
 
 
@@ -2820,7 +3001,7 @@ window.Quarto = {
 <!-- GÉNÉRÉ par typweb — ne pas éditer -->
 <script>
 /* Réglages du cours (typweb.toml) */
-window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.com/qlambotte/proba-cours", "pdfs": [{"titre": "Cours — version élève", "detail": "réponses à compléter", "fichier": "proba.pdf"}, {"titre": "Cours — avec le corrigé", "detail": "réponses en bleu", "fichier": "proba-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1", "detail": "", "fichier": "exercices-supp-ch1.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2", "detail": "", "fichier": "exercices-supp-ch2.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3", "detail": "", "fichier": "exercices-supp-ch3.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1 (corrigé)", "detail": "", "fichier": "exercices-supp-ch1-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2 (corrigé)", "detail": "", "fichier": "exercices-supp-ch2-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3 (corrigé)", "detail": "", "fichier": "exercices-supp-ch3-corrige.pdf"}], "portail": "https://qlambotte.github.io/6e.html", "horsLigne": true};
+window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.com/qlambotte/proba-cours", "pdfs": [{"titre": "Cours — version élève", "detail": "réponses à compléter", "fichier": "proba.pdf"}, {"titre": "Cours — avec le corrigé", "detail": "réponses en bleu", "fichier": "proba-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1", "detail": "", "fichier": "exercices-supp-ch1.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2", "detail": "", "fichier": "exercices-supp-ch2.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3", "detail": "", "fichier": "exercices-supp-ch3.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1 (corrigé)", "detail": "", "fichier": "exercices-supp-ch1-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2 (corrigé)", "detail": "", "fichier": "exercices-supp-ch2-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3 (corrigé)", "detail": "", "fichier": "exercices-supp-ch3-corrige.pdf"}], "portail": "https://qlambotte.github.io/6e.html", "horsLigne": true, "stylesEssai": true, "minuteur": [3, 5, 10, 15, 20]};
 /* Charge les scripts du site (js/) avec le bon chemin relatif,
    quelle que soit la profondeur de la page. */
 (function () {
@@ -2853,7 +3034,7 @@ window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.co
 })();
 </script>
 <script>
-// Menu « Aa » (en bas à gauche) : essayer les styles du site. Le choix est
+// Menu « Aa » : taille du texte (toujours) et styles du site à l'essai. Le choix est
 // mémorisé dans ce navigateur (localStorage « typweb-style »). À retirer quand
 // un style est retenu (typweb.toml : [site] styles-essai = false).
 (function () {
@@ -2875,22 +3056,50 @@ window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.co
     document.querySelectorAll(".st-panneau button").forEach(function (b) { b.classList.toggle("on", b.dataset.s === s); });
     window.dispatchEvent(new Event("resize"));      // figures : se redessiner
   }
+  var TAILLES = [0.85, 0.92, 1, 1.08, 1.16, 1.25, 1.35, 1.5];
+  function tailleCourante() { try { return parseFloat(localStorage.getItem("typweb-taille")) || 1; } catch (e) { return 1; } }
+  function poserTaille(t) {
+    document.documentElement.style.fontSize = t === 1 ? "" : (100 * t) + "%";
+    try { if (t === 1) localStorage.removeItem("typweb-taille"); else localStorage.setItem("typweb-taille", t); } catch (e) {}
+    var l = document.querySelector(".st-taille span"); if (l) l.textContent = Math.round(t * 100) + " %";
+    window.dispatchEvent(new Event("resize"));      // figures : se redessiner
+  }
+  function pas(d) {
+    var t = tailleCourante(), k = 0;
+    TAILLES.forEach(function (x, j) { if (Math.abs(x - t) < Math.abs(TAILLES[k] - t)) k = j; });
+    poserTaille(TAILLES[Math.max(0, Math.min(TAILLES.length - 1, k + d))]);
+  }
   function build() {
     if (document.querySelector(".st-menu")) return;
+    var essai = !window.TYPWEB || window.TYPWEB.stylesEssai !== false;
     var m = document.createElement("div"); m.className = "st-menu";
     var b = document.createElement("button"); b.className = "st-btn"; b.type = "button"; b.textContent = "Aa";
-    b.title = "Essayer un autre style"; b.setAttribute("aria-label", "Essayer un autre style");
+    b.title = "Taille du texte" + (essai ? " et style du site" : ""); b.setAttribute("aria-label", b.title);
     var p = document.createElement("div"); p.className = "st-panneau"; p.hidden = true;
-    p.innerHTML = "<p>Style du site (mode clair)</p>";
-    STYLES.forEach(function (s) {
-      var x = document.createElement("button"); x.type = "button"; x.dataset.s = s[0]; x.textContent = s[1];
-      x.addEventListener("click", function () { appliquer(s[0]); });
-      p.appendChild(x);
-    });
+    p.innerHTML = "<p>Taille du texte</p>";
+    var tl = document.createElement("div"); tl.className = "st-taille";
+    var moins = document.createElement("button"); moins.type = "button"; moins.textContent = "A−"; moins.title = "Réduire le texte";
+    var val = document.createElement("span"); val.textContent = Math.round(tailleCourante() * 100) + " %";
+    val.title = "Revenir à 100 %"; val.style.cursor = "pointer";
+    var plus = document.createElement("button"); plus.type = "button"; plus.textContent = "A+"; plus.title = "Agrandir le texte";
+    moins.addEventListener("click", function () { pas(-1); });
+    plus.addEventListener("click", function () { pas(1); });
+    val.addEventListener("click", function () { poserTaille(1); });
+    tl.appendChild(moins); tl.appendChild(val); tl.appendChild(plus);
+    p.appendChild(tl);
+    if (essai) {
+      var sep = document.createElement("div"); sep.className = "st-sep"; p.appendChild(sep);
+      var t = document.createElement("p"); t.textContent = "Style du site (mode clair)"; p.appendChild(t);
+      STYLES.forEach(function (s) {
+        var x = document.createElement("button"); x.type = "button"; x.dataset.s = s[0]; x.textContent = s[1];
+        x.addEventListener("click", function () { appliquer(s[0]); });
+        p.appendChild(x);
+      });
+    }
     b.addEventListener("click", function () { p.hidden = !p.hidden; });
     document.addEventListener("click", function (e) { if (!m.contains(e.target)) p.hidden = true; });
     m.appendChild(p); m.appendChild(b); document.body.appendChild(m);
-    appliquer(courant());
+    if (essai) appliquer(courant());
   }
   if (document.readyState !== "loading") build(); else document.addEventListener("DOMContentLoaded", build);
 })();

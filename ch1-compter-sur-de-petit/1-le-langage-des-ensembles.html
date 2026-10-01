@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Permutations avec répétition : les anagrammes – Probabilités</title>
+<title>Le langage des ensembles – Probabilités</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -35,8 +35,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../ch1-compter-sur-de-petit/6-choisir-une-methode.html" rel="next">
-<link href="../ch1-compter-sur-de-petit/4-combinaisons.html" rel="prev">
+<link href="../ch1-compter-sur-de-petit/2-lister-avant-de-compter.html" rel="next">
+<link href="../ch1-compter-sur-de-petit/index.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-73b0ff3878a4e6fc3716dc69a6aaefa3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-94cb1ee365b8c2bebb8400336c7455e1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-4f25214d2c0aa817e35f237ded488e3e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -82,6 +82,8 @@ ul.task-list li input[type="checkbox"] {
     if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
     var st = localStorage.getItem('typweb-style');
     if (st) document.documentElement.setAttribute('data-style', st);   // styles à l'essai (menu « Aa »)
+    var tx = parseFloat(localStorage.getItem('typweb-taille'));          // taille du texte (menu « Aa »)
+    if (tx && tx !== 1) document.documentElement.style.fontSize = (100 * tx) + '%';
   } catch (e) {}
 })();
 </script>
@@ -127,7 +129,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/index.html">Chapitre 1 — Compter sur de petits ensembles</a></li><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/5-permutations-avec-repetition-les-anagram.html"><span class="chapter-title">Permutations avec répétition : les anagrammes</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/index.html">Chapitre 1 — Compter sur de petits ensembles</a></li><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/1-le-langage-des-ensembles.html"><span class="chapter-title">Le langage des ensembles</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
@@ -173,37 +175,42 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/1-lister-avant-de-compter.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lister avant de compter</span></a>
+  <a href="../ch1-compter-sur-de-petit/1-le-langage-des-ensembles.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Le langage des ensembles</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/2-additionner-multiplier.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Additionner, multiplier</span></a>
+  <a href="../ch1-compter-sur-de-petit/2-lister-avant-de-compter.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lister avant de compter</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/3-arrangements-et-permutations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Arrangements et permutations</span></a>
+  <a href="../ch1-compter-sur-de-petit/3-additionner-multiplier.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Additionner, multiplier</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/4-combinaisons.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Combinaisons</span></a>
+  <a href="../ch1-compter-sur-de-petit/4-arrangements-et-permutations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Arrangements et permutations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/5-permutations-avec-repetition-les-anagram.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Permutations avec répétition : les anagrammes</span></a>
+  <a href="../ch1-compter-sur-de-petit/5-combinaisons.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Combinaisons</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/6-choisir-une-methode.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Choisir une méthode</span></a>
+  <a href="../ch1-compter-sur-de-petit/6-permutations-avec-repetition-les-anagram.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Permutations avec répétition : les anagrammes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/7-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  <a href="../ch1-compter-sur-de-petit/7-choisir-une-methode.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Choisir une méthode</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ch1-compter-sur-de-petit/8-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
   </div>
 </li>
       </ul>
@@ -285,12 +292,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch3-probabilite-conditio/6-sources-des-donnees.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sources des données</span></a>
+  <a href="../ch3-probabilite-conditio/6-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch3-probabilite-conditio/7-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  <a href="../ch3-probabilite-conditio/7-references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Références</span></a>
   </div>
 </li>
       </ul>
@@ -321,9 +328,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/index.html">Chapitre 1 — Compter sur de petits ensembles</a></li><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/5-permutations-avec-repetition-les-anagram.html"><span class="chapter-title">Permutations avec répétition : les anagrammes</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/index.html">Chapitre 1 — Compter sur de petits ensembles</a></li><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/1-le-langage-des-ensembles.html"><span class="chapter-title">Le langage des ensembles</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Permutations avec répétition : les anagrammes</span></h1>
+<h1 class="title"><span class="chapter-title">Le langage des ensembles</span></h1>
 </div>
 
 
@@ -341,127 +348,135 @@ window.Quarto = {
 
 
 <!-- GÉNÉRÉ par typweb à partir des notes Typst : NE PAS ÉDITER (les modifications seraient écrasées). -->
-<div id="activite-1-6" class="theo theo-activite" data-sorte="activite" data-num="1.6" data-page="12" data-phys="15">
+<p>Compter, puis calculer des probabilités, c’est parler d’ensembles : l’ensemble des résultats possibles, ceux qui ont une propriété, ceux qui en ont deux à la fois… Ce langage et ses symboles servent dans tout le cours.</p>
+<div id="activite-1-1" class="theo theo-activite" data-sorte="activite" data-num="1.1" data-page="2" data-phys="5">
 <div class="theo-head">
-<p><strong>Activité 1.6</strong> — les anagrammes de ANNA</p>
+<p><strong>Activité 1.1</strong> — deux ensembles de nombres</p>
 </div>
 <div class="theo-body">
-<p>Un anagramme de ANNA est un mot de 4 lettres, avec ou sans sens, formé de ces quatre lettres.</p>
+<p>On considère l’ensemble <span class="math inline">\(E\)</span> des nombres entiers de 1 à 12, l’ensemble <span class="math inline">\(A\)</span> des diviseurs de 12 et l’ensemble <span class="math inline">\(B\)</span> des nombres pairs de <span class="math inline">\(E\)</span>.</p>
 <ol type="a">
-<li>Écris tous les anagrammes de ANNA.</li>
+<li>Écris la liste des éléments de <span class="math inline">\(A\)</span> et celle des éléments de <span class="math inline">\(B\)</span>, entre accolades.</li>
 </ol>
 <div class="rep-bloc">
-<p>AANN, ANAN, ANNA, NAAN, NANA, NNAA : 6 anagrammes.</p>
+<p><span class="math inline">\(A = \{1, 2, 3, 4, 6, 12\}\)</span> ; <span class="math inline">\(B = \{2, 4, 6, 8, 10, 12\}\)</span>.</p>
 </div>
 <ol start="2" type="a">
-<li>Si les deux A et les deux N étaient discernables (A₁, A₂, N₁, N₂), combien y aurait-il de mots ? Le schéma regroupe ceux qui donnent le même anagramme : complète-le.</li>
+<li>Place les douze nombres de <span class="math inline">\(E\)</span> dans le diagramme.</li>
 </ol>
-<div class="pb-fig pb-partition">
-<div class="pb-part-titre">
-<p><strong>les 24 mots avec lettres discernables</strong></p>
+<div class="pb-fig pb-venn" data-n="2" data-inclus="0" data-disjoints="0" data-ombre="[]" data-activite="1">
+<div class="pb-univers">
+<p><span class="math inline">\(E\)</span></p>
 </div>
-<div class="pb-paquets" style="--n:6">
-<div class="pb-paquet">
-<div class="rep-bloc">
-<p>A₁N₁N₂A₂<br>
-A₁N₂N₁A₂<br>
-A₂N₁N₂A₁<br>
-A₂N₂N₁A₁</p>
+<div class="pb-nom" data-i="0">
+<p><span class="math inline">\(A\)</span></p>
 </div>
+<div class="pb-nom" data-i="1">
+<p><span class="math inline">\(B\)</span></p>
 </div>
-<div class="pb-paquet">
-<div class="rep-bloc">
-<p>A₁N₁A₂N₂<br>
-A₁N₂A₂N₁<br>
-A₂N₁A₁N₂<br>
-A₂N₂A₁N₁</p>
+<div class="pb-z" data-z="a">
+<p><span class="rep" data-v="1;3">1, 3</span></p>
 </div>
+<div class="pb-z" data-z="ab">
+<p><span class="rep" data-v="2;4;6;12">2, 4, 6, 12</span></p>
 </div>
-<div class="pb-paquet">
-<div class="rep-bloc">
-<p>A₁A₂N₁N₂<br>
-A₁A₂N₂N₁<br>
-A₂A₁N₁N₂<br>
-A₂A₁N₂N₁</p>
+<div class="pb-z" data-z="b">
+<p><span class="rep" data-v="8;10">8, 10</span></p>
 </div>
+<div class="pb-z" data-z="dehors">
+<p><span class="rep" data-v="5;7;9;11">5, 7, 9, 11</span></p>
 </div>
-<div class="pb-paquet">
-<div class="rep-bloc">
-<p>N₁A₁N₂A₂<br>
-N₁A₂N₂A₁<br>
-N₂A₁N₁A₂<br>
-N₂A₂N₁A₁</p>
-</div>
-</div>
-<div class="pb-paquet">
-<div class="rep-bloc">
-<p>N₁A₁A₂N₂<br>
-N₁A₂A₁N₂<br>
-N₂A₁A₂N₁<br>
-N₂A₂A₁N₁</p>
-</div>
-</div>
-<div class="pb-paquet">
-<div class="rep-bloc">
-<p>N₁N₂A₁A₂<br>
-N₁N₂A₂A₁<br>
-N₂N₁A₁A₂<br>
-N₂N₁A₂A₁</p>
-</div>
-</div>
-</div>
-</div>
-<div class="rep-bloc">
-<p><span class="math inline">\(4! = 24\)</span> mots. Chaque anagramme provient de <span class="math inline">\(2! \cdot 2! = 4\)</span> mots (on échange les A, on échange les N). Donc <span class="math inline">\(\frac{24}{4} = 6\)</span>.</p>
 </div>
 <ol start="3" type="a">
-<li>Autre méthode : choisis les places des deux A parmi les quatre places.</li>
+<li>Dans chaque cas, écris la liste des nombres de <span class="math inline">\(E\)</span> concernés et colorie la zone correspondante du diagramme : 1) dans <span class="math inline">\(A\)</span> et dans <span class="math inline">\(B\)</span> ; 2) dans <span class="math inline">\(A\)</span> ou dans <span class="math inline">\(B\)</span> (au moins dans l’un des deux) ; 3) dans <span class="math inline">\(A\)</span> mais pas dans <span class="math inline">\(B\)</span> ; 4) pas dans <span class="math inline">\(A\)</span> ; 5) à la fois impairs et dans <span class="math inline">\(B\)</span>.</li>
 </ol>
 <div class="rep-bloc">
-<p><span class="math inline">\(C_{4}^{2} = 6\)</span> ; les N occupent les places restantes. Les deux méthodes donnent <span class="math inline">\(\frac{4!}{2! \cdot 2!} = C_{4}^{2}\)</span> : choisir les places des A, c’est choisir un groupe de 2 places parmi 4.</p>
+<ol type="1">
+<li><span class="math inline">\(\{2, 4, 6, 12\}\)</span>, la zone commune ; 2) <span class="math inline">\(\{1, 2, 3, 4, 6, 8, 10, 12\}\)</span>, les deux cercles ; 3) <span class="math inline">\(\{1, 3\}\)</span> ; 4) <span class="math inline">\(\{5, 7, 8, 9, 10, 11\}\)</span>, tout ce qui est hors du cercle <span class="math inline">\(A\)</span> ; 5) aucun nombre : la liste est vide.</li>
+</ol>
+</div>
+<ol start="4" type="a">
+<li>Combien d’éléments compte chacun des ensembles a) et c) ? Le nombre d’éléments de « dans <span class="math inline">\(A\)</span> ou dans <span class="math inline">\(B\)</span> » est-il la somme des nombres d’éléments de <span class="math inline">\(A\)</span> et de <span class="math inline">\(B\)</span> ?</li>
+</ol>
+<div class="rep-bloc">
+<p><span class="math inline">\(A\)</span> : 6 ; <span class="math inline">\(B\)</span> : 6 ; 1) 4 ; 2) 8 ; 3) 2 ; 4) 6 ; 5) 0. Non : <span class="math inline">\(6 + 6 = 12\)</span>, mais 2, 4, 6 et 12 seraient comptés deux fois ; <span class="math inline">\(6 + 6 - 4 = 8\)</span>.</p>
 </div>
 </div>
 </div>
-<div id="definition-1-5" class="theo theo-definition" data-sorte="definition" data-num="1.5" data-page="13" data-phys="16">
-<div class="theo-head">
-<p><strong>Définition 1.5</strong> — permutations avec répétition</p>
+<div id="cadre-notations" class="cadre-info">
+<p><strong>Notations.</strong> Pour des ensembles <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> contenus dans un ensemble <span class="math inline">\(E\)</span> :</p>
+<div class="tableau">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><strong>Notation</strong></th>
+<th style="text-align: center;"><strong>Se lit</strong></th>
+<th style="text-align: center;"><strong>Signifie (exemple de l’activité 1.1)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\{1, 3\}\)</span></td>
+<td style="text-align: center;">« l’ensemble des éléments 1 et 3 »</td>
+<td style="text-align: center;">ensemble écrit en extension, entre accolades</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(3 \in A\)</span></td>
+<td style="text-align: center;">« 3 appartient à <span class="math inline">\(A\)</span> »</td>
+<td style="text-align: center;">3 est un élément de <span class="math inline">\(A\)</span> ; <span class="math inline">\(5 \notin A\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(A \cap B\)</span></td>
+<td style="text-align: center;">« <span class="math inline">\(A\)</span> inter <span class="math inline">\(B\)</span> »</td>
+<td style="text-align: center;">éléments communs à <span class="math inline">\(A\)</span> et à <span class="math inline">\(B\)</span> : <span class="math inline">\(\{2, 4, 6, 12\}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(A \cup B\)</span></td>
+<td style="text-align: center;">« <span class="math inline">\(A\)</span> union <span class="math inline">\(B\)</span> »</td>
+<td style="text-align: center;">éléments de <span class="math inline">\(A\)</span> ou de <span class="math inline">\(B\)</span> (au moins de l’un) : 8 éléments</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(A \setminus B\)</span></td>
+<td style="text-align: center;">« <span class="math inline">\(A\)</span> privé de <span class="math inline">\(B\)</span> »</td>
+<td style="text-align: center;">éléments de <span class="math inline">\(A\)</span> qui ne sont pas dans <span class="math inline">\(B\)</span> : <span class="math inline">\(\{1, 3\}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\overline{A}\)</span></td>
+<td style="text-align: center;">« complémentaire de <span class="math inline">\(A\)</span> »</td>
+<td style="text-align: center;">éléments de <span class="math inline">\(E\)</span> qui ne sont pas dans <span class="math inline">\(A\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\emptyset\)</span></td>
+<td style="text-align: center;">« ensemble vide »</td>
+<td style="text-align: center;">ensemble sans élément</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\{2, 4\} \subset A\)</span></td>
+<td style="text-align: center;">« <span class="math inline">\(\{2, 4\}\)</span> est inclus dans <span class="math inline">\(A\)</span> »</td>
+<td style="text-align: center;">tout élément de <span class="math inline">\(\{2, 4\}\)</span> est dans <span class="math inline">\(A\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\#A\)</span></td>
+<td style="text-align: center;">« cardinal de <span class="math inline">\(A\)</span> »</td>
+<td style="text-align: center;">nombre d’éléments de <span class="math inline">\(A\)</span> : <span class="math inline">\(\#A = 6\)</span></td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="theo-body">
-<p>Une <em>permutation avec répétition</em> de <span class="math inline">\(n\)</span> objets est une façon de les ranger tous en ligne lorsque certains d’entre eux sont identiques (on ne distingue pas deux objets identiques) : par exemple, un anagramme de ANNA.</p>
 </div>
-</div>
-<div id="propriete-1-6" class="theo theo-propriete" data-sorte="propriete" data-num="1.6" data-page="13" data-phys="16">
-<div class="theo-head">
-<p><strong>Propriété 1.6</strong></p>
-</div>
-<div class="theo-body">
-<p>Le nombre de permutations avec répétition de <span class="math inline">\(n\)</span> objets, dont <span class="math inline">\(k_{1}\)</span> sont identiques entre eux, <span class="math inline">\(k_{2}\)</span> identiques entre eux, …, <span class="math inline">\(k_{r}\)</span> identiques entre eux, vaut</p>
-<p><span class="math display">\[
-\frac{n!}{k_{1} ! \, k_{2} ! \cdots k_{r} !}.
-\]</span></p>
-<p>Avec deux sortes d’objets seulement, on retrouve les combinaisons : choisir 3 délégués parmi 5 élèves A, B, C, D, E revient à écrire O (« oui ») ou N (« non ») sous chaque nom, par exemple ONOON pour {A, C, D}. Il y a autant de délégations que d’anagrammes de OOONN : <span class="math inline">\(\frac{5!}{3! \cdot 2!} = C_{5}^{3} = 10\)</span>.</p>
-</div>
-</div>
-<div id="exemple-1-4" class="theo theo-exemple" data-sorte="exemple" data-num="1.4" data-page="13" data-phys="16">
-<div class="theo-head">
-<p><strong>Exemple 1.4</strong> — URSULINES</p>
-</div>
-<div class="theo-body">
-<p>Combien d’anagrammes du mot URSULINES ? On répond par deux méthodes.</p>
-<p>Le mot compte 9 lettres, dont U deux fois et S deux fois.</p>
-<p><em>Méthode 1.</em> Par la propriété : <span class="math inline">\(\frac{9!}{2! \cdot 2!} = \frac{362 \, 880}{4} = 90 \, 720\)</span>.</p>
-<p><em>Méthode 2.</em> On choisit les places des U (<span class="math inline">\(C_{9}^{2} = 36\)</span>), puis celles des S parmi les 7 places restantes (<span class="math inline">\(C_{7}^{2} = 21\)</span>), puis on range les 5 autres lettres, toutes différentes (<span class="math inline">\(5! = 120\)</span>) : <span class="math inline">\(36 \cdot 21 \cdot 120 = 90 \, 720\)</span>.</p>
-<p>Les deux méthodes donnent le même nombre.</p>
-</div>
-</div>
-<div id="exercice-1-16" class="exo" data-sorte="exercice" data-num="1.16" data-page="13" data-phys="16">
+<div id="exercice-1-1" class="exo" data-sorte="exercice" data-num="1.1" data-page="3" data-phys="6">
 <div class="exo-tete">
-<p><span class="exo-titre">✎ Exercice 1.16</span> <span class="exo-meta"><span class="exo-comp">A5</span> ★☆☆</span></p>
+<p><span class="exo-titre">✎ Exercice 1.1</span> <span class="exo-maison">⟵ à faire à la maison</span> <span class="exo-meta"><span class="exo-comp">C4</span> ★☆☆</span></p>
 </div>
 <div class="exo-corps">
-<p>Combien d’anagrammes du mot MONS ? du mot BELGIQUE ? Parmi ces derniers, combien commencent par B ?</p>
+<p>Dans l’ensemble <span class="math inline">\(E\)</span> des entiers de 1 à 20, on note <span class="math inline">\(A\)</span> l’ensemble des multiples de 4 et <span class="math inline">\(B\)</span> l’ensemble des diviseurs de 20. Écris en extension <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(A \cap B\)</span>, <span class="math inline">\(A \cup B\)</span> et <span class="math inline">\(A \setminus B\)</span>, puis calcule <span class="math inline">\(\#(A \cup B)\)</span> et <span class="math inline">\(\#\overline{B}\)</span>. Vrai ou faux : <span class="math inline">\(5 \in A\)</span> ; <span class="math inline">\(\{4, 20\} \subset B\)</span> ?</p>
 <div class="rep-bloc">
-<p>MONS : 4 lettres différentes, <span class="math inline">\(4! = 24\)</span>. BELGIQUE : 8 lettres, dont E deux fois, <span class="math inline">\(\frac{8!}{2!} = 20 \, 160\)</span>. Commençant par B : on range les 7 autres lettres (E deux fois), <span class="math inline">\(\frac{7!}{2!} = 2520\)</span>.</p>
+<p><span class="math inline">\(A = \{4, 8, 12, 16, 20\}\)</span> ; <span class="math inline">\(B = \{1, 2, 4, 5, 10, 20\}\)</span> ; <span class="math inline">\(A \cap B = \{4, 20\}\)</span> ; <span class="math inline">\(A \cup B = \{1, 2, 4, 5, 8, 10, 12, 16, 20\}\)</span> ; <span class="math inline">\(A \setminus B = \{8, 12, 16\}\)</span>. <span class="math inline">\(\#(A \cup B) = 9\)</span> ; <span class="math inline">\(\#\overline{B} = 20 - 6 = 14\)</span>. <span class="math inline">\(5 \in A\)</span> : faux ; <span class="math inline">\(\{4, 20\} \subset B\)</span> : vrai.</p>
 </div>
 </div>
 </div>
@@ -470,139 +485,28 @@ N₂N₁A₂A₁</p>
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false" href="">Pièges</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>Relis la <a href="#definition-1-5">définition des permutations avec répétition</a> et la <a href="#propriete-1-6">propriété 1.6</a>.</p>
+<p>Relis l’<a href="#activite-1-1">activité 1.1</a> et le cadre « Notations ».</p>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>Quelles lettres de BELGIQUE sont répétées ?</p>
+<p>Quels nombres sont à la fois multiples de 4 et diviseurs de 20 ?</p>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<p>BELGIQUE : 8 lettres, dont E deux fois.</p>
+<p>Écris d’abord <span class="math inline">\(A = \{4, 8, 12, 16, 20\}\)</span>, puis cherche les diviseurs de 20 un par un.</p>
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-<p>MONS : 4 lettres différentes, <span class="math inline">\(4! = 24\)</span> anagrammes. BELGIQUE : 8 lettres, dont E deux fois : <span class="math inline">\(\frac{8!}{2!} = 20 \, 160\)</span> anagrammes. Commençant par B : on range les 7 autres lettres, dont E deux fois : <span class="math inline">\(\frac{7!}{2!} = 2520\)</span>.</p>
+<p><span class="math inline">\(A = \{4, 8, 12, 16, 20\}\)</span> ; <span class="math inline">\(B = \{1, 2, 4, 5, 10, 20\}\)</span>. <span class="math inline">\(A \cap B = \{4, 20\}\)</span> ; <span class="math inline">\(A \cup B = \{1, 2, 4, 5, 8, 10, 12, 16, 20\}\)</span> ; <span class="math inline">\(A \setminus B = \{8, 12, 16\}\)</span>. <span class="math inline">\(\#(A \cup B) = 9\)</span> (<span class="math inline">\(5 + 6 - 2\)</span>) ; <span class="math inline">\(\#\overline{B} = 20 - 6 = 14\)</span>. <span class="math inline">\(5 \in A\)</span> est faux (5 n’est pas multiple de 4) ; <span class="math inline">\(\{4, 20\} \subset B\)</span> est vrai.</p>
 </div>
 <div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
 <ul>
-<li>Oublier de diviser par <span class="math inline">\(2!\)</span> : échanger les deux E ne change pas le mot.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div id="exercice-1-17" class="exo" data-sorte="exercice" data-num="1.17" data-page="14" data-phys="17">
-<div class="exo-tete">
-<p><span class="exo-titre">✎ Exercice 1.17</span> <span class="exo-meta"><span class="exo-comp">A5</span> ★☆☆</span></p>
-</div>
-<div class="exo-corps">
-<p>Combien d’anagrammes des mots a) PROPORTION ; b) ANAGRAMME ; c) RECHERCHER ?</p>
-<div class="rep-bloc">
-<ol type="a">
-<li>10 lettres : O trois fois, P et R deux fois : <span class="math inline">\(\frac{10!}{3! \cdot 2! \cdot 2!} = 151 \, 200\)</span>. b) 9 lettres : A trois fois, M deux fois : <span class="math inline">\(\frac{9!}{3! \cdot 2!} = 30 \, 240\)</span>. c) 10 lettres : R et E trois fois, C et H deux fois : <span class="math inline">\(\frac{10!}{3! \cdot 3! \cdot 2! \cdot 2!} = 25 \, 200\)</span>.</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="aides">
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-5" role="tab" aria-controls="tabset-2-5" aria-selected="false" href="">Pièges</a></li></ul>
-<div class="tab-content">
-<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-<p>Relis la <a href="#definition-1-5">définition des permutations avec répétition</a> et la <a href="#propriete-1-6">propriété 1.6</a>.</p>
-</div>
-<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
-<p>Combien de fois chaque lettre apparaît-elle ?</p>
-</div>
-<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
-<p>PROPORTION : 10 lettres ; O trois fois, P deux fois, R deux fois.</p>
-</div>
-<div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
-<ol type="a">
-<li>PROPORTION : 10 lettres dont O trois fois, P et R deux fois : <span class="math inline">\(\frac{10!}{3! \cdot 2! \cdot 2!} = 151 \, 200\)</span>. b) ANAGRAMME : 9 lettres dont A trois fois, M deux fois : <span class="math inline">\(\frac{9!}{3! \cdot 2!} = 30 \, 240\)</span>. c) RECHERCHER : 10 lettres dont R et E trois fois, C et H deux fois : <span class="math inline">\(\frac{10!}{3! \cdot 3! \cdot 2! \cdot 2!} = 25 \, 200\)</span>.</li>
-</ol>
-</div>
-<div id="tabset-2-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-5-tab">
-<ul>
-<li>Compter les lettres trop vite : ANAGRAMME contient trois A et deux M.</li>
-<li>Diviser par <span class="math inline">\(3 \cdot 2\)</span> au lieu de <span class="math inline">\(3! \cdot 2!\)</span>.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div id="exercice-1-18" class="exo" data-sorte="exercice" data-num="1.18" data-page="14" data-phys="17">
-<div class="exo-tete">
-<p><span class="exo-titre">✎ Exercice 1.18</span> <span class="exo-maison">⟵ à faire à la maison</span> <span class="exo-meta"><span class="exo-comp">A5</span> ★★☆</span></p>
-</div>
-<div class="exo-corps">
-<p>Combien d’anagrammes du mot MISSISSIPPI ? Réponds par deux méthodes.</p>
-<div class="rep-bloc">
-<p>11 lettres : M une fois, I quatre fois, S quatre fois, P deux fois. Méthode 1 : <span class="math inline">\(\frac{11!}{4! \cdot 4! \cdot 2!} = 34 \, 650\)</span>. Méthode 2 : places des I, <span class="math inline">\(C_{11}^{4} = 330\)</span> ; des S parmi les 7 restantes, <span class="math inline">\(C_{7}^{4} = 35\)</span> ; des P parmi les 3 restantes, <span class="math inline">\(C_{3}^{2} = 3\)</span> ; M à la dernière place : <span class="math inline">\(330 \cdot 35 \cdot 3 = 34 \, 650\)</span>.</p>
-</div>
-</div>
-</div>
-<div class="aides">
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-4" role="tab" aria-controls="tabset-3-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-5" role="tab" aria-controls="tabset-3-5" aria-selected="false" href="">Pièges</a></li></ul>
-<div class="tab-content">
-<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
-<p>Relis la <a href="#propriete-1-6">propriété des permutations avec répétition</a> et l’<a href="#exemple-1-4">exemple URSULINES</a>.</p>
-</div>
-<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
-<p>Combien de fois apparaît chaque lettre ?</p>
-</div>
-<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
-<p>M : 1 ; I : 4 ; S : 4 ; P : 2 ; en tout 11 lettres.</p>
-</div>
-<div id="tabset-3-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-4-tab">
-<p>Le mot compte 11 lettres : M une fois, I quatre fois, S quatre fois, P deux fois.</p>
-<p>Méthode 1 : <span class="math inline">\(\frac{11!}{4! \cdot 4! \cdot 2!} = 34 \, 650\)</span>.</p>
-<p>Méthode 2 : on choisit les places des I (<span class="math inline">\(C_{11}^{4} = 330\)</span>), puis celles des S parmi les 7 restantes (<span class="math inline">\(C_{7}^{4} = 35\)</span>), puis celles des P parmi les 3 restantes (<span class="math inline">\(C_{3}^{2} = 3\)</span>) ; M prend la dernière place. <span class="math inline">\(330 \cdot 35 \cdot 3 = 34 \, 650\)</span>. Les deux méthodes concordent.</p>
-</div>
-<div id="tabset-3-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-5-tab">
-<ul>
-<li>Compter 3 S ou 3 I : recompter les lettres une par une.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div id="exercice-1-19" class="exo" data-sorte="exercice" data-num="1.19" data-page="14" data-phys="17">
-<div class="exo-tete">
-<p><span class="exo-titre">✎ Exercice 1.19</span> <span class="exo-meta"><span class="exo-comp">T1</span> ★★★</span></p>
-</div>
-<div class="exo-corps">
-<p><em>Défi.</em> Sur un quadrillage, on va du coin inférieur gauche au coin supérieur droit d’un rectangle de 4 cases sur 3, en ne se déplaçant que d’une case vers la droite (D) ou vers le haut (H). Combien de chemins sont possibles ?</p>
-<div class="rep-bloc">
-<p>Un chemin est un mot de 7 lettres contenant 4 D et 3 H. Il suffit de choisir les places des H : <span class="math inline">\(C_{7}^{3} = 35\)</span> chemins.</p>
-</div>
-</div>
-</div>
-<div class="aides">
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-4" role="tab" aria-controls="tabset-4-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-5" role="tab" aria-controls="tabset-4-5" aria-selected="false" href="">Pièges</a></li></ul>
-<div class="tab-content">
-<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
-<p>Relis la <a href="#activite-1-6">activité 1.6</a>, méthode c) : choisir les places.</p>
-</div>
-<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
-<p>Combien de pas vers la droite et vers le haut faut-il en tout ?</p>
-</div>
-<div id="tabset-4-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-3-tab">
-<p>Un chemin est un mot de 7 lettres formé de 4 D et 3 H.</p>
-</div>
-<div id="tabset-4-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-4-tab">
-<p>Tout chemin compte 4 pas vers la droite et 3 vers le haut : c’est un mot de 7 lettres formé de 4 D et 3 H. Un tel mot est déterminé par les places des H : il y a <span class="math inline">\(C_{7}^{3} = 35\)</span> chemins.</p>
-</div>
-<div id="tabset-4-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-5-tab">
-<ul>
-<li>Calculer <span class="math inline">\(2^{7}\)</span> : ce nombre compte aussi des mots qui n’ont pas exactement 4 D.</li>
+<li>Écrire deux fois 4 et 20 dans <span class="math inline">\(A \cup B\)</span> : un ensemble ne contient chaque élément qu’une fois.</li>
+<li>Oublier 1 et 20 parmi les diviseurs de 20.</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 <div class="ae-lien">
-<p><a href="../autoeval.html#sections=sec-anagrammes">✔ S’autoévaluer sur cette section : test de 5 questions →</a></p>
+<p><a href="../autoeval.html#sections=sec-ensembles">✔ S’autoévaluer sur cette section : test de 2 questions →</a></p>
 </div>
 
 
@@ -790,7 +694,7 @@ N₂N₁A₂A₁</p>
 <!-- GÉNÉRÉ par typweb — ne pas éditer -->
 <script>
 /* Réglages du cours (typweb.toml) */
-window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.com/qlambotte/proba-cours", "pdfs": [{"titre": "Cours — version élève", "detail": "réponses à compléter", "fichier": "proba.pdf"}, {"titre": "Cours — avec le corrigé", "detail": "réponses en bleu", "fichier": "proba-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1", "detail": "", "fichier": "exercices-supp-ch1.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2", "detail": "", "fichier": "exercices-supp-ch2.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3", "detail": "", "fichier": "exercices-supp-ch3.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1 (corrigé)", "detail": "", "fichier": "exercices-supp-ch1-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2 (corrigé)", "detail": "", "fichier": "exercices-supp-ch2-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3 (corrigé)", "detail": "", "fichier": "exercices-supp-ch3-corrige.pdf"}], "portail": "https://qlambotte.github.io/6e.html", "horsLigne": true};
+window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.com/qlambotte/proba-cours", "pdfs": [{"titre": "Cours — version élève", "detail": "réponses à compléter", "fichier": "proba.pdf"}, {"titre": "Cours — avec le corrigé", "detail": "réponses en bleu", "fichier": "proba-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1", "detail": "", "fichier": "exercices-supp-ch1.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2", "detail": "", "fichier": "exercices-supp-ch2.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3", "detail": "", "fichier": "exercices-supp-ch3.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1 (corrigé)", "detail": "", "fichier": "exercices-supp-ch1-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2 (corrigé)", "detail": "", "fichier": "exercices-supp-ch2-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3 (corrigé)", "detail": "", "fichier": "exercices-supp-ch3-corrige.pdf"}], "portail": "https://qlambotte.github.io/6e.html", "horsLigne": true, "stylesEssai": true, "minuteur": [3, 5, 10, 15, 20]};
 /* Charge les scripts du site (js/) avec le bon chemin relatif,
    quelle que soit la profondeur de la page. */
 (function () {
@@ -823,7 +727,7 @@ window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.co
 })();
 </script>
 <script>
-// Menu « Aa » (en bas à gauche) : essayer les styles du site. Le choix est
+// Menu « Aa » : taille du texte (toujours) et styles du site à l'essai. Le choix est
 // mémorisé dans ce navigateur (localStorage « typweb-style »). À retirer quand
 // un style est retenu (typweb.toml : [site] styles-essai = false).
 (function () {
@@ -845,22 +749,50 @@ window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.co
     document.querySelectorAll(".st-panneau button").forEach(function (b) { b.classList.toggle("on", b.dataset.s === s); });
     window.dispatchEvent(new Event("resize"));      // figures : se redessiner
   }
+  var TAILLES = [0.85, 0.92, 1, 1.08, 1.16, 1.25, 1.35, 1.5];
+  function tailleCourante() { try { return parseFloat(localStorage.getItem("typweb-taille")) || 1; } catch (e) { return 1; } }
+  function poserTaille(t) {
+    document.documentElement.style.fontSize = t === 1 ? "" : (100 * t) + "%";
+    try { if (t === 1) localStorage.removeItem("typweb-taille"); else localStorage.setItem("typweb-taille", t); } catch (e) {}
+    var l = document.querySelector(".st-taille span"); if (l) l.textContent = Math.round(t * 100) + " %";
+    window.dispatchEvent(new Event("resize"));      // figures : se redessiner
+  }
+  function pas(d) {
+    var t = tailleCourante(), k = 0;
+    TAILLES.forEach(function (x, j) { if (Math.abs(x - t) < Math.abs(TAILLES[k] - t)) k = j; });
+    poserTaille(TAILLES[Math.max(0, Math.min(TAILLES.length - 1, k + d))]);
+  }
   function build() {
     if (document.querySelector(".st-menu")) return;
+    var essai = !window.TYPWEB || window.TYPWEB.stylesEssai !== false;
     var m = document.createElement("div"); m.className = "st-menu";
     var b = document.createElement("button"); b.className = "st-btn"; b.type = "button"; b.textContent = "Aa";
-    b.title = "Essayer un autre style"; b.setAttribute("aria-label", "Essayer un autre style");
+    b.title = "Taille du texte" + (essai ? " et style du site" : ""); b.setAttribute("aria-label", b.title);
     var p = document.createElement("div"); p.className = "st-panneau"; p.hidden = true;
-    p.innerHTML = "<p>Style du site (mode clair)</p>";
-    STYLES.forEach(function (s) {
-      var x = document.createElement("button"); x.type = "button"; x.dataset.s = s[0]; x.textContent = s[1];
-      x.addEventListener("click", function () { appliquer(s[0]); });
-      p.appendChild(x);
-    });
+    p.innerHTML = "<p>Taille du texte</p>";
+    var tl = document.createElement("div"); tl.className = "st-taille";
+    var moins = document.createElement("button"); moins.type = "button"; moins.textContent = "A−"; moins.title = "Réduire le texte";
+    var val = document.createElement("span"); val.textContent = Math.round(tailleCourante() * 100) + " %";
+    val.title = "Revenir à 100 %"; val.style.cursor = "pointer";
+    var plus = document.createElement("button"); plus.type = "button"; plus.textContent = "A+"; plus.title = "Agrandir le texte";
+    moins.addEventListener("click", function () { pas(-1); });
+    plus.addEventListener("click", function () { pas(1); });
+    val.addEventListener("click", function () { poserTaille(1); });
+    tl.appendChild(moins); tl.appendChild(val); tl.appendChild(plus);
+    p.appendChild(tl);
+    if (essai) {
+      var sep = document.createElement("div"); sep.className = "st-sep"; p.appendChild(sep);
+      var t = document.createElement("p"); t.textContent = "Style du site (mode clair)"; p.appendChild(t);
+      STYLES.forEach(function (s) {
+        var x = document.createElement("button"); x.type = "button"; x.dataset.s = s[0]; x.textContent = s[1];
+        x.addEventListener("click", function () { appliquer(s[0]); });
+        p.appendChild(x);
+      });
+    }
     b.addEventListener("click", function () { p.hidden = !p.hidden; });
     document.addEventListener("click", function (e) { if (!m.contains(e.target)) p.hidden = true; });
     m.appendChild(p); m.appendChild(b); document.body.appendChild(m);
-    appliquer(courant());
+    if (essai) appliquer(courant());
   }
   if (document.readyState !== "loading") build(); else document.addEventListener("DOMContentLoaded", build);
 })();
@@ -1267,13 +1199,13 @@ window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.co
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../ch1-compter-sur-de-petit/4-combinaisons.html" class="pagination-link" aria-label="Combinaisons">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Combinaisons</span></span>
+      <a href="../ch1-compter-sur-de-petit/index.html" class="pagination-link" aria-label="Chapitre 1 — Compter sur de petits ensembles">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Chapitre 1 — Compter sur de petits ensembles</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../ch1-compter-sur-de-petit/6-choisir-une-methode.html" class="pagination-link" aria-label="Choisir une méthode">
-        <span class="nav-page-text"><span class="chapter-title">Choisir une méthode</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../ch1-compter-sur-de-petit/2-lister-avant-de-compter.html" class="pagination-link" aria-label="Lister avant de compter">
+        <span class="nav-page-text"><span class="chapter-title">Lister avant de compter</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

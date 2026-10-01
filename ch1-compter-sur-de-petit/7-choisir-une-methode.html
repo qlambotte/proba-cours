@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lister avant de compter – Probabilités</title>
+<title>Choisir une méthode – Probabilités</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -35,8 +35,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../ch1-compter-sur-de-petit/2-additionner-multiplier.html" rel="next">
-<link href="../ch1-compter-sur-de-petit/index.html" rel="prev">
+<link href="../ch1-compter-sur-de-petit/8-exercices-supplementaires.html" rel="next">
+<link href="../ch1-compter-sur-de-petit/6-permutations-avec-repetition-les-anagram.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-73b0ff3878a4e6fc3716dc69a6aaefa3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-94cb1ee365b8c2bebb8400336c7455e1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-4f25214d2c0aa817e35f237ded488e3e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -82,6 +82,8 @@ ul.task-list li input[type="checkbox"] {
     if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
     var st = localStorage.getItem('typweb-style');
     if (st) document.documentElement.setAttribute('data-style', st);   // styles à l'essai (menu « Aa »)
+    var tx = parseFloat(localStorage.getItem('typweb-taille'));          // taille du texte (menu « Aa »)
+    if (tx && tx !== 1) document.documentElement.style.fontSize = (100 * tx) + '%';
   } catch (e) {}
 })();
 </script>
@@ -127,7 +129,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/index.html">Chapitre 1 — Compter sur de petits ensembles</a></li><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/1-lister-avant-de-compter.html"><span class="chapter-title">Lister avant de compter</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/index.html">Chapitre 1 — Compter sur de petits ensembles</a></li><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/7-choisir-une-methode.html"><span class="chapter-title">Choisir une méthode</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
@@ -173,37 +175,42 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/1-lister-avant-de-compter.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Lister avant de compter</span></a>
+  <a href="../ch1-compter-sur-de-petit/1-le-langage-des-ensembles.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Le langage des ensembles</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/2-additionner-multiplier.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Additionner, multiplier</span></a>
+  <a href="../ch1-compter-sur-de-petit/2-lister-avant-de-compter.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lister avant de compter</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/3-arrangements-et-permutations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Arrangements et permutations</span></a>
+  <a href="../ch1-compter-sur-de-petit/3-additionner-multiplier.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Additionner, multiplier</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/4-combinaisons.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Combinaisons</span></a>
+  <a href="../ch1-compter-sur-de-petit/4-arrangements-et-permutations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Arrangements et permutations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/5-permutations-avec-repetition-les-anagram.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Permutations avec répétition : les anagrammes</span></a>
+  <a href="../ch1-compter-sur-de-petit/5-combinaisons.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Combinaisons</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/6-choisir-une-methode.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Choisir une méthode</span></a>
+  <a href="../ch1-compter-sur-de-petit/6-permutations-avec-repetition-les-anagram.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Permutations avec répétition : les anagrammes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/7-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  <a href="../ch1-compter-sur-de-petit/7-choisir-une-methode.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Choisir une méthode</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ch1-compter-sur-de-petit/8-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
   </div>
 </li>
       </ul>
@@ -285,12 +292,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch3-probabilite-conditio/6-sources-des-donnees.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sources des données</span></a>
+  <a href="../ch3-probabilite-conditio/6-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch3-probabilite-conditio/7-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  <a href="../ch3-probabilite-conditio/7-references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Références</span></a>
   </div>
 </li>
       </ul>
@@ -321,9 +328,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/index.html">Chapitre 1 — Compter sur de petits ensembles</a></li><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/1-lister-avant-de-compter.html"><span class="chapter-title">Lister avant de compter</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/index.html">Chapitre 1 — Compter sur de petits ensembles</a></li><li class="breadcrumb-item"><a href="../ch1-compter-sur-de-petit/7-choisir-une-methode.html"><span class="chapter-title">Choisir une méthode</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Lister avant de compter</span></h1>
+<h1 class="title"><span class="chapter-title">Choisir une méthode</span></h1>
 </div>
 
 
@@ -341,140 +348,60 @@ window.Quarto = {
 
 
 <!-- GÉNÉRÉ par typweb à partir des notes Typst : NE PAS ÉDITER (les modifications seraient écrasées). -->
-<div id="activite-1-1" class="theo theo-activite" data-sorte="activite" data-num="1.1" data-page="2" data-phys="5">
+<div id="cadre-situations-de-reference" class="cadre-info">
+<p><strong>Situations de référence.</strong> On décrit un résultat, puis on se pose deux questions.</p>
+<div class="tableau">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><strong>L’ordre compte</strong> (suite)</th>
+<th style="text-align: center;"><strong>L’ordre ne compte pas</strong> (groupe)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>Répétition possible</strong></td>
+<td style="text-align: center;"><span class="math inline">\(n^{p}\)</span></td>
+<td style="text-align: center;">hors programme</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Sans répétition</strong></td>
+<td style="text-align: center;"><span class="math inline">\(A_{n}^{p}\)</span> ; si <span class="math inline">\(p = n\)</span> : <span class="math inline">\(n!\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(C_{n}^{p}\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Permutations avec répétition (objets identiques à ranger, anagrammes) : <span class="math inline">\(\frac{n!}{k_{1} ! \cdots k_{r} !}\)</span>. Plusieurs cas sans élément commun : on additionne. « Au moins un » : tout moins « aucun ».</p>
+</div>
+<div id="remarque-1-5" class="theo theo-remarque" data-sorte="remarque" data-num="1.5" data-page="14" data-phys="17">
 <div class="theo-head">
-<p><strong>Activité 1.1</strong> — quatre questions, un seul groupe</p>
+<p><strong>Remarque 1.5</strong></p>
 </div>
 <div class="theo-body">
-<p>Un groupe de quatre élèves : Alice, Bilal, Chloé et Dries, notés A, B, C, D. Pour chaque question, écris d’abord deux résultats possibles, puis la liste complète des résultats, organisée de façon à être sûr de n’en oublier aucun.</p>
-<ol type="a">
-<li>Élire un délégué et un suppléant.</li>
-</ol>
-<div class="rep-bloc">
-<p>AB, AC, AD, BA, BC, BD, CA, CB, CD, DA, DB, DC : 12 résultats (AB : Alice déléguée, Bilal suppléant).</p>
-</div>
-<ol start="2" type="a">
-<li>Former un binôme.</li>
-</ol>
-<div class="rep-bloc">
-<p>{A, B}, {A, C}, {A, D}, {B, C}, {B, D}, {C, D} : 6 résultats.</p>
-</div>
-<ol start="3" type="a">
-<li>Tirer au sort, lundi puis mardi, l’élève qui efface le tableau (le même élève peut être tiré deux fois).</li>
-</ol>
-<div class="rep-bloc">
-<p>AA, AB, AC, AD, BA, BB, BC, BD, CA, CB, CC, CD, DA, DB, DC, DD : 16 résultats.</p>
-</div>
-<ol start="4" type="a">
-<li>Fixer l’ordre de passage des quatre élèves au tableau.</li>
-</ol>
-<div class="rep-bloc">
-<p>ABCD, ABDC, ACBD, ACDB, ADBC, ADCB, puis 6 ordres commençant par B, 6 par C et 6 par D : 24 résultats.</p>
-</div>
-<ol start="5" type="a">
-<li>Pourquoi la liste a) est-elle deux fois plus longue que la liste b) ? Complète le schéma : chaque case regroupe les résultats de a) qui donnent le même binôme.</li>
-</ol>
-<div class="pb-fig pb-partition">
-<div class="pb-part-titre">
-<p><strong>les 12 résultats de a)</strong></p>
-</div>
-<div class="pb-paquets" style="--n:6">
-<div class="pb-paquet">
-<div class="rep-bloc">
-<p>AB<br>
-BA</p>
+<p>Erreurs fréquentes, à vérifier avant de rendre une réponse :</p>
+<ul>
+<li><em>erreur d’ordre</em> : utiliser <span class="math inline">\(A_{n}^{p}\)</span> pour des groupes, ou <span class="math inline">\(C_{n}^{p}\)</span> pour des suites ;</li>
+<li><em>erreur de répétition</em> : oublier qu’un élément peut revenir, ou l’autoriser à tort ;</li>
+<li><em>erreur d’objets</em> : confondre ce que l’on choisit (les élèves ? les places ? les boîtes ?) ;</li>
+<li><em>liste non organisée</em> : oublis ou doublons ; organiser par premier élément.</li>
+</ul>
 </div>
 </div>
-<div class="pb-paquet">
-<div class="rep-bloc">
-<p>AC<br>
-CA</p>
-</div>
-</div>
-<div class="pb-paquet">
-<div class="rep-bloc">
-<p>AD<br>
-DA</p>
-</div>
-</div>
-<div class="pb-paquet">
-<div class="rep-bloc">
-<p>BC<br>
-CB</p>
-</div>
-</div>
-<div class="pb-paquet">
-<div class="rep-bloc">
-<p>BD<br>
-DB</p>
-</div>
-</div>
-<div class="pb-paquet">
-<div class="rep-bloc">
-<p>CD<br>
-DC</p>
-</div>
-</div>
-</div>
-</div>
-<div class="rep-bloc">
-<p>Chaque binôme de b), par exemple {A, B}, donne deux résultats de a) : AB et BA. Dans a), l’ordre compte ; dans b), non. Les 12 résultats se regroupent en 6 paquets de 2 : <span class="math inline">\(12 = 6 \cdot 2\)</span>.</p>
-</div>
-<ol start="6" type="a">
-<li>Quels résultats de c) ne sont pas dans a) ? Complète le diagramme.</li>
-</ol>
-<div class="pb-fig pb-venn" data-n="2" data-inclus="1" data-disjoints="0" data-ombre="[]" data-activite="1">
-<div class="pb-univers">
-<p><span class="math inline">\(\Omega\)</span></p>
-</div>
-<div class="pb-nom" data-i="0">
-<ol start="3" type="a">
-<li></li>
-</ol>
-</div>
-<div class="pb-nom" data-i="1">
-<ol type="a">
-<li></li>
-</ol>
-</div>
-<div class="pb-z" data-z="b">
-<p><span class="rep" data-v="12">12</span></p>
-</div>
-<div class="pb-z" data-z="a">
-<p><span class="rep" data-v="4">4</span></p>
-</div>
-</div>
-<div class="rep-bloc">
-<p>AA, BB, CC et DD : en c), un même élève peut revenir ; en a), non. La liste a) est contenue dans la liste c) : <span class="math inline">\(16 = 12 + 4\)</span>.</p>
-</div>
-</div>
-</div>
-<div class="pb-denombreur" data-cfg="{&quot;elements&quot;: [&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;], &quot;p&quot;: 2, &quot;ordre&quot;: true, &quot;repetition&quot;: false}"></div>
-<div id="cadre-compter-en-quatre-temps" class="cadre-info">
-<p><strong>Compter en quatre temps.</strong></p>
-<ol type="1">
-<li><strong>Décrire.</strong> Écrire deux ou trois résultats possibles. Un résultat est-il une <em>suite</em> (l’ordre compte : AB ≠ BA) ou un <em>groupe</em> (l’ordre ne compte pas : {A, B} = {B, A}) ?</li>
-<li><strong>Questionner.</strong> Un élément peut-il revenir (répétition) ?</li>
-<li><strong>Compter.</strong> Liste organisée, arbre ou diagramme si l’ensemble est petit ; principe multiplicatif ou formule sinon.</li>
-<li><strong>Contrôler.</strong> Sur un cas plus petit, lister les résultats et vérifier que le calcul donne le même nombre.</li>
-</ol>
-</div>
-<div id="remarque-1-1" class="theo theo-remarque" data-sorte="remarque" data-num="1.1" data-page="3" data-phys="6">
-<div class="theo-head">
-<p><strong>Remarque 1.1</strong></p>
-</div>
-<div class="theo-body">
-<p>On note une suite entre parenthèses, <span class="math inline">\((A, B)\)</span>, ou simplement AB ; on note un groupe entre accolades, <span class="math inline">\(\{A, B\}\)</span>. Le nombre d’éléments d’un ensemble <span class="math inline">\(E\)</span> se note <span class="math inline">\(\#E\)</span>.</p>
-</div>
-</div>
-<div id="exercice-1-1" class="exo" data-sorte="exercice" data-num="1.1" data-page="3" data-phys="6">
+<div id="exercice-1-21" class="exo" data-sorte="exercice" data-num="1.21" data-page="15" data-phys="18">
 <div class="exo-tete">
-<p><span class="exo-titre">✎ Exercice 1.1</span> <span class="exo-meta"><span class="exo-comp">A5</span> ★☆☆</span></p>
+<p><span class="exo-titre">✎ Exercice 1.21</span> <span class="exo-meta"><span class="exo-comp">C1</span> ★☆☆</span></p>
 </div>
 <div class="exo-corps">
-<p>Écris tous les codes formés d’une lettre parmi X, Y, Z suivie d’un chiffre parmi 1, 2. Combien y en a-t-il ?</p>
+<p>Pour chaque situation, dis si l’ordre compte, si la répétition est possible, et donne la formule qui compte les résultats.</p>
+<ol type="a">
+<li>Les trois premiers d’une course de 12 coureurs, dans l’ordre. b) Quatre livres à emporter en vacances parmi dix. c) Le code d’un cadenas à trois roues de chiffres (de 0 à 9). d) L’ordre de cinq livres sur une étagère. e) L’ordre de 3 boules rouges et 2 boules blanches (identiques par couleur) alignées.</li>
+</ol>
 <div class="rep-bloc">
-<p>X1, X2, Y1, Y2, Z1, Z2 : 6 codes.</p>
+<ol type="a">
+<li>Ordre, sans répétition : <span class="math inline">\(A_{12}^{3} = 1320\)</span>. b) Sans ordre, sans répétition : <span class="math inline">\(C_{10}^{4} = 210\)</span>. c) Ordre, répétition : <span class="math inline">\(10^{3} = 1000\)</span>. d) Permutation : <span class="math inline">\(5! = 120\)</span>. e) Permutation avec répétition : <span class="math inline">\(\frac{5!}{3! \cdot 2!} = 10\)</span>.</li>
+</ol>
 </div>
 </div>
 </div>
@@ -483,33 +410,47 @@ DC</p>
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false" href="">Pièges</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>Relis l’<a href="#activite-1-1">activité 1.1</a> et le <a href="#cadre-compter-en-quatre-temps">cadre « Compter en quatre temps »</a>.</p>
+<p>Relis le <a href="#cadre-situations-de-reference">tableau des situations de référence</a>.</p>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>Comment organiser la liste pour être sûr de n’oublier aucun code ?</p>
+<p>Pour chaque situation, écris deux résultats : sont-ils différents si on les écrit dans l’autre ordre ?</p>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<p>Écris d’abord tous les codes qui commencent par X : X1, X2.</p>
+<ol type="a">
+<li>Le podium (A, B, C) diffère de (B, A, C) : l’ordre compte.</li>
+</ol>
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-<p>On organise la liste par lettre : X1, X2, Y1, Y2, Z1, Z2. Il y a 6 codes.</p>
+<ol type="a">
+<li>L’ordre compte, sans répétition : <span class="math inline">\(A_{12}^{3} = 1320\)</span>. b) L’ordre ne compte pas, sans répétition : <span class="math inline">\(C_{10}^{4} = 210\)</span>. c) L’ordre compte, avec répétition : <span class="math inline">\(10^{3} = 1000\)</span>. d) On range les 5 livres : permutation, <span class="math inline">\(5! = 120\)</span>. e) On range 5 boules dont 3 identiques et 2 identiques : permutation avec répétition, <span class="math inline">\(\frac{5!}{3! \cdot 2!} = 10\)</span>.</li>
+</ol>
 </div>
 <div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
 <ul>
-<li>Écrire aussi les codes « chiffre puis lettre » (1X…) : l’énoncé impose la lettre en premier.</li>
+<li><ol start="3" type="a">
+<li>Oublier qu’un chiffre peut revenir (code 007).</li>
+</ol></li>
+<li><ol start="5" type="a">
+<li>Répondre <span class="math inline">\(5! = 120\)</span> : échanger deux boules de même couleur ne change pas l’alignement.</li>
+</ol></li>
 </ul>
 </div>
 </div>
 </div>
 </div>
-<div id="exercice-1-2" class="exo" data-sorte="exercice" data-num="1.2" data-page="4" data-phys="7">
+<div id="exercice-1-22" class="exo" data-sorte="exercice" data-num="1.22" data-page="15" data-phys="18">
 <div class="exo-tete">
-<p><span class="exo-titre">✎ Exercice 1.2</span> <span class="exo-maison">⟵ à faire à la maison</span> <span class="exo-meta"><span class="exo-comp">A5</span> ★☆☆</span></p>
+<p><span class="exo-titre">✎ Exercice 1.22</span> <span class="exo-meta"><span class="exo-comp">C1</span> ★★☆</span></p>
 </div>
 <div class="exo-corps">
-<p>On lance une pièce trois fois de suite et on note la suite des faces obtenues (P pour pile, F pour face). Écris la liste organisée de tous les résultats. Combien de résultats contiennent exactement deux « pile » ?</p>
+<p>Sans calculer, associe à chaque situation la formule qui convient : <span class="math inline">\(5^{3}\)</span>, <span class="math inline">\(A_{5}^{3}\)</span>, <span class="math inline">\(C_{5}^{3}\)</span>, <span class="math inline">\(C_{6}^{3}\)</span>.</p>
+<ol type="a">
+<li>Ranger 3 lettres différentes dans 5 boîtes, au plus une lettre par boîte. b) Choisir 3 élèves parmi 6 pour former l’équipe « rouge » ; les autres forment l’équipe « bleue ». c) Poster 3 lettres différentes, chacune dans l’une de 5 boîtes aux lettres (une boîte peut en recevoir plusieurs). d) Colorier en noir 3 cases d’une rangée de 5 cases.</li>
+</ol>
 <div class="rep-bloc">
-<p>PPP, PPF, PFP, PFF, FPP, FPF, FFP, FFF : 8 résultats. Exactement deux « pile » : PPF, PFP, FPP, soit 3 résultats.</p>
+<ol type="a">
+<li><span class="math inline">\(A_{5}^{3} = 60\)</span> : on choisit, dans l’ordre des lettres, une boîte distincte pour chacune. b) <span class="math inline">\(C_{6}^{3} = 20\)</span> : un groupe de 3 élèves. c) <span class="math inline">\(5^{3} = 125\)</span> : chaque lettre a 5 choix, une boîte peut revenir. d) <span class="math inline">\(C_{5}^{3} = 10\)</span> : un groupe de 3 cases.</li>
+</ol>
 </div>
 </div>
 </div>
@@ -518,28 +459,111 @@ DC</p>
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-5" role="tab" aria-controls="tabset-2-5" aria-selected="false" href="">Pièges</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-<p>Relis l’<a href="#activite-1-1">activité 1.1</a> : une liste organisée par premier élément.</p>
+<p>Relis le <a href="#cadre-situations-de-reference">tableau des situations de référence</a> et la <a href="#remarque-1-5">remarque sur les erreurs d’objets</a>.</p>
 </div>
 <div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
-<p>Combien de résultats commencent par P ? par F ?</p>
+<p>Dans chaque situation, qu’est-ce qu’on choisit : des boîtes, des élèves, des cases ? Pour chaque lettre ?</p>
 </div>
 <div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
-<p>Commence par PPP, PPF, PFP, PFF : ce sont les résultats qui commencent par P.</p>
+<ol type="a">
+<li>Pour chaque lettre, on choisit une boîte, et deux lettres n’ont pas la même boîte.</li>
+</ol>
 </div>
 <div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
-<p>Un résultat est une suite de trois faces. Liste organisée par première face : PPP, PPF, PFP, PFF, FPP, FPF, FFP, FFF : 8 résultats. Exactement deux « pile » : PPF, PFP, FPP, soit 3 résultats.</p>
+<ol type="a">
+<li><span class="math inline">\(A_{5}^{3} = 60\)</span> : on attribue aux 3 lettres, dans l’ordre, 3 boîtes distinctes. b) <span class="math inline">\(C_{6}^{3} = 20\)</span> : l’équipe rouge est un groupe de 3 élèves. c) <span class="math inline">\(5^{3} = 125\)</span> : chaque lettre a 5 boîtes possibles, une boîte peut revenir. d) <span class="math inline">\(C_{5}^{3} = 10\)</span> : on choisit un groupe de 3 cases.</li>
+</ol>
 </div>
 <div id="tabset-2-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-5-tab">
 <ul>
-<li>Oublier que PPF, PFP et FPP sont trois résultats différents : l’ordre des lancers compte.</li>
-<li>Compter PPP parmi les résultats à deux « pile » : il en contient trois.</li>
+<li>Confondre a) et c) : la différence est la répétition (une boîte peut-elle recevoir deux lettres ?).</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="exercice-1-23" class="exo" data-sorte="exercice" data-num="1.23">
+<div class="exo-tete">
+<p><span class="exo-titre">✎ Exercice 1.23</span> <span class="exo-maison">⟵ à faire à la maison</span> <span class="exo-meta"><span class="exo-comp">T1</span> ★★☆</span></p>
+</div>
+<div class="exo-corps">
+<p>Six élèves, dont Alice et Bilal, se placent en ligne pour une photo. Combien de placements sont possibles ? Dans combien d’entre eux Alice et Bilal sont-ils côte à côte ?</p>
+<div class="rep-bloc">
+<p>Placements : <span class="math inline">\(6! = 720\)</span>. Côte à côte : on considère le bloc « Alice et Bilal » comme un seul objet ; on range 5 objets, <span class="math inline">\(5! = 120\)</span> façons, puis on ordonne Alice et Bilal dans le bloc, 2 façons : <span class="math inline">\(120 \cdot 2 = 240\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-4" role="tab" aria-controls="tabset-3-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-5" role="tab" aria-controls="tabset-3-5" aria-selected="false" href="">Pièges</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<p>Relis la <a href="../ch1-compter-sur-de-petit/4-arrangements-et-permutations.html#definition-1-3">définition des permutations</a> et le <a href="../ch1-compter-sur-de-petit/3-additionner-multiplier.html#propriete-1-1">principe multiplicatif</a>.</p>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<p>Si Alice et Bilal sont collés, combien d’« objets » faut-il ranger ?</p>
+</div>
+<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
+<p>Le bloc « Alice et Bilal » et les 4 autres élèves : 5 objets.</p>
+</div>
+<div id="tabset-3-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-4-tab">
+<p>Placements : on range 6 élèves, <span class="math inline">\(6! = 720\)</span>. Alice et Bilal côte à côte : on forme un bloc avec eux deux ; on range 5 objets (le bloc et les 4 autres élèves), <span class="math inline">\(5! = 120\)</span> façons ; dans le bloc, Alice et Bilal s’ordonnent de 2 façons. Il y a <span class="math inline">\(120 \cdot 2 = 240\)</span> placements.</p>
+</div>
+<div id="tabset-3-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-5-tab">
+<ul>
+<li>Oublier le facteur 2 : « Alice puis Bilal » et « Bilal puis Alice » sont deux placements.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="exercice-1-24" class="exo" data-sorte="exercice" data-num="1.24">
+<div class="exo-tete">
+<p><span class="exo-titre">✎ Exercice 1.24</span> <span class="exo-meta"><span class="exo-comp">C1</span> ★★☆</span></p>
+</div>
+<div class="exo-corps">
+<p><em>Trouve l’erreur.</em> Chaque réponse ci-dessous est fausse. Explique l’erreur, puis corrige.</p>
+<ol type="a">
+<li><p>« Pour choisir 3 délégués ayant le même rôle parmi 10 élèves, il y a <span class="math inline">\(A_{10}^{3} = 720\)</span> choix. »</p></li>
+<li><p>« Il y a <span class="math inline">\(10^{4} = 10 \, 000\)</span> codes de 4 chiffres tous différents. »</p></li>
+</ol>
+<div class="rep-bloc">
+<ol type="a">
+<li>Erreur d’ordre : les délégués ont le même rôle, un choix est un groupe. <span class="math inline">\(A_{10}^{3}\)</span> compte chaque groupe <span class="math inline">\(3! = 6\)</span> fois : il y a <span class="math inline">\(C_{10}^{3} = \frac{720}{6} = 120\)</span> choix. b) Erreur de répétition : <span class="math inline">\(10^{4}\)</span> autorise les chiffres répétés. Chiffres tous différents : <span class="math inline">\(A_{10}^{4} = 10 \cdot 9 \cdot 8 \cdot 7 = 5040\)</span> codes.</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-4" role="tab" aria-controls="tabset-4-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-5" role="tab" aria-controls="tabset-4-5" aria-selected="false" href="">Pièges</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<p>Relis le cadre « Situations de référence » et la <a href="#remarque-1-5">remarque sur les erreurs fréquentes</a>.</p>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<p>Pour chaque phrase : un résultat est-il une suite ou un groupe ? Un élément peut-il revenir ?</p>
+</div>
+<div id="tabset-4-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-3-tab">
+<ol type="a">
+<li>Échanger deux délégués de même rôle donne-t-il un autre choix ?</li>
+</ol>
+</div>
+<div id="tabset-4-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-4-tab">
+<ol type="a">
+<li>Erreur d’ordre : les délégués ont le même rôle, un choix est un groupe de 3 élèves. <span class="math inline">\(A_{10}^{3}\)</span> compte chaque groupe <span class="math inline">\(3! = 6\)</span> fois : <span class="math inline">\(C_{10}^{3} = \frac{720}{6} = 120\)</span> choix. b) Erreur de répétition : <span class="math inline">\(10^{4}\)</span> compte aussi les codes avec un chiffre répété. Chiffres tous différents : <span class="math inline">\(A_{10}^{4} = 10 \cdot 9 \cdot 8 \cdot 7 = 5040\)</span> codes.</li>
+</ol>
+</div>
+<div id="tabset-4-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-5-tab">
+<ul>
+<li>Se contenter de dire « c’est faux » : il faut nommer l’erreur (ordre, répétition) et corriger.</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 <div class="ae-lien">
-<p><a href="../autoeval.html#sections=sec-lister">✔ S’autoévaluer sur cette section : test de 3 questions →</a></p>
+<p><a href="../autoeval.html#sections=sec-choisir">✔ S’autoévaluer sur cette section : test de 3 questions →</a></p>
 </div>
 
 
@@ -727,7 +751,7 @@ DC</p>
 <!-- GÉNÉRÉ par typweb — ne pas éditer -->
 <script>
 /* Réglages du cours (typweb.toml) */
-window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.com/qlambotte/proba-cours", "pdfs": [{"titre": "Cours — version élève", "detail": "réponses à compléter", "fichier": "proba.pdf"}, {"titre": "Cours — avec le corrigé", "detail": "réponses en bleu", "fichier": "proba-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1", "detail": "", "fichier": "exercices-supp-ch1.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2", "detail": "", "fichier": "exercices-supp-ch2.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3", "detail": "", "fichier": "exercices-supp-ch3.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1 (corrigé)", "detail": "", "fichier": "exercices-supp-ch1-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2 (corrigé)", "detail": "", "fichier": "exercices-supp-ch2-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3 (corrigé)", "detail": "", "fichier": "exercices-supp-ch3-corrige.pdf"}], "portail": "https://qlambotte.github.io/6e.html", "horsLigne": true};
+window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.com/qlambotte/proba-cours", "pdfs": [{"titre": "Cours — version élève", "detail": "réponses à compléter", "fichier": "proba.pdf"}, {"titre": "Cours — avec le corrigé", "detail": "réponses en bleu", "fichier": "proba-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1", "detail": "", "fichier": "exercices-supp-ch1.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2", "detail": "", "fichier": "exercices-supp-ch2.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3", "detail": "", "fichier": "exercices-supp-ch3.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1 (corrigé)", "detail": "", "fichier": "exercices-supp-ch1-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2 (corrigé)", "detail": "", "fichier": "exercices-supp-ch2-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3 (corrigé)", "detail": "", "fichier": "exercices-supp-ch3-corrige.pdf"}], "portail": "https://qlambotte.github.io/6e.html", "horsLigne": true, "stylesEssai": true, "minuteur": [3, 5, 10, 15, 20]};
 /* Charge les scripts du site (js/) avec le bon chemin relatif,
    quelle que soit la profondeur de la page. */
 (function () {
@@ -760,7 +784,7 @@ window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.co
 })();
 </script>
 <script>
-// Menu « Aa » (en bas à gauche) : essayer les styles du site. Le choix est
+// Menu « Aa » : taille du texte (toujours) et styles du site à l'essai. Le choix est
 // mémorisé dans ce navigateur (localStorage « typweb-style »). À retirer quand
 // un style est retenu (typweb.toml : [site] styles-essai = false).
 (function () {
@@ -782,22 +806,50 @@ window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.co
     document.querySelectorAll(".st-panneau button").forEach(function (b) { b.classList.toggle("on", b.dataset.s === s); });
     window.dispatchEvent(new Event("resize"));      // figures : se redessiner
   }
+  var TAILLES = [0.85, 0.92, 1, 1.08, 1.16, 1.25, 1.35, 1.5];
+  function tailleCourante() { try { return parseFloat(localStorage.getItem("typweb-taille")) || 1; } catch (e) { return 1; } }
+  function poserTaille(t) {
+    document.documentElement.style.fontSize = t === 1 ? "" : (100 * t) + "%";
+    try { if (t === 1) localStorage.removeItem("typweb-taille"); else localStorage.setItem("typweb-taille", t); } catch (e) {}
+    var l = document.querySelector(".st-taille span"); if (l) l.textContent = Math.round(t * 100) + " %";
+    window.dispatchEvent(new Event("resize"));      // figures : se redessiner
+  }
+  function pas(d) {
+    var t = tailleCourante(), k = 0;
+    TAILLES.forEach(function (x, j) { if (Math.abs(x - t) < Math.abs(TAILLES[k] - t)) k = j; });
+    poserTaille(TAILLES[Math.max(0, Math.min(TAILLES.length - 1, k + d))]);
+  }
   function build() {
     if (document.querySelector(".st-menu")) return;
+    var essai = !window.TYPWEB || window.TYPWEB.stylesEssai !== false;
     var m = document.createElement("div"); m.className = "st-menu";
     var b = document.createElement("button"); b.className = "st-btn"; b.type = "button"; b.textContent = "Aa";
-    b.title = "Essayer un autre style"; b.setAttribute("aria-label", "Essayer un autre style");
+    b.title = "Taille du texte" + (essai ? " et style du site" : ""); b.setAttribute("aria-label", b.title);
     var p = document.createElement("div"); p.className = "st-panneau"; p.hidden = true;
-    p.innerHTML = "<p>Style du site (mode clair)</p>";
-    STYLES.forEach(function (s) {
-      var x = document.createElement("button"); x.type = "button"; x.dataset.s = s[0]; x.textContent = s[1];
-      x.addEventListener("click", function () { appliquer(s[0]); });
-      p.appendChild(x);
-    });
+    p.innerHTML = "<p>Taille du texte</p>";
+    var tl = document.createElement("div"); tl.className = "st-taille";
+    var moins = document.createElement("button"); moins.type = "button"; moins.textContent = "A−"; moins.title = "Réduire le texte";
+    var val = document.createElement("span"); val.textContent = Math.round(tailleCourante() * 100) + " %";
+    val.title = "Revenir à 100 %"; val.style.cursor = "pointer";
+    var plus = document.createElement("button"); plus.type = "button"; plus.textContent = "A+"; plus.title = "Agrandir le texte";
+    moins.addEventListener("click", function () { pas(-1); });
+    plus.addEventListener("click", function () { pas(1); });
+    val.addEventListener("click", function () { poserTaille(1); });
+    tl.appendChild(moins); tl.appendChild(val); tl.appendChild(plus);
+    p.appendChild(tl);
+    if (essai) {
+      var sep = document.createElement("div"); sep.className = "st-sep"; p.appendChild(sep);
+      var t = document.createElement("p"); t.textContent = "Style du site (mode clair)"; p.appendChild(t);
+      STYLES.forEach(function (s) {
+        var x = document.createElement("button"); x.type = "button"; x.dataset.s = s[0]; x.textContent = s[1];
+        x.addEventListener("click", function () { appliquer(s[0]); });
+        p.appendChild(x);
+      });
+    }
     b.addEventListener("click", function () { p.hidden = !p.hidden; });
     document.addEventListener("click", function (e) { if (!m.contains(e.target)) p.hidden = true; });
     m.appendChild(p); m.appendChild(b); document.body.appendChild(m);
-    appliquer(courant());
+    if (essai) appliquer(courant());
   }
   if (document.readyState !== "loading") build(); else document.addEventListener("DOMContentLoaded", build);
 })();
@@ -1204,13 +1256,13 @@ window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.co
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../ch1-compter-sur-de-petit/index.html" class="pagination-link" aria-label="Chapitre 1 — Compter sur de petits ensembles">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Chapitre 1 — Compter sur de petits ensembles</span>
+      <a href="../ch1-compter-sur-de-petit/6-permutations-avec-repetition-les-anagram.html" class="pagination-link" aria-label="Permutations avec répétition : les anagrammes">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Permutations avec répétition : les anagrammes</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../ch1-compter-sur-de-petit/2-additionner-multiplier.html" class="pagination-link" aria-label="Additionner, multiplier">
-        <span class="nav-page-text"><span class="chapter-title">Additionner, multiplier</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../ch1-compter-sur-de-petit/8-exercices-supplementaires.html" class="pagination-link" aria-label="Exercices supplémentaires">
+        <span class="nav-page-text"><span class="chapter-title">Exercices supplémentaires</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-73b0ff3878a4e6fc3716dc69a6aaefa3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-94cb1ee365b8c2bebb8400336c7455e1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-4f25214d2c0aa817e35f237ded488e3e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -82,6 +82,8 @@ ul.task-list li input[type="checkbox"] {
     if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
     var st = localStorage.getItem('typweb-style');
     if (st) document.documentElement.setAttribute('data-style', st);   // styles à l'essai (menu « Aa »)
+    var tx = parseFloat(localStorage.getItem('typweb-taille'));          // taille du texte (menu « Aa »)
+    if (tx && tx !== 1) document.documentElement.style.fontSize = (100 * tx) + '%';
   } catch (e) {}
 })();
 </script>
@@ -173,37 +175,42 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/1-lister-avant-de-compter.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lister avant de compter</span></a>
+  <a href="../ch1-compter-sur-de-petit/1-le-langage-des-ensembles.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Le langage des ensembles</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/2-additionner-multiplier.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Additionner, multiplier</span></a>
+  <a href="../ch1-compter-sur-de-petit/2-lister-avant-de-compter.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lister avant de compter</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/3-arrangements-et-permutations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Arrangements et permutations</span></a>
+  <a href="../ch1-compter-sur-de-petit/3-additionner-multiplier.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Additionner, multiplier</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/4-combinaisons.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Combinaisons</span></a>
+  <a href="../ch1-compter-sur-de-petit/4-arrangements-et-permutations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Arrangements et permutations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/5-permutations-avec-repetition-les-anagram.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Permutations avec répétition : les anagrammes</span></a>
+  <a href="../ch1-compter-sur-de-petit/5-combinaisons.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Combinaisons</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/6-choisir-une-methode.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Choisir une méthode</span></a>
+  <a href="../ch1-compter-sur-de-petit/6-permutations-avec-repetition-les-anagram.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Permutations avec répétition : les anagrammes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch1-compter-sur-de-petit/7-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  <a href="../ch1-compter-sur-de-petit/7-choisir-une-methode.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Choisir une méthode</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ch1-compter-sur-de-petit/8-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
   </div>
 </li>
       </ul>
@@ -285,12 +292,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch3-probabilite-conditio/6-sources-des-donnees.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sources des données</span></a>
+  <a href="../ch3-probabilite-conditio/6-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ch3-probabilite-conditio/7-exercices-supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  <a href="../ch3-probabilite-conditio/7-references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Références</span></a>
   </div>
 </li>
       </ul>
@@ -422,7 +429,7 @@ window.Quarto = {
 <p><strong>Exemple 3.1</strong> — retour au chevalier de Méré</p>
 </div>
 <div class="theo-body">
-<p>Les 4 lancers d’un dé sont indépendants : <span class="math inline">\(P(\text{aucun 6}) = (\frac{5}{6})^{4} = \frac{625}{1296}\)</span>. On retrouve le résultat obtenu en comptant (exemple 2.4).</p>
+<p>Les 4 lancers d’un dé sont indépendants : <span class="math inline">\(P(\text{aucun 6}) = (\frac{5}{6})^{4} = \frac{625}{1296}\)</span>. On retrouve le résultat obtenu en comptant (exemple 2.5).</p>
 </div>
 </div>
 <div id="exercice-3-7" class="exo" data-sorte="exercice" data-num="3.7" data-page="33" data-phys="36">
@@ -508,7 +515,7 @@ window.Quarto = {
 </ol>
 <div class="rep-bloc">
 <ol type="a">
-<li><span class="math inline">\(P(F) \approx 57 \, \frac{632}{117} \, 914 \approx 0{,}489\)</span>, donc <span class="math inline">\(P(G) \approx 0{,}511\)</span> (probabilité <em>a posteriori</em>). b) Trois chemins de l’arbre contiennent deux garçons (GGF, GFG, FGG), chacun de probabilité <span class="math inline">\(0{,}511^{2} \cdot 0{,}489\)</span> : <span class="math inline">\(P \approx 3 \cdot 0{,}511^{2} \cdot 0{,}489 \approx 0{,}383\)</span>, un peu plus que <span class="math inline">\(\frac{3}{8} = 0{,}375\)</span>, car les garçons sont un peu plus fréquents. c) Contraire : « trois filles ou trois garçons » : <span class="math inline">\(P \approx 1 - 0{,}489^{3} - 0{,}511^{3} \approx 0{,}750\)</span>.</li>
+<li><span class="math inline">\(P(F) \approx 57 \, \frac{632}{117} \, 914 \approx 0{,}489\)</span>, donc <span class="math inline">\(P(G) \approx 0{,}511\)</span> (probabilité <em>a posteriori</em>). b) Trois chemins de l’arbre contiennent deux garçons (GGF, GFG, FGG), chacun de probabilité <span class="math inline">\(0{,}511^{2} \cdot 0{,}489\)</span> : <span class="math inline">\(P(\text{exactement deux garçons}) \approx 3 \cdot 0{,}511^{2} \cdot 0{,}489 \approx 0{,}383\)</span>, un peu plus que <span class="math inline">\(\frac{3}{8} = 0{,}375\)</span>, car les garçons sont un peu plus fréquents. c) Contraire : « trois filles ou trois garçons » : <span class="math inline">\(P(\text{au moins un enfant de chaque sexe}) \approx 1 - 0{,}489^{3} - 0{,}511^{3} \approx 0{,}750\)</span>.</li>
 </ol>
 </div>
 </div>
@@ -528,7 +535,7 @@ window.Quarto = {
 </div>
 <div id="tabset-3-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-4-tab">
 <ol type="a">
-<li><span class="math inline">\(60 \, 282 + 57 \, 632 = 117 \, 914\)</span> naissances : <span class="math inline">\(P(F) \approx 57 \, \frac{632}{117} \, 914 \approx 0{,}489\)</span> et <span class="math inline">\(P(G) \approx 0{,}511\)</span>. b) Naissances indépendantes : trois chemins (GGF, GFG, FGG), chacun de probabilité <span class="math inline">\(0{,}511^{2} \cdot 0{,}489\)</span>, donc <span class="math inline">\(P \approx 0{,}383\)</span> ; c’est un peu plus que <span class="math inline">\(\frac{3}{8} = 0{,}375\)</span>, car les garçons sont un peu plus fréquents. c) Contraire : « trois filles ou trois garçons » : <span class="math inline">\(P \approx 1 - 0{,}489^{3} - 0{,}511^{3} \approx 0{,}750\)</span>.</li>
+<li><span class="math inline">\(60 \, 282 + 57 \, 632 = 117 \, 914\)</span> naissances : <span class="math inline">\(P(F) \approx 57 \, \frac{632}{117} \, 914 \approx 0{,}489\)</span> et <span class="math inline">\(P(G) \approx 0{,}511\)</span>. b) Naissances indépendantes : trois chemins (GGF, GFG, FGG), chacun de probabilité <span class="math inline">\(0{,}511^{2} \cdot 0{,}489\)</span>, donc <span class="math inline">\(P(\text{exactement deux garçons}) \approx 0{,}383\)</span> ; c’est un peu plus que <span class="math inline">\(\frac{3}{8} = 0{,}375\)</span>, car les garçons sont un peu plus fréquents. c) Contraire : « trois filles ou trois garçons » : <span class="math inline">\(P(\text{au moins un enfant de chaque sexe}) \approx 1 - 0{,}489^{3} - 0{,}511^{3} \approx 0{,}750\)</span>.</li>
 </ol>
 </div>
 <div id="tabset-3-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-5-tab">
@@ -607,6 +614,53 @@ window.Quarto = {
 <div id="tabset-5-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-5-tab">
 <ul>
 <li>Calculer <span class="math inline">\(P(R_{2})\)</span> sans remise comme <span class="math inline">\(\frac{2}{4}\)</span> : la première boule peut aussi être bleue.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="exercice-3-12" class="exo" data-sorte="exercice" data-num="3.12" data-page="35" data-phys="38">
+<div class="exo-tete">
+<p><span class="exo-titre">✎ Exercice 3.12</span> <span class="exo-meta"><span class="exo-comp">T2</span> ★★☆</span></p>
+</div>
+<div class="exo-corps">
+<p><em>Trouve l’erreur.</em> Chaque affirmation ci-dessous est fausse. Explique l’erreur.</p>
+<ol type="a">
+<li><p>« Un test est positif chez 90 % des malades. Donc une personne dont le test est positif est malade avec la probabilité <span class="math inline">\(0{,}9\)</span>. »</p></li>
+<li><p>« <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont disjoints, donc ils sont indépendants. »</p></li>
+</ol>
+<div class="rep-bloc">
+<ol type="a">
+<li>Le texte donne <span class="math inline">\(P(T | M) = 0{,}9\)</span> ; la question porte sur <span class="math inline">\(P(M | T)\)</span>, qui dépend aussi de la proportion de malades et des positifs chez les non-malades (activité 3.3) : elle peut être bien plus petite. b) Si <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont disjoints et de probabilités non nulles, <span class="math inline">\(P(A \cap B) = 0\)</span> alors que <span class="math inline">\(P(A) \cdot P(B) &gt; 0\)</span> : ils sont dépendants. Savoir que <span class="math inline">\(B\)</span> est réalisé rend <span class="math inline">\(A\)</span> impossible.</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-3" role="tab" aria-controls="tabset-6-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-4" role="tab" aria-controls="tabset-6-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-5" role="tab" aria-controls="tabset-6-5" aria-selected="false" href="">Pièges</a></li></ul>
+<div class="tab-content">
+<div id="tabset-6-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-6-1-tab">
+<p>Relis l’<a href="../ch3-probabilite-conditio/3-lire-un-test-de-depistage.html#activite-3-3">activité 3.3</a> et la <a href="#definition-3-2">définition de l’indépendance</a>.</p>
+</div>
+<div id="tabset-6-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-2-tab">
+<ol type="a">
+<li>Quelle est la condition dans « positif chez 90 % des malades » ? Et dans la conclusion ?</li>
+</ol>
+</div>
+<div id="tabset-6-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-3-tab">
+<ol start="2" type="a">
+<li>Que vaut <span class="math inline">\(P(A \cap B)\)</span> si <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont disjoints ?</li>
+</ol>
+</div>
+<div id="tabset-6-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-4-tab">
+<ol type="a">
+<li>Le texte donne <span class="math inline">\(P(T | M) = 0{,}9\)</span>, la conclusion porte sur <span class="math inline">\(P(M | T)\)</span> : on a inversé la condition. <span class="math inline">\(P(M | T)\)</span> dépend aussi de la proportion de malades et des positifs chez les non-malades ; elle peut être bien plus petite (activité 3.3). b) Disjoints : <span class="math inline">\(P(A \cap B) = 0\)</span>. Si <span class="math inline">\(P(A) &gt; 0\)</span> et <span class="math inline">\(P(B) &gt; 0\)</span>, alors <span class="math inline">\(P(A) \cdot P(B) &gt; 0 \neq P(A \cap B)\)</span> : <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont dépendants.</li>
+</ol>
+</div>
+<div id="tabset-6-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-5-tab">
+<ul>
+<li>Confondre « disjoints » (pas d’issue commune) et « indépendants » (une information ne change pas la probabilité).</li>
 </ul>
 </div>
 </div>
@@ -801,7 +855,7 @@ window.Quarto = {
 <!-- GÉNÉRÉ par typweb — ne pas éditer -->
 <script>
 /* Réglages du cours (typweb.toml) */
-window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.com/qlambotte/proba-cours", "pdfs": [{"titre": "Cours — version élève", "detail": "réponses à compléter", "fichier": "proba.pdf"}, {"titre": "Cours — avec le corrigé", "detail": "réponses en bleu", "fichier": "proba-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1", "detail": "", "fichier": "exercices-supp-ch1.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2", "detail": "", "fichier": "exercices-supp-ch2.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3", "detail": "", "fichier": "exercices-supp-ch3.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1 (corrigé)", "detail": "", "fichier": "exercices-supp-ch1-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2 (corrigé)", "detail": "", "fichier": "exercices-supp-ch2-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3 (corrigé)", "detail": "", "fichier": "exercices-supp-ch3-corrige.pdf"}], "portail": "https://qlambotte.github.io/6e.html", "horsLigne": true};
+window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.com/qlambotte/proba-cours", "pdfs": [{"titre": "Cours — version élève", "detail": "réponses à compléter", "fichier": "proba.pdf"}, {"titre": "Cours — avec le corrigé", "detail": "réponses en bleu", "fichier": "proba-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1", "detail": "", "fichier": "exercices-supp-ch1.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2", "detail": "", "fichier": "exercices-supp-ch2.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3", "detail": "", "fichier": "exercices-supp-ch3.pdf"}, {"titre": "Exercices supplémentaires — chapitre 1 (corrigé)", "detail": "", "fichier": "exercices-supp-ch1-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 2 (corrigé)", "detail": "", "fichier": "exercices-supp-ch2-corrige.pdf"}, {"titre": "Exercices supplémentaires — chapitre 3 (corrigé)", "detail": "", "fichier": "exercices-supp-ch3-corrige.pdf"}], "portail": "https://qlambotte.github.io/6e.html", "horsLigne": true, "stylesEssai": true, "minuteur": [3, 5, 10, 15, 20]};
 /* Charge les scripts du site (js/) avec le bon chemin relatif,
    quelle que soit la profondeur de la page. */
 (function () {
@@ -834,7 +888,7 @@ window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.co
 })();
 </script>
 <script>
-// Menu « Aa » (en bas à gauche) : essayer les styles du site. Le choix est
+// Menu « Aa » : taille du texte (toujours) et styles du site à l'essai. Le choix est
 // mémorisé dans ce navigateur (localStorage « typweb-style »). À retirer quand
 // un style est retenu (typweb.toml : [site] styles-essai = false).
 (function () {
@@ -856,22 +910,50 @@ window.TYPWEB = {"cle": "proba", "pdf": "proba.pdf", "depot": "https://github.co
     document.querySelectorAll(".st-panneau button").forEach(function (b) { b.classList.toggle("on", b.dataset.s === s); });
     window.dispatchEvent(new Event("resize"));      // figures : se redessiner
   }
+  var TAILLES = [0.85, 0.92, 1, 1.08, 1.16, 1.25, 1.35, 1.5];
+  function tailleCourante() { try { return parseFloat(localStorage.getItem("typweb-taille")) || 1; } catch (e) { return 1; } }
+  function poserTaille(t) {
+    document.documentElement.style.fontSize = t === 1 ? "" : (100 * t) + "%";
+    try { if (t === 1) localStorage.removeItem("typweb-taille"); else localStorage.setItem("typweb-taille", t); } catch (e) {}
+    var l = document.querySelector(".st-taille span"); if (l) l.textContent = Math.round(t * 100) + " %";
+    window.dispatchEvent(new Event("resize"));      // figures : se redessiner
+  }
+  function pas(d) {
+    var t = tailleCourante(), k = 0;
+    TAILLES.forEach(function (x, j) { if (Math.abs(x - t) < Math.abs(TAILLES[k] - t)) k = j; });
+    poserTaille(TAILLES[Math.max(0, Math.min(TAILLES.length - 1, k + d))]);
+  }
   function build() {
     if (document.querySelector(".st-menu")) return;
+    var essai = !window.TYPWEB || window.TYPWEB.stylesEssai !== false;
     var m = document.createElement("div"); m.className = "st-menu";
     var b = document.createElement("button"); b.className = "st-btn"; b.type = "button"; b.textContent = "Aa";
-    b.title = "Essayer un autre style"; b.setAttribute("aria-label", "Essayer un autre style");
+    b.title = "Taille du texte" + (essai ? " et style du site" : ""); b.setAttribute("aria-label", b.title);
     var p = document.createElement("div"); p.className = "st-panneau"; p.hidden = true;
-    p.innerHTML = "<p>Style du site (mode clair)</p>";
-    STYLES.forEach(function (s) {
-      var x = document.createElement("button"); x.type = "button"; x.dataset.s = s[0]; x.textContent = s[1];
-      x.addEventListener("click", function () { appliquer(s[0]); });
-      p.appendChild(x);
-    });
+    p.innerHTML = "<p>Taille du texte</p>";
+    var tl = document.createElement("div"); tl.className = "st-taille";
+    var moins = document.createElement("button"); moins.type = "button"; moins.textContent = "A−"; moins.title = "Réduire le texte";
+    var val = document.createElement("span"); val.textContent = Math.round(tailleCourante() * 100) + " %";
+    val.title = "Revenir à 100 %"; val.style.cursor = "pointer";
+    var plus = document.createElement("button"); plus.type = "button"; plus.textContent = "A+"; plus.title = "Agrandir le texte";
+    moins.addEventListener("click", function () { pas(-1); });
+    plus.addEventListener("click", function () { pas(1); });
+    val.addEventListener("click", function () { poserTaille(1); });
+    tl.appendChild(moins); tl.appendChild(val); tl.appendChild(plus);
+    p.appendChild(tl);
+    if (essai) {
+      var sep = document.createElement("div"); sep.className = "st-sep"; p.appendChild(sep);
+      var t = document.createElement("p"); t.textContent = "Style du site (mode clair)"; p.appendChild(t);
+      STYLES.forEach(function (s) {
+        var x = document.createElement("button"); x.type = "button"; x.dataset.s = s[0]; x.textContent = s[1];
+        x.addEventListener("click", function () { appliquer(s[0]); });
+        p.appendChild(x);
+      });
+    }
     b.addEventListener("click", function () { p.hidden = !p.hidden; });
     document.addEventListener("click", function (e) { if (!m.contains(e.target)) p.hidden = true; });
     m.appendChild(p); m.appendChild(b); document.body.appendChild(m);
-    appliquer(courant());
+    if (essai) appliquer(courant());
   }
   if (document.readyState !== "loading") build(); else document.addEventListener("DOMContentLoaded", build);
 })();

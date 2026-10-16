@@ -8,23 +8,33 @@ annee      = "6e"
 uaa        = "6UAA1"
 depot      = "https://github.com/qlambotte/proba-cours"
 site-url   = "https://qlambotte.github.io/proba-cours/"
-
+portail    = "https://qlambotte.github.io/6e.html" 
+figure     = "arbre"
 [notes]
 dossier    = "../notes"
 principal  = "proba.typ"
 # Exercices supplémentaires : en fin de chapitre sur le site (numéros S1.1…)
 [[notes.complements]]
 fichier  = "fiches/exercices-supp-ch1.typ"
+id       = "6UAA1.exercices-supplementaires"
 chapitre = 1
 titre    = "Exercices supplémentaires"
 [[notes.complements]]
 fichier  = "fiches/exercices-supp-ch2.typ"
+id       = "6UAA1.exercices-supplementaires-2"
 chapitre = 2
 titre    = "Exercices supplémentaires"
 [[notes.complements]]
 fichier  = "fiches/exercices-supp-ch3.typ"
+id       = "6UAA1.exercices-supplementaires-3"
 chapitre = 3
 titre    = "Exercices supplémentaires"
+# Références : page du site seulement (le livre donne les sources en notes de bas de page)
+[[notes.complements]]
+fichier  = "references.typ"
+id       = "6UAA1.references"
+chapitre = 3
+titre    = "Références"
 
 [pdf]
 corrige    = true

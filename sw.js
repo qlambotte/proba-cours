@@ -3,9 +3,9 @@
      gardée ; toutes les pages sont mises de côté à la première visite ;
    - le reste (scripts, styles, figures, polices, MathJax) : copie gardée,
      rafraîchie en arrière-plan. Les PDF ne sont pas mis de côté (trop lourds). */
-var VERSION = "c93c910f9f";
+var VERSION = "8336244b8d";
 var CACHE = "typweb-" + VERSION;
-var PAGES = ["./", "index.html", "autoeval.html", "ch1-compter-sur-de-petit/1-le-langage-des-ensembles.html", "ch1-compter-sur-de-petit/2-lister-avant-de-compter.html", "ch1-compter-sur-de-petit/3-additionner-multiplier.html", "ch1-compter-sur-de-petit/4-arrangements-et-permutations.html", "ch1-compter-sur-de-petit/5-combinaisons.html", "ch1-compter-sur-de-petit/6-permutations-avec-repetition-les-anagram.html", "ch1-compter-sur-de-petit/7-choisir-une-methode.html", "ch1-compter-sur-de-petit/8-exercices-supplementaires.html", "ch1-compter-sur-de-petit/index.html", "ch2-modeliser-le-hasard/1-frequences-et-probabilite.html", "ch2-modeliser-le-hasard/2-univers-et-evenements.html", "ch2-modeliser-le-hasard/3-le-modele-dequiprobabilite.html", "ch2-modeliser-le-hasard/4-proprietes-des-probabilites.html", "ch2-modeliser-le-hasard/5-denombrer-pour-calculer.html", "ch2-modeliser-le-hasard/6-exercices-supplementaires.html", "ch2-modeliser-le-hasard/index.html", "ch3-probabilite-conditio/1-probabilite-conditionnelle.html", "ch3-probabilite-conditio/2-arbres-de-probabilites.html", "ch3-probabilite-conditio/3-lire-un-test-de-depistage.html", "ch3-probabilite-conditio/4-independance.html", "ch3-probabilite-conditio/5-pour-aller-plus-loin.html", "ch3-probabilite-conditio/6-exercices-supplementaires.html", "ch3-probabilite-conditio/7-references.html", "ch3-probabilite-conditio/index.html", "essentiel.html", "nouveautes.html", "objectifs.html"];
+var PAGES = ["./", "index.html", "index.json", "autoeval.html", "ch1-compter-sur-de-petit/1-le-langage-des-ensembles.html", "ch1-compter-sur-de-petit/2-lister-avant-de-compter.html", "ch1-compter-sur-de-petit/3-additionner-multiplier.html", "ch1-compter-sur-de-petit/4-arrangements-et-permutations.html", "ch1-compter-sur-de-petit/5-combinaisons.html", "ch1-compter-sur-de-petit/6-permutations-avec-repetition-les-anagram.html", "ch1-compter-sur-de-petit/7-choisir-une-methode.html", "ch1-compter-sur-de-petit/8-exercices-supplementaires.html", "ch1-compter-sur-de-petit/index.html", "ch2-modeliser-le-hasard/1-frequences-et-probabilite.html", "ch2-modeliser-le-hasard/2-univers-et-evenements.html", "ch2-modeliser-le-hasard/3-le-modele-dequiprobabilite.html", "ch2-modeliser-le-hasard/4-proprietes-des-probabilites.html", "ch2-modeliser-le-hasard/5-denombrer-pour-calculer.html", "ch2-modeliser-le-hasard/6-exercices-supplementaires.html", "ch2-modeliser-le-hasard/index.html", "ch3-probabilite-conditio/1-probabilite-conditionnelle.html", "ch3-probabilite-conditio/2-arbres-de-probabilites.html", "ch3-probabilite-conditio/3-lire-un-test-de-depistage.html", "ch3-probabilite-conditio/4-independance.html", "ch3-probabilite-conditio/5-pour-aller-plus-loin.html", "ch3-probabilite-conditio/6-exercices-supplementaires.html", "ch3-probabilite-conditio/7-references.html", "ch3-probabilite-conditio/index.html", "essentiel.html", "mode-emploi.html", "nouveautes.html", "objectifs.html", "sources.html"];
 
 self.addEventListener("install", function (e) {
   e.waitUntil(caches.open(CACHE).then(function (c) {
@@ -32,7 +32,9 @@ self.addEventListener("fetch", function (e) {
   if (req.method !== "GET") return;
   var url = new URL(req.url);
   if (/\.pdf$/i.test(url.pathname)) return;
-  var page = req.mode === "navigate" || (req.headers.get("accept") || "").indexOf("text/html") >= 0;
+  // pages, index.json, prof.js (couche prof) et sync.js (synchronisation) : réseau d'abord, copie si hors ligne
+  var page = req.mode === "navigate" || (req.headers.get("accept") || "").indexOf("text/html") >= 0
+             || /(\.json|\/prof\.js|\/sync\.js)$/.test(url.pathname);
   if (page) {
     e.respondWith(fetch(req).then(function (r) { return garder(req, r); }).catch(function () {
       return caches.match(req, { ignoreSearch: true }).then(function (r) {

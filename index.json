@@ -4,8 +4,8 @@
  "uaa": "6UAA1",
  "annee": "6e",
  "cle": "proba",
- "empreinte": "7613dba7c8a5",
- "genere": "2026-10-16",
+ "empreinte": "9da7842f7b55",
+ "genere": "2026-10-27",
  "elements": [
   {
    "id": "6UAA1.compter-petits-ensembles",
@@ -549,7 +549,7 @@
    "etiquettes": [],
    "ancre": "ch1-compter-sur-de-petit/6-permutations-avec-repetition-les-anagram.html#6UAA1.ex.020",
    "num": "1.20",
-   "page": 16
+   "page": 15
   },
   {
    "id": "6UAA1.choisir-methode",
@@ -895,7 +895,7 @@
    "etiquettes": [],
    "ancre": "ch2-modeliser-le-hasard/3-le-modele-dequiprobabilite.html#6UAA1.probabilite-priori-regle-laplace",
    "num": "2.3",
-   "page": 24
+   "page": 23
   },
   {
    "id": "6UAA1.rem.006",
@@ -905,7 +905,7 @@
    "etiquettes": [],
    "ancre": "ch2-modeliser-le-hasard/3-le-modele-dequiprobabilite.html#6UAA1.rem.006",
    "num": "2.1",
-   "page": 24
+   "page": 23
   },
   {
    "id": "6UAA1.probabilite-univers-fini",
@@ -935,7 +935,7 @@
    "etiquettes": [],
    "ancre": "ch2-modeliser-le-hasard/3-le-modele-dequiprobabilite.html#6UAA1.probleme-duc-toscane",
    "num": "2.4",
-   "page": 25
+   "page": 24
   },
   {
    "id": "6UAA1.ex.031",
@@ -977,7 +977,7 @@
    "etiquettes": [],
    "ancre": "ch2-modeliser-le-hasard/4-proprietes-des-probabilites.html#6UAA1.probabilite-reunion",
    "num": "2.4",
-   "page": 26
+   "page": 25
   },
   {
    "id": "6UAA1.proprietes-probabilites-2",
@@ -1017,7 +1017,7 @@
    "etiquettes": [],
    "ancre": "ch2-modeliser-le-hasard/4-proprietes-des-probabilites.html#6UAA1.ex.033",
    "num": "2.9",
-   "page": 27
+   "page": 26
   },
   {
    "id": "6UAA1.ex.034",
@@ -1037,7 +1037,7 @@
    "etiquettes": [],
    "ancre": "ch2-modeliser-le-hasard/4-proprietes-des-probabilites.html#6UAA1.ex.035",
    "num": "2.11",
-   "page": 28
+   "page": 27
   },
   {
    "id": "6UAA1.ex.036",
@@ -1049,7 +1049,7 @@
    ],
    "ancre": "ch2-modeliser-le-hasard/4-proprietes-des-probabilites.html#6UAA1.ex.036",
    "num": "2.12",
-   "page": 28
+   "page": 27
   },
   {
    "id": "6UAA1.ex.037",
@@ -1061,7 +1061,7 @@
    ],
    "ancre": "ch2-modeliser-le-hasard/4-proprietes-des-probabilites.html#6UAA1.ex.037",
    "num": "2.13",
-   "page": 28
+   "page": 27
   },
   {
    "id": "6UAA1.denombrer-calculer",
@@ -1091,7 +1091,7 @@
    "etiquettes": [],
    "ancre": "ch2-modeliser-le-hasard/5-denombrer-pour-calculer.html#6UAA1.anniversaires",
    "num": "2.7",
-   "page": 29
+   "page": 28
   },
   {
    "id": "6UAA1.ex.038",
@@ -1101,7 +1101,7 @@
    "etiquettes": [],
    "ancre": "ch2-modeliser-le-hasard/5-denombrer-pour-calculer.html#6UAA1.ex.038",
    "num": "2.14",
-   "page": 29
+   "page": 28
   },
   {
    "id": "6UAA1.ex.039",
@@ -1113,7 +1113,7 @@
    ],
    "ancre": "ch2-modeliser-le-hasard/5-denombrer-pour-calculer.html#6UAA1.ex.039",
    "num": "2.15",
-   "page": 29
+   "page": 28
   },
   {
    "id": "6UAA1.ex.040",
@@ -1263,7 +1263,7 @@
    "etiquettes": [],
    "ancre": "ch3-probabilite-conditio/1-probabilite-conditionnelle.html#6UAA1.titanic",
    "num": "3.1",
-   "page": 31
+   "page": 30
   },
   {
    "id": "6UAA1.probabilite-conditionnelle-2",
@@ -1273,7 +1273,7 @@
    "etiquettes": [],
    "ancre": "ch3-probabilite-conditio/1-probabilite-conditionnelle.html#6UAA1.probabilite-conditionnelle-2",
    "num": "3.1",
-   "page": 32
+   "page": 31
   },
   {
    "id": "6UAA1.rem.008",
@@ -1283,7 +1283,7 @@
    "etiquettes": [],
    "ancre": "ch3-probabilite-conditio/1-probabilite-conditionnelle.html#6UAA1.rem.008",
    "num": "3.1",
-   "page": 32
+   "page": 31
   },
   {
    "id": "6UAA1.ex.043",
@@ -1293,7 +1293,7 @@
    "etiquettes": [],
    "ancre": "ch3-probabilite-conditio/1-probabilite-conditionnelle.html#6UAA1.ex.043",
    "num": "3.1",
-   "page": 32
+   "page": 31
   },
   {
    "id": "6UAA1.ex.044",
@@ -1305,7 +1305,7 @@
    ],
    "ancre": "ch3-probabilite-conditio/1-probabilite-conditionnelle.html#6UAA1.ex.044",
    "num": "3.2",
-   "page": 33
+   "page": 32
   },
   {
    "id": "6UAA1.arbres-probabilites",
@@ -1325,7 +1325,7 @@
    "etiquettes": [],
    "ancre": "ch3-probabilite-conditio/2-arbres-de-probabilites.html#6UAA1.effectifs-probabilites",
    "num": "3.2",
-   "page": 33
+   "page": 32
   },
   {
    "id": "6UAA1.calculer-arbre",
@@ -1335,7 +1335,7 @@
    "etiquettes": [],
    "ancre": "ch3-probabilite-conditio/2-arbres-de-probabilites.html#6UAA1.calculer-arbre",
    "num": "3.1",
-   "page": 34
+   "page": 33
   },
   {
    "id": "6UAA1.ex.045",
@@ -1345,7 +1345,7 @@
    "etiquettes": [],
    "ancre": "ch3-probabilite-conditio/2-arbres-de-probabilites.html#6UAA1.ex.045",
    "num": "3.3",
-   "page": 34
+   "page": 33
   },
   {
    "id": "6UAA1.ex.046",
@@ -1357,7 +1357,7 @@
    ],
    "ancre": "ch3-probabilite-conditio/2-arbres-de-probabilites.html#6UAA1.ex.046",
    "num": "3.4",
-   "page": 34
+   "page": 33
   },
   {
    "id": "6UAA1.lire-test-depistage",
@@ -1377,7 +1377,7 @@
    "etiquettes": [],
    "ancre": "ch3-probabilite-conditio/3-lire-un-test-de-depistage.html#6UAA1.test-positif",
    "num": "3.3",
-   "page": 35
+   "page": 34
   },
   {
    "id": "6UAA1.rem.009",
@@ -1387,7 +1387,7 @@
    "etiquettes": [],
    "ancre": "ch3-probabilite-conditio/3-lire-un-test-de-depistage.html#6UAA1.rem.009",
    "num": "3.2",
-   "page": 36
+   "page": 35
   },
   {
    "id": "6UAA1.ex.047",
@@ -1397,7 +1397,7 @@
    "etiquettes": [],
    "ancre": "ch3-probabilite-conditio/3-lire-un-test-de-depistage.html#6UAA1.ex.047",
    "num": "3.5",
-   "page": 36
+   "page": 35
   },
   {
    "id": "6UAA1.ex.048",
@@ -1409,7 +1409,7 @@
    ],
    "ancre": "ch3-probabilite-conditio/3-lire-un-test-de-depistage.html#6UAA1.ex.048",
    "num": "3.6",
-   "page": 36
+   "page": 35
   },
   {
    "id": "6UAA1.independance",
@@ -1429,7 +1429,7 @@
    "etiquettes": [],
    "ancre": "ch3-probabilite-conditio/4-independance.html#6UAA1.information-change-t-elle-probabilite",
    "num": "3.4",
-   "page": 36
+   "page": 35
   },
   {
    "id": "6UAA1.evenements-independants",
@@ -1439,7 +1439,7 @@
    "etiquettes": [],
    "ancre": "ch3-probabilite-conditio/4-independance.html#6UAA1.evenements-independants",
    "num": "3.2",
-   "page": 37
+   "page": 36
   },
   {
    "id": "6UAA1.prop.003",
@@ -1449,7 +1449,7 @@
    "etiquettes": [],
    "ancre": "ch3-probabilite-conditio/4-independance.html#6UAA1.prop.003",
    "num": "3.2",
-   "page": 37
+   "page": 36
   },
   {
    "id": "6UAA1.rem.010",
@@ -1459,7 +1459,7 @@
    "etiquettes": [],
    "ancre": "ch3-probabilite-conditio/4-independance.html#6UAA1.rem.010",
    "num": "3.3",
-   "page": 37
+   "page": 36
   },
   {
    "id": "6UAA1.rem.011",
@@ -1469,7 +1469,7 @@
    "etiquettes": [],
    "ancre": "ch3-probabilite-conditio/4-independance.html#6UAA1.rem.011",
    "num": "3.4",
-   "page": 37
+   "page": 36
   },
   {
    "id": "6UAA1.retour-chevalier-mere",
@@ -1479,7 +1479,7 @@
    "etiquettes": [],
    "ancre": "ch3-probabilite-conditio/4-independance.html#6UAA1.retour-chevalier-mere",
    "num": "3.1",
-   "page": 37
+   "page": 36
   },
   {
    "id": "6UAA1.ex.049",
@@ -1489,7 +1489,7 @@
    "etiquettes": [],
    "ancre": "ch3-probabilite-conditio/4-independance.html#6UAA1.ex.049",
    "num": "3.7",
-   "page": 37
+   "page": 36
   },
   {
    "id": "6UAA1.ex.050",
@@ -1499,7 +1499,7 @@
    "etiquettes": [],
    "ancre": "ch3-probabilite-conditio/4-independance.html#6UAA1.ex.050",
    "num": "3.8",
-   "page": 38
+   "page": 37
   },
   {
    "id": "6UAA1.ex.051",
@@ -1509,7 +1509,7 @@
    "etiquettes": [],
    "ancre": "ch3-probabilite-conditio/4-independance.html#6UAA1.ex.051",
    "num": "3.9",
-   "page": 38
+   "page": 37
   },
   {
    "id": "6UAA1.ex.052",
@@ -1521,7 +1521,7 @@
    ],
    "ancre": "ch3-probabilite-conditio/4-independance.html#6UAA1.ex.052",
    "num": "3.10",
-   "page": 38
+   "page": 37
   },
   {
    "id": "6UAA1.ex.053",
@@ -1531,7 +1531,7 @@
    "etiquettes": [],
    "ancre": "ch3-probabilite-conditio/4-independance.html#6UAA1.ex.053",
    "num": "3.11",
-   "page": 38
+   "page": 37
   },
   {
    "id": "6UAA1.ex.054",
@@ -1541,7 +1541,7 @@
    "etiquettes": [],
    "ancre": "ch3-probabilite-conditio/4-independance.html#6UAA1.ex.054",
    "num": "3.12",
-   "page": 39
+   "page": 37
   },
   {
    "id": "6UAA1.aller-plus-loin",
@@ -1561,7 +1561,7 @@
    "etiquettes": [],
    "ancre": "ch3-probabilite-conditio/5-pour-aller-plus-loin.html#6UAA1.probleme-monty-hall",
    "num": "3.5",
-   "page": 39
+   "page": 38
   },
   {
    "id": "6UAA1.jeux-gratter-gain-moyen",
@@ -1571,7 +1571,7 @@
    "etiquettes": [],
    "ancre": "ch3-probabilite-conditio/5-pour-aller-plus-loin.html#6UAA1.jeux-gratter-gain-moyen",
    "num": "3.6",
-   "page": 39
+   "page": 38
   },
   {
    "id": "6UAA1.rem.012",
@@ -1581,7 +1581,7 @@
    "etiquettes": [],
    "ancre": "ch3-probabilite-conditio/5-pour-aller-plus-loin.html#6UAA1.rem.012",
    "num": "3.5",
-   "page": 40
+   "page": 39
   },
   {
    "id": "6UAA1.autre-facon-voir-probabilite-approche",
@@ -1591,7 +1591,7 @@
    "etiquettes": [],
    "ancre": "ch3-probabilite-conditio/5-pour-aller-plus-loin.html#6UAA1.autre-facon-voir-probabilite-approche",
    "num": "3.7",
-   "page": 40
+   "page": 39
   },
   {
    "id": "6UAA1.ex.055",
@@ -1601,7 +1601,7 @@
    "etiquettes": [],
    "ancre": "ch3-probabilite-conditio/5-pour-aller-plus-loin.html#6UAA1.ex.055",
    "num": "3.13",
-   "page": 41
+   "page": 40
   },
   {
    "id": "6UAA1.exercices-supplementaires-3",

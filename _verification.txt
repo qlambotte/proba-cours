@@ -1,0 +1,5 @@
+Vérification — Probabilités
+77 exercices, 142 encadrés, 15 objectifs — 1 point à voir
+
+! encadrés sans numéro de page du PDF (34) : preuve 1.1, preuve 1.2, activite 1.7, exercice 1.23, exercice 1.24, exercice S1.1, exercice S1.2, exercice S1.3, exercice S1.4, exercice S1.5, exercice S1.6, exercice S1.7, exercice S1.8, exercice S1.9, definition 2.4, exemple 2.7, exercice 2.18, exercice S2.1, exercice S2.2, exercice S2.3, exercice S2.4, exercice S2.5, exercice S2.6, exercice S2.7, exercice S2.8, preuve 3.1, remarque 3.5, activite 3.7, exercice 3.13, exercice S3.1, exercice S3.2, exercice S3.3, exercice S3.4, exercice S3.5
+    → recompiler le PDF (typweb pdf)

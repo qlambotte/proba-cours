@@ -1,0 +1,389 @@
+---
+title: "Exercices supplémentaires"
+---
+
+<!-- GÉNÉRÉ par typweb à partir des notes Typst : NE PAS ÉDITER (les modifications seraient écrasées). -->
+
+# Décrire, lister, multiplier
+
+::: {#exercice-S1-1 data-sorte="exercice" data-num="S1.1" data-id="6UAA1.ex.056" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice S1.1]{.exo-titre} [[A5]{.exo-comp} ★☆☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Un code de casier est formé de 2 lettres (de A à Z) suivies de 3 chiffres (de 0 à 9). Combien de codes différents existe-t-il ?
+
+::: {.rep-bloc}
+Un code est une suite de 2 lettres et 3 chiffres, avec répétition : $26^{2} \cdot 10^{3} = 676 \, 000$ codes.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis le [principe multiplicatif](3-additionner-multiplier.qmd#propriete-1-1).
+
+## Indice 2 {.unlisted}
+
+Combien de choix pour chaque position ? Ce nombre dépend-il des positions précédentes ?
+
+## Indice 3 {.unlisted}
+
+Lettres : $26 \cdot 26$ ; chiffres : $10 \cdot 10 \cdot 10$.
+
+## Solution {.unlisted}
+
+Un code est une suite de 2 lettres puis 3 chiffres, avec répétition. Par le principe multiplicatif : $26^{2} \cdot 10^{3} = 676 \, 000$ codes.
+
+## Pièges {.unlisted}
+
+- Utiliser $A_{26}^{2}$ : rien n’interdit deux lettres identiques.
+:::
+:::
+
+::: {#exercice-S1-2 data-sorte="exercice" data-num="S1.2" data-id="6UAA1.ex.057" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice S1.2]{.exo-titre} [[C1]{.exo-comp} ★☆☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Dix élèves participent à un concours. Pour chaque situation, dis si l’ordre compte, si la répétition est possible, et donne le nombre de résultats.
+
+a) On distribue 4 prix différents à 4 élèves distincts. b) On récompense 4 élèves par un même prix. c) On lance 4 fois un dé et on note les résultats dans l’ordre.
+
+::: {.rep-bloc}
+a) Ordre, sans répétition : $A_{10}^{4} = 5040$. b) Sans ordre, sans répétition : $C_{10}^{4} = 210$. c) Ordre, répétition : $6^{4} = 1296$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis le [tableau des situations de référence](7-choisir-une-methode.qmd#cadre-situations-de-reference).
+
+## Indice 2 {.unlisted}
+
+Dans chaque cas, un résultat est-il une suite ou un groupe ? Un élément peut-il revenir ?
+
+## Indice 3 {.unlisted}
+
+a) Les prix sont différents : l’ordre d’attribution compte.
+
+## Solution {.unlisted}
+
+a) Suite de 4 élèves distincts : $A_{10}^{4} = 5040$. b) Groupe de 4 élèves : $C_{10}^{4} = 210$. c) Suite de 4 résultats, avec répétition : $6^{4} = 1296$.
+
+## Pièges {.unlisted}
+
+- b) Utiliser $A_{10}^{4}$ : avec un même prix, l’ordre des lauréats ne compte pas.
+:::
+:::
+
+::: {#exercice-S1-3 data-sorte="exercice" data-num="S1.3" data-id="6UAA1.ex.058" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice S1.3]{.exo-titre} [[A5]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Parmi les nombres entiers de 1 à 1 000, combien ne sont divisibles ni par 5 ni par 7 ? Représente la situation par un diagramme de Venn complété.
+
+::: {.pb-fig .pb-venn data-n="2" data-inclus="0" data-disjoints="0" data-ombre="[]" data-activite="1"}
+::: {.pb-univers}
+$1, 2, …, 1000$
+:::
+
+::: {.pb-nom data-i="0"}
+$F$
+:::
+
+::: {.pb-nom data-i="1"}
+$S$
+:::
+
+::: {.pb-z data-z="a"}
+[172]{.rep data-v="172"}
+:::
+
+::: {.pb-z data-z="ab"}
+[28]{.rep data-v="28"}
+:::
+
+::: {.pb-z data-z="b"}
+[114]{.rep data-v="114"}
+:::
+
+::: {.pb-z data-z="dehors"}
+[686]{.rep data-v="686"}
+:::
+:::
+
+::: {.rep-bloc}
+$F$ : multiples de 5, $\#F = 200$. $S$ : multiples de 7, $\#S = 142$ ($7 \cdot 142 = 994$). Multiples de 35 : 28 ($35 \cdot 28 = 980$). $\#(F \cup S) = 200 + 142 - 28 = 314$. Ni l’un ni l’autre : $1000 - 314 = 686$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis le [principe additif](3-additionner-multiplier.qmd#propriete-1-2) et la [propriété du complémentaire](3-additionner-multiplier.qmd#propriete-1-3).
+
+## Indice 2 {.unlisted}
+
+« Ni par 5 ni par 7 » est le contraire de quel événement ?
+
+## Indice 3 {.unlisted}
+
+Multiples de 5 et de 7 : les multiples de 35 ; $35 \cdot 28 = 980$.
+
+## Solution {.unlisted}
+
+$F$ : multiples de 5, $\#F = 200$. $S$ : multiples de 7, $\#S = 142$ ($7 \cdot 142 = 994$). Multiples de 5 et de 7, donc de 35 : $\#(F \cap S) = 28$. $\#(F \cup S) = 200 + 142 - 28 = 314$. Les nombres divisibles ni par 5 ni par 7 sont hors de $F \cup S$ : $1000 - 314 = 686$.
+
+## Pièges {.unlisted}
+
+- Calculer $1000 - 200 - 142$ : les multiples de 35 sont alors retirés deux fois.
+:::
+:::
+
+# Formules
+
+::: {#exercice-S1-4 data-sorte="exercice" data-num="S1.4" data-id="6UAA1.ex.059" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice S1.4]{.exo-titre} [[A5]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Un mot de passe est formé de 4 lettres minuscules (26 lettres). Combien de mots de passe contiennent au moins une lettre répétée ?
+
+::: {.rep-bloc}
+Tous les mots de passe : $26^{4} = 456 \, 976$. Lettres toutes différentes : $A_{26}^{4} = 26 \cdot 25 \cdot 24 \cdot 23 = 358 \, 800$. Au moins une lettre répétée : $456 \, 976 - 358 \, 800 = 98 \, 176$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [propriété du complémentaire](3-additionner-multiplier.qmd#propriete-1-3) et la [définition des arrangements](4-arrangements-et-permutations.qmd#definition-1-1).
+
+## Indice 2 {.unlisted}
+
+Quel est le contraire de « au moins une lettre répétée » ?
+
+## Indice 3 {.unlisted}
+
+Contraire : les 4 lettres sont toutes différentes, $A_{26}^{4}$ mots.
+
+## Solution {.unlisted}
+
+Tous les mots de passe : suites de 4 lettres avec répétition, $26^{4} = 456 \, 976$. Lettres toutes différentes : $A_{26}^{4} = 26 \cdot 25 \cdot 24 \cdot 23 = 358 \, 800$. Au moins une lettre répétée : $456 \, 976 - 358 \, 800 = 98 \, 176$.
+
+## Pièges {.unlisted}
+
+- Compter directement « une lettre répétée » : on oublie les mots à trois ou quatre lettres identiques, ou on en compte certains deux fois.
+:::
+:::
+
+::: {#exercice-S1-5 data-sorte="exercice" data-num="S1.5" data-id="6UAA1.ex.060" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice S1.5]{.exo-titre} [[T1]{.exo-comp} ★★★]{.exo-meta}
+:::
+
+::: {.exo-corps}
+*Défi.* On tire 5 cartes d’un jeu de 52 cartes (l’ordre ne compte pas). Combien de mains contiennent exactement 2 as ?
+
+::: {.rep-bloc}
+On choisit 2 as parmi 4 : $C_{4}^{2} = 6$ ; puis 3 cartes parmi les 48 qui ne sont pas des as : $C_{48}^{3} = 17 \, 296$. Mains : $6 \cdot 17 \, 296 = 103 \, 776$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [définition des combinaisons](5-combinaisons.qmd#definition-1-4) et l’[exercice 1.15](5-combinaisons.qmd#exercice-1-15).
+
+## Indice 2 {.unlisted}
+
+Une main se construit-elle en choisissant d’abord les as, puis les autres cartes ?
+
+## Indice 3 {.unlisted}
+
+As : $C_{4}^{2} = 6$ groupes.
+
+## Solution {.unlisted}
+
+On choisit 2 as parmi les 4 : $C_{4}^{2} = 6$ ; puis 3 cartes parmi les 48 qui ne sont pas des as : $C_{48}^{3} = 17 \, 296$. Par le principe multiplicatif, il y a $6 \cdot 17 \, 296 = 103 \, 776$ mains.
+
+## Pièges {.unlisted}
+
+- Choisir les 3 autres cartes parmi 50 : on obtient alors des mains à 3 ou 4 as.
+:::
+:::
+
+# Entraînement complémentaire
+
+::: {#exercice-S1-6 data-sorte="exercice" data-num="S1.6" data-id="6UAA1.ex.061" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice S1.6]{.exo-titre} [[A5]{.exo-comp} ★☆☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Simplifie, puis calcule sans calculatrice : $\frac{12!}{10!}$ ; $\frac{6!}{3! \cdot 3!}$ ; $\frac{100!}{98! \cdot 2!}$ ; $\frac{(n+2)!}{n!}$.
+
+::: {.rep-bloc}
+$\frac{12!}{10!} = 12 \cdot 11 = 132$ ; $\frac{6!}{3! \cdot 3!} = \frac{6 \cdot 5 \cdot 4}{3 \cdot 2} = 20$ ; $\frac{100!}{98! \cdot 2!} = \frac{100 \cdot 99}{2} = 4950$ ; $\frac{(n+2)!}{n!} = (n+2)(n+1)$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [définition de la factorielle](4-arrangements-et-permutations.qmd#definition-1-2).
+
+## Indice 2 {.unlisted}
+
+Quelle factorielle « contient » l’autre ?
+
+## Indice 3 {.unlisted}
+
+$12! = 12 \cdot 11 \cdot 10!$.
+
+## Solution {.unlisted}
+
+$\frac{12!}{10!} = 12 \cdot 11 = 132$ ; $\frac{6!}{3! \cdot 3!} = \frac{6 \cdot 5 \cdot 4}{3 \cdot 2 \cdot 1} = 20$ ; $\frac{100!}{98! \cdot 2!} = \frac{100 \cdot 99}{2} = 4950$ ; $\frac{(n+2)!}{n!} = (n+2)(n+1)$.
+
+## Pièges {.unlisted}
+
+- Calculer $100!$ à la calculatrice : le nombre est trop grand ; il faut simplifier d’abord.
+:::
+:::
+
+::: {#exercice-S1-7 data-sorte="exercice" data-num="S1.7" data-id="6UAA1.ex.062" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice S1.7]{.exo-titre} [[A5]{.exo-comp} ★☆☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Combien d’anagrammes des mots a) KAYAK ; b) ELEVE (sans tenir compte des accents) ; c) CASQUETTES ?
+
+::: {.rep-bloc}
+a) K et A deux fois : $\frac{5!}{2! \cdot 2!} = 30$. b) E trois fois : $\frac{5!}{3!} = 20$. c) 10 lettres, S, E et T deux fois : $\frac{10!}{2! \cdot 2! \cdot 2!} = 453 \, 600$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [définition des permutations avec répétition](6-permutations-avec-repetition-les-anagram.qmd#definition-1-5).
+
+## Indice 2 {.unlisted}
+
+Quelles lettres apparaissent plusieurs fois, et combien de fois ?
+
+## Indice 3 {.unlisted}
+
+KAYAK : 5 lettres, K deux fois, A deux fois.
+
+## Solution {.unlisted}
+
+a) $\frac{5!}{2! \cdot 2!} = 30$. b) ELEVE : E trois fois, $\frac{5!}{3!} = 20$. c) CASQUETTES : 10 lettres, S, E et T deux fois : $\frac{10!}{2! \cdot 2! \cdot 2!} = 453 \, 600$.
+
+## Pièges {.unlisted}
+
+- Oublier une lettre répétée (dans CASQUETTES : S, E et T).
+:::
+:::
+
+::: {#exercice-S1-8 data-sorte="exercice" data-num="S1.8" data-id="6UAA1.ex.063" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice S1.8]{.exo-titre} [[A5]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+a) Sept enfants s’assoient sur une rangée de 7 chaises, mais 3 d’entre eux refusent la première place. Combien de placements sont possibles ?
+
+b) Six personnes montent dans une voiture à 6 places ; seules 2 d’entre elles savent conduire. Combien de placements sont possibles ?
+
+::: {.rep-bloc}
+a) On commence par la place la plus contrainte : 4 enfants peuvent occuper la première chaise, puis on range les 6 autres : $4 \cdot 6! = 2880$. b) 2 choix pour le siège du conducteur, puis $5!$ pour les autres : $2 \cdot 5! = 240$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis le [principe multiplicatif](3-additionner-multiplier.qmd#propriete-1-1) et la [définition des permutations](4-arrangements-et-permutations.qmd#definition-1-3).
+
+## Indice 2 {.unlisted}
+
+Quelle place faut-il remplir en premier ?
+
+## Indice 3 {.unlisted}
+
+a) Combien d’enfants acceptent la première chaise ?
+
+## Solution {.unlisted}
+
+a) 4 enfants peuvent occuper la première chaise ; les 6 autres se rangent ensuite sur les 6 chaises restantes : $4 \cdot 6! = 2880$ placements. b) 2 choix pour le siège du conducteur, puis $5!$ placements des autres : $2 \cdot 5! = 240$.
+
+## Pièges {.unlisted}
+
+- Calculer $7! - 3$ : ce sont des placements qui sont interdits, pas des enfants.
+- Commencer par une place sans contrainte : le nombre de choix pour la place contrainte dépend alors des choix précédents.
+:::
+:::
+
+::: {#exercice-S1-9 data-sorte="exercice" data-num="S1.9" data-id="6UAA1.ex.064" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice S1.9]{.exo-titre} [[A5]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+On range sur une étagère 6 livres de français, 3 livres de mathématiques et 4 livres de sciences, tous différents. Combien de rangements sont possibles a) sans contrainte ? b) si les livres d’une même discipline restent côte à côte ?
+
+::: {.rep-bloc}
+a) Permutation de 13 livres : $13! = 6 \, 227 \, 020 \, 800$. b) On range les 3 blocs ($3!$), puis les livres dans chaque bloc ($6!$, $3!$, $4!$) : $3! \cdot 6! \cdot 3! \cdot 4! = 622 \, 080$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [définition des permutations](4-arrangements-et-permutations.qmd#definition-1-3) et le [principe multiplicatif](3-additionner-multiplier.qmd#propriete-1-1).
+
+## Indice 2 {.unlisted}
+
+b) Si chaque discipline forme un bloc, combien de blocs faut-il ranger ?
+
+## Indice 3 {.unlisted}
+
+b) On range les 3 blocs, puis les livres à l’intérieur de chaque bloc.
+
+## Solution {.unlisted}
+
+a) $13! = 6 \, 227 \, 020 \, 800$ rangements. b) Ordre des blocs : $3!$ ; dans les blocs : $6!$, $3!$ et $4!$. $3! \cdot 6! \cdot 3! \cdot 4! = 622 \, 080$ rangements.
+
+## Pièges {.unlisted}
+
+- b) Oublier l’ordre des blocs ($3!$).
+- Additionner $6! + 3! + 4!$ au lieu de multiplier.
+:::
+:::

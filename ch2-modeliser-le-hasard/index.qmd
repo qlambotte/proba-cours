@@ -1,0 +1,25 @@
+---
+title: "Chapitre 2 — Modéliser le hasard"
+---
+
+<!-- GÉNÉRÉ par typweb à partir des notes Typst : NE PAS ÉDITER (les modifications seraient écrasées). -->
+
+Un phénomène est aléatoire quand on ne peut pas prévoir son résultat. On peut pourtant mesurer ses chances de deux façons : par l’expérience, en observant des fréquences, ou par un raisonnement, en posant un modèle.
+
+## Sections
+
+1. [Fréquences et probabilité](1-frequences-et-probabilite.qmd) []{.suivi-sec data-exos="2.1 2.2 2.3"}
+2. [Univers et événements](2-univers-et-evenements.qmd) []{.suivi-sec data-exos="2.4 2.5 2.6"}
+3. [Le modèle d’équiprobabilité](3-le-modele-dequiprobabilite.qmd) []{.suivi-sec data-exos="2.7 2.8"}
+4. [Propriétés des probabilités](4-proprietes-des-probabilites.qmd) []{.suivi-sec data-exos="2.9 2.10 2.11 2.12 2.13"}
+5. [Dénombrer pour calculer](5-denombrer-pour-calculer.qmd) []{.suivi-sec data-exos="2.14 2.15 2.16 2.17 2.18"}
+6. [Exercices supplémentaires](6-exercices-supplementaires.qmd) []{.suivi-sec data-exos="S2.1 S2.2 S2.3 S2.4 S2.5 S2.6 S2.7 S2.8"}
+
+## À faire à la maison
+
+- [Exercice 2.2](1-frequences-et-probabilite.qmd#exercice-2-2)
+- [Exercice 2.6](2-univers-et-evenements.qmd#exercice-2-6)
+- [Exercice 2.8](3-le-modele-dequiprobabilite.qmd#exercice-2-8)
+- [Exercice 2.12](4-proprietes-des-probabilites.qmd#exercice-2-12)
+- [Exercice 2.13](4-proprietes-des-probabilites.qmd#exercice-2-13)
+- [Exercice 2.15](5-denombrer-pour-calculer.qmd#exercice-2-15)

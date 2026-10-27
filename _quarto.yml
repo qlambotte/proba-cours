@@ -1,0 +1,98 @@
+# GÉNÉRÉ par typweb à partir de typweb.toml : NE PAS ÉDITER (modifier typweb.toml).
+project:
+  type: book
+  output-dir: _book
+  # le contenu est régénéré depuis les notes Typst à chaque rendu / aperçu
+  pre-render: python3 ../../../typweb/typweb.py contenu
+  resources:
+    - js/*.js
+    - js/*.css
+    - js/*.json
+    - index.json
+    - sw.js
+    - proba.pdf
+    - proba-corrige.pdf
+    - exercices-supp-ch1.pdf
+    - exercices-supp-ch2.pdf
+    - exercices-supp-ch3.pdf
+    - exercices-supp-ch1-corrige.pdf
+    - exercices-supp-ch2-corrige.pdf
+    - exercices-supp-ch3-corrige.pdf
+
+book:
+  title: "Probabilités"
+  subtitle: "Cours & exercices — 6e, 4 périodes (6UAA1)"
+  author: "Quentin Lambotte"
+  date: today
+  date-format: "YYYY"
+  reader-mode: false
+  search: true
+  site-url: "https://qlambotte.github.io/proba-cours/"
+  sidebar:
+    style: docked
+    collapse-level: 1
+    pinned: true
+  chapters:
+    - index.qmd
+    - objectifs.qmd
+    - part: ch1-compter-sur-de-petit/index.qmd
+      chapters:
+        - ch1-compter-sur-de-petit/1-le-langage-des-ensembles.qmd
+        - ch1-compter-sur-de-petit/2-lister-avant-de-compter.qmd
+        - ch1-compter-sur-de-petit/3-additionner-multiplier.qmd
+        - ch1-compter-sur-de-petit/4-arrangements-et-permutations.qmd
+        - ch1-compter-sur-de-petit/5-combinaisons.qmd
+        - ch1-compter-sur-de-petit/6-permutations-avec-repetition-les-anagram.qmd
+        - ch1-compter-sur-de-petit/7-choisir-une-methode.qmd
+        - ch1-compter-sur-de-petit/8-exercices-supplementaires.qmd
+    - part: ch2-modeliser-le-hasard/index.qmd
+      chapters:
+        - ch2-modeliser-le-hasard/1-frequences-et-probabilite.qmd
+        - ch2-modeliser-le-hasard/2-univers-et-evenements.qmd
+        - ch2-modeliser-le-hasard/3-le-modele-dequiprobabilite.qmd
+        - ch2-modeliser-le-hasard/4-proprietes-des-probabilites.qmd
+        - ch2-modeliser-le-hasard/5-denombrer-pour-calculer.qmd
+        - ch2-modeliser-le-hasard/6-exercices-supplementaires.qmd
+    - part: ch3-probabilite-conditio/index.qmd
+      chapters:
+        - ch3-probabilite-conditio/1-probabilite-conditionnelle.qmd
+        - ch3-probabilite-conditio/2-arbres-de-probabilites.qmd
+        - ch3-probabilite-conditio/3-lire-un-test-de-depistage.qmd
+        - ch3-probabilite-conditio/4-independance.qmd
+        - ch3-probabilite-conditio/5-pour-aller-plus-loin.qmd
+        - ch3-probabilite-conditio/6-exercices-supplementaires.qmd
+        - ch3-probabilite-conditio/7-references.qmd
+    - sources.qmd
+    - essentiel.qmd
+    - autoeval.qmd
+    - nouveautes.qmd
+    - mode-emploi.qmd
+  page-footer:
+    left: "Probabilités — cours & exercices"
+    right: "© {{< meta book.author >}}"
+
+lang: fr
+
+format:
+  html:
+    theme:
+      - cosmo
+      - polices.scss
+      - theme.scss
+      - styles-essai.scss
+    include-in-header:
+      - _includes/theme-init.html
+    include-after-body:
+      - _includes/aides.html
+      - _includes/tools.html
+      - _includes/scripts.html
+      - _includes/styles-essai.html
+    toc: true
+    toc-title: "Sur cette page"
+    toc-depth: 3
+    number-sections: false
+    html-math-method: mathjax
+    grid:
+      sidebar-width: 300px
+      body-width: 880px
+      margin-width: 200px

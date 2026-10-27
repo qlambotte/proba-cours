@@ -1,0 +1,325 @@
+---
+title: "Exercices supplémentaires"
+---
+
+<!-- GÉNÉRÉ par typweb à partir des notes Typst : NE PAS ÉDITER (les modifications seraient écrasées). -->
+
+# Univers, événements, équiprobabilité
+
+::: {#exercice-S2-1 data-sorte="exercice" data-num="S2.1" data-id="6UAA1.ex.065" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice S2.1]{.exo-titre} [[C3]{.exo-comp} ★☆☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Une urne contient trois boules numérotées 1, 2, 3. On tire une boule, on note son numéro, on la remet, puis on en tire une deuxième. Écris l’univers. Écris en extension l’événement $A$ « la somme vaut 4 » et son contraire.
+
+::: {.rep-bloc}
+$\Omega = \{(1{,}1), (1{,}2), (1{,}3), (2{,}1), (2{,}2), (2{,}3), (3{,}1), (3{,}2), (3{,}3)\}$ : 9 issues. $A = \{(1{,}3), (2{,}2), (3{,}1)\}$ ; $\overline{A}$ contient les 6 autres couples.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [définition 2.2](2-univers-et-evenements.qmd#definition-2-2).
+
+## Indice 2 {.unlisted}
+
+Une issue est-elle un nombre ou un couple de numéros ?
+
+## Indice 3 {.unlisted}
+
+$(1, 3)$ et $(3, 1)$ sont deux issues différentes.
+
+## Solution {.unlisted}
+
+$\Omega = \{(1{,}1), (1{,}2), (1{,}3), (2{,}1), (2{,}2), (2{,}3), (3{,}1), (3{,}2), (3{,}3)\}$ : 9 issues. $A = \{(1{,}3), (2{,}2), (3{,}1)\}$ ; $\overline{A} = \{(1{,}1), (1{,}2), (2{,}1), (2{,}3), (3{,}2), (3{,}3)\}$.
+
+## Pièges {.unlisted}
+
+- Oublier les couples (1, 1), (2, 2), (3, 3) : la boule est remise.
+:::
+:::
+
+::: {#exercice-S2-2 data-sorte="exercice" data-num="S2.2" data-id="6UAA1.ex.066" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice S2.2]{.exo-titre} [[C6]{.exo-comp} ★☆☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Une roulette européenne compte 37 cases : le 0 (vert) et les nombres de 1 à 36, dont 18 rouges et 18 noirs. On suppose les 37 cases équiprobables. Calcule la probabilité d’obtenir un nombre rouge, puis celle d’obtenir un nombre pair non nul.
+
+::: {.rep-bloc}
+$P(\text{rouge}) = \frac{18}{37} \approx 0{,}486$. Nombres pairs de 2 à 36 : 18, donc $P(\text{pair non nul}) = \frac{18}{37}$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [règle de Laplace](3-le-modele-dequiprobabilite.qmd#definition-2-3).
+
+## Indice 2 {.unlisted}
+
+Combien de cases en tout ? Combien sont favorables ?
+
+## Indice 3 {.unlisted}
+
+Le 0 n’est ni rouge ni noir.
+
+## Solution {.unlisted}
+
+On suppose les 37 cases équiprobables. $P(\text{rouge}) = \frac{18}{37} \approx 0{,}486$. Nombres pairs non nuls : 2, 4, …, 36, soit 18 cases : $P(\text{pair non nul}) = \frac{18}{37}$.
+
+## Pièges {.unlisted}
+
+- Répondre $\frac{1}{2}$ : la case 0 fait perdre les deux paris.
+:::
+:::
+
+::: {#exercice-S2-3 data-sorte="exercice" data-num="S2.3" data-id="6UAA1.ex.067" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice S2.3]{.exo-titre} [[A3]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+On lance deux dés équilibrés et on multiplie les deux nombres. Quelle est la probabilité que le produit soit pair ?
+
+::: {.rep-bloc}
+On suppose les 36 couples équiprobables. Le produit est impair si les deux nombres sont impairs : $3 \cdot 3 = 9$ couples. $P(\text{pair}) = 1 - \frac{9}{36} = \frac{27}{36} = \frac{3}{4}$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis le [cadre « Au moins un »](4-proprietes-des-probabilites.qmd#cadre-au-moins-un) et la [propriété 2.1](4-proprietes-des-probabilites.qmd#propriete-2-1).
+
+## Indice 2 {.unlisted}
+
+Quand un produit de deux entiers est-il impair ?
+
+## Indice 3 {.unlisted}
+
+Produit impair : les deux nombres sont impairs, $3 \cdot 3 = 9$ couples.
+
+## Solution {.unlisted}
+
+On suppose les 36 couples équiprobables. Le produit est impair si et seulement si les deux nombres sont impairs : $3 \cdot 3 = 9$ couples. Par le contraire, $P(\text{produit pair}) = 1 - \frac{9}{36} = \frac{27}{36} = \frac{3}{4}$.
+
+## Pièges {.unlisted}
+
+- Répondre $\frac{1}{2}$ : il suffit d’un nombre pair pour que le produit soit pair.
+:::
+:::
+
+# Fréquences et simulations
+
+::: {#exercice-S2-4 data-sorte="exercice" data-num="S2.4" data-id="6UAA1.ex.068" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice S2.4]{.exo-titre} [[A6]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Avec le simulateur du site, simule 1 000 lancers de trois dés. Relève la fréquence des sommes 9 et 10. Compare-les aux probabilités de l’exemple 2.4.
+
+```{=html}
+<div class="pb-sim" data-cfg="{&quot;experience&quot;: &quot;des&quot;, &quot;des&quot;: 3, &quot;suivre&quot;: &quot;10&quot;}"></div>
+```
+
+::: {.rep-bloc}
+Les fréquences observées sont proches de $\frac{25}{216} \approx 0{,}116$ pour 9 et de $\frac{27}{216} \approx 0{,}125$ pour 10 ; sur 1 000 lancers, l’écart entre les deux peut toutefois s’inverser : il faut beaucoup de lancers pour le voir nettement.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis l’[exemple 2.4](3-le-modele-dequiprobabilite.qmd#exemple-2-4) et la [définition 2.1](1-frequences-et-probabilite.qmd#definition-2-1).
+
+## Indice 2 {.unlisted}
+
+Les probabilités de 9 et 10 sont-elles très différentes ?
+
+## Indice 3 {.unlisted}
+
+$\frac{25}{216} \approx 0{,}116$ et $\frac{27}{216} \approx 0{,}125$ : l’écart est d’environ $0{,}009$.
+
+## Solution {.unlisted}
+
+Les fréquences observées sont proches de $\frac{25}{216} \approx 0{,}116$ pour 9 et de $\frac{27}{216} \approx 0{,}125$ pour 10. L’écart entre les deux probabilités est faible : sur 1 000 lancers, les fréquences peuvent encore s’inverser. Il faut beaucoup plus de lancers pour que la différence apparaisse nettement.
+
+## Pièges {.unlisted}
+
+- Conclure qu’une probabilité est fausse parce qu’une série de 1 000 lancers ne la retrouve pas exactement.
+:::
+:::
+
+::: {#exercice-S2-5 data-sorte="exercice" data-num="S2.5" data-id="6UAA1.ex.069" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice S2.5]{.exo-titre} [[T1]{.exo-comp} ★★★]{.exo-meta}
+:::
+
+::: {.exo-corps}
+*Défi.* À partir de combien de personnes la probabilité qu’au moins deux aient le même anniversaire dépasse-t-elle $\frac{1}{2}$ ? On suppose les 365 jours équiprobables. Utilise la calculatrice, puis vérifie avec le simulateur.
+
+```{=html}
+<div class="pb-sim" data-cfg="{&quot;experience&quot;: &quot;anniversaires&quot;, &quot;groupe&quot;: 23, &quot;suivre&quot;: &quot;au moins deux communs&quot;}"></div>
+```
+
+::: {.rep-bloc}
+$1 - \frac{A_{365}^{22}}{365^{22}} \approx 0{,}476$ et $1 - \frac{A_{365}^{23}}{365^{23}} \approx 0{,}507$ : il faut 23 personnes.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis l’[exemple 2.7](5-denombrer-pour-calculer.qmd#exemple-2-7).
+
+## Indice 2 {.unlisted}
+
+Pour $n$ personnes, que vaut $P(\text{au moins deux communs})$ ?
+
+## Indice 3 {.unlisted}
+
+Calcule $1 - \frac{A_{365}^{n}}{365^{n}}$ pour $n = 22$, puis $n = 23$.
+
+## Solution {.unlisted}
+
+On suppose les 365 jours équiprobables. Pour $n$ personnes, $P(\text{au moins deux communs}) = 1 - \frac{A_{365}^{n}}{365^{n}}$. Pour $n = 22$ : $\approx 0{,}476$ ; pour $n = 23$ : $\approx 0{,}507$. Il faut 23 personnes pour que la probabilité dépasse $\frac{1}{2}$.
+
+## Pièges {.unlisted}
+
+- Répondre 183 (la moitié de 365) : on compare chaque personne à toutes les autres, pas à une seule date.
+:::
+:::
+
+# Entraînement complémentaire
+
+::: {#exercice-S2-6 data-sorte="exercice" data-num="S2.6" data-id="6UAA1.ex.070" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice S2.6]{.exo-titre} [[C6]{.exo-comp} ★☆☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+La bataille navale se joue sur une grille de 10 cases sur 10. On y place un porte-avions (4 cases), deux croiseurs (3 cases chacun), trois torpilleurs (2 cases chacun) et quatre sous-marins (1 case chacun). On tire au hasard sur une case. Calcule la probabilité a) de toucher le porte-avions ; b) de toucher un torpilleur ; c) de tirer dans l’eau.
+
+::: {.rep-bloc}
+On suppose les 100 cases équiprobables. Les bateaux occupent $4 + 2 \cdot 3 + 3 \cdot 2 + 4 \cdot 1 = 20$ cases. a) $\frac{4}{100} = \frac{1}{25}$ ; b) $\frac{6}{100} = \frac{3}{50}$ ; c) $\frac{80}{100} = \frac{4}{5}$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [règle de Laplace](3-le-modele-dequiprobabilite.qmd#definition-2-3).
+
+## Indice 2 {.unlisted}
+
+Combien de cases sont occupées par chaque sorte de bateau ?
+
+## Indice 3 {.unlisted}
+
+Les bateaux occupent $4 + 2 \cdot 3 + 3 \cdot 2 + 4 \cdot 1$ cases.
+
+## Solution {.unlisted}
+
+On suppose les 100 cases équiprobables. Les bateaux occupent 20 cases. a) $\frac{4}{100} = \frac{1}{25}$ ; b) trois torpilleurs de 2 cases : $\frac{6}{100} = \frac{3}{50}$ ; c) $\frac{80}{100} = \frac{4}{5}$.
+
+## Pièges {.unlisted}
+
+- b) Compter 2 cases au lieu de $3 \cdot 2$ : « un torpilleur » signifie n’importe lequel des trois.
+:::
+:::
+
+::: {#exercice-S2-7 data-sorte="exercice" data-num="S2.7" data-id="6UAA1.ex.071" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice S2.7]{.exo-titre} [[T1]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Sam lance un dé à 6 faces, Célia un dé à 8 faces (numérotées de 1 à 8), en même temps. Celui qui obtient le plus petit nombre gagne ; en cas d’égalité, personne ne gagne. Qui a le plus de chances de gagner ?
+
+::: {.rep-bloc}
+On suppose les $6 \cdot 8 = 48$ couples équiprobables (tableau à double entrée). Sam gagne si son nombre $s$ est plus petit que celui de Célia : pour $s = 1$, 7 cas ; $s = 2$, 6 cas ; … ; $s = 6$, 2 cas : $7 + 6 + 5 + 4 + 3 + 2 = 27$ cas. Égalités : 6 cas ; Célia gagne : $48 - 27 - 6 = 15$ cas. $P(\text{Sam gagne}) = \frac{27}{48} = \frac{9}{16}$ et $P(\text{Célia gagne}) = \frac{15}{48} = \frac{5}{16}$ : Sam a plus de chances de gagner.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [règle de Laplace](3-le-modele-dequiprobabilite.qmd#definition-2-3) et l’[activité des deux dés](3-le-modele-dequiprobabilite.qmd#activite-2-3).
+
+## Indice 2 {.unlisted}
+
+Comment représenter tous les couples (dé de Sam, dé de Célia) ?
+
+## Indice 3 {.unlisted}
+
+Tableau à double entrée de 6 lignes et 8 colonnes : 48 cases.
+
+## Solution {.unlisted}
+
+On suppose les 48 couples équiprobables. Sam gagne si son nombre $s$ est plus petit : $7 + 6 + 5 + 4 + 3 + 2 = 27$ cas ; égalités : 6 cas ; Célia gagne : 15 cas. $P(\text{Sam}) = \frac{27}{48} = \frac{9}{16}$ ; $P(\text{Célia}) = \frac{15}{48} = \frac{5}{16}$ : Sam a plus de chances.
+
+## Pièges {.unlisted}
+
+- Penser que Célia est avantagée parce que son dé a plus de faces : ici, c’est le plus petit nombre qui gagne.
+- Oublier les égalités : $P(\text{Sam}) + P(\text{Célia}) \neq 1$.
+:::
+:::
+
+::: {#exercice-S2-8 data-sorte="exercice" data-num="S2.8" data-id="6UAA1.ex.072" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice S2.8]{.exo-titre} [[T1]{.exo-comp} ★★★]{.exo-meta}
+:::
+
+::: {.exo-corps}
+*Défi.* Pour un oral, le professeur a préparé 60 sujets ; chaque élève en tire 4 au hasard. Un élève n’a étudié que 20 sujets. Calcule la probabilité qu’il connaisse a) les 4 sujets tirés ; b) aucun des sujets tirés ; c) exactement 3 des sujets tirés.
+
+::: {.rep-bloc}
+Une issue est un groupe de 4 sujets parmi 60 : $C_{60}^{4} = 487 \, 635$ groupes, supposés équiprobables. a) $\frac{C_{20}^{4}}{C_{60}^{4}} = \frac{4845}{487 \, 635} \approx 0{,}0099$. b) 4 sujets parmi les 40 non étudiés : $\frac{C_{40}^{4}}{C_{60}^{4}} = \frac{91 \, 390}{487 \, 635} \approx 0{,}187$. c) 3 parmi 20 et 1 parmi 40 : $\frac{C_{20}^{3} \cdot 40}{C_{60}^{4}} = \frac{45 \, 600}{487 \, 635} \approx 0{,}094$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis l’[exemple du Lotto](5-denombrer-pour-calculer.qmd#exemple-2-6) et la [définition des combinaisons](../ch1-compter-sur-de-petit/5-combinaisons.qmd#definition-1-4).
+
+## Indice 2 {.unlisted}
+
+L’ordre des sujets tirés compte-t-il ? Qu’est-ce qu’une issue ?
+
+## Indice 3 {.unlisted}
+
+$\#\Omega = C_{60}^{4} = 487 \, 635$.
+
+## Solution {.unlisted}
+
+Une issue est un groupe de 4 sujets parmi 60 : $C_{60}^{4} = 487 \, 635$ groupes, supposés équiprobables. a) $\frac{C_{20}^{4}}{C_{60}^{4}} = \frac{4845}{487 \, 635} \approx 0{,}0099$. b) $\frac{C_{40}^{4}}{C_{60}^{4}} = \frac{91 \, 390}{487 \, 635} \approx 0{,}187$. c) $\frac{C_{20}^{3} \cdot C_{40}^{1}}{C_{60}^{4}} = \frac{45 \, 600}{487 \, 635} \approx 0{,}094$.
+
+## Pièges {.unlisted}
+
+- c) Oublier de choisir le quatrième sujet parmi les 40 non étudiés.
+- Utiliser des arrangements au numérateur et des combinaisons au dénominateur.
+:::
+:::

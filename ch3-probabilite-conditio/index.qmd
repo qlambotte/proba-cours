@@ -1,0 +1,24 @@
+---
+title: "Chapitre 3 — Probabilité conditionnelle et indépendance"
+---
+
+<!-- GÉNÉRÉ par typweb à partir des notes Typst : NE PAS ÉDITER (les modifications seraient écrasées). -->
+
+Une information peut changer une probabilité. La question à se poser devient : *parmi* quels cas calcule-t-on la proportion ?
+
+## Sections
+
+1. [Probabilité conditionnelle](1-probabilite-conditionnelle.qmd) []{.suivi-sec data-exos="3.1 3.2"}
+2. [Arbres de probabilités](2-arbres-de-probabilites.qmd) []{.suivi-sec data-exos="3.3 3.4"}
+3. [Lire un test de dépistage](3-lire-un-test-de-depistage.qmd) []{.suivi-sec data-exos="3.5 3.6"}
+4. [Indépendance](4-independance.qmd) []{.suivi-sec data-exos="3.7 3.8 3.9 3.10 3.11 3.12"}
+5. [Pour aller plus loin](5-pour-aller-plus-loin.qmd) []{.suivi-sec data-exos="3.13"}
+6. [Exercices supplémentaires](6-exercices-supplementaires.qmd) []{.suivi-sec data-exos="S3.1 S3.2 S3.3 S3.4 S3.5"}
+7. [Références](7-references.qmd)
+
+## À faire à la maison
+
+- [Exercice 3.2](1-probabilite-conditionnelle.qmd#exercice-3-2)
+- [Exercice 3.4](2-arbres-de-probabilites.qmd#exercice-3-4)
+- [Exercice 3.6](3-lire-un-test-de-depistage.qmd#exercice-3-6)
+- [Exercice 3.10](4-independance.qmd#exercice-3-10)

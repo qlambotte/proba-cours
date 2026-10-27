@@ -1,0 +1,201 @@
+---
+title: "Exercices supplémentaires"
+---
+
+<!-- GÉNÉRÉ par typweb à partir des notes Typst : NE PAS ÉDITER (les modifications seraient écrasées). -->
+
+# Conditionner
+
+::: {#exercice-S3-1 data-sorte="exercice" data-num="S3.1" data-id="6UAA1.ex.073" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice S3.1]{.exo-titre} [[A1]{.exo-comp} ★☆☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Au Titanic (tableau de l’activité 3.1), on note $T$ : « voyager en 3^e^ classe ». Écris en mots, puis calcule $P(S | T)$ et $P(T | S)$.
+
+::: {.rep-bloc}
+$P(S | T)$ : parmi les passagers de 3^e^ classe, proportion de survivants, $\frac{178}{706} \approx 0{,}252$. $P(T | S)$ : parmi les survivants, proportion de passagers de 3^e^ classe, $\frac{178}{711} \approx 0{,}250$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis l’[activité 3.1](1-probabilite-conditionnelle.qmd#activite-3-1) et la [définition 3.1](1-probabilite-conditionnelle.qmd#definition-3-1).
+
+## Indice 2 {.unlisted}
+
+Parmi qui calcule-t-on chaque proportion ?
+
+## Indice 3 {.unlisted}
+
+$P(S | T)$ : parmi les 706 passagers de 3^e^ classe.
+
+## Solution {.unlisted}
+
+$P(S | T)$ : parmi les 706 passagers de 3^e^ classe, 178 ont survécu, $P(S | T) = \frac{178}{706} \approx 0{,}252$. $P(T | S)$ : parmi les 711 survivants, 178 voyageaient en 3^e^ classe, $P(T | S) = \frac{178}{711} \approx 0{,}250$. Ces deux probabilités sont proches ici parce que 706 et 711 sont proches ; ce n’est pas une règle.
+
+## Pièges {.unlisted}
+
+- Conclure que $P(S | T) = P(T | S)$ en général.
+:::
+:::
+
+::: {#exercice-S3-2 data-sorte="exercice" data-num="S3.2" data-id="6UAA1.ex.074" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice S3.2]{.exo-titre} [[A2]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Une urne contient 2 boules rouges et 3 boules bleues. On tire deux boules sans remise. Construis l’arbre et calcule la probabilité que les deux boules soient de couleurs différentes.
+
+::: {.rep-bloc}
+On suppose chaque boule équiprobable. $P(R_{1} \cap B_{2}) = \frac{2}{5} \cdot \frac{3}{4} = \frac{6}{20}$ ; $P(B_{1} \cap R_{2}) = \frac{3}{5} \cdot \frac{2}{4} = \frac{6}{20}$. $P(\text{couleurs différentes}) = \frac{12}{20} = \frac{3}{5}$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [propriété « calculer sur un arbre »](2-arbres-de-probabilites.qmd#propriete-3-1).
+
+## Indice 2 {.unlisted}
+
+Quels chemins mènent à « couleurs différentes » ?
+
+## Indice 3 {.unlisted}
+
+Chemin rouge puis bleue : $\frac{2}{5} \cdot \frac{3}{4}$.
+
+## Solution {.unlisted}
+
+On suppose chaque boule équiprobable. Deux chemins mènent à « couleurs différentes » : $P(R_{1} \cap B_{2}) = \frac{2}{5} \cdot \frac{3}{4} = \frac{6}{20}$ et $P(B_{1} \cap R_{2}) = \frac{3}{5} \cdot \frac{2}{4} = \frac{6}{20}$. $P(\text{couleurs différentes}) = \frac{6}{20} + \frac{6}{20} = \frac{12}{20} = \frac{3}{5}$.
+
+## Pièges {.unlisted}
+
+- Oublier l’un des deux chemins.
+:::
+:::
+
+# Indépendance et dépistage
+
+::: {#exercice-S3-3 data-sorte="exercice" data-num="S3.3" data-id="6UAA1.ex.075" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice S3.3]{.exo-titre} [[A4]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+On lance un dé équilibré. $A$ : « obtenir un nombre pair » ; $B$ : « obtenir au plus 2 ». $A$ et $B$ sont-ils indépendants ?
+
+::: {.rep-bloc}
+$P(A) = \frac{1}{2}$, $P(B) = \frac{2}{6} = \frac{1}{3}$, $A \cap B = \{2\}$, $P(A \cap B) = \frac{1}{6}$. $P(A) \cdot P(B) = \frac{1}{2} \cdot \frac{1}{3} = \frac{1}{6} = P(A \cap B)$ : $A$ et $B$ sont indépendants.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [définition 3.2](4-independance.qmd#definition-3-2).
+
+## Indice 2 {.unlisted}
+
+Que vaut $A \cap B$ ?
+
+## Indice 3 {.unlisted}
+
+$A \cap B = \{2\}$.
+
+## Solution {.unlisted}
+
+On suppose les 6 faces équiprobables. $P(A) = \frac{3}{6} = \frac{1}{2}$, $P(B) = \frac{2}{6} = \frac{1}{3}$, $A \cap B = \{2\}$ et $P(A \cap B) = \frac{1}{6}$. $P(A) \cdot P(B) = \frac{1}{2} \cdot \frac{1}{3} = \frac{1}{6} = P(A \cap B)$ : $A$ et $B$ sont indépendants.
+
+## Pièges {.unlisted}
+
+- Penser que $A$ et $B$ sont dépendants parce qu’ils ont une issue commune.
+:::
+:::
+
+::: {#exercice-S3-4 data-sorte="exercice" data-num="S3.4" data-id="6UAA1.ex.076" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice S3.4]{.exo-titre} [[T2]{.exo-comp} ★★★]{.exo-meta}
+:::
+
+::: {.exo-corps}
+*Défi.* On reprend le dépistage de l’activité 3.3 (test positif chez 90 % des malades et chez 9 % des non-malades), mais pour une maladie qui touche 0,1 % des personnes testées. Calcule $P(M | T)$ et commente.
+
+::: {.rep-bloc}
+Sur 10 000 personnes : 10 malades, dont 9 positives ; 9 990 non malades, dont $9990 \cdot 0{,}09 \approx 899$ positives. $P(M | T) \approx \frac{9}{908} \approx 0{,}0099$ : moins d’une personne positive sur 100 est malade. Plus la maladie est rare, moins un test positif est informatif à lui seul.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis l’[activité 3.3](3-lire-un-test-de-depistage.qmd#activite-3-3) et l’[exercice 3.5](3-lire-un-test-de-depistage.qmd#exercice-3-5).
+
+## Indice 2 {.unlisted}
+
+Pour combien de personnes faut-il construire l’arbre pour n’avoir que des effectifs raisonnables ?
+
+## Indice 3 {.unlisted}
+
+Sur 10 000 personnes : 10 malades, dont 9 positives.
+
+## Solution {.unlisted}
+
+Sur 10 000 personnes : 10 malades, dont $10 \cdot 0{,}9 = 9$ positives ; 9 990 non malades, dont $9990 \cdot 0{,}09 \approx 899$ positives. $P(M | T) \approx \frac{9}{9 + 899} = \frac{9}{908} \approx 0{,}0099$ : moins d’une personne positive sur 100 est malade. Plus la maladie est rare, moins un test positif renseigne à lui seul.
+
+## Pièges {.unlisted}
+
+- Construire l’arbre sur 1 000 personnes : on obtient 1 malade et des effectifs non entiers.
+:::
+:::
+
+# Entraînement complémentaire
+
+::: {#exercice-S3-5 data-sorte="exercice" data-num="S3.5" data-id="6UAA1.ex.077" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice S3.5]{.exo-titre} [[A3]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Un gardien a 5 clés indiscernables ; une seule ouvre la porte. Il les essaie l’une après l’autre, en mettant de côté chaque clé essayée. Construis un arbre, puis calcule la probabilité qu’il ouvre la porte a) au premier essai ; b) au troisième essai ; c) au dernier essai ; d) en au plus deux essais.
+
+::: {.rep-bloc}
+On suppose qu’à chaque essai, les clés restantes sont équiprobables. a) $\frac{1}{5}$. b) Deux échecs puis la bonne clé : $\frac{4}{5} \cdot \frac{3}{4} \cdot \frac{1}{3} = \frac{1}{5}$. c) $\frac{4}{5} \cdot \frac{3}{4} \cdot \frac{2}{3} \cdot \frac{1}{2} \cdot 1 = \frac{1}{5}$ : chaque rang a la même probabilité. d) Premier ou deuxième essai (événements disjoints) : $\frac{1}{5} + \frac{1}{5} = \frac{2}{5}$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [règle des arbres](2-arbres-de-probabilites.qmd#propriete-3-1).
+
+## Indice 2 {.unlisted}
+
+Après un échec, combien de clés reste-t-il, et combien sont bonnes ?
+
+## Indice 3 {.unlisted}
+
+Au 3^e^ essai : deux échecs, puis la bonne clé : $\frac{4}{5} \cdot \frac{3}{4} \cdot \frac{1}{3}$.
+
+## Solution {.unlisted}
+
+On suppose qu’à chaque essai, les clés restantes sont équiprobables. a) $\frac{1}{5}$. b) $\frac{4}{5} \cdot \frac{3}{4} \cdot \frac{1}{3} = \frac{1}{5}$. c) $\frac{4}{5} \cdot \frac{3}{4} \cdot \frac{2}{3} \cdot \frac{1}{2} \cdot 1 = \frac{1}{5}$. d) Ouvrir au 1^er^ ou au 2^e^ essai (disjoints) : $\frac{1}{5} + \frac{4}{5} \cdot \frac{1}{4} = \frac{2}{5}$.
+
+## Pièges {.unlisted}
+
+- b) Répondre $\frac{1}{3}$ : c’est la probabilité au 3^e^ essai *sachant* que les deux premiers ont échoué.
+:::
+:::

@@ -1,0 +1,169 @@
+---
+title: "Objectifs"
+subtitle: "Compétences à développer dans ce chapitre"
+---
+
+
+<!-- GÉNÉRÉ par typweb (grille de objectifs.typ) : NE PAS ÉDITER. -->
+
+
+::: {.obj-intro}
+Je suis capable de…
+:::
+
+
+::: {#obj-suivi data-cle="proba" data-autoeval="autoeval.html"}
+:::
+
+
+## Appliquer {.obj-cat}
+
+::: {.obj-liste}
+
+::: {.obj data-code="A5"}
+[A5]{.obj-code}
+
+::: {.obj-texte}
+…
+:::
+:::
+
+:::
+
+
+## Connaître {.obj-cat}
+
+::: {.obj-liste}
+
+::: {.obj data-code="C1"}
+[C1]{.obj-code}
+
+::: {.obj-texte}
+Reconnaître en contexte, un groupement d’objets (arrangement, combinaison).
+:::
+:::
+
+::: {.obj data-code="C2"}
+[C2]{.obj-code}
+
+::: {.obj-texte}
+Associer une probabilité au calcul de fréquences à partir d’un exemple d’expérience aléatoire.
+:::
+:::
+
+::: {.obj data-code="C3"}
+[C3]{.obj-code}
+
+::: {.obj-texte}
+Citer, pour une expérience aléatoire donnée, la catégorie d’épreuve, deux événements disjoints, un événement et son contraire, un événement certain et un événement impossible.
+:::
+:::
+
+::: {.obj data-code="C4"}
+[C4]{.obj-code}
+
+::: {.obj-texte}
+Représenter l’union, l’intersection, la différence de deux événements à l’aide des diagrammes de Venn et les exprimer en langage courant.
+:::
+:::
+
+::: {.obj data-code="C5"}
+[C5]{.obj-code}
+
+::: {.obj-texte}
+Citer les propriétés des probabilités.
+:::
+:::
+
+::: {.obj data-code="C6"}
+[C6]{.obj-code}
+
+::: {.obj-texte}
+Citer la règle de calcul d’une probabilité d’un événement dans le cas d’événements équiprobables.
+:::
+:::
+
+:::
+
+
+## Appliquer {.obj-cat}
+
+::: {.obj-liste}
+
+::: {.obj data-code="A1"}
+[A1]{.obj-code}
+
+::: {.obj-texte}
+Identifier l’événement associé à une probabilité donnée à partir d’un arbre, d’un tableau ou de diagrammes de Venn.
+:::
+:::
+
+::: {.obj data-code="A2"}
+[A2]{.obj-code}
+
+::: {.obj-texte}
+Extraire d’un arbre, d’un tableau ou de diagrammes de Venn la probabilité d’un événement.
+:::
+:::
+
+::: {.obj data-code="A3"}
+[A3]{.obj-code}
+
+::: {.obj-texte}
+Calculer une probabilité (y compris une probabilité conditionnelle) en utilisant : des tableaux / des diagrammes de Venn / des arbres / des formules d’analyse combinatoire.
+:::
+:::
+
+::: {.obj data-code="A4"}
+[A4]{.obj-code}
+
+::: {.obj-texte}
+Vérifier si 2 événements sont dépendants ou indépendants.
+:::
+:::
+
+::: {.obj data-code="A5"}
+[A5]{.obj-code}
+
+::: {.obj-texte}
+Dénombrer les résultats d’une situation à l’aide d’une liste organisée, d’un arbre, d’un diagramme ou des formules d’analyse combinatoire, en justifiant le choix de la formule. ^†^
+:::
+:::
+
+::: {.obj data-code="A6"}
+[A6]{.obj-code}
+
+::: {.obj-texte}
+Calculer une probabilité *a posteriori* à partir de données statistiques ou de simulations. ^†^
+:::
+:::
+
+:::
+
+
+## Transférer {.obj-cat}
+
+::: {.obj-liste}
+
+::: {.obj data-code="T1"}
+[T1]{.obj-code}
+
+::: {.obj-texte}
+Résoudre un problème d’analyse combinatoire / de probabilité.
+:::
+:::
+
+::: {.obj data-code="T2"}
+[T2]{.obj-code}
+
+::: {.obj-texte}
+Utiliser le calcul des probabilités pour analyser et critiquer des informations chiffrées (santé, presse, jeux de hasard). ^†^
+:::
+:::
+
+:::
+
+
+::: {.ae-lien}
+[✔ S'autoévaluer sur ces objectifs →](autoeval.qmd)
+:::

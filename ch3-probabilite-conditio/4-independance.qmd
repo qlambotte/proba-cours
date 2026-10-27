@@ -1,0 +1,348 @@
+---
+title: "Indépendance"
+---
+
+<!-- GÉNÉRÉ par typweb à partir des notes Typst : NE PAS ÉDITER (les modifications seraient écrasées). -->
+
+::: {#activite-3-4 data-sorte="activite" data-num="3.4" data-page="35" data-phys="38" data-id="6UAA1.information-change-t-elle-probabilite" data-type="activite" data-tags="" .theo .theo-activite}
+::: {.theo-head}
+**Activité 3.4** — une information change-t-elle la probabilité ?
+:::
+
+::: {.theo-body}
+a) Au Titanic, compare $P(S)$ et $P(S | C)$. Savoir qu’une personne voyageait en 1^re^ classe change-t-il la probabilité qu’elle ait survécu ?
+
+::: {.rep-bloc}
+$P(S) \approx 0{,}323$ et $P(S | C) \approx 0{,}625$ : oui, fortement.
+:::
+
+b) On lance un dé rouge et un dé blanc. $A$ : « le rouge donne 6 » ; $B$ : « le blanc donne 6 ». Compare $P(A)$ et $P(A | B)$.
+
+::: {.rep-bloc}
+On suppose les 36 couples équiprobables. $P(A) = \frac{6}{36} = \frac{1}{6}$ ; $P(A | B) = \frac{\#(A \cap B)}{\#B} = \frac{1}{6}$. Savoir que $B$ est réalisé ne change rien.
+:::
+
+c) Dans ce dernier cas, compare $P(A \cap B)$ et $P(A) \cdot P(B)$.
+
+::: {.rep-bloc}
+$P(A \cap B) = \frac{1}{36} = \frac{1}{6} \cdot \frac{1}{6} = P(A) \cdot P(B)$.
+:::
+:::
+:::
+
+::: {#definition-3-2 data-sorte="definition" data-num="3.2" data-page="36" data-phys="39" data-id="6UAA1.evenements-independants" data-type="definition" data-tags="" .theo .theo-definition}
+::: {.theo-head}
+**Définition 3.2** — événements indépendants
+:::
+
+::: {.theo-body}
+Deux événements $A$ et $B$ sont *indépendants* si $P(A \cap B) = P(A) \cdot P(B)$. Sinon, ils sont *dépendants*.
+:::
+:::
+
+::: {#propriete-3-2 data-sorte="propriete" data-num="3.2" data-page="36" data-phys="39" data-id="6UAA1.prop.003" data-type="propriete" data-tags="" .theo .theo-propriete}
+::: {.theo-head}
+**Propriété 3.2**
+:::
+
+::: {.theo-body}
+Si $P(B) \neq 0$ : $A$ et $B$ sont indépendants $\Longleftrightarrow$ $P(A | B) = P(A)$.
+:::
+:::
+
+::: {#preuve-3-1 data-sorte="preuve" data-num="3.1" .theo .theo-preuve}
+::: {.theo-head}
+**Démonstration 3.1**
+:::
+
+::: {.theo-body}
+$P(A | B) = \frac{P(A \cap B)}{P(B)}$ vaut $P(A)$ si et seulement si $P(A \cap B) = P(A) \cdot P(B)$.
+:::
+:::
+
+::: {#remarque-3-3 data-sorte="remarque" data-num="3.3" data-page="36" data-phys="39" data-id="6UAA1.rem.010" data-type="remarque" data-tags="" .theo .theo-remarque}
+::: {.theo-head}
+**Remarque 3.3**
+:::
+
+::: {.theo-body}
+Indépendants ne veut pas dire disjoints. Avec un dé, « obtenir 1 » et « obtenir 6 » sont disjoints : $P(\{1\} \cap \{6\}) = 0$, alors que $P(\{1\}) \cdot P(\{6\}) = \frac{1}{36}$. Ils sont donc *dépendants* : savoir qu’on a obtenu 6 rend « obtenir 1 » impossible.
+
+::: {.pb-fig .pb-venn data-n="2" data-inclus="0" data-disjoints="1" data-ombre="[]" data-activite="0"}
+::: {.pb-univers}
+$\Omega$
+:::
+
+::: {.pb-nom data-i="0"}
+$\{1\}$
+:::
+
+::: {.pb-nom data-i="1"}
+$\{6\}$
+:::
+:::
+:::
+:::
+
+::: {#remarque-3-4 data-sorte="remarque" data-num="3.4" data-page="36" data-phys="39" data-id="6UAA1.rem.011" data-type="remarque" data-tags="" .theo .theo-remarque}
+::: {.theo-head}
+**Remarque 3.4**
+:::
+
+::: {.theo-body}
+*L’erreur du joueur.* À la roulette, après cinq « rouge » consécutifs, « noir » n’est pas plus probable : les tirages successifs sont indépendants.
+:::
+:::
+
+::: {#exemple-3-1 data-sorte="exemple" data-num="3.1" data-page="36" data-phys="39" data-id="6UAA1.retour-chevalier-mere" data-type="exemple" data-tags="" .theo .theo-exemple}
+::: {.theo-head}
+**Exemple 3.1** — retour au chevalier de Méré
+:::
+
+::: {.theo-body}
+Les 4 lancers d’un dé sont indépendants : $P(\text{aucun 6}) = (\frac{5}{6})^{4} = \frac{625}{1296}$. On retrouve le résultat obtenu en comptant (exemple 2.5).
+:::
+:::
+
+::: {#exercice-3-7 data-sorte="exercice" data-num="3.7" data-page="36" data-phys="39" data-id="6UAA1.ex.049" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice 3.7]{.exo-titre} [[A4]{.exo-comp} ★☆☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+On lance un dé rouge et un dé blanc. $A$ : « la somme vaut 7 » ; $B$ : « le rouge donne 6 » ; $D$ : « la somme vaut 12 ». $A$ et $B$ sont-ils indépendants ? $D$ et $B$ ?
+
+::: {.rep-bloc}
+On suppose les 36 couples équiprobables. $P(A) = \frac{6}{36} = \frac{1}{6}$, $P(B) = \frac{1}{6}$, $A \cap B = \{(6, 1)\}$ : $P(A \cap B) = \frac{1}{36} = P(A) \cdot P(B)$, donc $A$ et $B$ sont indépendants. $P(D) = \frac{1}{36}$, $D \cap B = \{(6, 6)\}$ : $P(D \cap B) = \frac{1}{36} \neq \frac{1}{36} \cdot \frac{1}{6}$, donc $D$ et $B$ sont dépendants.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [définition de l’indépendance](#definition-3-2).
+
+## Indice 2 {.unlisted}
+
+Que valent $P(A)$, $P(B)$ et $P(A \cap B)$ ?
+
+## Indice 3 {.unlisted}
+
+$A \cap B = \{(6, 1)\}$ : $P(A \cap B) = \frac{1}{36}$.
+
+## Solution {.unlisted}
+
+On suppose les 36 couples équiprobables. $P(A) = \frac{6}{36} = \frac{1}{6}$, $P(B) = \frac{6}{36} = \frac{1}{6}$, $A \cap B = \{(6, 1)\}$, donc $P(A \cap B) = \frac{1}{36} = \frac{1}{6} \cdot \frac{1}{6} = P(A) \cdot P(B)$ : $A$ et $B$ sont indépendants. $P(D) = \frac{1}{36}$, $D \cap B = \{(6, 6)\}$, donc $P(D \cap B) = \frac{1}{36}$ alors que $P(D) \cdot P(B) = \frac{1}{216}$ : $D$ et $B$ sont dépendants.
+
+## Pièges {.unlisted}
+
+- Juger l’indépendance « à l’intuition » : on vérifie l’égalité de la définition.
+:::
+:::
+
+::: {#exercice-3-8 data-sorte="exercice" data-num="3.8" data-page="37" data-phys="40" data-id="6UAA1.ex.050" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice 3.8]{.exo-titre} [[A4]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Au Titanic, les événements $S$ et $C$ sont-ils indépendants ?
+
+::: {.rep-bloc}
+$P(S \cap C) = \frac{203}{2201} \approx 0{,}092$ et $P(S) \cdot P(C) = \frac{711}{2201} \cdot \frac{325}{2201} \approx 0{,}048$. Ces deux nombres sont différents : $S$ et $C$ sont dépendants.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [définition 3.2](#definition-3-2) ou la [propriété 3.2](#propriete-3-2).
+
+## Indice 2 {.unlisted}
+
+Compare $P(S \cap C)$ et $P(S) \cdot P(C)$, ou $P(S | C)$ et $P(S)$.
+
+## Indice 3 {.unlisted}
+
+$P(S \cap C) = \frac{203}{2201}$.
+
+## Solution {.unlisted}
+
+$P(S \cap C) = \frac{203}{2201} \approx 0{,}092$ et $P(S) \cdot P(C) = \frac{711}{2201} \cdot \frac{325}{2201} \approx 0{,}048$. Ces deux nombres sont différents : $S$ et $C$ sont dépendants. (Autre justification : $P(S | C) \approx 0{,}625 \neq P(S) \approx 0{,}323$.)
+
+## Pièges {.unlisted}
+
+- Calculer $P(S) \cdot P(C)$ avec les effectifs (711 · 325) au lieu des probabilités.
+:::
+:::
+
+::: {#exercice-3-9 data-sorte="exercice" data-num="3.9" data-page="37" data-phys="40" data-id="6UAA1.ex.051" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice 3.9]{.exo-titre} [[A6]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+En 2021, 60 282 garçons et 57 632 filles sont nés en Belgique^[Statbel, *Chiffres clés 2022. Aperçu statistique de la Belgique*, p. 9 (naissances en 2021).].
+
+a) Estime la probabilité qu’un nouveau-né soit une fille.
+
+b) On reprend la famille de trois enfants de l’exercice 2.8, en supposant les naissances indépendantes, mais avec la probabilité estimée en a). Calcule la probabilité d’avoir exactement deux garçons et compare-la à $\frac{3}{8}$.
+
+c) Calcule la probabilité que la famille ait au moins un enfant de chaque sexe.
+
+::: {.rep-bloc}
+a) $P(F) \approx 57 \, \frac{632}{117} \, 914 \approx 0{,}489$, donc $P(G) \approx 0{,}511$ (probabilité *a posteriori*). b) Trois chemins de l’arbre contiennent deux garçons (GGF, GFG, FGG), chacun de probabilité $0{,}511^{2} \cdot 0{,}489$ : $P(\text{exactement deux garçons}) \approx 3 \cdot 0{,}511^{2} \cdot 0{,}489 \approx 0{,}383$, un peu plus que $\frac{3}{8} = 0{,}375$, car les garçons sont un peu plus fréquents. c) Contraire : « trois filles ou trois garçons » : $P(\text{au moins un enfant de chaque sexe}) \approx 1 - 0{,}489^{3} - 0{,}511^{3} \approx 0{,}750$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [probabilité a posteriori](../ch2-modeliser-le-hasard/1-frequences-et-probabilite.qmd#definition-2-1), la [règle des arbres](2-arbres-de-probabilites.qmd#propriete-3-1) et l’[exercice 2.8](../ch2-modeliser-le-hasard/3-le-modele-dequiprobabilite.qmd#exercice-2-8).
+
+## Indice 2 {.unlisted}
+
+Combien d’enfants sont nés en tout ? Quels chemins de l’arbre donnent deux garçons ?
+
+## Indice 3 {.unlisted}
+
+$P(F) \approx 57 \, \frac{632}{117} \, 914$.
+
+## Solution {.unlisted}
+
+a) $60 \, 282 + 57 \, 632 = 117 \, 914$ naissances : $P(F) \approx 57 \, \frac{632}{117} \, 914 \approx 0{,}489$ et $P(G) \approx 0{,}511$. b) Naissances indépendantes : trois chemins (GGF, GFG, FGG), chacun de probabilité $0{,}511^{2} \cdot 0{,}489$, donc $P(\text{exactement deux garçons}) \approx 0{,}383$ ; c’est un peu plus que $\frac{3}{8} = 0{,}375$, car les garçons sont un peu plus fréquents. c) Contraire : « trois filles ou trois garçons » : $P(\text{au moins un enfant de chaque sexe}) \approx 1 - 0{,}489^{3} - 0{,}511^{3} \approx 0{,}750$.
+
+## Pièges {.unlisted}
+
+- Diviser le nombre de filles par le nombre de garçons au lieu du nombre total de naissances.
+- b) Oublier qu’il y a trois chemins avec deux garçons.
+:::
+:::
+
+::: {#exercice-3-10 data-sorte="exercice" data-num="3.10" data-page="37" data-phys="40" data-id="6UAA1.ex.052" data-type="exercice" data-tags="maison" .exo}
+::: {.exo-tete}
+[✎ Exercice 3.10]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[A4]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+On tire une carte d’un jeu de 52 cartes. $C$ : « tirer un cœur » ; $R$ : « tirer un roi ». $C$ et $R$ sont-ils indépendants ? Sont-ils disjoints ?
+
+::: {.rep-bloc}
+On suppose les 52 cartes équiprobables. $P(C \cap R) = \frac{1}{52}$ et $P(C) \cdot P(R) = \frac{13}{52} \cdot \frac{4}{52} = \frac{1}{4} \cdot \frac{1}{13} = \frac{1}{52}$ : $C$ et $R$ sont indépendants. Ils ne sont pas disjoints : le roi de cœur est dans les deux.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [définition 3.2](#definition-3-2) et la [remarque 3.3](#remarque-3-3).
+
+## Indice 2 {.unlisted}
+
+Que vaut $P(C \cap R)$ ? Et $P(C) \cdot P(R)$ ?
+
+## Indice 3 {.unlisted}
+
+$P(C) \cdot P(R) = \frac{1}{4} \cdot \frac{1}{13}$.
+
+## Solution {.unlisted}
+
+On suppose les 52 cartes équiprobables. $P(C \cap R) = \frac{1}{52}$ (roi de cœur) et $P(C) \cdot P(R) = \frac{13}{52} \cdot \frac{4}{52} = \frac{1}{4} \cdot \frac{1}{13} = \frac{1}{52}$ : $C$ et $R$ sont indépendants. Ils ne sont pas disjoints : le roi de cœur appartient aux deux.
+
+## Pièges {.unlisted}
+
+- Croire que des événements qui ont un élément commun sont forcément dépendants.
+:::
+:::
+
+::: {#exercice-3-11 data-sorte="exercice" data-num="3.11" data-page="37" data-phys="40" data-id="6UAA1.ex.053" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice 3.11]{.exo-titre} [[T1]{.exo-comp} ★★★]{.exo-meta}
+:::
+
+::: {.exo-corps}
+*Défi.* On reprend l’urne de l’exercice 3.3 (3 rouges, 2 bleues, deux tirages sans remise). Les événements $R_{1}$ : « la première boule est rouge » et $R_{2}$ : « la deuxième boule est rouge » sont-ils indépendants ? Et avec remise ?
+
+::: {.rep-bloc}
+Sans remise : $P(R_{2}) = \frac{3}{5}$ (exercice 3.3) et $P(R_{2} | R_{1}) = \frac{2}{4} = \frac{1}{2} \neq \frac{3}{5}$ : dépendants. Avec remise : $P(R_{2} | R_{1}) = \frac{3}{5} = P(R_{2})$ : indépendants.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [propriété 3.2](#propriete-3-2) et l’[exercice 3.3](2-arbres-de-probabilites.qmd#exercice-3-3).
+
+## Indice 2 {.unlisted}
+
+Savoir que la première boule est rouge change-t-il la probabilité que la deuxième le soit ?
+
+## Indice 3 {.unlisted}
+
+Sans remise : $P(R_{2} | R_{1}) = \frac{2}{4}$ et $P(R_{2}) = \frac{3}{5}$.
+
+## Solution {.unlisted}
+
+Sans remise : $P(R_{2}) = \frac{3}{5}$ (exercice 3.3) et $P(R_{2} | R_{1}) = \frac{2}{4} = \frac{1}{2}$. Comme $\frac{1}{2} \neq \frac{3}{5}$, $R_{1}$ et $R_{2}$ sont dépendants. Avec remise : $P(R_{2} | R_{1}) = \frac{3}{5} = P(R_{2})$, donc $R_{1}$ et $R_{2}$ sont indépendants.
+
+## Pièges {.unlisted}
+
+- Calculer $P(R_{2})$ sans remise comme $\frac{2}{4}$ : la première boule peut aussi être bleue.
+:::
+:::
+
+::: {#exercice-3-12 data-sorte="exercice" data-num="3.12" data-page="37" data-phys="40" data-id="6UAA1.ex.054" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice 3.12]{.exo-titre} [[T2]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+*Trouve l’erreur.* Chaque affirmation ci-dessous est fausse. Explique l’erreur.
+
+a) « Un test est positif chez 90 % des malades. Donc une personne dont le test est positif est malade avec la probabilité $0{,}9$. »
+
+b) « $A$ et $B$ sont disjoints, donc ils sont indépendants. »
+
+::: {.rep-bloc}
+a) Le texte donne $P(T | M) = 0{,}9$ ; la question porte sur $P(M | T)$, qui dépend aussi de la proportion de malades et des positifs chez les non-malades (activité 3.3) : elle peut être bien plus petite. b) Si $A$ et $B$ sont disjoints et de probabilités non nulles, $P(A \cap B) = 0$ alors que $P(A) \cdot P(B) > 0$ : ils sont dépendants. Savoir que $B$ est réalisé rend $A$ impossible.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis l’[activité 3.3](3-lire-un-test-de-depistage.qmd#activite-3-3) et la [définition de l’indépendance](#definition-3-2).
+
+## Indice 2 {.unlisted}
+
+a) Quelle est la condition dans « positif chez 90 % des malades » ? Et dans la conclusion ?
+
+## Indice 3 {.unlisted}
+
+b) Que vaut $P(A \cap B)$ si $A$ et $B$ sont disjoints ?
+
+## Solution {.unlisted}
+
+a) Le texte donne $P(T | M) = 0{,}9$, la conclusion porte sur $P(M | T)$ : on a inversé la condition. $P(M | T)$ dépend aussi de la proportion de malades et des positifs chez les non-malades ; elle peut être bien plus petite (activité 3.3). b) Disjoints : $P(A \cap B) = 0$. Si $P(A) > 0$ et $P(B) > 0$, alors $P(A) \cdot P(B) > 0 \neq P(A \cap B)$ : $A$ et $B$ sont dépendants.
+
+## Pièges {.unlisted}
+
+- Confondre « disjoints » (pas d’issue commune) et « indépendants » (une information ne change pas la probabilité).
+:::
+:::
+
+::: {.ae-lien}
+[✔ S'autoévaluer sur cette section : test de 4 questions →](../autoeval.qmd#sections=sec-independance)
+:::

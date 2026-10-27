@@ -1,0 +1,476 @@
+---
+title: "L'essentiel"
+subtitle: "Définitions et propriétés du cours, pour s'y retrouver"
+---
+
+<!-- GÉNÉRÉ par typweb à partir des notes Typst : NE PAS ÉDITER (les modifications seraient écrasées). -->
+
+::: {.callout-important title="À lire avant d'utiliser cette page"}
+Cette page rassemble les énoncés du cours, **sans** les activités qui leur donnent du sens, sans les justifications, les exemples ni les méthodes vues en classe. Connaître ces énoncés **ne suffit pas** : l'essentiel, c'est de savoir les **utiliser**, et cela s'apprend avec les exemples et les exercices.
+
+Sers-t'en pour retrouver un énoncé ou vérifier que tu peux le **redire sans regarder**, puis retourne au cours (lien « dans le cours » sous chaque encadré) et aux exercices.
+:::
+
+## Chapitre 1 — Compter sur de petits ensembles
+
+### Additionner, multiplier
+
+::: {#ess-propriete-1-1 data-sorte="propriete" data-num="1.1" data-page="6" data-phys="9" data-id="6UAA1.principe-multiplicatif" data-type="propriete" data-tags="" .theo .theo-propriete}
+::: {.theo-head}
+**Propriété 1.1** — principe multiplicatif
+:::
+
+::: {.theo-body}
+Si un résultat se construit en $k$ étapes successives, avec
+
+- $n_{1}$ choix possibles à la première étape,
+- $n_{2}$ choix possibles à la deuxième étape, *quel que soit le choix fait à la première*,
+- …, $n_{k}$ choix possibles à la $k$-ième étape, *quels que soient les choix précédents*,
+
+et si deux suites de choix différentes donnent deux résultats différents, alors le nombre de résultats vaut
+
+$$
+n_{1} \cdot n_{2} \cdot \cdots \cdot n_{k}.
+$$
+:::
+:::
+
+::: {.ess-lien}
+[↗ dans le cours](ch1-compter-sur-de-petit/3-additionner-multiplier.qmd#propriete-1-1)
+:::
+
+::: {#ess-propriete-1-2 data-sorte="propriete" data-num="1.2" data-page="7" data-phys="10" data-id="6UAA1.principe-additif" data-type="propriete" data-tags="" .theo .theo-propriete}
+::: {.theo-head}
+**Propriété 1.2** — principe additif
+:::
+
+::: {.theo-body}
+Pour deux ensembles finis $A$ et $B$ :
+
+$$
+\#(A \cup B) = \#A + \#B - \#(A \cap B).
+$$
+
+Si $A$ et $B$ n’ont aucun élément commun ($A \cap B = \emptyset$), alors $\#(A \cup B) = \#A + \#B$ : on additionne les cas.
+:::
+:::
+
+::: {.ess-lien}
+[↗ dans le cours](ch1-compter-sur-de-petit/3-additionner-multiplier.qmd#propriete-1-2)
+:::
+
+::: {#ess-propriete-1-3 data-sorte="propriete" data-num="1.3" data-page="7" data-phys="10" data-id="6UAA1.compter-complementaire" data-type="propriete" data-tags="" .theo .theo-propriete}
+::: {.theo-head}
+**Propriété 1.3** — compter par le complémentaire
+:::
+
+::: {.theo-body}
+Si $A$ est une partie d’un ensemble fini $E$, le nombre d’éléments de $E$ qui ne sont pas dans $A$ vaut $\#E - \#A$.
+
+::: {.pb-fig .pb-venn data-n="1" data-inclus="0" data-disjoints="0" data-ombre="[&quot;dehors&quot;]" data-activite="0"}
+::: {.pb-univers}
+$E$
+:::
+
+::: {.pb-nom data-i="0"}
+$A$
+:::
+:::
+
+C’est utile pour compter les résultats qui contiennent « au moins un » élément d’un certain type : on compte tout, puis on retire ceux qui n’en contiennent « aucun ».
+:::
+:::
+
+::: {.ess-lien}
+[↗ dans le cours](ch1-compter-sur-de-petit/3-additionner-multiplier.qmd#propriete-1-3)
+:::
+
+### Arrangements et permutations
+
+::: {#ess-definition-1-1 data-sorte="definition" data-num="1.1" data-page="9" data-phys="12" data-id="6UAA1.arrangements" data-type="definition" data-tags="" .theo .theo-definition}
+::: {.theo-head}
+**Définition 1.1** — arrangements
+:::
+
+::: {.theo-body}
+Un *arrangement de $p$ éléments pris parmi $n$* est une suite de $p$ éléments choisis parmi $n$ éléments donnés (l’ordre compte).
+
+- **Avec répétition** (un élément peut revenir) : il y en a $n^{p}$.
+- **Sans répétition** (éléments distincts, $p \leq n$) : il y en a
+
+$$
+A_{n}^{p} = \underbrace{n (n-1) (n-2) \cdots (n-p+1)}_{p \text{facteurs}}.
+$$
+
+Au premier choix, aucun élément n’est pris : $n$ choix. Au $k$-ième choix, $k - 1$ éléments sont déjà pris : il reste $n - k + 1$ choix. Le dernier facteur (au $p$-ième choix) est donc $n - p + 1$ : pour le bureau, $18 \cdot 17 \cdot 16$ et $16 = 18 - 3 + 1$.
+:::
+:::
+
+::: {.ess-lien}
+[↗ dans le cours](ch1-compter-sur-de-petit/4-arrangements-et-permutations.qmd#definition-1-1)
+:::
+
+::: {#ess-definition-1-2 data-sorte="definition" data-num="1.2" data-page="10" data-phys="13" data-id="6UAA1.factorielle" data-type="definition" data-tags="" .theo .theo-definition}
+::: {.theo-head}
+**Définition 1.2** — factorielle
+:::
+
+::: {.theo-body}
+Pour tout naturel $n \geq 1$, $n! = n (n-1) \cdots 2 \cdot 1$ (lire « factorielle $n$ »). On pose $0! = 1$.
+:::
+:::
+
+::: {.ess-lien}
+[↗ dans le cours](ch1-compter-sur-de-petit/4-arrangements-et-permutations.qmd#definition-1-2)
+:::
+
+::: {#ess-propriete-1-4 data-sorte="propriete" data-num="1.4" data-page="10" data-phys="13" data-id="6UAA1.prop.001" data-type="propriete" data-tags="" .theo .theo-propriete}
+::: {.theo-head}
+**Propriété 1.4**
+:::
+
+::: {.theo-body}
+Pour $0 \leq p \leq n$ :
+
+$$
+A_{n}^{p} = \frac{n!}{(n-p)!}.
+$$
+:::
+:::
+
+::: {.ess-lien}
+[↗ dans le cours](ch1-compter-sur-de-petit/4-arrangements-et-permutations.qmd#propriete-1-4)
+:::
+
+::: {#ess-definition-1-3 data-sorte="definition" data-num="1.3" data-page="10" data-phys="13" data-id="6UAA1.permutations" data-type="definition" data-tags="" .theo .theo-definition}
+::: {.theo-head}
+**Définition 1.3** — permutations
+:::
+
+::: {.theo-body}
+Une *permutation* de $n$ éléments est une façon de les ranger tous dans un ordre : c’est un arrangement sans répétition de $n$ éléments pris parmi $n$. Il y en a $A_{n}^{n} = n!$.
+:::
+:::
+
+::: {.ess-lien}
+[↗ dans le cours](ch1-compter-sur-de-petit/4-arrangements-et-permutations.qmd#definition-1-3)
+:::
+
+### Combinaisons
+
+::: {#ess-definition-1-4 data-sorte="definition" data-num="1.4" data-page="12" data-phys="15" data-id="6UAA1.combinaisons-2" data-type="definition" data-tags="" .theo .theo-definition}
+::: {.theo-head}
+**Définition 1.4** — combinaisons
+:::
+
+::: {.theo-body}
+Une *combinaison de $p$ éléments pris parmi $n$* est un groupe (sans ordre) de $p$ éléments distincts choisis parmi $n$. Il y en a
+
+$$
+C_{n}^{p} = \frac{A_{n}^{p}}{p!} = \frac{n!}{p! \, (n-p)!}.
+$$
+
+Seconde forme, lue directement : on range les $n$ éléments en ligne ($n!$ façons) ; les $p$ premiers forment le groupe. Changer l’ordre des $p$ premiers ($p!$ façons) ou celui des $n - p$ derniers ($(n-p)!$ façons) ne change pas le groupe : on divise par $p! \, (n-p)!$.
+:::
+:::
+
+::: {.ess-lien}
+[↗ dans le cours](ch1-compter-sur-de-petit/5-combinaisons.qmd#definition-1-4)
+:::
+
+::: {#ess-propriete-1-5 data-sorte="propriete" data-num="1.5" data-page="12" data-phys="15" data-id="6UAA1.symetrie" data-type="propriete" data-tags="" .theo .theo-propriete}
+::: {.theo-head}
+**Propriété 1.5** — symétrie
+:::
+
+::: {.theo-body}
+Pour $0 \leq p \leq n$ :
+
+$$
+C_{n}^{p} = C_{n}^{n-p}.
+$$
+:::
+:::
+
+::: {.ess-lien}
+[↗ dans le cours](ch1-compter-sur-de-petit/5-combinaisons.qmd#propriete-1-5)
+:::
+
+### Permutations avec répétition : les anagrammes
+
+::: {#ess-definition-1-5 data-sorte="definition" data-num="1.5" data-page="14" data-phys="17" data-id="6UAA1.permutations-repetition" data-type="definition" data-tags="" .theo .theo-definition}
+::: {.theo-head}
+**Définition 1.5** — permutations avec répétition
+:::
+
+::: {.theo-body}
+Une *permutation avec répétition* de $n$ objets est une façon de les ranger tous en ligne lorsque certains d’entre eux sont identiques (on ne distingue pas deux objets identiques) : par exemple, un anagramme de ANNA.
+:::
+:::
+
+::: {.ess-lien}
+[↗ dans le cours](ch1-compter-sur-de-petit/6-permutations-avec-repetition-les-anagram.qmd#definition-1-5)
+:::
+
+::: {#ess-propriete-1-6 data-sorte="propriete" data-num="1.6" data-page="14" data-phys="17" data-id="6UAA1.prop.002" data-type="propriete" data-tags="" .theo .theo-propriete}
+::: {.theo-head}
+**Propriété 1.6**
+:::
+
+::: {.theo-body}
+Le nombre de permutations avec répétition de $n$ objets, dont $k_{1}$ sont identiques entre eux, $k_{2}$ identiques entre eux, …, $k_{r}$ identiques entre eux, vaut
+
+$$
+\frac{n!}{k_{1} ! \, k_{2} ! \cdots k_{r} !}.
+$$
+
+Avec deux sortes d’objets seulement, on retrouve les combinaisons : choisir 3 délégués parmi 5 élèves A, B, C, D, E revient à écrire O (« oui ») ou N (« non ») sous chaque nom, par exemple ONOON pour {A, C, D}. Il y a autant de délégations que d’anagrammes de OOONN : $\frac{5!}{3! \cdot 2!} = C_{5}^{3} = 10$.
+:::
+:::
+
+::: {.ess-lien}
+[↗ dans le cours](ch1-compter-sur-de-petit/6-permutations-avec-repetition-les-anagram.qmd#propriete-1-6)
+:::
+
+## Chapitre 2 — Modéliser le hasard
+
+### Fréquences et probabilité
+
+::: {#ess-definition-2-1 data-sorte="definition" data-num="2.1" data-page="19" data-phys="22" data-id="6UAA1.probabilite-posteriori" data-type="definition" data-tags="" .theo .theo-definition}
+::: {.theo-head}
+**Définition 2.1** — probabilité *a posteriori*
+:::
+
+::: {.theo-body}
+La *probabilité* d’un résultat est un nombre entre 0 et 1 qui mesure ses chances de se produire : c’est un nombre du *modèle*, pas une observation. Quand on répète un grand nombre de fois l’expérience dans les mêmes conditions, la fréquence relative du résultat varie de moins en moins : elle fournit une *estimation* de sa probabilité, appelée probabilité *a posteriori*. Plus le nombre de répétitions est grand, plus l’estimation est en général fiable ; elle n’est jamais certaine.
+:::
+:::
+
+::: {.ess-lien}
+[↗ dans le cours](ch2-modeliser-le-hasard/1-frequences-et-probabilite.qmd#definition-2-1)
+:::
+
+### Univers et événements
+
+::: {#ess-definition-2-2 data-sorte="definition" data-num="2.2" data-page="21" data-phys="24" data-id="6UAA1.experience-aleatoire-issue-evenement" data-type="definition" data-tags="" .theo .theo-definition}
+::: {.theo-head}
+**Définition 2.2** — expérience aléatoire, issue, événement
+:::
+
+::: {.theo-body}
+- Une *expérience aléatoire* est une expérience dont on connaît tous les résultats possibles, mais dont on ne peut pas prévoir le résultat avec certitude.
+- Chaque résultat possible est une *issue* (ou *épreuve*).
+- L’ensemble de toutes les issues est l’*univers*, noté $\Omega$. Le programme dit aussi *catégorie d’épreuves*.
+- Un *événement* est une partie de $\Omega$. Il est *réalisé* si l’issue obtenue lui appartient.
+:::
+:::
+
+::: {.ess-lien}
+[↗ dans le cours](ch2-modeliser-le-hasard/2-univers-et-evenements.qmd#definition-2-2)
+:::
+
+### Le modèle d’équiprobabilité
+
+::: {#ess-definition-2-3 data-sorte="definition" data-num="2.3" data-page="23" data-phys="26" data-id="6UAA1.probabilite-priori-regle-laplace" data-type="definition" data-tags="" .theo .theo-definition}
+::: {.theo-head}
+**Définition 2.3** — probabilité *a priori* (règle de Laplace)
+:::
+
+::: {.theo-body}
+Si l’on suppose que toutes les issues d’un univers fini $\Omega$ ont la même probabilité (*hypothèse d’équiprobabilité*), la probabilité d’un événement $A$ vaut
+
+$$
+P(A) = \frac{\#A}{\#\Omega} = \frac{\text{nombre d'issues favorables à } A}{\text{nombre d'issues possibles}}.
+$$
+:::
+:::
+
+::: {.ess-lien}
+[↗ dans le cours](ch2-modeliser-le-hasard/3-le-modele-dequiprobabilite.qmd#definition-2-3)
+:::
+
+::: {#ess-definition-2-4 data-sorte="definition" data-num="2.4" data-page="24" data-phys="27" data-id="6UAA1.probabilite-univers-fini" data-type="definition" data-tags="" .theo .theo-definition}
+::: {.theo-head}
+**Définition 2.4** — probabilité sur un univers fini
+:::
+
+::: {.theo-body}
+Soit $\Omega = \{\omega_{1}, \omega_{2}, …, \omega_{n}\}$ un univers fini. Définir une probabilité sur $\Omega$, c’est associer à chaque issue $\omega_{i}$ un nombre $p_{i}$, sa probabilité, de sorte que
+
+$$
+p_{i} \geq 0 \quad \text{et} \quad p_{1} + p_{2} + \cdots + p_{n} = 1.
+$$
+
+La probabilité d’un événement $A$ est alors la somme des probabilités des issues de $A$. Si toutes les issues ont la même probabilité, chaque $p_{i}$ vaut $\frac{1}{n}$ et l’on retrouve la règle de Laplace : $P(A) = \#A \cdot \frac{1}{n} = \frac{\#A}{\#\Omega}$.
+:::
+:::
+
+::: {.ess-lien}
+[↗ dans le cours](ch2-modeliser-le-hasard/3-le-modele-dequiprobabilite.qmd#definition-2-4)
+:::
+
+### Propriétés des probabilités
+
+::: {#ess-propriete-2-1 data-sorte="propriete" data-num="2.1" data-page="26" data-phys="29" data-id="6UAA1.proprietes-probabilites-2" data-type="propriete" data-tags="" .theo .theo-propriete}
+::: {.theo-head}
+**Propriété 2.1** — propriétés des probabilités
+:::
+
+::: {.theo-body}
+Pour tous événements $A$ et $B$ :
+
+- $0 \leq P(A) \leq 1$, $P(\Omega) = 1$, $P(\emptyset) = 0$ ;
+- $P(\overline{A}) = 1 - P(A)$ ;
+- $P(A \cup B) = P(A) + P(B) - P(A \cap B)$ ; si $A$ et $B$ sont disjoints, $P(A \cup B) = P(A) + P(B)$.
+:::
+:::
+
+::: {.ess-lien}
+[↗ dans le cours](ch2-modeliser-le-hasard/4-proprietes-des-probabilites.qmd#propriete-2-1)
+:::
+
+## Chapitre 3 — Probabilité conditionnelle et indépendance
+
+### Probabilité conditionnelle
+
+::: {#ess-definition-3-1 data-sorte="definition" data-num="3.1" data-page="31" data-phys="34" data-id="6UAA1.probabilite-conditionnelle-2" data-type="definition" data-tags="" .theo .theo-definition}
+::: {.theo-head}
+**Définition 3.1** — probabilité conditionnelle
+:::
+
+::: {.theo-body}
+Soit $B$ un événement tel que $P(B) \neq 0$. La *probabilité de $A$ sachant $B$* est
+
+$$
+P(A | B) = \frac{P(A \cap B)}{P(B)}.
+$$
+
+Sous l’hypothèse d’équiprobabilité, $P(A | B) = \frac{\#(A \cap B)}{\#B}$ : on remplace l’univers $\Omega$ par $B$.
+
+::: {.pb-fig .pb-venn data-n="2" data-inclus="0" data-disjoints="0" data-ombre="[&quot;b&quot;, &quot;ab&quot;]" data-activite="0"}
+::: {.pb-univers}
+$\Omega$
+:::
+
+::: {.pb-nom data-i="0"}
+$A$
+:::
+
+::: {.pb-nom data-i="1"}
+$B$
+:::
+:::
+
+Sachant $B$, seules comptent les issues de $B$ (zone hachurée) ; parmi elles, celles de $A$ sont dans $A \cap B$.
+:::
+:::
+
+::: {.ess-lien}
+[↗ dans le cours](ch3-probabilite-conditio/1-probabilite-conditionnelle.qmd#definition-3-1)
+:::
+
+### Arbres de probabilités
+
+::: {#ess-propriete-3-1 data-sorte="propriete" data-num="3.1" data-page="33" data-phys="36" data-id="6UAA1.calculer-arbre" data-type="propriete" data-tags="" .theo .theo-propriete}
+::: {.theo-head}
+**Propriété 3.1** — calculer sur un arbre
+:::
+
+::: {.theo-body}
+::: {.pb-fig .pb-arbre data-feuilles="4"}
+::: {.pb-n data-id="n0" data-parent="" data-niv="0" data-y="1.5"}
+ 
+:::
+
+::: {.pb-n data-id="n1" data-parent="n0" data-niv="1" data-y="0.5"}
+$B$
+:::
+
+::: {.pb-p data-pour="n1"}
+$P(B)$
+:::
+
+::: {.pb-n data-id="n2" data-parent="n1" data-niv="2" data-y="0.0"}
+$A$
+:::
+
+::: {.pb-p data-pour="n2"}
+$P(A | B)$
+:::
+
+::: {.pb-n data-id="n3" data-parent="n1" data-niv="2" data-y="1.0"}
+$\overline{A}$
+:::
+
+::: {.pb-p data-pour="n3"}
+$P(\overline{A} | B)$
+:::
+
+::: {.pb-n data-id="n4" data-parent="n0" data-niv="1" data-y="2.5"}
+$\overline{B}$
+:::
+
+::: {.pb-p data-pour="n4"}
+$P(\overline{B})$
+:::
+
+::: {.pb-n data-id="n5" data-parent="n4" data-niv="2" data-y="2.0"}
+$A$
+:::
+
+::: {.pb-p data-pour="n5"}
+$P(A | \overline{B})$
+:::
+
+::: {.pb-n data-id="n6" data-parent="n4" data-niv="2" data-y="3.0"}
+$\overline{A}$
+:::
+
+::: {.pb-p data-pour="n6"}
+$P(\overline{A} | \overline{B})$
+:::
+:::
+
+- Sur une branche issue d’un nœud $B$, on écrit une probabilité *sachant* $B$. Les branches issues d’un même nœud ont une somme égale à 1.
+- La probabilité d’un chemin est le produit des probabilités de ses branches : $P(A \cap B) = P(B) \cdot P(A | B)$. C’est la définition 3.1, $P(A | B) = \frac{P(A \cap B)}{P(B)}$, réécrite.
+- La probabilité d’un événement est la somme des probabilités des chemins qui y mènent :
+
+$$
+P(A) = P(B) \cdot P(A | B) + P(\overline{B}) \cdot P(A | \overline{B}).
+$$
+:::
+:::
+
+::: {.ess-lien}
+[↗ dans le cours](ch3-probabilite-conditio/2-arbres-de-probabilites.qmd#propriete-3-1)
+:::
+
+### Indépendance
+
+::: {#ess-definition-3-2 data-sorte="definition" data-num="3.2" data-page="36" data-phys="39" data-id="6UAA1.evenements-independants" data-type="definition" data-tags="" .theo .theo-definition}
+::: {.theo-head}
+**Définition 3.2** — événements indépendants
+:::
+
+::: {.theo-body}
+Deux événements $A$ et $B$ sont *indépendants* si $P(A \cap B) = P(A) \cdot P(B)$. Sinon, ils sont *dépendants*.
+:::
+:::
+
+::: {.ess-lien}
+[↗ dans le cours](ch3-probabilite-conditio/4-independance.qmd#definition-3-2)
+:::
+
+::: {#ess-propriete-3-2 data-sorte="propriete" data-num="3.2" data-page="36" data-phys="39" data-id="6UAA1.prop.003" data-type="propriete" data-tags="" .theo .theo-propriete}
+::: {.theo-head}
+**Propriété 3.2**
+:::
+
+::: {.theo-body}
+Si $P(B) \neq 0$ : $A$ et $B$ sont indépendants $\Longleftrightarrow$ $P(A | B) = P(A)$.
+:::
+:::
+
+::: {.ess-lien}
+[↗ dans le cours](ch3-probabilite-conditio/4-independance.qmd#propriete-3-2)
+:::

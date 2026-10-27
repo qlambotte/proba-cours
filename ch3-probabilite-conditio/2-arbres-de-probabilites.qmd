@@ -1,0 +1,324 @@
+---
+title: "Arbres de probabilités"
+---
+
+<!-- GÉNÉRÉ par typweb à partir des notes Typst : NE PAS ÉDITER (les modifications seraient écrasées). -->
+
+::: {#activite-3-2 data-sorte="activite" data-num="3.2" data-page="32" data-phys="35" data-id="6UAA1.effectifs-probabilites" data-type="activite" data-tags="" .theo .theo-activite}
+::: {.theo-head}
+**Activité 3.2** — des effectifs aux probabilités
+:::
+
+::: {.theo-body}
+On ne distingue plus que la 1^re^ classe ($C$) et les autres personnes ($\overline{C}$). Voici l’arbre des effectifs.
+
+::: {.pb-fig .pb-arbre data-feuilles="4"}
+::: {.pb-n data-id="n0" data-parent="" data-niv="0" data-y="1.5"}
+2 201 personnes
+:::
+
+::: {.pb-n data-id="n1" data-parent="n0" data-niv="1" data-y="0.5"}
+325 en 1^re^ classe
+:::
+
+::: {.pb-n data-id="n2" data-parent="n1" data-niv="2" data-y="0.0"}
+203 survivants
+:::
+
+::: {.pb-n data-id="n3" data-parent="n1" data-niv="2" data-y="1.0"}
+122 décédés
+:::
+
+::: {.pb-n data-id="n4" data-parent="n0" data-niv="1" data-y="2.5"}
+1 876 autres
+:::
+
+::: {.pb-n data-id="n5" data-parent="n4" data-niv="2" data-y="2.0"}
+508 survivants
+:::
+
+::: {.pb-n data-id="n6" data-parent="n4" data-niv="2" data-y="3.0"}
+1 368 décédés
+:::
+:::
+
+On divise chaque effectif par celui du nœud dont il part : les branches portent des probabilités. Complète l’arbre.
+
+::: {.pb-fig .pb-arbre data-feuilles="4"}
+::: {.pb-n data-id="n0" data-parent="" data-niv="0" data-y="1.5"}
+ 
+:::
+
+::: {.pb-n data-id="n1" data-parent="n0" data-niv="1" data-y="0.5"}
+$C$
+:::
+
+::: {.pb-p data-pour="n1"}
+$\frac{325}{2201}$
+:::
+
+::: {.pb-n data-id="n2" data-parent="n1" data-niv="2" data-y="0.0"}
+$S$
+:::
+
+::: {.pb-p data-pour="n2"}
+[$\frac{203}{325}$]{.rep data-v="203/325"}
+:::
+
+::: {.pb-n data-id="n3" data-parent="n1" data-niv="2" data-y="1.0"}
+$\overline{S}$
+:::
+
+::: {.pb-p data-pour="n3"}
+[$\frac{122}{325}$]{.rep data-v="122/325"}
+:::
+
+::: {.pb-n data-id="n4" data-parent="n0" data-niv="1" data-y="2.5"}
+$\overline{C}$
+:::
+
+::: {.pb-p data-pour="n4"}
+$\frac{1876}{2201}$
+:::
+
+::: {.pb-n data-id="n5" data-parent="n4" data-niv="2" data-y="2.0"}
+$S$
+:::
+
+::: {.pb-p data-pour="n5"}
+[$\frac{508}{1876}$]{.rep data-v="508/1876"}
+:::
+
+::: {.pb-n data-id="n6" data-parent="n4" data-niv="2" data-y="3.0"}
+$\overline{S}$
+:::
+
+::: {.pb-p data-pour="n6"}
+[$\frac{1368}{1876}$]{.rep data-v="1368/1876"}
+:::
+:::
+
+a) Que représente la fraction $\frac{203}{325}$ ?
+
+::: {.rep-bloc}
+$P(S | C)$ : la probabilité de survivre sachant qu’on voyageait en 1^re^ classe.
+:::
+
+b) Calcule $\frac{325}{2201} \cdot \frac{203}{325}$. Que retrouve-t-on ?
+
+::: {.rep-bloc}
+$\frac{203}{2201} = P(C \cap S)$ : le produit le long du chemin donne la probabilité de l’intersection.
+:::
+
+c) Comment obtenir $P(S)$ à partir de l’arbre ?
+
+::: {.rep-bloc}
+En additionnant les chemins qui mènent à $S$ : $\frac{203}{2201} + \frac{508}{2201} = \frac{711}{2201}$.
+:::
+:::
+:::
+
+::: {#propriete-3-1 data-sorte="propriete" data-num="3.1" data-page="33" data-phys="36" data-id="6UAA1.calculer-arbre" data-type="propriete" data-tags="" .theo .theo-propriete}
+::: {.theo-head}
+**Propriété 3.1** — calculer sur un arbre
+:::
+
+::: {.theo-body}
+::: {.pb-fig .pb-arbre data-feuilles="4"}
+::: {.pb-n data-id="n0" data-parent="" data-niv="0" data-y="1.5"}
+ 
+:::
+
+::: {.pb-n data-id="n1" data-parent="n0" data-niv="1" data-y="0.5"}
+$B$
+:::
+
+::: {.pb-p data-pour="n1"}
+$P(B)$
+:::
+
+::: {.pb-n data-id="n2" data-parent="n1" data-niv="2" data-y="0.0"}
+$A$
+:::
+
+::: {.pb-p data-pour="n2"}
+$P(A | B)$
+:::
+
+::: {.pb-n data-id="n3" data-parent="n1" data-niv="2" data-y="1.0"}
+$\overline{A}$
+:::
+
+::: {.pb-p data-pour="n3"}
+$P(\overline{A} | B)$
+:::
+
+::: {.pb-n data-id="n4" data-parent="n0" data-niv="1" data-y="2.5"}
+$\overline{B}$
+:::
+
+::: {.pb-p data-pour="n4"}
+$P(\overline{B})$
+:::
+
+::: {.pb-n data-id="n5" data-parent="n4" data-niv="2" data-y="2.0"}
+$A$
+:::
+
+::: {.pb-p data-pour="n5"}
+$P(A | \overline{B})$
+:::
+
+::: {.pb-n data-id="n6" data-parent="n4" data-niv="2" data-y="3.0"}
+$\overline{A}$
+:::
+
+::: {.pb-p data-pour="n6"}
+$P(\overline{A} | \overline{B})$
+:::
+:::
+
+- Sur une branche issue d’un nœud $B$, on écrit une probabilité *sachant* $B$. Les branches issues d’un même nœud ont une somme égale à 1.
+- La probabilité d’un chemin est le produit des probabilités de ses branches : $P(A \cap B) = P(B) \cdot P(A | B)$. C’est la définition 3.1, $P(A | B) = \frac{P(A \cap B)}{P(B)}$, réécrite.
+- La probabilité d’un événement est la somme des probabilités des chemins qui y mènent :
+
+$$
+P(A) = P(B) \cdot P(A | B) + P(\overline{B}) \cdot P(A | \overline{B}).
+$$
+:::
+:::
+
+::: {#exercice-3-3 data-sorte="exercice" data-num="3.3" data-page="33" data-phys="36" data-id="6UAA1.ex.045" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice 3.3]{.exo-titre} [[A2]{.exo-comp} ★☆☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Une urne contient 3 boules rouges et 2 boules bleues. On tire une boule, on ne la remet pas, puis on en tire une deuxième. Complète l’arbre, puis calcule la probabilité de tirer deux boules rouges et celle que la deuxième boule soit rouge.
+
+::: {.pb-fig .pb-arbre data-feuilles="4"}
+::: {.pb-n data-id="n0" data-parent="" data-niv="0" data-y="1.5"}
+ 
+:::
+
+::: {.pb-n data-id="n1" data-parent="n0" data-niv="1" data-y="0.5"}
+$R_{1}$
+:::
+
+::: {.pb-p data-pour="n1"}
+$\frac{3}{5}$
+:::
+
+::: {.pb-n data-id="n2" data-parent="n1" data-niv="2" data-y="0.0"}
+$R_{2}$
+:::
+
+::: {.pb-p data-pour="n2"}
+[$\frac{2}{4}$]{.rep data-v="2/4"}
+:::
+
+::: {.pb-n data-id="n3" data-parent="n1" data-niv="2" data-y="1.0"}
+$B_{2}$
+:::
+
+::: {.pb-p data-pour="n3"}
+[$\frac{2}{4}$]{.rep data-v="2/4"}
+:::
+
+::: {.pb-n data-id="n4" data-parent="n0" data-niv="1" data-y="2.5"}
+$B_{1}$
+:::
+
+::: {.pb-p data-pour="n4"}
+$\frac{2}{5}$
+:::
+
+::: {.pb-n data-id="n5" data-parent="n4" data-niv="2" data-y="2.0"}
+$R_{2}$
+:::
+
+::: {.pb-p data-pour="n5"}
+[$\frac{3}{4}$]{.rep data-v="3/4"}
+:::
+
+::: {.pb-n data-id="n6" data-parent="n4" data-niv="2" data-y="3.0"}
+$B_{2}$
+:::
+
+::: {.pb-p data-pour="n6"}
+[$\frac{1}{4}$]{.rep data-v="1/4"}
+:::
+:::
+
+::: {.rep-bloc}
+On suppose que chaque boule a la même chance d’être tirée. $P(R_{1} \cap R_{2}) = \frac{3}{5} \cdot \frac{2}{4} = \frac{6}{20} = \frac{3}{10}$. $P(R_{2}) = \frac{3}{5} \cdot \frac{2}{4} + \frac{2}{5} \cdot \frac{3}{4} = \frac{6}{20} + \frac{6}{20} = \frac{12}{20} = \frac{3}{5}$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [propriété « calculer sur un arbre »](#propriete-3-1).
+
+## Indice 2 {.unlisted}
+
+Après avoir tiré une rouge, combien reste-t-il de boules rouges ? de boules en tout ?
+
+## Indice 3 {.unlisted}
+
+Branche $R_{1} \to R_{2}$ : $\frac{2}{4}$.
+
+## Solution {.unlisted}
+
+On suppose que chaque boule a la même chance d’être tirée. Branches du deuxième niveau : après $R_{1}$, $P(R_{2} | R_{1}) = \frac{2}{4}$ et $P(B_{2} | R_{1}) = \frac{2}{4}$ ; après $B_{1}$, $P(R_{2} | B_{1}) = \frac{3}{4}$ et $P(B_{2} | B_{1}) = \frac{1}{4}$. $P(R_{1} \cap R_{2}) = \frac{3}{5} \cdot \frac{2}{4} = \frac{6}{20} = \frac{3}{10}$. $P(R_{2}) = \frac{3}{5} \cdot \frac{2}{4} + \frac{2}{5} \cdot \frac{3}{4} = \frac{6}{20} + \frac{6}{20} = \frac{3}{5}$.
+
+## Pièges {.unlisted}
+
+- Garder $\frac{3}{5}$ au deuxième tirage : la boule n’est pas remise.
+- Additionner au lieu de multiplier le long d’un chemin.
+:::
+:::
+
+::: {#exercice-3-4 data-sorte="exercice" data-num="3.4" data-page="33" data-phys="36" data-id="6UAA1.ex.046" data-type="exercice" data-tags="maison" .exo}
+::: {.exo-tete}
+[✎ Exercice 3.4]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[A3]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Même urne, mais on remet la première boule avant de tirer la deuxième. Construis l’arbre et calcule la probabilité de tirer deux boules de la même couleur.
+
+::: {.rep-bloc}
+Avec remise, les branches du deuxième niveau portent $\frac{3}{5}$ (rouge) et $\frac{2}{5}$ (bleue) quel que soit le premier tirage. $P(\text{même couleur}) = \frac{3}{5} \cdot \frac{3}{5} + \frac{2}{5} \cdot \frac{2}{5} = \frac{9}{25} + \frac{4}{25} = \frac{13}{25}$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [propriété « calculer sur un arbre »](#propriete-3-1).
+
+## Indice 2 {.unlisted}
+
+Quels chemins mènent à « même couleur » ?
+
+## Indice 3 {.unlisted}
+
+Avec remise, chaque tirage donne rouge avec la probabilité $\frac{3}{5}$.
+
+## Solution {.unlisted}
+
+Avec remise, les branches du deuxième niveau portent $\frac{3}{5}$ (rouge) et $\frac{2}{5}$ (bleue), quel que soit le premier tirage. Deux chemins mènent à « même couleur » : $P(\text{même couleur}) = \frac{3}{5} \cdot \frac{3}{5} + \frac{2}{5} \cdot \frac{2}{5} = \frac{9}{25} + \frac{4}{25} = \frac{13}{25}$.
+
+## Pièges {.unlisted}
+
+- Oublier le chemin « bleue puis bleue ».
+:::
+:::
+
+::: {.ae-lien}
+[✔ S'autoévaluer sur cette section : test de 4 questions →](../autoeval.qmd#sections=sec-arbres)
+:::

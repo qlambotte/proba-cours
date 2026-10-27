@@ -1,0 +1,476 @@
+---
+title: "Additionner, multiplier"
+---
+
+<!-- GÉNÉRÉ par typweb à partir des notes Typst : NE PAS ÉDITER (les modifications seraient écrasées). -->
+
+::: {#activite-1-3 data-sorte="activite" data-num="1.3" data-page="5" data-phys="8" data-id="6UAA1.arbre-compter" data-type="activite" data-tags="" .theo .theo-activite}
+::: {.theo-head}
+**Activité 1.3** — un arbre pour compter
+:::
+
+::: {.theo-body}
+On reprend la question d) de l’activité 1.2 : l’ordre de passage des quatre élèves. Voici le début de l’arbre des ordres qui commencent par A.
+
+::: {.pb-fig .pb-arbre data-feuilles="9"}
+::: {.pb-n data-id="n0" data-parent="" data-niv="0" data-y="4.0"}
+ 
+:::
+
+::: {.pb-n data-id="n1" data-parent="n0" data-niv="1" data-y="2.5"}
+A
+:::
+
+::: {.pb-n data-id="n2" data-parent="n1" data-niv="2" data-y="0.5"}
+B
+:::
+
+::: {.pb-n data-id="n3" data-parent="n2" data-niv="3" data-y="0.0"}
+C
+:::
+
+::: {.pb-n data-id="n4" data-parent="n3" data-niv="4" data-y="0.0"}
+D
+:::
+
+::: {.pb-n data-id="n5" data-parent="n2" data-niv="3" data-y="1.0"}
+D
+:::
+
+::: {.pb-n data-id="n6" data-parent="n5" data-niv="4" data-y="1.0"}
+C
+:::
+
+::: {.pb-n data-id="n7" data-parent="n1" data-niv="2" data-y="2.5"}
+C
+:::
+
+::: {.pb-n data-id="n8" data-parent="n7" data-niv="3" data-y="2.0"}
+B
+:::
+
+::: {.pb-n data-id="n9" data-parent="n8" data-niv="4" data-y="2.0"}
+D
+:::
+
+::: {.pb-n data-id="n10" data-parent="n7" data-niv="3" data-y="3.0"}
+D
+:::
+
+::: {.pb-n data-id="n11" data-parent="n10" data-niv="4" data-y="3.0"}
+B
+:::
+
+::: {.pb-n data-id="n12" data-parent="n1" data-niv="2" data-y="4.5"}
+D
+:::
+
+::: {.pb-n data-id="n13" data-parent="n12" data-niv="3" data-y="4.0"}
+B
+:::
+
+::: {.pb-n data-id="n14" data-parent="n13" data-niv="4" data-y="4.0"}
+C
+:::
+
+::: {.pb-n data-id="n15" data-parent="n12" data-niv="3" data-y="5.0"}
+C
+:::
+
+::: {.pb-n data-id="n16" data-parent="n15" data-niv="4" data-y="5.0"}
+B
+:::
+
+::: {.pb-n data-id="n17" data-parent="n0" data-niv="1" data-y="6.0"}
+B   (idem)
+:::
+
+::: {.pb-n data-id="n18" data-parent="n0" data-niv="1" data-y="7.0"}
+C   (idem)
+:::
+
+::: {.pb-n data-id="n19" data-parent="n0" data-niv="1" data-y="8.0"}
+D   (idem)
+:::
+:::
+
+a) Combien de branches partent de la racine ? de chaque nœud du deuxième niveau ? du troisième ?
+
+::: {.rep-bloc}
+4 branches, puis 3 depuis chaque nœud du deuxième niveau, puis 2, puis 1.
+:::
+
+b) Pourquoi le nombre d’ordres est-il un produit ?
+
+::: {.rep-bloc}
+À chaque étape, le nombre de choix est le même pour toutes les branches : 4, puis 3, puis 2, puis 1. L’arbre a donc $4 \cdot 3 \cdot 2 \cdot 1 = 24$ feuilles, et chaque feuille est un ordre différent.
+:::
+:::
+:::
+
+::: {#propriete-1-1 data-sorte="propriete" data-num="1.1" data-page="6" data-phys="9" data-id="6UAA1.principe-multiplicatif" data-type="propriete" data-tags="" .theo .theo-propriete}
+::: {.theo-head}
+**Propriété 1.1** — principe multiplicatif
+:::
+
+::: {.theo-body}
+Si un résultat se construit en $k$ étapes successives, avec
+
+- $n_{1}$ choix possibles à la première étape,
+- $n_{2}$ choix possibles à la deuxième étape, *quel que soit le choix fait à la première*,
+- …, $n_{k}$ choix possibles à la $k$-ième étape, *quels que soient les choix précédents*,
+
+et si deux suites de choix différentes donnent deux résultats différents, alors le nombre de résultats vaut
+
+$$
+n_{1} \cdot n_{2} \cdot \cdots \cdot n_{k}.
+$$
+:::
+:::
+
+::: {#exemple-1-1 data-sorte="exemple" data-num="1.1" data-page="6" data-phys="9" data-id="6UAA1.plaques-belges" data-type="exemple" data-tags="" .theo .theo-exemple}
+::: {.theo-head}
+**Exemple 1.1** — plaques belges
+:::
+
+::: {.theo-body}
+Les plaques d’immatriculation belges de la série 1 (mises en circulation à partir de 2010) ont le format 1-ABC-123 : trois lettres, puis un nombre de 001 à 999. La presse annonçait « plus de 17,5 millions de combinaisons possibles »^[RTBF (21/12/2020). Les nouvelles plaques d’immatriculation débutant par 2 seront sur les routes fin janvier.]. Vérifions.
+
+Une plaque est une suite de trois lettres (l’ordre compte, une lettre peut revenir) suivie d’un nombre de 001 à 999. Chaque étape offre toujours le même nombre de choix : 26, 26, 26, puis 999. Par le principe multiplicatif, il y a $26 \cdot 26 \cdot 26 \cdot 999 = 17 \, 558 \, 424$ plaques : un peu plus de 17,5 millions.
+:::
+:::
+
+::: {#remarque-1-2 data-sorte="remarque" data-num="1.2" data-page="6" data-phys="9" data-id="6UAA1.rem.002" data-type="remarque" data-tags="" .theo .theo-remarque}
+::: {.theo-head}
+**Remarque 1.2**
+:::
+
+::: {.theo-body}
+Les *choix* peuvent changer d’une branche à l’autre ; c’est leur *nombre* qui doit rester le même. Nombres de trois chiffres distincts : 9 choix pour les centaines (pas 0), puis 9 pour les dizaines (0 redevient possible, mais pas le chiffre des centaines), puis 8 pour les unités : $9 \cdot 9 \cdot 8 = 648$.
+
+La dernière condition du principe compte aussi. Pour former un binôme, « 4 choix pour le premier élève, puis 3 pour le second » donne $4 \cdot 3 = 12$ ; mais choisir A puis B et choisir B puis A donnent le même binôme {A, B}. Deux suites de choix différentes donnent ici le même résultat : chaque binôme est compté deux fois, et il y en a $\frac{12}{2} = 6$ (activité 1.2).
+:::
+:::
+
+Quand les résultats se répartissent en plusieurs cas, on compte chaque cas, puis on rassemble. Un diagramme montre si les cas se recouvrent.
+
+::: {#activite-1-4 data-sorte="activite" data-num="1.4" data-page="7" data-phys="10" data-id="6UAA1.compter-reunion" data-type="activite" data-tags="" .theo .theo-activite}
+::: {.theo-head}
+**Activité 1.4** — compter une réunion
+:::
+
+::: {.theo-body}
+Parmi les nombres entiers de 1 à 100, on note $A$ l’ensemble des multiples de 2 et $B$ l’ensemble des multiples de 3.
+
+a) Calcule $\#A$, $\#B$ et le nombre de multiples de 6. Que représentent ces derniers dans le diagramme ?
+
+::: {.rep-bloc}
+$\#A = 50$ ; $\#B = 33$ ($3 \cdot 33 = 99$) ; multiples de 6 : 16 ($6 \cdot 16 = 96$). Ce sont les nombres qui sont à la fois dans $A$ et dans $B$ : l’intersection $A \cap B$.
+:::
+
+b) Complète le diagramme avec le nombre d’éléments de chaque zone.
+
+::: {.pb-fig .pb-venn data-n="2" data-inclus="0" data-disjoints="0" data-ombre="[]" data-activite="1"}
+::: {.pb-univers}
+$1, 2, …, 100$
+:::
+
+::: {.pb-nom data-i="0"}
+$A$
+:::
+
+::: {.pb-nom data-i="1"}
+$B$
+:::
+
+::: {.pb-z data-z="a"}
+[34]{.rep data-v="34"}
+:::
+
+::: {.pb-z data-z="ab"}
+[16]{.rep data-v="16"}
+:::
+
+::: {.pb-z data-z="b"}
+[17]{.rep data-v="17"}
+:::
+
+::: {.pb-z data-z="dehors"}
+[33]{.rep data-v="33"}
+:::
+:::
+
+c) Combien de nombres de 1 à 100 sont multiples de 2 ou de 3 ? Pourquoi $50 + 33$ est-il faux ?
+
+::: {.rep-bloc}
+$34 + 16 + 17 = 67$. Dans $50 + 33 = 83$, les 16 multiples de 6 sont comptés deux fois : une fois dans $A$, une fois dans $B$. Donc $\#(A \cup B) = 50 + 33 - 16 = 67$.
+:::
+:::
+:::
+
+::: {#propriete-1-2 data-sorte="propriete" data-num="1.2" data-page="7" data-phys="10" data-id="6UAA1.principe-additif" data-type="propriete" data-tags="" .theo .theo-propriete}
+::: {.theo-head}
+**Propriété 1.2** — principe additif
+:::
+
+::: {.theo-body}
+Pour deux ensembles finis $A$ et $B$ :
+
+$$
+\#(A \cup B) = \#A + \#B - \#(A \cap B).
+$$
+
+Si $A$ et $B$ n’ont aucun élément commun ($A \cap B = \emptyset$), alors $\#(A \cup B) = \#A + \#B$ : on additionne les cas.
+:::
+:::
+
+::: {#propriete-1-3 data-sorte="propriete" data-num="1.3" data-page="7" data-phys="10" data-id="6UAA1.compter-complementaire" data-type="propriete" data-tags="" .theo .theo-propriete}
+::: {.theo-head}
+**Propriété 1.3** — compter par le complémentaire
+:::
+
+::: {.theo-body}
+Si $A$ est une partie d’un ensemble fini $E$, le nombre d’éléments de $E$ qui ne sont pas dans $A$ vaut $\#E - \#A$.
+
+::: {.pb-fig .pb-venn data-n="1" data-inclus="0" data-disjoints="0" data-ombre="[&quot;dehors&quot;]" data-activite="0"}
+::: {.pb-univers}
+$E$
+:::
+
+::: {.pb-nom data-i="0"}
+$A$
+:::
+:::
+
+C’est utile pour compter les résultats qui contiennent « au moins un » élément d’un certain type : on compte tout, puis on retire ceux qui n’en contiennent « aucun ».
+:::
+:::
+
+::: {#exemple-1-2 data-sorte="exemple" data-num="1.2" data-page="8" data-phys="11" data-id="6UAA1.moins-zero" data-type="exemple" data-tags="" .theo .theo-exemple}
+::: {.theo-head}
+**Exemple 1.2** — au moins un zéro
+:::
+
+::: {.theo-body}
+Combien de codes PIN à 4 chiffres (de 0000 à 9999) contiennent au moins un 0 ?
+
+Un code est une suite de 4 chiffres, avec répétition : il y en a $10 \cdot 10 \cdot 10 \cdot 10 = 10 \, 000$. Les codes sans aucun 0 ont 9 choix à chaque position : $9^{4} = 6561$. Il y a donc $10 \, 000 - 6561 = 3439$ codes contenant au moins un 0.
+:::
+:::
+
+::: {#exercice-1-4 data-sorte="exercice" data-num="1.4" data-page="8" data-phys="11" data-id="6UAA1.ex.004" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice 1.4]{.exo-titre} [[A5]{.exo-comp} ★☆☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Pour s’habiller, Mehdi choisit un pull parmi 3 et un pantalon parmi 2. Construis l’arbre des tenues possibles et donne leur nombre.
+
+::: {.rep-bloc}
+L’arbre a 3 branches (les pulls), puis 2 branches depuis chaque pull (les pantalons) : $3 \cdot 2 = 6$ tenues.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis l’[activité 1.3](#activite-1-3) et le [principe multiplicatif](#propriete-1-1).
+
+## Indice 2 {.unlisted}
+
+Combien de branches partent de la racine ? de chaque pull ?
+
+## Indice 3 {.unlisted}
+
+Première étape : 3 branches (les pulls). Chaque pull porte ensuite 2 branches.
+
+## Solution {.unlisted}
+
+Une tenue est un couple (pull, pantalon). L’arbre a 3 branches au premier niveau et 2 branches depuis chaque pull ; le nombre de pantalons ne dépend pas du pull choisi. Par le principe multiplicatif, il y a $3 \cdot 2 = 6$ tenues.
+
+## Pièges {.unlisted}
+
+- Additionner $3 + 2$ : on choisit un pull *et* un pantalon, pas l’un *ou* l’autre.
+:::
+:::
+
+::: {#exercice-1-5 data-sorte="exercice" data-num="1.5" data-page="8" data-phys="11" data-id="6UAA1.ex.005" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice 1.5]{.exo-titre} [[A5]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Parmi les nombres entiers de 1 à 60, combien sont multiples de 4 ou de 6 ? Représente la situation par un diagramme de Venn complété.
+
+::: {.pb-fig .pb-venn data-n="2" data-inclus="0" data-disjoints="0" data-ombre="[]" data-activite="1"}
+::: {.pb-univers}
+$1, 2, …, 60$
+:::
+
+::: {.pb-nom data-i="0"}
+$Q$
+:::
+
+::: {.pb-nom data-i="1"}
+$S$
+:::
+
+::: {.pb-z data-z="a"}
+[10]{.rep data-v="10"}
+:::
+
+::: {.pb-z data-z="ab"}
+[5]{.rep data-v="5"}
+:::
+
+::: {.pb-z data-z="b"}
+[5]{.rep data-v="5"}
+:::
+
+::: {.pb-z data-z="dehors"}
+[40]{.rep data-v="40"}
+:::
+:::
+
+::: {.rep-bloc}
+Multiples de 4 : $\#Q = 15$. Multiples de 6 : $\#S = 10$. Multiples des deux, c’est-à-dire de 12 : 5. Donc $\#(Q \cup S) = 15 + 10 - 5 = 20$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis l’[activité 1.4](#activite-1-4) et le [principe additif](#propriete-1-2).
+
+## Indice 2 {.unlisted}
+
+Quels nombres sont à la fois multiples de 4 et de 6 ?
+
+## Indice 3 {.unlisted}
+
+Les multiples communs de 4 et de 6 sont les multiples de 12 : 12, 24, 36, 48, 60.
+
+## Solution {.unlisted}
+
+$Q$ : multiples de 4 ; $\#Q = 15$ ($4 \cdot 15 = 60$). $S$ : multiples de 6 ; $\#S = 10$. Les multiples de 4 et de 6 sont les multiples de 12 : $\#(Q \cap S) = 5$. Par le principe additif, $\#(Q \cup S) = 15 + 10 - 5 = 20$. Dans le diagramme : $Q$ seulement 10, $Q \cap S$ 5, $S$ seulement 5, hors des deux 40.
+
+## Pièges {.unlisted}
+
+- Répondre $15 + 10 = 25$ : les multiples de 12 sont comptés deux fois.
+- Prendre les multiples de 24 ($4 \cdot 6$) comme multiples communs : 12 est déjà multiple de 4 et de 6.
+:::
+:::
+
+::: {#exercice-1-6 data-sorte="exercice" data-num="1.6" data-page="9" data-phys="12" data-id="6UAA1.ex.006" data-type="exercice" data-tags="maison" .exo}
+::: {.exo-tete}
+[✎ Exercice 1.6]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[A5]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Un cadenas a trois roues portant chacune les chiffres de 0 à 9. Combien de codes possèdent au moins un 7 ?
+
+::: {.rep-bloc}
+Codes : $10^{3} = 1000$. Codes sans 7 : $9^{3} = 729$. Codes avec au moins un 7 : $1000 - 729 = 271$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [propriété « compter par le complémentaire »](#propriete-1-3) et l’[exemple 1.2](#exemple-1-2).
+
+## Indice 2 {.unlisted}
+
+Est-il plus simple de compter les codes avec au moins un 7, ou ceux sans aucun 7 ?
+
+## Indice 3 {.unlisted}
+
+Codes sans aucun 7 : chaque roue a 9 chiffres possibles.
+
+## Solution {.unlisted}
+
+Un code est une suite de 3 chiffres, avec répétition : $10^{3} = 1000$ codes. Codes sans aucun 7 : $9^{3} = 729$. Par le complémentaire, $1000 - 729 = 271$ codes contiennent au moins un 7.
+
+## Pièges {.unlisted}
+
+- Calculer $3 \cdot 10 \cdot 10$ en plaçant « un 7 » sur chaque roue : les codes à deux ou trois 7 sont comptés plusieurs fois.
+:::
+:::
+
+::: {#exercice-1-7 data-sorte="exercice" data-num="1.7" data-page="9" data-phys="12" data-id="6UAA1.ex.007" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice 1.7]{.exo-titre} [[T1]{.exo-comp} ★★★]{.exo-meta}
+:::
+
+::: {.exo-corps}
+*Défi.* Combien existe-t-il de nombres pairs de trois chiffres distincts ? Indication : distingue deux cas selon le chiffre des unités et représente-les dans un diagramme.
+
+::: {.pb-fig .pb-venn data-n="2" data-inclus="0" data-disjoints="1" data-ombre="[]" data-activite="1"}
+::: {.pb-univers}
+nombres pairs à chiffres distincts
+:::
+
+::: {.pb-nom data-i="0"}
+$Z$
+:::
+
+::: {.pb-nom data-i="1"}
+$Q$
+:::
+
+::: {.pb-z data-z="a"}
+[72]{.rep data-v="72"}
+:::
+
+::: {.pb-z data-z="b"}
+[256]{.rep data-v="256"}
+:::
+:::
+
+($Z$ : chiffre des unités 0 ; $Q$ : chiffre des unités 2, 4, 6 ou 8.)
+
+::: {.rep-bloc}
+On commence par les unités, qui imposent la parité. Unités 0 : 9 choix pour les centaines, 8 pour les dizaines : $9 \cdot 8 = 72$. Unités 2, 4, 6 ou 8 (4 choix) : 8 choix pour les centaines (ni 0, ni le chiffre des unités), puis 8 pour les dizaines : $4 \cdot 8 \cdot 8 = 256$. Les deux cas n’ont aucun nombre commun : $72 + 256 = 328$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [remarque 1.2](#remarque-1-2) (nombres à chiffres distincts) et le [principe additif](#propriete-1-2).
+
+## Indice 2 {.unlisted}
+
+Par quel chiffre vaut-il mieux commencer : les centaines ou les unités ?
+
+## Indice 3 {.unlisted}
+
+Si les unités valent 0, il reste 9 choix pour les centaines et 8 pour les dizaines.
+
+## Solution {.unlisted}
+
+On commence par les unités, qui imposent la parité, et on distingue deux cas sans nombre commun.
+
+- Unités 0 : 9 choix pour les centaines (1 à 9), puis 8 pour les dizaines : $9 \cdot 8 = 72$.
+- Unités 2, 4, 6 ou 8 (4 choix) : 8 choix pour les centaines (ni 0, ni le chiffre des unités), puis 8 pour les dizaines : $4 \cdot 8 \cdot 8 = 256$.
+
+Il y a $72 + 256 = 328$ nombres pairs de trois chiffres distincts.
+
+## Pièges {.unlisted}
+
+- Calculer $9 \cdot 9 \cdot 5$ : le nombre de choix pour les unités dépend alors des chiffres déjà utilisés (0, pair ou non).
+- Oublier que 0 est interdit aux centaines, mais permis aux unités.
+:::
+:::
+
+::: {.ae-lien}
+[✔ S'autoévaluer sur cette section : test de 4 questions →](../autoeval.qmd#sections=sec-multiplicatif)
+:::

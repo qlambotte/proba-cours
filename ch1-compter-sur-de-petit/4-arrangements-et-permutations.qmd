@@ -1,0 +1,333 @@
+---
+title: "Arrangements et permutations"
+---
+
+<!-- GÉNÉRÉ par typweb à partir des notes Typst : NE PAS ÉDITER (les modifications seraient écrasées). -->
+
+::: {#activite-1-5 data-sorte="activite" data-num="1.5" data-page="9" data-phys="12" data-id="6UAA1.elire-bureau" data-type="activite" data-tags="" .theo .theo-activite}
+::: {.theo-head}
+**Activité 1.5** — élire un bureau
+:::
+
+::: {.theo-body}
+Le conseil des élèves élit un président, un vice-président et un secrétaire parmi 18 candidats.
+
+a) Décris un résultat. L’ordre compte-t-il ? Un élève peut-il revenir ?
+
+::: {.rep-bloc}
+Un bureau est une suite de 3 élèves : (président, vice-président, secrétaire). L’ordre compte, car les fonctions sont différentes. Un élève ne peut pas cumuler deux fonctions.
+:::
+
+b) Combien de bureaux différents sont possibles ?
+
+::: {.rep-bloc}
+$18 \cdot 17 \cdot 16 = 4896$ bureaux.
+:::
+
+c) Et si un même élève pouvait cumuler les fonctions ?
+
+::: {.rep-bloc}
+$18 \cdot 18 \cdot 18 = 18^{3} = 5832$ bureaux.
+:::
+:::
+:::
+
+::: {#definition-1-1 data-sorte="definition" data-num="1.1" data-page="9" data-phys="12" data-id="6UAA1.arrangements" data-type="definition" data-tags="" .theo .theo-definition}
+::: {.theo-head}
+**Définition 1.1** — arrangements
+:::
+
+::: {.theo-body}
+Un *arrangement de $p$ éléments pris parmi $n$* est une suite de $p$ éléments choisis parmi $n$ éléments donnés (l’ordre compte).
+
+- **Avec répétition** (un élément peut revenir) : il y en a $n^{p}$.
+- **Sans répétition** (éléments distincts, $p \leq n$) : il y en a
+
+$$
+A_{n}^{p} = \underbrace{n (n-1) (n-2) \cdots (n-p+1)}_{p \text{facteurs}}.
+$$
+
+Au premier choix, aucun élément n’est pris : $n$ choix. Au $k$-ième choix, $k - 1$ éléments sont déjà pris : il reste $n - k + 1$ choix. Le dernier facteur (au $p$-ième choix) est donc $n - p + 1$ : pour le bureau, $18 \cdot 17 \cdot 16$ et $16 = 18 - 3 + 1$.
+:::
+:::
+
+::: {#definition-1-2 data-sorte="definition" data-num="1.2" data-page="10" data-phys="13" data-id="6UAA1.factorielle" data-type="definition" data-tags="" .theo .theo-definition}
+::: {.theo-head}
+**Définition 1.2** — factorielle
+:::
+
+::: {.theo-body}
+Pour tout naturel $n \geq 1$, $n! = n (n-1) \cdots 2 \cdot 1$ (lire « factorielle $n$ »). On pose $0! = 1$.
+:::
+:::
+
+::: {#propriete-1-4 data-sorte="propriete" data-num="1.4" data-page="10" data-phys="13" data-id="6UAA1.prop.001" data-type="propriete" data-tags="" .theo .theo-propriete}
+::: {.theo-head}
+**Propriété 1.4**
+:::
+
+::: {.theo-body}
+Pour $0 \leq p \leq n$ :
+
+$$
+A_{n}^{p} = \frac{n!}{(n-p)!}.
+$$
+:::
+:::
+
+::: {#preuve-1-1 data-sorte="preuve" data-num="1.1" .theo .theo-preuve}
+::: {.theo-head}
+**Démonstration 1.1**
+:::
+
+::: {.theo-body}
+On range les $n$ éléments en ligne : $n!$ rangements. Seules les $p$ premières places comptent (pour le bureau : les 3 premiers d’un classement des 18 candidats). Deux rangements qui ne diffèrent que par l’ordre des $n - p$ derniers donnent le même arrangement : chaque arrangement provient de $(n-p)!$ rangements (pour le bureau, de $15!$ classements). On regroupe, puis on divise : $A_{n}^{p} = \frac{n!}{(n-p)!}$. Par le calcul, les facteurs de $n - p$ à $1$ se simplifient et il reste les $p$ premiers facteurs de $n!$.
+:::
+:::
+
+::: {#definition-1-3 data-sorte="definition" data-num="1.3" data-page="10" data-phys="13" data-id="6UAA1.permutations" data-type="definition" data-tags="" .theo .theo-definition}
+::: {.theo-head}
+**Définition 1.3** — permutations
+:::
+
+::: {.theo-body}
+Une *permutation* de $n$ éléments est une façon de les ranger tous dans un ordre : c’est un arrangement sans répétition de $n$ éléments pris parmi $n$. Il y en a $A_{n}^{n} = n!$.
+:::
+:::
+
+::: {#remarque-1-3 data-sorte="remarque" data-num="1.3" data-page="10" data-phys="13" data-id="6UAA1.rem.003" data-type="remarque" data-tags="" .theo .theo-remarque}
+::: {.theo-head}
+**Remarque 1.3**
+:::
+
+::: {.theo-body}
+Avec $p = n$, la formule donne $A_{n}^{n} = \frac{n!}{0!}$. Pour retrouver $n!$, il faut $0! = 1$ : c’est ce qui justifie cette convention. Elle a aussi un sens : $0!$ compte les façons de ranger zéro objet, et il y en a exactement une (ne rien ranger). À la calculatrice : touches $x!$ et nPr ; on écrit toujours la formule avant le résultat.
+:::
+:::
+
+::: {#exercice-1-8 data-sorte="exercice" data-num="1.8" data-page="10" data-phys="13" data-id="6UAA1.ex.008" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice 1.8]{.exo-titre} [[A5]{.exo-comp} ★☆☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Combien de codes PIN à 4 chiffres existe-t-il ? Combien ont leurs quatre chiffres différents ? Représente les deux ensembles de codes par un diagramme.
+
+::: {.pb-fig .pb-venn data-n="2" data-inclus="1" data-disjoints="0" data-ombre="[]" data-activite="1"}
+::: {.pb-univers}
+codes à 4 chiffres
+:::
+
+::: {.pb-nom data-i="0"}
+$T$
+:::
+
+::: {.pb-nom data-i="1"}
+$D$
+:::
+
+::: {.pb-z data-z="b"}
+[5040]{.rep data-v="5040"}
+:::
+
+::: {.pb-z data-z="a"}
+[4960]{.rep data-v="4960"}
+:::
+:::
+
+($T$ : tous les codes ; $D$ : les codes à quatre chiffres différents.)
+
+::: {.rep-bloc}
+Codes : suites de 4 chiffres avec répétition, $10^{4} = 10 \, 000$. Chiffres différents : sans répétition, $A_{10}^{4} = 10 \cdot 9 \cdot 8 \cdot 7 = 5040$. Les codes à chiffres différents font partie de tous les codes ; les autres sont $10 \, 000 - 5040 = 4960$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [définition des arrangements](#definition-1-1).
+
+## Indice 2 {.unlisted}
+
+Un chiffre peut-il revenir ? Dans chacune des deux questions ?
+
+## Indice 3 {.unlisted}
+
+Codes à chiffres différents : 10 choix, puis 9, puis 8, puis 7.
+
+## Solution {.unlisted}
+
+Un code est une suite de 4 chiffres (l’ordre compte). Avec répétition : $10^{4} = 10 \, 000$ codes. Sans répétition : $A_{10}^{4} = 10 \cdot 9 \cdot 8 \cdot 7 = 5040$ codes. Les codes à chiffres différents font partie de tous les codes ; il reste $10 \, 000 - 5040 = 4960$ codes ayant au moins un chiffre répété.
+
+## Pièges {.unlisted}
+
+- Utiliser $C_{10}^{4}$ : 1234 et 4321 sont deux codes différents.
+- Compter 9 choix pour le premier chiffre : un code PIN peut commencer par 0.
+:::
+:::
+
+::: {#exercice-1-9 data-sorte="exercice" data-num="1.9" data-page="11" data-phys="14" data-id="6UAA1.ex.009" data-type="exercice" data-tags="maison" .exo}
+::: {.exo-tete}
+[✎ Exercice 1.9]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[A5]{.exo-comp} ★☆☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Douze coureurs prennent le départ d’une course. Combien de podiums (premier, deuxième, troisième) sont possibles ? De combien de façons les douze coureurs peuvent-ils franchir la ligne d’arrivée (sans ex æquo) ?
+
+::: {.rep-bloc}
+Un podium est une suite de 3 coureurs distincts : $A_{12}^{3} = 12 \cdot 11 \cdot 10 = 1320$. Un classement complet est une permutation des 12 coureurs : $12! = 479 \, 001 \, 600$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [définition des arrangements](#definition-1-1) et celle des [permutations](#definition-1-3).
+
+## Indice 2 {.unlisted}
+
+Un podium est-il une suite ou un groupe ? Un coureur peut-il y figurer deux fois ?
+
+## Indice 3 {.unlisted}
+
+Premier : 12 choix ; deuxième : 11 ; troisième : 10.
+
+## Solution {.unlisted}
+
+Un podium est une suite de 3 coureurs distincts : $A_{12}^{3} = 12 \cdot 11 \cdot 10 = 1320$ podiums. Un classement complet range les 12 coureurs : c’est une permutation, $12! = 479 \, 001 \, 600$ classements.
+
+## Pièges {.unlisted}
+
+- Utiliser $C_{12}^{3}$ : le podium (A, B, C) diffère du podium (B, A, C).
+:::
+:::
+
+::: {#exercice-1-10 data-sorte="exercice" data-num="1.10" data-page="11" data-phys="14" data-id="6UAA1.ex.010" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice 1.10]{.exo-titre} [[A5]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Calcule sans calculatrice : $\frac{10!}{8!}$ ; $\frac{7!}{5! \cdot 2!}$ ; $\frac{(n+1)!}{n!}$.
+
+::: {.rep-bloc}
+$\frac{10!}{8!} = 10 \cdot 9 = 90$ ; $\frac{7!}{5! \cdot 2!} = \frac{7 \cdot 6}{2} = 21$ ; $\frac{(n+1)!}{n!} = n + 1$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [définition de la factorielle](#definition-1-2).
+
+## Indice 2 {.unlisted}
+
+Quels facteurs sont communs au numérateur et au dénominateur ?
+
+## Indice 3 {.unlisted}
+
+$10! = 10 \cdot 9 \cdot 8!$.
+
+## Solution {.unlisted}
+
+- $\frac{10!}{8!} = \frac{10 \cdot 9 \cdot 8!}{8!} = 90$.
+- $\frac{7!}{5! \cdot 2!} = \frac{7 \cdot 6 \cdot 5!}{5! \cdot 2} = \frac{42}{2} = 21$.
+- $\frac{(n+1)!}{n!} = \frac{(n+1) \cdot n!}{n!} = n + 1$.
+
+## Pièges {.unlisted}
+
+- Simplifier $\frac{10!}{8!}$ en $\frac{10}{8}$ : on simplifie des facteurs, pas les nombres sous le « ! ».
+:::
+:::
+
+::: {#exercice-1-11 data-sorte="exercice" data-num="1.11" data-page="11" data-phys="14" data-id="6UAA1.ex.011" data-type="exercice" data-tags="maison" .exo}
+::: {.exo-tete}
+[✎ Exercice 1.11]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[A5]{.exo-comp} ★☆☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Sans calculatrice, calcule : $6!$ ; $\frac{9!}{7!}$ ; $\frac{8!}{6! \cdot 2!}$ ; $\frac{5!}{0!}$. Simplifie $\frac{n!}{(n-2)!}$.
+
+::: {.rep-bloc}
+$6! = 720$ ; $\frac{9!}{7!} = 9 \cdot 8 = 72$ ; $\frac{8!}{6! \cdot 2!} = \frac{8 \cdot 7}{2} = 28$ ; $\frac{5!}{0!} = \frac{120}{1} = 120$ ; $\frac{n!}{(n-2)!} = n(n-1)$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [définition de la factorielle](#definition-1-2) et la convention $0! = 1$.
+
+## Indice 2 {.unlisted}
+
+Dans un quotient de factorielles, quels facteurs se simplifient ?
+
+## Indice 3 {.unlisted}
+
+$9! = 9 \cdot 8 \cdot 7!$.
+
+## Solution {.unlisted}
+
+$6! = 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 = 720$ ; $\frac{9!}{7!} = \frac{9 \cdot 8 \cdot 7!}{7!} = 72$ ; $\frac{8!}{6! \cdot 2!} = \frac{8 \cdot 7}{2} = 28$ ; $\frac{5!}{0!} = \frac{120}{1} = 120$ ; $\frac{n!}{(n-2)!} = \frac{n(n-1)(n-2)!}{(n-2)!} = n(n-1)$.
+
+## Pièges {.unlisted}
+
+- Simplifier $\frac{9!}{7!}$ en $\frac{9}{7}$ : on ne simplifie pas « les points d’exclamation ».
+- Prendre $0! = 0$ : on convient que $0! = 1$.
+:::
+:::
+
+::: {#exercice-1-12 data-sorte="exercice" data-num="1.12" data-page="11" data-phys="14" data-id="6UAA1.ex.012" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice 1.12]{.exo-titre} [[A5]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Arnaud fête son anniversaire avec 3 copains et 2 copines. Les 6 enfants descendent le toboggan l’un après l’autre. Combien d’ordres de passage sont possibles
+
+a) sans contrainte ? b) si Arnaud passe en premier ?
+
+c) si les deux filles passent en premier ? d) si les deux filles passent l’une juste après l’autre ?
+
+::: {.rep-bloc}
+Un ordre de passage est une permutation des enfants. a) $6! = 720$. b) Arnaud est placé ; on range les 5 autres : $5! = 120$. c) Les deux filles aux deux premières places : $2!$ ; les 4 garçons ensuite : $4!$ ; $2! \cdot 4! = 48$. d) On colle les deux filles en un seul bloc : on range 5 objets ($5!$), puis les filles dans le bloc ($2!$) : $5! \cdot 2! = 240$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [définition des permutations](#definition-1-3) et le [principe multiplicatif](3-additionner-multiplier.qmd#propriete-1-1).
+
+## Indice 2 {.unlisted}
+
+Quelle est la place la plus contrainte ? Par quoi commencer ?
+
+## Indice 3 {.unlisted}
+
+d) Colle les deux filles en un seul « bloc » : combien d’objets faut-il ranger ?
+
+## Solution {.unlisted}
+
+Un ordre de passage est une permutation des 6 enfants. a) $6! = 720$. b) Arnaud occupe la première place ; on range les 5 autres : $5! = 120$. c) Les filles aux places 1 et 2 : $2!$ façons ; les 4 garçons ensuite : $4!$ façons ; $2! \cdot 4! = 48$. d) Le bloc des deux filles et les 4 garçons font 5 objets : $5!$ ; dans le bloc, deux ordres : $5! \cdot 2! = 240$.
+
+## Pièges {.unlisted}
+
+- c) Oublier que les deux filles peuvent échanger leurs places ($2!$).
+- d) Compter $6!$ en oubliant que le bloc ne forme qu’un seul objet à ranger.
+:::
+:::
+
+::: {.ae-lien}
+[✔ S'autoévaluer sur cette section : test de 6 questions →](../autoeval.qmd#sections=sec-arrangements)
+:::

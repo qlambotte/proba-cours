@@ -1,0 +1,193 @@
+---
+title: "Pour aller plus loin"
+---
+
+<!-- GÉNÉRÉ par typweb à partir des notes Typst : NE PAS ÉDITER (les modifications seraient écrasées). -->
+
+Ces activités se font si le temps le permet (voir le plan du cours).
+
+::: {#activite-3-5 data-sorte="activite" data-num="3.5" data-page="38" data-phys="41" data-id="6UAA1.probleme-monty-hall" data-type="activite" data-tags="" .theo .theo-activite}
+::: {.theo-head}
+**Activité 3.5** — le problème de Monty Hall
+:::
+
+::: {.theo-body}
+Dans un jeu télévisé, une voiture est cachée derrière l’une de trois portes, des chèvres derrière les deux autres. Le joueur choisit une porte. Le présentateur, qui sait où est la voiture, ouvre une autre porte, derrière laquelle se trouve une chèvre, puis propose au joueur de changer de porte.
+
+a) Vaut-il mieux garder sa porte ou changer ? Réponds d’abord sans calculer, puis simule un grand nombre de parties.
+
+```{=html}
+<div class="pb-sim" data-cfg="{&quot;experience&quot;: &quot;monty&quot;, &quot;suivre&quot;: &quot;Changer gagne&quot;}"></div>
+```
+
+::: {.rep-bloc}
+La simulation montre qu’en changeant, on gagne environ deux fois sur trois.
+:::
+
+b) Explique ce résultat par un arbre.
+
+::: {.pb-fig .pb-arbre data-feuilles="2"}
+::: {.pb-n data-id="n0" data-parent="" data-niv="0" data-y="0.5"}
+ 
+:::
+
+::: {.pb-n data-id="n1" data-parent="n0" data-niv="1" data-y="0.0"}
+voiture choisie
+:::
+
+::: {.pb-p data-pour="n1"}
+$\frac{1}{3}$
+:::
+
+::: {.pb-n data-id="n2" data-parent="n1" data-niv="2" data-y="0.0"}
+changer : perd
+:::
+
+::: {.pb-p data-pour="n2"}
+$1$
+:::
+
+::: {.pb-n data-id="n3" data-parent="n0" data-niv="1" data-y="1.0"}
+chèvre choisie
+:::
+
+::: {.pb-p data-pour="n3"}
+$\frac{2}{3}$
+:::
+
+::: {.pb-n data-id="n4" data-parent="n3" data-niv="2" data-y="1.0"}
+changer : gagne
+:::
+
+::: {.pb-p data-pour="n4"}
+$1$
+:::
+:::
+
+::: {.rep-bloc}
+Au premier choix, le joueur désigne la voiture avec la probabilité $\frac{1}{3}$ et une chèvre avec la probabilité $\frac{2}{3}$. S’il a choisi une chèvre, le présentateur ouvre l’autre porte à chèvre et changer mène à la voiture. $P(\text{gagner en changeant}) = \frac{2}{3}$ ; $P(\text{gagner en gardant}) = \frac{1}{3}$. La simulation estime ce résultat dans un modèle ; l’arbre le démontre.
+:::
+:::
+:::
+
+::: {#activite-3-6 data-sorte="activite" data-num="3.6" data-page="38" data-phys="41" data-id="6UAA1.jeux-gratter-gain-moyen" data-type="activite" data-tags="" .theo .theo-activite}
+::: {.theo-head}
+**Activité 3.6** — jeux à gratter : gain moyen
+:::
+
+::: {.theo-body}
+Selon une analyse publiée par la RTBF^[RTBF (13/12/2024). Lotto ou jeux à gratter : ce que les probabilités nous disent vraiment (analyse de F. Vrins, UCLouvain).], un billet Subito à 10 € rapporte en moyenne 7,28 € de gains.
+
+a) Que signifie « en moyenne » ? Estime le total des gains pour 1 000 billets achetés.
+
+::: {.rep-bloc}
+Sur un grand nombre de billets, le total des gains divisé par le nombre de billets est proche de 7,28 €. Pour 1 000 billets (10 000 € de mises), les gains totaux sont d’environ $1000 \cdot 7{,}28 = 7280$ €.
+:::
+
+b) Quel est le gain net moyen par billet ? En pourcentage de la mise ?
+
+::: {.rep-bloc}
+$7{,}28 - 10 = -2{,}72$ € par billet, soit $-27{,}2 \%$ de la mise.
+:::
+
+c) D’où vient ce nombre ? Prenons un jeu imaginaire : on mise 1 €, on lance un dé équilibré et l’on reçoit 3 € si l’on obtient 6, rien sinon. Calcule la moyenne des gains, chaque gain étant pondéré par sa probabilité.
+
+::: {.rep-bloc}
+$3 \cdot \frac{1}{6} + 0 \cdot \frac{5}{6} = 0{,}5$ € par partie. Pour le Subito, l’analyse fait le même calcul avec la liste des lots et leurs probabilités.
+:::
+
+d) Un joueur peut-il gagner exactement 7,28 € avec un billet ? Que nous apprend ce nombre sur *son* billet ?
+
+::: {.rep-bloc}
+Non : un billet rapporte 0 € ou l’un des lots prévus, jamais 7,28 €. Ce nombre ne dit presque rien d’un billet isolé, ni même de quelques billets. Il ne décrit que le total des gains sur un très grand nombre de billets, ce qui intéresse surtout l’organisateur du jeu.
+:::
+:::
+:::
+
+::: {#remarque-3-5 data-sorte="remarque" data-num="3.5" data-page="39" data-phys="42" data-id="6UAA1.rem.012" data-type="remarque" data-tags="" .theo .theo-remarque}
+::: {.theo-head}
+**Remarque 3.5**
+:::
+
+::: {.theo-body}
+Le « gain moyen » se calcule comme une moyenne pondérée par les probabilités, mais son interprétation est fragile : ce n’est pas un gain que l’on peut obtenir, et il ne prévoit rien pour un joueur qui achète peu de billets. On y reviendra avec les lois de probabilité.
+:::
+:::
+
+::: {#activite-3-7 data-sorte="activite" data-num="3.7" data-page="39" data-phys="42" data-id="6UAA1.autre-facon-voir-probabilite-approche" data-type="activite" data-tags="" .theo .theo-activite}
+::: {.theo-head}
+**Activité 3.7** — une autre façon de voir la probabilité : l’approche bayésienne
+:::
+
+::: {.theo-body}
+Jusqu’ici, une probabilité a été estimée par la fréquence d’un résultat quand on répète une expérience (approche *fréquentiste*). Cette approche a une limite : beaucoup de questions portent sur un événement *unique*, qu’on ne peut pas répéter. « Cette patiente est-elle malade ? » « L’accusé est-il coupable ? » Une pièce lancée une seule fois donne une fréquence de « pile » égale à 0 ou à 1, quelle que soit la pièce^[Hájek, A. (2023). Interpretations of Probability. *Stanford Encyclopedia of Philosophy* (révision du 16/11/2023), § 3.3 et 3.4.].
+
+L’approche *bayésienne* répond à cette critique : la probabilité y mesure le *degré de confiance* que l’on accorde à un événement, compte tenu de l’information dont on dispose. Quand une nouvelle information arrive, on *met à jour* cette confiance par une probabilité conditionnelle : la confiance devient $P(\text{événement} | \text{information})$.
+
+On reprend la mammographie de l’activité 3.3 (1 % de malades ; test positif chez 90 % des malades et 9 % des non-malades). On suppose qu’un second test, de mêmes caractéristiques, est fait indépendamment du premier chez les personnes positives.
+
+a) Avant tout test, quelle confiance accorder à « cette femme est malade » ?
+
+::: {.rep-bloc}
+$P(M) = 0{,}01$ : c’est la probabilité *a priori*, fondée sur la proportion de malades dans la région.
+:::
+
+b) Après un premier test positif ? (Reprends l’activité 3.3.)
+
+::: {.rep-bloc}
+$P(M | T_{1}) = \frac{9}{9 + 89} \approx 0{,}09$ (sur 1 000 femmes : 9 malades positives, 89 non malades positives) : la confiance passe de 1 % à environ 9 %.
+:::
+
+c) Après un second test positif ? Construis l’arbre des effectifs pour 1 000 000 de femmes.
+
+::: {.rep-bloc}
+10 000 malades, dont 9 000 positives au premier test et $9000 \cdot 0{,}9 = 8100$ au second ; 990 000 non malades, dont 89 100 positives au premier test et $89 \, 100 \cdot 0{,}09 = 8019$ au second. $P(M | T_{1} \cap T_{2}) = \frac{8100}{8100 + 8019} \approx 0{,}50$ : la confiance passe à environ 50 %.
+:::
+
+d) Quelle est la critique adressée à l’approche bayésienne ?
+
+::: {.rep-bloc}
+Il faut choisir une probabilité de départ (*a priori*). Ici, elle vient d’une fréquence (la proportion de malades) ; quand on n’a pas de telles données, deux personnes peuvent partir de probabilités différentes et aboutir à des conclusions différentes. Les deux approches coexistent : les fréquences servent souvent à choisir ou à contrôler les probabilités de départ.
+:::
+
+*Pour aller beaucoup plus loin* (niveau universitaire) : un cours complet de statistique construit sur l’approche bayésienne, avec des exemples programmés^[McElreath, R. (2020). *Statistical Rethinking: A Bayesian Course with Examples in R and Stan* (2^e^ éd.). Chapman and Hall/CRC.].
+:::
+:::
+
+::: {#exercice-3-13 data-sorte="exercice" data-num="3.13" data-page="40" data-phys="43" data-id="6UAA1.ex.055" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice 3.13]{.exo-titre} [[T1]{.exo-comp} ★★★]{.exo-meta}
+:::
+
+::: {.exo-corps}
+À l’EuroMillions, on choisit 5 numéros parmi 50 et 2 « étoiles » parmi 12^[La finance pour tous (23/07/2026). Combien de chances de gagner au Loto ou à l’EuroMillions ?]. Calcule la probabilité de trouver les 5 numéros et les 2 étoiles, et compare-la à celle du gros lot du Lotto.
+
+::: {.rep-bloc}
+On suppose les tirages équiprobables. Grilles : $C_{50}^{5} \cdot C_{12}^{2} = 2 \, 118 \, 760 \cdot 66 = 139 \, 838 \, 160$, donc $P(\text{gros lot EuroMillions}) = \frac{1}{139 \, 838 \, 160}$. Au Lotto, $P(\text{gros lot Lotto}) = \frac{1}{8 \, 145 \, 060}$ : le gros lot de l’EuroMillions est environ 17 fois moins probable.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [définition des combinaisons](../ch1-compter-sur-de-petit/5-combinaisons.qmd#definition-1-4) et l’[exemple 2.6](../ch2-modeliser-le-hasard/5-denombrer-pour-calculer.qmd#exemple-2-6).
+
+## Indice 2 {.unlisted}
+
+Une grille se construit-elle en choisissant les numéros, puis les étoiles ?
+
+## Indice 3 {.unlisted}
+
+Numéros : $C_{50}^{5} = 2 \, 118 \, 760$ ; étoiles : $C_{12}^{2} = 66$.
+
+## Solution {.unlisted}
+
+Une grille est formée d’un groupe de 5 numéros parmi 50 et d’un groupe de 2 étoiles parmi 12 : $C_{50}^{5} \cdot C_{12}^{2} = 2 \, 118 \, 760 \cdot 66 = 139 \, 838 \, 160$ grilles. On suppose les tirages équiprobables : $P(\text{gros lot EuroMillions}) = \frac{1}{139 \, 838 \, 160}$. Au Lotto, $P(\text{gros lot Lotto}) = \frac{1}{8 \, 145 \, 060}$ ; comme $139 \, 838 \, \frac{160}{8} \, 145 \, 060 \approx 17$, le gros lot de l’EuroMillions est environ 17 fois moins probable.
+
+## Pièges {.unlisted}
+
+- Additionner $C_{50}^{5} + C_{12}^{2}$ : on choisit les numéros *et* les étoiles.
+:::
+:::

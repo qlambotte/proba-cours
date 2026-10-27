@@ -1,0 +1,208 @@
+---
+title: "Lire un test de dépistage"
+---
+
+<!-- GÉNÉRÉ par typweb à partir des notes Typst : NE PAS ÉDITER (les modifications seraient écrasées). -->
+
+::: {#activite-3-3 data-sorte="activite" data-num="3.3" data-page="34" data-phys="37" data-id="6UAA1.test-positif" data-type="activite" data-tags="" .theo .theo-activite}
+::: {.theo-head}
+**Activité 3.3** — un test positif
+:::
+
+::: {.theo-body}
+Ce problème a été posé à 160 gynécologues lors d’une formation^[Gigerenzer, G. et al. (2007). Helping doctors and patients make sense of health statistics. *Psychological Science in the Public Interest*, 8(2), 53-96.] :
+
+*On pratique un dépistage du cancer du sein par mammographie dans une région. Pour les femmes de cette région, on sait que la probabilité d’avoir un cancer du sein est de 1 %. Si une femme a un cancer, la probabilité que sa mammographie soit positive est de 90 %. Si elle n’en a pas, la probabilité que sa mammographie soit quand même positive est de 9 %. Une femme a une mammographie positive. Quelle est la meilleure réponse ?*
+
+- *A. La probabilité qu’elle ait un cancer est d’environ 81 %.*
+- *B. Sur 10 femmes dont la mammographie est positive, environ 9 ont un cancer.*
+- *C. Sur 10 femmes dont la mammographie est positive, environ 1 a un cancer.*
+- *D. La probabilité qu’elle ait un cancer est d’environ 1 %.*
+
+a) Choisis une réponse sans calculer.
+
+::: {.rep-bloc}
+Réponse de chacun.
+:::
+
+b) Complète l’arbre des effectifs pour 1 000 femmes.
+
+::: {.pb-fig .pb-arbre data-feuilles="4"}
+::: {.pb-n data-id="n0" data-parent="" data-niv="0" data-y="1.5"}
+1 000 femmes
+:::
+
+::: {.pb-n data-id="n1" data-parent="n0" data-niv="1" data-y="0.5"}
+[10]{.rep data-v="10"} malades
+:::
+
+::: {.pb-n data-id="n2" data-parent="n1" data-niv="2" data-y="0.0"}
+[9]{.rep data-v="9"} positives
+:::
+
+::: {.pb-n data-id="n3" data-parent="n1" data-niv="2" data-y="1.0"}
+[1]{.rep data-v="1"} négative
+:::
+
+::: {.pb-n data-id="n4" data-parent="n0" data-niv="1" data-y="2.5"}
+[990]{.rep data-v="990"} non malades
+:::
+
+::: {.pb-n data-id="n5" data-parent="n4" data-niv="2" data-y="2.0"}
+[89]{.rep data-v="89"} positives
+:::
+
+::: {.pb-n data-id="n6" data-parent="n4" data-niv="2" data-y="3.0"}
+[901]{.rep data-v="901"} négatives
+:::
+:::
+
+c) *Parmi* les femmes positives, quelle proportion a un cancer ?
+
+::: {.rep-bloc}
+$9 + 89 = 98$ femmes sont positives, dont 9 ont un cancer : $\frac{9}{98} \approx 0{,}092$, soit environ 9 %. La meilleure réponse est C : sur 10 femmes positives, environ 1 a un cancer. Seuls 21 % des gynécologues l’ont choisie avant la formation.
+:::
+
+d) Pourquoi cette probabilité est-elle si faible ?
+
+::: {.rep-bloc}
+La maladie est rare (1 %) : les femmes positives sans cancer, prises parmi 990 femmes non malades (89), sont bien plus nombreuses que les femmes positives avec un cancer (9).
+:::
+:::
+:::
+
+Pour lire la probabilité « à l’envers », on regroupe les mêmes quatre cases selon le résultat du test : c’est l’*arbre double*.
+
+::: {.pb-fig .pb-double data-aretes="[[&quot;r1&quot;, &quot;h0&quot;], [&quot;r1&quot;, &quot;h1&quot;], [&quot;h0&quot;, &quot;c0&quot;], [&quot;h0&quot;, &quot;c1&quot;], [&quot;h1&quot;, &quot;c2&quot;], [&quot;h1&quot;, &quot;c3&quot;], [&quot;c0&quot;, &quot;b0&quot;], [&quot;c2&quot;, &quot;b0&quot;], [&quot;c1&quot;, &quot;b1&quot;], [&quot;c3&quot;, &quot;b1&quot;], [&quot;b0&quot;, &quot;r2&quot;], [&quot;b1&quot;, &quot;r2&quot;]]"}
+::: {.pb-n data-id="r1" data-rang="0" data-col="1.5"}
+1 000 femmes
+:::
+
+::: {.pb-n data-id="h0" data-rang="1" data-col="0"}
+10 malades
+:::
+
+::: {.pb-n data-id="h1" data-rang="1" data-col="3"}
+990 non malades
+:::
+
+::: {.pb-n data-id="c0" data-rang="2" data-col="0"}
+9 positives
+:::
+
+::: {.pb-n data-id="c1" data-rang="2" data-col="1"}
+1 négative
+:::
+
+::: {.pb-n data-id="c2" data-rang="2" data-col="2"}
+89 positives
+:::
+
+::: {.pb-n data-id="c3" data-rang="2" data-col="3"}
+901 négatives
+:::
+
+::: {.pb-n data-id="b0" data-rang="3" data-col="0"}
+98 positives
+:::
+
+::: {.pb-n data-id="b1" data-rang="3" data-col="3"}
+902 négatives
+:::
+
+::: {.pb-n data-id="r2" data-rang="4" data-col="1.5"}
+1 000 femmes
+:::
+:::
+
+En remontant depuis le nœud « 98 positives », on lit $P(\text{cancer} | \text{positive}) = \frac{9}{98}$ ; en descendant depuis « 10 malades », on lit $P(\text{positive} | \text{cancer}) = \frac{9}{10}$.
+
+::: {#remarque-3-2 data-sorte="remarque" data-num="3.2" data-page="35" data-phys="38" data-id="6UAA1.rem.009" data-type="remarque" data-tags="" .theo .theo-remarque}
+::: {.theo-head}
+**Remarque 3.2**
+:::
+
+::: {.theo-body}
+Même calcul avec des probabilités. $M$ : « avoir un cancer » ; $T$ : « test positif ». $P(M \cap T) = 0{,}01 \cdot 0{,}9 = 0{,}009$ ; $P(T) = 0{,}009 + 0{,}99 \cdot 0{,}09 = 0{,}0981$ ; $P(M | T) = \frac{0{,}009}{0{,}0981} \approx 0{,}092$. Les effectifs rendent ce calcul lisible.
+:::
+:::
+
+::: {#exercice-3-5 data-sorte="exercice" data-num="3.5" data-page="35" data-phys="38" data-id="6UAA1.ex.047" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice 3.5]{.exo-titre} [[A3]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+On reprend le dépistage avec une proportion de 10 % de femmes malades (mêmes pourcentages de tests positifs). Construis l’arbre des effectifs pour 1 000 femmes et calcule $P(M | T)$.
+
+::: {.rep-bloc}
+Sur 1 000 femmes : 100 malades, dont $100 \cdot 0{,}9 = 90$ positives ; 900 non malades, dont $900 \cdot 0{,}09 = 81$ positives. $P(M | T) = \frac{90}{90 + 81} = \frac{90}{171} \approx 0{,}526$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis l’[activité 3.3](#activite-3-3).
+
+## Indice 2 {.unlisted}
+
+Sur 1 000 femmes, combien sont malades ? combien de malades sont positives ?
+
+## Indice 3 {.unlisted}
+
+100 malades, dont 90 positives ; 900 non malades, dont 81 positives.
+
+## Solution {.unlisted}
+
+Sur 1 000 femmes : 100 malades, dont $100 \cdot 0{,}9 = 90$ positives ; 900 non malades, dont $900 \cdot 0{,}09 = 81$ positives. Parmi les $90 + 81 = 171$ femmes positives, 90 sont malades : $P(M | T) = \frac{90}{171} \approx 0{,}526$.
+
+## Pièges {.unlisted}
+
+- Répondre $0{,}9$ : c’est $P(T | M)$, pas $P(M | T)$.
+:::
+:::
+
+::: {#exercice-3-6 data-sorte="exercice" data-num="3.6" data-page="35" data-phys="38" data-id="6UAA1.ex.048" data-type="exercice" data-tags="maison" .exo}
+::: {.exo-tete}
+[✎ Exercice 3.6]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[T2]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Un article affirme : « ce test est fiable à 90 % ». Quelles informations manque-t-il pour savoir ce que signifie un résultat positif ?
+
+::: {.rep-bloc}
+Il manque la proportion de malades dans la population testée et la proportion de tests positifs chez les non-malades. $P(M | T)$ en dépend fortement : environ 9 % pour 1 % de malades, environ 53 % pour 10 % (activité 3.3 et exercice 3.5).
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis l’[activité 3.3](#activite-3-3) et l’[exercice 3.5](#exercice-3-5).
+
+## Indice 2 {.unlisted}
+
+De quels nombres dépend $P(M | T)$ dans l’arbre des effectifs ?
+
+## Indice 3 {.unlisted}
+
+Compare $P(M | T)$ pour une proportion de malades de 1 % et de 10 %.
+
+## Solution {.unlisted}
+
+« Fiable à 90 % » ne dit que la proportion de tests positifs chez les malades. Pour savoir ce que signifie un résultat positif, il faut aussi la proportion de malades dans la population testée et la proportion de tests positifs chez les non-malades. $P(M | T)$ en dépend fortement : environ 9 % pour 1 % de malades, environ 53 % pour 10 %, avec les mêmes pourcentages de tests positifs.
+
+## Pièges {.unlisted}
+
+- Conclure qu’une personne positive est malade à 90 % : c’est confondre $P(T | M)$ et $P(M | T)$.
+:::
+:::
+
+::: {.ae-lien}
+[✔ S'autoévaluer sur cette section : test de 3 questions →](../autoeval.qmd#sections=sec-depistage)
+:::

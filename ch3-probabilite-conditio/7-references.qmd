@@ -1,0 +1,29 @@
+---
+title: "Références"
+---
+
+<!-- GÉNÉRÉ par typweb à partir des notes Typst : NE PAS ÉDITER (les modifications seraient écrasées). -->
+
+Sources des données et des documents cités dans les notes (chaque source est aussi indiquée en note de bas de page, à l’endroit où elle sert).
+
+Dawson, R. J. M. (1995). The "unusual episode" data revisited. *Journal of Statistics Education*, 3(3). Données de l’enquête officielle britannique de 1912 sur le Titanic.
+
+FESeC. Programme de mathématiques D/2014/7362/3/16, UAA « Probabilité ».
+
+Gigerenzer, G., Gaissmaier, W., Kurz-Milcke, E., Schwartz, L. M., & Woloshin, S. (2007). Helping doctors and patients make sense of health statistics. *Psychological Science in the Public Interest*, 8(2), 53-96.
+
+Hájek, A. (2023). Interpretations of Probability. *Stanford Encyclopedia of Philosophy* (révision du 16/11/2023), § 3.3 (probabilité subjective) et § 3.4 (interprétations fréquentistes, problème du cas unique).
+
+McElreath, R. (2020). *Statistical Rethinking: A Bayesian Course with Examples in R and Stan* (2^e^ éd.). Chapman and Hall/CRC. Pour aller beaucoup plus loin sur l’approche bayésienne (niveau universitaire).
+
+La finance pour tous (23/07/2026). Combien de chances de gagner au Loto ou à l’EuroMillions ?
+
+RTBF (21/12/2020). Les nouvelles plaques d’immatriculation débutant par 2 seront sur les routes fin janvier.
+
+RTBF (13/12/2024). Lotto ou jeux à gratter : ce que les probabilités nous disent vraiment (analyse de F. Vrins, UCLouvain).
+
+SEGEC (14/03/2022). OA 6ème (4 périodes) – Probabilités.
+
+Statbel (2022). *Chiffres clés 2022. Aperçu statistique de la Belgique*, p. 9 (naissances en 2021 par sexe).
+
+Statbel. Naissances et fécondité : personnes nées un 29 février, en Belgique et par province, au 1^er^ janvier 2019 (11 431 406 habitants, dont 7 145 nés un 29 février).

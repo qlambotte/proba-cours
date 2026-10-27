@@ -1,0 +1,198 @@
+---
+title: "Choisir une méthode"
+---
+
+<!-- GÉNÉRÉ par typweb à partir des notes Typst : NE PAS ÉDITER (les modifications seraient écrasées). -->
+
+::: {#cadre-situations-de-reference .cadre-info}
+**Situations de référence.** On décrit un résultat, puis on se pose deux questions.
+
+::: {.tableau}
+|   | **L’ordre compte** (suite) | **L’ordre ne compte pas** (groupe) |
+|:---:|:---:|:---:|
+| **Répétition possible** | $n^{p}$ | hors programme |
+| **Sans répétition** | $A_{n}^{p}$ ; si $p = n$ : $n!$ | $C_{n}^{p}$ |
+:::
+
+Permutations avec répétition (objets identiques à ranger, anagrammes) : $\frac{n!}{k_{1} ! \cdots k_{r} !}$. Plusieurs cas sans élément commun : on additionne. « Au moins un » : tout moins « aucun ».
+:::
+
+::: {#remarque-1-5 data-sorte="remarque" data-num="1.5" data-page="16" data-phys="19" data-id="6UAA1.rem.005" data-type="remarque" data-tags="" .theo .theo-remarque}
+::: {.theo-head}
+**Remarque 1.5**
+:::
+
+::: {.theo-body}
+Erreurs fréquentes, à vérifier avant de rendre une réponse :
+
+- *erreur d’ordre* : utiliser $A_{n}^{p}$ pour des groupes, ou $C_{n}^{p}$ pour des suites ;
+- *erreur de répétition* : oublier qu’un élément peut revenir, ou l’autoriser à tort ;
+- *erreur d’objets* : confondre ce que l’on choisit (les élèves ? les places ? les boîtes ?) ;
+- *liste non organisée* : oublis ou doublons ; organiser par premier élément.
+:::
+:::
+
+::: {#exercice-1-21 data-sorte="exercice" data-num="1.21" data-page="16" data-phys="19" data-id="6UAA1.ex.021" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice 1.21]{.exo-titre} [[C1]{.exo-comp} ★☆☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Pour chaque situation, dis si l’ordre compte, si la répétition est possible, et donne la formule qui compte les résultats.
+
+a) Les trois premiers d’une course de 12 coureurs, dans l’ordre. b) Quatre livres à emporter en vacances parmi dix. c) Le code d’un cadenas à trois roues de chiffres (de 0 à 9). d) L’ordre de cinq livres sur une étagère. e) L’ordre de 3 boules rouges et 2 boules blanches (identiques par couleur) alignées.
+
+::: {.rep-bloc}
+a) Ordre, sans répétition : $A_{12}^{3} = 1320$. b) Sans ordre, sans répétition : $C_{10}^{4} = 210$. c) Ordre, répétition : $10^{3} = 1000$. d) Permutation : $5! = 120$. e) Permutation avec répétition : $\frac{5!}{3! \cdot 2!} = 10$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis le [tableau des situations de référence](#cadre-situations-de-reference).
+
+## Indice 2 {.unlisted}
+
+Pour chaque situation, écris deux résultats : sont-ils différents si on les écrit dans l’autre ordre ?
+
+## Indice 3 {.unlisted}
+
+a) Le podium (A, B, C) diffère de (B, A, C) : l’ordre compte.
+
+## Solution {.unlisted}
+
+a) L’ordre compte, sans répétition : $A_{12}^{3} = 1320$. b) L’ordre ne compte pas, sans répétition : $C_{10}^{4} = 210$. c) L’ordre compte, avec répétition : $10^{3} = 1000$. d) On range les 5 livres : permutation, $5! = 120$. e) On range 5 boules dont 3 identiques et 2 identiques : permutation avec répétition, $\frac{5!}{3! \cdot 2!} = 10$.
+
+## Pièges {.unlisted}
+
+- c) Oublier qu’un chiffre peut revenir (code 007).
+- e) Répondre $5! = 120$ : échanger deux boules de même couleur ne change pas l’alignement.
+:::
+:::
+
+::: {#exercice-1-22 data-sorte="exercice" data-num="1.22" data-page="16" data-phys="19" data-id="6UAA1.ex.022" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice 1.22]{.exo-titre} [[C1]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Sans calculer, associe à chaque situation la formule qui convient : $5^{3}$, $A_{5}^{3}$, $C_{5}^{3}$, $C_{6}^{3}$.
+
+a) Ranger 3 lettres différentes dans 5 boîtes, au plus une lettre par boîte. b) Choisir 3 élèves parmi 6 pour former l’équipe « rouge » ; les autres forment l’équipe « bleue ». c) Poster 3 lettres différentes, chacune dans l’une de 5 boîtes aux lettres (une boîte peut en recevoir plusieurs). d) Colorier en noir 3 cases d’une rangée de 5 cases.
+
+::: {.rep-bloc}
+a) $A_{5}^{3} = 60$ : on choisit, dans l’ordre des lettres, une boîte distincte pour chacune. b) $C_{6}^{3} = 20$ : un groupe de 3 élèves. c) $5^{3} = 125$ : chaque lettre a 5 choix, une boîte peut revenir. d) $C_{5}^{3} = 10$ : un groupe de 3 cases.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis le [tableau des situations de référence](#cadre-situations-de-reference) et la [remarque sur les erreurs d’objets](#remarque-1-5).
+
+## Indice 2 {.unlisted}
+
+Dans chaque situation, qu’est-ce qu’on choisit : des boîtes, des élèves, des cases ? Pour chaque lettre ?
+
+## Indice 3 {.unlisted}
+
+a) Pour chaque lettre, on choisit une boîte, et deux lettres n’ont pas la même boîte.
+
+## Solution {.unlisted}
+
+a) $A_{5}^{3} = 60$ : on attribue aux 3 lettres, dans l’ordre, 3 boîtes distinctes. b) $C_{6}^{3} = 20$ : l’équipe rouge est un groupe de 3 élèves. c) $5^{3} = 125$ : chaque lettre a 5 boîtes possibles, une boîte peut revenir. d) $C_{5}^{3} = 10$ : on choisit un groupe de 3 cases.
+
+## Pièges {.unlisted}
+
+- Confondre a) et c) : la différence est la répétition (une boîte peut-elle recevoir deux lettres ?).
+:::
+:::
+
+::: {#exercice-1-23 data-sorte="exercice" data-num="1.23" data-page="17" data-phys="20" data-id="6UAA1.ex.023" data-type="exercice" data-tags="maison" .exo}
+::: {.exo-tete}
+[✎ Exercice 1.23]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[T1]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Six élèves, dont Alice et Bilal, se placent en ligne pour une photo. Combien de placements sont possibles ? Dans combien d’entre eux Alice et Bilal sont-ils côte à côte ?
+
+::: {.rep-bloc}
+Placements : $6! = 720$. Côte à côte : on considère le bloc « Alice et Bilal » comme un seul objet ; on range 5 objets, $5! = 120$ façons, puis on ordonne Alice et Bilal dans le bloc, 2 façons : $120 \cdot 2 = 240$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [définition des permutations](4-arrangements-et-permutations.qmd#definition-1-3) et le [principe multiplicatif](3-additionner-multiplier.qmd#propriete-1-1).
+
+## Indice 2 {.unlisted}
+
+Si Alice et Bilal sont collés, combien d’« objets » faut-il ranger ?
+
+## Indice 3 {.unlisted}
+
+Le bloc « Alice et Bilal » et les 4 autres élèves : 5 objets.
+
+## Solution {.unlisted}
+
+Placements : on range 6 élèves, $6! = 720$. Alice et Bilal côte à côte : on forme un bloc avec eux deux ; on range 5 objets (le bloc et les 4 autres élèves), $5! = 120$ façons ; dans le bloc, Alice et Bilal s’ordonnent de 2 façons. Il y a $120 \cdot 2 = 240$ placements.
+
+## Pièges {.unlisted}
+
+- Oublier le facteur 2 : « Alice puis Bilal » et « Bilal puis Alice » sont deux placements.
+:::
+:::
+
+::: {#exercice-1-24 data-sorte="exercice" data-num="1.24" data-page="17" data-phys="20" data-id="6UAA1.ex.024" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice 1.24]{.exo-titre} [[C1]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+*Trouve l’erreur.* Chaque réponse ci-dessous est fausse. Explique l’erreur, puis corrige.
+
+a) « Pour choisir 3 délégués ayant le même rôle parmi 10 élèves, il y a $A_{10}^{3} = 720$ choix. »
+
+b) « Il y a $10^{4} = 10 \, 000$ codes de 4 chiffres tous différents. »
+
+::: {.rep-bloc}
+a) Erreur d’ordre : les délégués ont le même rôle, un choix est un groupe. $A_{10}^{3}$ compte chaque groupe $3! = 6$ fois : il y a $C_{10}^{3} = \frac{720}{6} = 120$ choix. b) Erreur de répétition : $10^{4}$ autorise les chiffres répétés. Chiffres tous différents : $A_{10}^{4} = 10 \cdot 9 \cdot 8 \cdot 7 = 5040$ codes.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis le cadre « Situations de référence » et la [remarque sur les erreurs fréquentes](#remarque-1-5).
+
+## Indice 2 {.unlisted}
+
+Pour chaque phrase : un résultat est-il une suite ou un groupe ? Un élément peut-il revenir ?
+
+## Indice 3 {.unlisted}
+
+a) Échanger deux délégués de même rôle donne-t-il un autre choix ?
+
+## Solution {.unlisted}
+
+a) Erreur d’ordre : les délégués ont le même rôle, un choix est un groupe de 3 élèves. $A_{10}^{3}$ compte chaque groupe $3! = 6$ fois : $C_{10}^{3} = \frac{720}{6} = 120$ choix. b) Erreur de répétition : $10^{4}$ compte aussi les codes avec un chiffre répété. Chiffres tous différents : $A_{10}^{4} = 10 \cdot 9 \cdot 8 \cdot 7 = 5040$ codes.
+
+## Pièges {.unlisted}
+
+- Se contenter de dire « c’est faux » : il faut nommer l’erreur (ordre, répétition) et corriger.
+:::
+:::
+
+::: {.ae-lien}
+[✔ S'autoévaluer sur cette section : test de 3 questions →](../autoeval.qmd#sections=sec-choisir)
+:::

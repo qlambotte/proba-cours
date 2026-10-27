@@ -1,0 +1,198 @@
+---
+title: "Fréquences et probabilité"
+---
+
+<!-- GÉNÉRÉ par typweb à partir des notes Typst : NE PAS ÉDITER (les modifications seraient écrasées). -->
+
+::: {#activite-2-1 data-sorte="activite" data-num="2.1" data-page="18" data-phys="21" data-id="6UAA1.somme-deux" data-type="activite" data-tags="" .theo .theo-activite}
+::: {.theo-head}
+**Activité 2.1** — la somme de deux dés
+:::
+
+::: {.theo-body}
+On lance deux dés équilibrés et on additionne les deux nombres obtenus : la somme vaut 2, 3, …, 12.
+
+a) Avant de lancer : les onze sommes ont-elles la même chance ? Laquelle obtiendra-t-on le plus souvent ? Note ta prévision et justifie-la.
+
+::: {.rep-bloc}
+Réponse personnelle. Beaucoup d’élèves pensent que les onze sommes ont la même chance (« une chance sur 11 »). On ne sait pas encore le vérifier par un calcul : on va observer.
+:::
+
+b) Chaque binôme lance 30 fois les deux dés et note chaque fois la somme. On rassemble les résultats de la classe : effectifs, puis fréquences relatives (effectif divisé par le nombre total de lancers). Construis le diagramme en bâtonnets des fréquences.
+
+```{=html}
+<div class="pb-releve" data-cfg="{&quot;issues&quot;: [&quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;10&quot;, &quot;11&quot;, &quot;12&quot;], &quot;variable&quot;: &quot;somme&quot;, &quot;unite&quot;: &quot;lancers&quot;, &quot;modele&quot;: [0.027777777777777776, 0.05555555555555555, 0.08333333333333333, 0.1111111111111111, 0.1388888888888889, 0.16666666666666666, 0.1388888888888889, 0.1111111111111111, 0.08333333333333333, 0.05555555555555555, 0.027777777777777776], &quot;suivre&quot;: &quot;7&quot;, &quot;legendeModele&quot;: &quot;probabilités calculées à l’activité 2.3&quot;}"></div>
+```
+
+c) Compare avec ta prévision. Les fréquences d’un seul binôme (30 lancers) donnent-elles la même image que celles de la classe ?
+
+::: {.rep-bloc}
+Sur les lancers de la classe, les sommes ne sont pas également fréquentes : les sommes du milieu (6, 7, 8) sortent bien plus souvent que 2 ou 12. Sur 30 lancers seulement, les fréquences d’un binôme peuvent être très différentes de celles de la classe.
+:::
+
+d) Sur le site, la courbe montre la fréquence de la somme 7 quand on ajoute les binômes l’un après l’autre. Que constates-tu ?
+
+::: {.rep-bloc}
+Les fréquences varient beaucoup au début, puis de moins en moins : elles se stabilisent autour d’une valeur.
+:::
+
+e) On simule le lancer d’un dé au tableur avec la formule `=ALEA.ENTRE.BORNES(1;6)`, recopiée sur 1 000 lignes. Que suppose-t-on en simulant ainsi ?
+
+::: {.rep-bloc}
+On suppose que les six faces ont la même chance (dé équilibré). La simulation reproduit ce modèle ; elle ne le démontre pas.
+:::
+:::
+:::
+
+::: {#definition-2-1 data-sorte="definition" data-num="2.1" data-page="19" data-phys="22" data-id="6UAA1.probabilite-posteriori" data-type="definition" data-tags="" .theo .theo-definition}
+::: {.theo-head}
+**Définition 2.1** — probabilité *a posteriori*
+:::
+
+::: {.theo-body}
+La *probabilité* d’un résultat est un nombre entre 0 et 1 qui mesure ses chances de se produire : c’est un nombre du *modèle*, pas une observation. Quand on répète un grand nombre de fois l’expérience dans les mêmes conditions, la fréquence relative du résultat varie de moins en moins : elle fournit une *estimation* de sa probabilité, appelée probabilité *a posteriori*. Plus le nombre de répétitions est grand, plus l’estimation est en général fiable ; elle n’est jamais certaine.
+:::
+:::
+
+::: {#cadre-la-loi-des-grands-nombres .cadre-info}
+**La loi des grands nombres.** Ce que l’on observe dans l’activité 2.1 porte un nom. Quand on répète une même expérience aléatoire un très grand nombre de fois, dans les mêmes conditions et sans qu’un essai influence les autres, la fréquence d’un résultat se rapproche de sa probabilité : il devient de plus en plus improbable qu’elle en reste éloignée. C’est ce résultat, que l’on démontre en mathématiques (mais pas dans ce cours), qui justifie d’estimer une probabilité par une fréquence. Il ne dit rien d’un petit nombre d’essais : après 10 lancers, la fréquence peut encore être loin de la probabilité.
+:::
+
+::: {#exemple-2-1 data-sorte="exemple" data-num="2.1" data-page="20" data-phys="23" data-id="6UAA1.nes-29-fevrier" data-type="exemple" data-tags="" .theo .theo-exemple}
+::: {.theo-head}
+**Exemple 2.1** — nés un 29 février
+:::
+
+::: {.theo-body}
+Au 1^er^ janvier 2019, la Belgique comptait 11 431 406 habitants, dont 7 145 avaient leur anniversaire le 29 février^[Statbel. Naissances et fécondité : personnes nées un 29 février, au 1^er^ janvier 2019.].
+
+a) Estimons la probabilité qu’un habitant choisi au hasard soit né un 29 février : $\frac{7145}{11431406} \approx 0{,}000625$, soit environ $0{,}0625 \%$.
+
+b) Si les naissances étaient réparties uniformément sur les jours, cette probabilité vaudrait $\frac{1}{1461} \approx 0{,}000684$ : sur 4 ans, il y a $4 \cdot 365 + 1 = 1461$ jours, dont un seul 29 février. Les données donnent un peu moins : le modèle « naissances uniformes » n’est qu’une approximation.
+
+c) La proportion vaut $0{,}068 \%$ en Hainaut et $0{,}053 \%$ dans le Limbourg^[Statbel. Naissances et fécondité : personnes nées un 29 février, par province, au 1^er^ janvier 2019.]. Ces seuls chiffres ne permettent pas d’expliquer l’écart ; ils montrent qu’une probabilité estimée dépend de la population observée.
+:::
+:::
+
+::: {#exercice-2-1 data-sorte="exercice" data-num="2.1" data-page="20" data-phys="23" data-id="6UAA1.ex.025" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice 2.1]{.exo-titre} [[A6]{.exo-comp} ★☆☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Avec les données de la classe (activité 2.1), estime la probabilité d’obtenir une somme de 7 en lançant deux dés. Pourquoi cette estimation est-elle plus fiable que celle d’un seul binôme ?
+
+::: {.rep-bloc}
+On prend la fréquence relative de la somme 7 sur l’ensemble des lancers de la classe. Elle repose sur beaucoup plus de lancers que celle d’un binôme ; or les fréquences se stabilisent quand le nombre de lancers augmente.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [définition de la probabilité a posteriori](#definition-2-1).
+
+## Indice 2 {.unlisted}
+
+Quelle fréquence repose sur le plus grand nombre de lancers ?
+
+## Indice 3 {.unlisted}
+
+Divise le nombre de lancers dont la somme vaut 7 par le nombre total de lancers de la classe.
+
+## Solution {.unlisted}
+
+On estime la probabilité par la fréquence relative de la somme 7 sur l’ensemble des lancers de la classe : effectif de « 7 » divisé par le nombre total de lancers. Cette estimation repose sur beaucoup plus de lancers que celle d’un binôme ; or la fréquence se stabilise quand le nombre de lancers augmente. Elle est donc plus fiable.
+
+## Pièges {.unlisted}
+
+- Répondre $\frac{1}{11}$ : les onze sommes n’ont pas la même chance ; la question porte sur les données.
+- Faire la moyenne des fréquences des binômes sans tenir compte du nombre de lancers de chacun (ici, tous en font 30 : les deux calculs coïncident).
+:::
+:::
+
+::: {#exercice-2-2 data-sorte="exercice" data-num="2.2" data-page="20" data-phys="23" data-id="6UAA1.ex.026" data-type="exercice" data-tags="maison" .exo}
+::: {.exo-tete}
+[✎ Exercice 2.2]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[A6]{.exo-comp} ★☆☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+En Hainaut, $0{,}068 \%$ des habitants sont nés un 29 février^[Statbel, au 1^er^ janvier 2019 (voir l’exemple 2.1).]. Parmi 10 000 Hennuyers choisis au hasard, combien peut-on s’attendre à en trouver ?
+
+::: {.rep-bloc}
+$10 \, 000 \cdot 0{,}00068 = 6{,}8$ : environ 7 personnes.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis l’[exemple 2.1](#exemple-2-1).
+
+## Indice 2 {.unlisted}
+
+Que vaut $0{,}068 \%$ écrit sous forme décimale ?
+
+## Indice 3 {.unlisted}
+
+$0{,}068 \% = 0{,}00068$.
+
+## Solution {.unlisted}
+
+$10 \, 000 \cdot 0{,}00068 = 6{,}8$ : on peut s’attendre à trouver environ 7 personnes nées un 29 février.
+
+## Pièges {.unlisted}
+
+- Calculer $10 \, 000 \cdot 0{,}068 = 680$ : on oublie de diviser le pourcentage par 100.
+:::
+:::
+
+::: {#exercice-2-3 data-sorte="exercice" data-num="2.3" data-page="20" data-phys="23" data-id="6UAA1.ex.027" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice 2.3]{.exo-titre} [[C2]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Avec le simulateur du site, lance une pièce 10 fois, puis 100 fois, puis 1 000 fois, et note chaque fois la fréquence de « pile ». Recommence une deuxième série. Qu’observes-tu ? Quelle probabilité associes-tu à « pile » ?
+
+```{=html}
+<div class="pb-sim" data-cfg="{&quot;experience&quot;: &quot;piece&quot;, &quot;suivre&quot;: &quot;Pile&quot;}"></div>
+```
+
+::: {.rep-bloc}
+Après 10 lancers, les fréquences des deux séries peuvent être très différentes ; après 1 000 lancers, elles sont proches l’une de l’autre et proches de $0{,}5$. On associe à « pile » la probabilité $\frac{1}{2}$, valeur autour de laquelle la fréquence se stabilise.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis l’[activité 2.1](#activite-2-1) et la [définition 2.1](#definition-2-1).
+
+## Indice 2 {.unlisted}
+
+Les fréquences de tes deux séries se ressemblent-elles davantage après 10 ou après 1 000 lancers ?
+
+## Indice 3 {.unlisted}
+
+Note les deux fréquences après 1 000 lancers et compare-les à $0{,}5$.
+
+## Solution {.unlisted}
+
+Après 10 lancers, les fréquences de « pile » des deux séries peuvent être très différentes. Après 1 000 lancers, elles sont proches l’une de l’autre et proches de $0{,}5$. On associe à « pile » la probabilité $\frac{1}{2}$, valeur autour de laquelle la fréquence se stabilise.
+
+## Pièges {.unlisted}
+
+- Penser que la fréquence après 1 000 lancers vaut exactement $0{,}5$ : elle en est seulement proche.
+:::
+:::
+
+::: {.ae-lien}
+[✔ S'autoévaluer sur cette section : test de 4 questions →](../autoeval.qmd#sections=sec-frequences)
+:::

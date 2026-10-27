@@ -1,0 +1,183 @@
+---
+title: "Probabilité conditionnelle"
+---
+
+<!-- GÉNÉRÉ par typweb à partir des notes Typst : NE PAS ÉDITER (les modifications seraient écrasées). -->
+
+::: {#activite-3-1 data-sorte="activite" data-num="3.1" data-page="30" data-phys="33" data-id="6UAA1.titanic" data-type="activite" data-tags="" .theo .theo-activite}
+::: {.theo-head}
+**Activité 3.1** — le Titanic
+:::
+
+::: {.theo-body}
+Le tableau donne le nombre de personnes à bord du Titanic selon la classe et la survie^[Dawson, R. J. M. (1995). The "unusual episode" data revisited. *Journal of Statistics Education*, 3(3). Données de l’enquête officielle britannique de 1912.].
+
+::: {.tableau}
+|   | **Survivants** | **Décédés** | **Total** |
+|:---:|:---:|:---:|:---:|
+| 1^re^ classe | 203 | 122 | 325 |
+| 2^e^ classe | 118 | 167 | 285 |
+| 3^e^ classe | 178 | 528 | 706 |
+| Équipage | 212 | 673 | 885 |
+| **Total** | **711** | **1 490** | **2 201** |
+:::
+
+On choisit au hasard une personne parmi les 2 201. On note $S$ : « elle a survécu » et $C$ : « elle voyageait en 1^re^ classe ».
+
+a) Calcule $P(S)$.
+
+::: {.rep-bloc}
+$P(S) = \frac{711}{2201} \approx 0{,}323$.
+:::
+
+b) *Parmi* les passagers de 1^re^ classe, quelle proportion a survécu ?
+
+::: {.rep-bloc}
+$\frac{203}{325} \approx 0{,}625$.
+:::
+
+c) *Parmi* les survivants, quelle proportion voyageait en 1^re^ classe ?
+
+::: {.rep-bloc}
+$\frac{203}{711} \approx 0{,}286$.
+:::
+
+d) Les réponses b) et c) ont le même numérateur. Qu’est-ce qui change ?
+
+::: {.rep-bloc}
+La population de référence : les 325 passagers de 1^re^ classe en b), les 711 survivants en c).
+:::
+
+e) Écris la réponse b) comme quotient de deux probabilités calculées sur les 2 201 personnes.
+
+::: {.rep-bloc}
+$\frac{203}{325} = \frac{203 / 2201}{325 / 2201} = \frac{P(S \cap C)}{P(C)}$.
+:::
+:::
+:::
+
+::: {#definition-3-1 data-sorte="definition" data-num="3.1" data-page="31" data-phys="34" data-id="6UAA1.probabilite-conditionnelle-2" data-type="definition" data-tags="" .theo .theo-definition}
+::: {.theo-head}
+**Définition 3.1** — probabilité conditionnelle
+:::
+
+::: {.theo-body}
+Soit $B$ un événement tel que $P(B) \neq 0$. La *probabilité de $A$ sachant $B$* est
+
+$$
+P(A | B) = \frac{P(A \cap B)}{P(B)}.
+$$
+
+Sous l’hypothèse d’équiprobabilité, $P(A | B) = \frac{\#(A \cap B)}{\#B}$ : on remplace l’univers $\Omega$ par $B$.
+
+::: {.pb-fig .pb-venn data-n="2" data-inclus="0" data-disjoints="0" data-ombre="[&quot;b&quot;, &quot;ab&quot;]" data-activite="0"}
+::: {.pb-univers}
+$\Omega$
+:::
+
+::: {.pb-nom data-i="0"}
+$A$
+:::
+
+::: {.pb-nom data-i="1"}
+$B$
+:::
+:::
+
+Sachant $B$, seules comptent les issues de $B$ (zone hachurée) ; parmi elles, celles de $A$ sont dans $A \cap B$.
+:::
+:::
+
+::: {#cadre-lire-une-probabilite-conditionnelle .cadre-info}
+**Lire une probabilité conditionnelle.** « *Parmi* les $B$, quelle proportion de $A$ ? » se note $P(A | B)$. On écrit toujours l’événement en mots avant le symbole. Beaucoup de manuels notent aussi $P_{B} (A)$.
+:::
+
+::: {#remarque-3-1 data-sorte="remarque" data-num="3.1" data-page="31" data-phys="34" data-id="6UAA1.rem.008" data-type="remarque" data-tags="" .theo .theo-remarque}
+::: {.theo-head}
+**Remarque 3.1**
+:::
+
+::: {.theo-body}
+En général, $P(A | B) \neq P(B | A)$. Au Titanic, $P(S | C) \approx 0{,}625$ alors que $P(C | S) \approx 0{,}286$.
+:::
+:::
+
+::: {#exercice-3-1 data-sorte="exercice" data-num="3.1" data-page="31" data-phys="34" data-id="6UAA1.ex.043" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice 3.1]{.exo-titre} [[A1]{.exo-comp} ★☆☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Au Titanic, on note $E$ : « faire partie de l’équipage ». Écris en mots, puis calcule $P(S | E)$ et $P(E | S)$.
+
+::: {.rep-bloc}
+$P(S | E)$ : parmi les membres d’équipage, proportion de survivants, $\frac{212}{885} \approx 0{,}240$. $P(E | S)$ : parmi les survivants, proportion de membres d’équipage, $\frac{212}{711} \approx 0{,}298$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis l’[activité 3.1](#activite-3-1) et le [cadre « Lire une probabilité conditionnelle »](#cadre-lire-une-probabilite-conditionnelle).
+
+## Indice 2 {.unlisted}
+
+Pour chaque probabilité : *parmi* qui calcule-t-on la proportion ?
+
+## Indice 3 {.unlisted}
+
+$P(S | E)$ : parmi les 885 membres d’équipage.
+
+## Solution {.unlisted}
+
+$P(S | E)$ est la probabilité qu’une personne ait survécu sachant qu’elle faisait partie de l’équipage : parmi les 885 membres d’équipage, 212 ont survécu, $P(S | E) = \frac{212}{885} \approx 0{,}240$. $P(E | S)$ est la probabilité qu’une personne fasse partie de l’équipage sachant qu’elle a survécu : parmi les 711 survivants, 212 étaient membres d’équipage, $P(E | S) = \frac{212}{711} \approx 0{,}298$.
+
+## Pièges {.unlisted}
+
+- Diviser par 2 201 : c’est $P(S \cap E)$, pas une probabilité conditionnelle.
+:::
+:::
+
+::: {#exercice-3-2 data-sorte="exercice" data-num="3.2" data-page="32" data-phys="35" data-id="6UAA1.ex.044" data-type="exercice" data-tags="maison" .exo}
+::: {.exo-tete}
+[✎ Exercice 3.2]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[A2]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Au Titanic, on note $D$ : « voyager en 2^e^ classe ». Calcule $P(D)$, $P(S | D)$ et $P(D | S)$. Quelle probabilité répond à la question « un survivant choisi au hasard voyageait-il probablement en 2^e^ classe ? » ?
+
+::: {.rep-bloc}
+$P(D) = \frac{285}{2201} \approx 0{,}129$ ; $P(S | D) = \frac{118}{285} \approx 0{,}414$ ; $P(D | S) = \frac{118}{711} \approx 0{,}166$. La question porte sur les survivants : c’est $P(D | S)$ ; un survivant voyageait rarement en 2^e^ classe.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [définition 3.1](#definition-3-1) et la [remarque 3.1](#remarque-3-1).
+
+## Indice 2 {.unlisted}
+
+La question porte-t-elle sur les passagers de 2^e^ classe ou sur les survivants ?
+
+## Indice 3 {.unlisted}
+
+$P(D | S)$ : parmi les 711 survivants.
+
+## Solution {.unlisted}
+
+$P(D) = \frac{285}{2201} \approx 0{,}129$ ; $P(S | D) = \frac{118}{285} \approx 0{,}414$ ; $P(D | S) = \frac{118}{711} \approx 0{,}166$. La question porte sur un survivant : c’est $P(D | S)$. Un survivant choisi au hasard voyageait en 2^e^ classe avec une probabilité d’environ $0{,}166$ : ce n’est pas probable.
+
+## Pièges {.unlisted}
+
+- Répondre avec $P(S | D)$ : on inverse la condition.
+:::
+:::
+
+::: {.ae-lien}
+[✔ S'autoévaluer sur cette section : test de 4 questions →](../autoeval.qmd#sections=sec-conditionnelle)
+:::

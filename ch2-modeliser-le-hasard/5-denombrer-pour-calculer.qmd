@@ -1,0 +1,243 @@
+---
+title: "Dénombrer pour calculer"
+---
+
+<!-- GÉNÉRÉ par typweb à partir des notes Typst : NE PAS ÉDITER (les modifications seraient écrasées). -->
+
+::: {#exemple-2-6 data-sorte="exemple" data-num="2.6" data-page="28" data-phys="31" data-id="6UAA1.lotto-2" data-type="exemple" data-tags="" .theo .theo-exemple}
+::: {.theo-head}
+**Exemple 2.6** — Lotto
+:::
+
+::: {.theo-body}
+Au Lotto, on coche une grille de 6 numéros parmi 45 ; 6 numéros sont tirés. Calculons la probabilité a) de cocher les 6 bons numéros ; b) d’en cocher exactement 3.
+
+Une issue est le groupe des 6 numéros tirés : $\#\Omega = C_{45}^{6} = 8 \, 145 \, 060$ tirages, que l’on suppose équiprobables.
+
+a) Un seul tirage est favorable : $P(\text{6 bons numéros}) = \frac{1}{8 \, 145 \, 060}$.
+
+b) On choisit 3 numéros parmi les 6 cochés et 3 parmi les 39 non cochés : $C_{6}^{3} \cdot C_{39}^{3} = 20 \cdot 9139 = 182 \, 780$ tirages favorables. $P(\text{exactement 3 bons numéros}) = \frac{182 \, 780}{8 \, 145 \, 060} \approx 0{,}0224$, environ une chance sur 45.
+:::
+:::
+
+**nombre de bons numéros d’une grille**
+
+```{=html}
+<div class="pb-sim" data-cfg="{&quot;experience&quot;: &quot;lotto&quot;, &quot;suivre&quot;: &quot;3&quot;}"></div>
+```
+
+::: {#exemple-2-7 data-sorte="exemple" data-num="2.7" data-page="28" data-phys="31" data-id="6UAA1.anniversaires" data-type="exemple" data-tags="" .theo .theo-exemple}
+::: {.theo-head}
+**Exemple 2.7** — anniversaires
+:::
+
+::: {.theo-body}
+Dans une classe de 25 élèves, quelle est la probabilité qu’au moins deux élèves aient le même anniversaire ? On suppose les 365 jours équiprobables et on ignore le 29 février.
+
+Une issue est la suite des 25 anniversaires : $\#\Omega = 365^{25}$. Contraire « tous différents » : $A_{365}^{25}$ suites. $P(\text{au moins deux anniversaires communs}) = 1 - \frac{A_{365}^{25}}{365^{25}} \approx 0{,}569$. C’est plus d’une chance sur deux.
+:::
+:::
+
+**classe de 25 élèves**
+
+```{=html}
+<div class="pb-sim" data-cfg="{&quot;experience&quot;: &quot;anniversaires&quot;, &quot;groupe&quot;: 25, &quot;suivre&quot;: &quot;au moins deux communs&quot;}"></div>
+```
+
+::: {#exercice-2-14 data-sorte="exercice" data-num="2.14" data-page="28" data-phys="31" data-id="6UAA1.ex.038" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice 2.14]{.exo-titre} [[A3]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Au Lotto (6 numéros tirés parmi 45), quelle est la probabilité que le numéro 7 soit tiré ?
+
+::: {.rep-bloc}
+On suppose les $C_{45}^{6}$ tirages équiprobables. Tirages contenant le 7 : on choisit les 5 autres numéros parmi 44, $C_{44}^{5}$. $P(\text{le 7 est tiré}) = \frac{C_{44}^{5}}{C_{45}^{6}} = \frac{6}{45} = \frac{2}{15}$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis l’[exemple 2.6](#exemple-2-6).
+
+## Indice 2 {.unlisted}
+
+Parmi les tirages, lesquels contiennent le 7 ? Que reste-t-il à choisir ?
+
+## Indice 3 {.unlisted}
+
+Tirages contenant le 7 : $C_{44}^{5}$.
+
+## Solution {.unlisted}
+
+Une issue est le groupe des 6 numéros tirés ; on suppose les $C_{45}^{6}$ tirages équiprobables. Les tirages contenant le 7 s’obtiennent en choisissant les 5 autres numéros parmi 44 : $C_{44}^{5}$. Donc $P(\text{le 7 est tiré}) = \frac{C_{44}^{5}}{C_{45}^{6}} = \frac{\frac{44!}{5! \cdot 39!}}{\frac{45!}{6! \cdot 39!}} = \frac{6}{45} = \frac{2}{15}$.
+
+## Pièges {.unlisted}
+
+- Répondre $\frac{1}{45}$ : six numéros sont tirés, pas un seul.
+:::
+:::
+
+::: {#exercice-2-15 data-sorte="exercice" data-num="2.15" data-page="28" data-phys="31" data-id="6UAA1.ex.039" data-type="exercice" data-tags="maison" .exo}
+::: {.exo-tete}
+[✎ Exercice 2.15]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[T1]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Reprends le problème des anniversaires pour une classe de 20 élèves.
+
+::: {.rep-bloc}
+On suppose les 365 jours équiprobables. $P(\text{au moins deux anniversaires communs}) = 1 - \frac{A_{365}^{20}}{365^{20}} \approx 0{,}411$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis l’[exemple 2.7](#exemple-2-7).
+
+## Indice 2 {.unlisted}
+
+Quel est le contraire de « au moins deux ont le même anniversaire » ?
+
+## Indice 3 {.unlisted}
+
+Tous différents : $A_{365}^{20}$ suites sur $365^{20}$.
+
+## Solution {.unlisted}
+
+On suppose les 365 jours équiprobables. Une issue est la suite des 20 anniversaires : $\#\Omega = 365^{20}$. Contraire « tous différents » : $A_{365}^{20}$ suites. $P(\text{au moins deux anniversaires communs}) = 1 - \frac{A_{365}^{20}}{365^{20}} \approx 0{,}411$.
+
+## Pièges {.unlisted}
+
+- Calculer $\frac{20}{365}$ : c’est sans rapport avec la question posée.
+:::
+:::
+
+::: {#exercice-2-16 data-sorte="exercice" data-num="2.16" data-page="29" data-phys="32" data-id="6UAA1.ex.040" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice 2.16]{.exo-titre} [[T1]{.exo-comp} ★★★]{.exo-meta}
+:::
+
+::: {.exo-corps}
+*Défi.* Un comité de 5 personnes est tiré au sort parmi 8 filles et 6 garçons. Quelle est la probabilité qu’il compte exactement 3 filles ?
+
+::: {.rep-bloc}
+Une issue est un groupe de 5 personnes parmi 14 : $C_{14}^{5} = 2002$ groupes, supposés équiprobables. Groupes de 3 filles et 2 garçons : $C_{8}^{3} \cdot C_{6}^{2} = 56 \cdot 15 = 840$ (exercice 1.15). $P(\text{exactement 3 filles}) = \frac{840}{2002} \approx 0{,}420$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis l’[exercice 1.15](../ch1-compter-sur-de-petit/5-combinaisons.qmd#exercice-1-15) et la [règle de Laplace](3-le-modele-dequiprobabilite.qmd#definition-2-3).
+
+## Indice 2 {.unlisted}
+
+Combien de comités possibles en tout ? Combien comptent 3 filles ?
+
+## Indice 3 {.unlisted}
+
+En tout : $C_{14}^{5} = 2002$ comités.
+
+## Solution {.unlisted}
+
+Une issue est un groupe de 5 personnes parmi 14 : $C_{14}^{5} = 2002$ groupes, supposés équiprobables. Groupes de 3 filles et 2 garçons : $C_{8}^{3} \cdot C_{6}^{2} = 56 \cdot 15 = 840$. $P(\text{exactement 3 filles}) = \frac{840}{2002} \approx 0{,}420$.
+
+## Pièges {.unlisted}
+
+- Prendre $\frac{8}{14}$ (proportion de filles) : ce n’est pas la probabilité d’avoir exactement 3 filles.
+:::
+:::
+
+::: {#exercice-2-17 data-sorte="exercice" data-num="2.17" data-page="29" data-phys="32" data-id="6UAA1.ex.041" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice 2.17]{.exo-titre} [[T2]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Jouer 1-2-3-4-5-6 au Lotto, est-ce moins probable que de jouer une autre grille ?
+
+::: {.rep-bloc}
+Non. Si le tirage se fait au hasard, les $C_{45}^{6}$ tirages sont équiprobables : chaque grille a la même probabilité, $\frac{1}{8 \, 145 \, 060}$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis l’[exemple 2.6](#exemple-2-6).
+
+## Indice 2 {.unlisted}
+
+Si le tirage se fait au hasard, une grille a-t-elle plus de chances qu’une autre ?
+
+## Indice 3 {.unlisted}
+
+Chaque tirage est une issue de l’univers, supposée équiprobable.
+
+## Solution {.unlisted}
+
+Non. Si le tirage se fait au hasard, les $C_{45}^{6} = 8 \, 145 \, 060$ tirages sont équiprobables : la grille 1-2-3-4-5-6 a la même probabilité que toute autre, $\frac{1}{8 \, 145 \, 060}$.
+
+## Pièges {.unlisted}
+
+- Confondre « une grille régulière » et « l’ensemble des grilles qui paraissent aléatoires », qui est bien plus grand.
+:::
+:::
+
+::: {#exercice-2-18 data-sorte="exercice" data-num="2.18" data-page="29" data-phys="32" data-id="6UAA1.ex.042" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice 2.18]{.exo-titre} [[C5]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+*Trouve l’erreur.* Chaque réponse ci-dessous est fausse. Explique l’erreur, puis corrige.
+
+a) « On lance deux dés équilibrés. Il y a 11 sommes possibles, donc $P(\text{somme} = 3) = \frac{1}{11}$. »
+
+b) « On tire une carte d’un jeu de 52 cartes. $A$ : « tirer une carte rouge » ; $B$ : « tirer une figure (valet, dame ou roi) ». $P(A \cup B) = P(A) + P(B) = \frac{26}{52} + \frac{12}{52} = \frac{38}{52}$. »
+
+::: {.rep-bloc}
+a) Les 11 sommes ne sont pas équiprobables. On suppose les 36 couples équiprobables ; 3 s’obtient avec (1, 2) et (2, 1) : $P(\text{somme} = 3) = \frac{2}{36} = \frac{1}{18}$. b) $A$ et $B$ ne sont pas disjoints : les 6 figures rouges sont comptées deux fois. $P(A \cup B) = \frac{26}{52} + \frac{12}{52} - \frac{6}{52} = \frac{32}{52} = \frac{8}{13}$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [remarque 2.1](3-le-modele-dequiprobabilite.qmd#remarque-2-1) et les [propriétés des probabilités](4-proprietes-des-probabilites.qmd#propriete-2-1).
+
+## Indice 2 {.unlisted}
+
+a) Les 11 sommes ont-elles la même chance ? b) Une carte peut-elle être rouge et une figure ?
+
+## Indice 3 {.unlisted}
+
+b) Compte les figures rouges : valet, dame et roi de cœur et de carreau.
+
+## Solution {.unlisted}
+
+a) Les 11 sommes ne sont pas équiprobables. On suppose les 36 couples équiprobables ; 3 s’obtient avec (1, 2) et (2, 1) : $P(\text{somme} = 3) = \frac{2}{36} = \frac{1}{18}$. b) $A$ et $B$ ne sont pas disjoints : les 6 figures rouges sont comptées deux fois. $P(A \cup B) = \frac{26}{52} + \frac{12}{52} - \frac{6}{52} = \frac{32}{52} = \frac{8}{13}$.
+
+## Pièges {.unlisted}
+
+- b) Retirer 12 ou 26 au lieu des 6 cartes communes.
+:::
+:::
+
+::: {.ae-lien}
+[✔ S'autoévaluer sur cette section : test de 4 questions →](../autoeval.qmd#sections=sec-denombrer-calculer)
+:::

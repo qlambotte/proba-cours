@@ -1,0 +1,309 @@
+---
+title: "Univers et événements"
+---
+
+<!-- GÉNÉRÉ par typweb à partir des notes Typst : NE PAS ÉDITER (les modifications seraient écrasées). -->
+
+::: {#definition-2-2 data-sorte="definition" data-num="2.2" data-page="21" data-phys="24" data-id="6UAA1.experience-aleatoire-issue-evenement" data-type="definition" data-tags="" .theo .theo-definition}
+::: {.theo-head}
+**Définition 2.2** — expérience aléatoire, issue, événement
+:::
+
+::: {.theo-body}
+- Une *expérience aléatoire* est une expérience dont on connaît tous les résultats possibles, mais dont on ne peut pas prévoir le résultat avec certitude.
+- Chaque résultat possible est une *issue* (ou *épreuve*).
+- L’ensemble de toutes les issues est l’*univers*, noté $\Omega$. Le programme dit aussi *catégorie d’épreuves*.
+- Un *événement* est une partie de $\Omega$. Il est *réalisé* si l’issue obtenue lui appartient.
+:::
+:::
+
+::: {#exemple-2-2 data-sorte="exemple" data-num="2.2" data-page="21" data-phys="24" data-id="6UAA1.exm.001" data-type="exemple" data-tags="" .theo .theo-exemple}
+::: {.theo-head}
+**Exemple 2.2** — un dé
+:::
+
+::: {.theo-body}
+On lance un dé et on note le nombre obtenu : $\Omega = \{1, 2, 3, 4, 5, 6\}$. L’événement $A$ « obtenir un nombre pair » est $A = \{2, 4, 6\}$ ; l’événement $B$ « obtenir au moins 5 » est $B = \{5, 6\}$.
+
+::: {.tableau}
+| **En mots** | **Notation** | **Avec le dé** |
+|:---:|:---:|:---:|
+| événement élémentaire | $\{\omega\}$ | $\{3\}$ |
+| événement certain | $\Omega$ | « obtenir au plus 6 » |
+| événement impossible | $\emptyset$ | « obtenir 7 » |
+| contraire de $A$ (non $A$) | $\overline{A}$ | $\{1, 3, 5\}$ |
+| $A$ et $B$ | $A \cap B$ | $\{6\}$ |
+| $A$ ou $B$ (au moins l’un des deux) | $A \cup B$ | $\{2, 4, 5, 6\}$ |
+| $A$ mais pas $B$ | $A \setminus B$ | $\{2, 4\}$ |
+| $A$ et $B$ disjoints (incompatibles) | $A \cap B = \emptyset$ | $\{1\}$ et $B$ |
+:::
+:::
+:::
+
+::: {#activite-2-2 data-sorte="activite" data-num="2.2" data-page="21" data-phys="24" data-id="6UAA1.representer-evenements" data-type="activite" data-tags="" .theo .theo-activite}
+::: {.theo-head}
+**Activité 2.2** — représenter des événements
+:::
+
+::: {.theo-body}
+Dans chaque diagramme, hachure la zone qui représente l’événement indiqué, puis traduis-le en mots pour le dé de l’exemple 2.2.
+
+::: {.grille style="--n:2"}
+::: {.cellule}
+a) $A \cup B$
+
+::: {.pb-fig .pb-venn data-n="2" data-inclus="0" data-disjoints="0" data-ombre="[&quot;a&quot;, &quot;ab&quot;, &quot;b&quot;]" data-activite="1"}
+::: {.pb-univers}
+$\Omega$
+:::
+
+::: {.pb-nom data-i="0"}
+$A$
+:::
+
+::: {.pb-nom data-i="1"}
+$B$
+:::
+:::
+:::
+
+::: {.cellule}
+b) $A \cap B$
+
+::: {.pb-fig .pb-venn data-n="2" data-inclus="0" data-disjoints="0" data-ombre="[&quot;ab&quot;]" data-activite="1"}
+::: {.pb-univers}
+$\Omega$
+:::
+
+::: {.pb-nom data-i="0"}
+$A$
+:::
+
+::: {.pb-nom data-i="1"}
+$B$
+:::
+:::
+:::
+
+::: {.cellule}
+c) $A \setminus B$
+
+::: {.pb-fig .pb-venn data-n="2" data-inclus="0" data-disjoints="0" data-ombre="[&quot;a&quot;]" data-activite="1"}
+::: {.pb-univers}
+$\Omega$
+:::
+
+::: {.pb-nom data-i="0"}
+$A$
+:::
+
+::: {.pb-nom data-i="1"}
+$B$
+:::
+:::
+:::
+
+::: {.cellule}
+d) $\overline{A}$
+
+::: {.pb-fig .pb-venn data-n="2" data-inclus="0" data-disjoints="0" data-ombre="[&quot;b&quot;, &quot;dehors&quot;]" data-activite="1"}
+::: {.pb-univers}
+$\Omega$
+:::
+
+::: {.pb-nom data-i="0"}
+$A$
+:::
+
+::: {.pb-nom data-i="1"}
+$B$
+:::
+:::
+:::
+:::
+
+::: {.rep-bloc}
+a) « obtenir un nombre pair ou au moins 5 » : $\{2, 4, 5, 6\}$. b) « obtenir un nombre pair et au moins 5 » : $\{6\}$. c) « obtenir un nombre pair, mais pas au moins 5 » : $\{2, 4\}$. d) « obtenir un nombre impair » : $\{1, 3, 5\}$.
+:::
+:::
+:::
+
+::: {#exercice-2-4 data-sorte="exercice" data-num="2.4" data-page="22" data-phys="25" data-id="6UAA1.ex.028" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice 2.4]{.exo-titre} [[C3]{.exo-comp} ★☆☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+On tire une carte d’un jeu de 52 cartes. Donne le nombre d’issues. Cite deux événements disjoints, un événement et son contraire, un événement certain et un événement impossible.
+
+::: {.rep-bloc}
+$\#\Omega = 52$. Par exemple : « tirer un cœur » et « tirer un pique » sont disjoints ; « tirer une carte rouge » a pour contraire « tirer une carte noire » ; « tirer une carte » est certain ; « tirer le 11 de trèfle » est impossible.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [définition 2.2](#definition-2-2) et le tableau de l’[exemple 2.2](#exemple-2-2).
+
+## Indice 2 {.unlisted}
+
+Deux événements disjoints peuvent-ils être réalisés en même temps ?
+
+## Indice 3 {.unlisted}
+
+« Tirer un cœur » et « tirer un pique » : une carte ne peut pas être les deux.
+
+## Solution {.unlisted}
+
+L’univers contient les 52 cartes : $\#\Omega = 52$. Par exemple :
+
+- « tirer un cœur » et « tirer un pique » sont disjoints ;
+- « tirer une carte rouge » a pour contraire « tirer une carte noire » ;
+- « tirer une carte du jeu » est certain ; « tirer le 11 de trèfle » est impossible.
+
+## Pièges {.unlisted}
+
+- Donner « tirer un cœur » et « tirer un roi » comme disjoints : le roi de cœur est dans les deux.
+- Donner « tirer un cœur » comme contraire de « tirer un pique » : un carreau n’est ni l’un ni l’autre.
+:::
+:::
+
+::: {#exercice-2-5 data-sorte="exercice" data-num="2.5" data-page="22" data-phys="25" data-id="6UAA1.ex.029" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice 2.5]{.exo-titre} [[C4]{.exo-comp} ★☆☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+On choisit un élève au hasard dans l’école. $F$ : « l’élève fait du football » ; $M$ : « l’élève fait de la musique ». Écris en mots les événements $F \cap M$, $F \cup M$, $M \setminus F$ et $\overline{F \cup M}$, puis hachure $M \setminus F$.
+
+::: {.pb-fig .pb-venn data-n="2" data-inclus="0" data-disjoints="0" data-ombre="[&quot;b&quot;]" data-activite="1"}
+::: {.pb-univers}
+$\Omega$
+:::
+
+::: {.pb-nom data-i="0"}
+$F$
+:::
+
+::: {.pb-nom data-i="1"}
+$M$
+:::
+:::
+
+::: {.rep-bloc}
+$F \cap M$ : « l’élève fait du football et de la musique ». $F \cup M$ : « l’élève fait du football ou de la musique (au moins l’un des deux) ». $M \setminus F$ : « l’élève fait de la musique, mais pas de football ». $\overline{F \cup M}$ : « l’élève ne fait ni football ni musique ».
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis le tableau de l’[exemple 2.2](#exemple-2-2) et l’[activité 2.2](#activite-2-2).
+
+## Indice 2 {.unlisted}
+
+Que signifie « et » ? « ou » ? « mais pas » ?
+
+## Indice 3 {.unlisted}
+
+$M \setminus F$ : dans $M$, en dehors de $F$.
+
+## Solution {.unlisted}
+
+- $F \cap M$ : « l’élève fait du football et de la musique ».
+- $F \cup M$ : « l’élève fait du football ou de la musique (au moins l’un des deux) ».
+- $M \setminus F$ : « l’élève fait de la musique, mais pas de football ».
+- $\overline{F \cup M}$ : « l’élève ne fait ni football ni musique ».
+
+On hachure la partie de $M$ qui n’est pas dans $F$.
+
+## Pièges {.unlisted}
+
+- Lire « ou » comme « l’un ou l’autre, mais pas les deux » : $F \cup M$ contient $F \cap M$.
+:::
+:::
+
+::: {#exercice-2-6 data-sorte="exercice" data-num="2.6" data-page="22" data-phys="25" data-id="6UAA1.ex.030" data-type="exercice" data-tags="maison" .exo}
+::: {.exo-tete}
+[✎ Exercice 2.6]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[C4]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+On lance un dé. $A$ : « obtenir un nombre pair » ; $B$ : « obtenir au moins 3 » ; $C$ : « obtenir 6 ». Écris en extension $A \cap B$, $B \setminus A$, $\overline{B}$ et $A \cap \overline{C}$. Représente $A$, $B$, $C$ dans un diagramme où chaque issue est placée dans sa zone.
+
+::: {.pb-fig .pb-venn data-n="3" data-inclus="0" data-disjoints="0" data-ombre="[]" data-activite="1"}
+::: {.pb-univers}
+$\Omega$
+:::
+
+::: {.pb-nom data-i="0"}
+$A$
+:::
+
+::: {.pb-nom data-i="1"}
+$B$
+:::
+
+::: {.pb-nom data-i="2"}
+$C$
+:::
+
+::: {.pb-z data-z="a"}
+[2]{.rep data-v="2"}
+:::
+
+::: {.pb-z data-z="ab"}
+[4]{.rep data-v="4"}
+:::
+
+::: {.pb-z data-z="b"}
+[3, 5]{.rep data-v="3;5"}
+:::
+
+::: {.pb-z data-z="abc"}
+[6]{.rep data-v="6"}
+:::
+
+::: {.pb-z data-z="dehors"}
+[1]{.rep data-v="1"}
+:::
+:::
+
+::: {.rep-bloc}
+$A \cap B = \{4, 6\}$ ; $B \setminus A = \{3, 5\}$ ; $\overline{B} = \{1, 2\}$ ; $A \cap \overline{C} = \{2, 4\}$. Dans le diagramme : 6 est dans les trois ensembles, 4 dans $A$ et $B$, 2 dans $A$ seulement, 3 et 5 dans $B$ seulement, 1 hors des trois.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis le tableau de l’[exemple 2.2](#exemple-2-2).
+
+## Indice 2 {.unlisted}
+
+Où se place chaque issue de 1 à 6 : dans quels ensembles ?
+
+## Indice 3 {.unlisted}
+
+$A = \{2, 4, 6\}$, $B = \{3, 4, 5, 6\}$, $C = \{6\}$.
+
+## Solution {.unlisted}
+
+$A = \{2, 4, 6\}$, $B = \{3, 4, 5, 6\}$, $C = \{6\}$. $A \cap B = \{4, 6\}$ ; $B \setminus A = \{3, 5\}$ ; $\overline{B} = \{1, 2\}$ ; $A \cap \overline{C} = \{2, 4\}$. Diagramme : 6 dans les trois ensembles, 4 dans $A$ et $B$ seulement, 2 dans $A$ seulement, 3 et 5 dans $B$ seulement, 1 hors des trois.
+
+## Pièges {.unlisted}
+
+- Écrire $B = \{4, 5, 6\}$ : « au moins 3 » contient 3.
+:::
+:::
+
+::: {.ae-lien}
+[✔ S'autoévaluer sur cette section : test de 6 questions →](../autoeval.qmd#sections=sec-vocabulaire)
+:::

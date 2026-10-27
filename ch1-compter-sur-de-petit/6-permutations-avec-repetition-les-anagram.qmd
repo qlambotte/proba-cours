@@ -1,0 +1,300 @@
+---
+title: "Permutations avec répétition : les anagrammes"
+---
+
+<!-- GÉNÉRÉ par typweb à partir des notes Typst : NE PAS ÉDITER (les modifications seraient écrasées). -->
+
+::: {#activite-1-7 data-sorte="activite" data-num="1.7" data-page="14" data-phys="17" data-id="6UAA1.anagrammes-anna" data-type="activite" data-tags="" .theo .theo-activite}
+::: {.theo-head}
+**Activité 1.7** — les anagrammes de ANNA
+:::
+
+::: {.theo-body}
+Un anagramme de ANNA est un mot de 4 lettres, avec ou sans sens, formé de ces quatre lettres.
+
+a) Écris tous les anagrammes de ANNA.
+
+::: {.rep-bloc}
+AANN, ANAN, ANNA, NAAN, NANA, NNAA : 6 anagrammes.
+:::
+
+b) Si les deux A et les deux N étaient discernables (A₁, A₂, N₁, N₂), combien y aurait-il de mots ? Le schéma regroupe ceux qui donnent le même anagramme : complète-le.
+
+::: {.pb-fig .pb-partition}
+::: {.pb-part-titre}
+**les 24 mots avec lettres discernables**
+:::
+
+::: {.pb-paquets style="--n:6"}
+::: {.pb-paquet}
+::: {.rep-bloc}
+A₁N₁N₂A₂ \
+A₁N₂N₁A₂ \
+A₂N₁N₂A₁ \
+A₂N₂N₁A₁
+:::
+:::
+
+::: {.pb-paquet}
+::: {.rep-bloc}
+A₁N₁A₂N₂ \
+A₁N₂A₂N₁ \
+A₂N₁A₁N₂ \
+A₂N₂A₁N₁
+:::
+:::
+
+::: {.pb-paquet}
+::: {.rep-bloc}
+A₁A₂N₁N₂ \
+A₁A₂N₂N₁ \
+A₂A₁N₁N₂ \
+A₂A₁N₂N₁
+:::
+:::
+
+::: {.pb-paquet}
+::: {.rep-bloc}
+N₁A₁N₂A₂ \
+N₁A₂N₂A₁ \
+N₂A₁N₁A₂ \
+N₂A₂N₁A₁
+:::
+:::
+
+::: {.pb-paquet}
+::: {.rep-bloc}
+N₁A₁A₂N₂ \
+N₁A₂A₁N₂ \
+N₂A₁A₂N₁ \
+N₂A₂A₁N₁
+:::
+:::
+
+::: {.pb-paquet}
+::: {.rep-bloc}
+N₁N₂A₁A₂ \
+N₁N₂A₂A₁ \
+N₂N₁A₁A₂ \
+N₂N₁A₂A₁
+:::
+:::
+:::
+:::
+
+::: {.rep-bloc}
+$4! = 24$ mots. Chaque anagramme provient de $2! \cdot 2! = 4$ mots (on échange les A, on échange les N). Donc $\frac{24}{4} = 6$.
+:::
+
+c) Autre méthode : choisis les places des deux A parmi les quatre places.
+
+::: {.rep-bloc}
+$C_{4}^{2} = 6$ ; les N occupent les places restantes. Les deux méthodes donnent $\frac{4!}{2! \cdot 2!} = C_{4}^{2}$ : choisir les places des A, c’est choisir un groupe de 2 places parmi 4.
+:::
+:::
+:::
+
+::: {#definition-1-5 data-sorte="definition" data-num="1.5" data-page="14" data-phys="17" data-id="6UAA1.permutations-repetition" data-type="definition" data-tags="" .theo .theo-definition}
+::: {.theo-head}
+**Définition 1.5** — permutations avec répétition
+:::
+
+::: {.theo-body}
+Une *permutation avec répétition* de $n$ objets est une façon de les ranger tous en ligne lorsque certains d’entre eux sont identiques (on ne distingue pas deux objets identiques) : par exemple, un anagramme de ANNA.
+:::
+:::
+
+::: {#propriete-1-6 data-sorte="propriete" data-num="1.6" data-page="14" data-phys="17" data-id="6UAA1.prop.002" data-type="propriete" data-tags="" .theo .theo-propriete}
+::: {.theo-head}
+**Propriété 1.6**
+:::
+
+::: {.theo-body}
+Le nombre de permutations avec répétition de $n$ objets, dont $k_{1}$ sont identiques entre eux, $k_{2}$ identiques entre eux, …, $k_{r}$ identiques entre eux, vaut
+
+$$
+\frac{n!}{k_{1} ! \, k_{2} ! \cdots k_{r} !}.
+$$
+
+Avec deux sortes d’objets seulement, on retrouve les combinaisons : choisir 3 délégués parmi 5 élèves A, B, C, D, E revient à écrire O (« oui ») ou N (« non ») sous chaque nom, par exemple ONOON pour {A, C, D}. Il y a autant de délégations que d’anagrammes de OOONN : $\frac{5!}{3! \cdot 2!} = C_{5}^{3} = 10$.
+:::
+:::
+
+::: {#exemple-1-4 data-sorte="exemple" data-num="1.4" data-page="15" data-phys="18" data-id="6UAA1.ursulines" data-type="exemple" data-tags="" .theo .theo-exemple}
+::: {.theo-head}
+**Exemple 1.4** — URSULINES
+:::
+
+::: {.theo-body}
+Combien d’anagrammes du mot URSULINES ? On répond par deux méthodes.
+
+Le mot compte 9 lettres, dont U deux fois et S deux fois.
+
+*Méthode 1.* Par la propriété : $\frac{9!}{2! \cdot 2!} = \frac{362 \, 880}{4} = 90 \, 720$.
+
+*Méthode 2.* On choisit les places des U ($C_{9}^{2} = 36$), puis celles des S parmi les 7 places restantes ($C_{7}^{2} = 21$), puis on range les 5 autres lettres, toutes différentes ($5! = 120$) : $36 \cdot 21 \cdot 120 = 90 \, 720$.
+
+Les deux méthodes donnent le même nombre.
+:::
+:::
+
+::: {#exercice-1-17 data-sorte="exercice" data-num="1.17" data-page="15" data-phys="18" data-id="6UAA1.ex.017" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice 1.17]{.exo-titre} [[A5]{.exo-comp} ★☆☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Combien d’anagrammes du mot MONS ? du mot BELGIQUE ? Parmi ces derniers, combien commencent par B ?
+
+::: {.rep-bloc}
+MONS : 4 lettres différentes, $4! = 24$. BELGIQUE : 8 lettres, dont E deux fois, $\frac{8!}{2!} = 20 \, 160$. Commençant par B : on range les 7 autres lettres (E deux fois), $\frac{7!}{2!} = 2520$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [définition des permutations avec répétition](#definition-1-5) et la [propriété 1.6](#propriete-1-6).
+
+## Indice 2 {.unlisted}
+
+Quelles lettres de BELGIQUE sont répétées ?
+
+## Indice 3 {.unlisted}
+
+BELGIQUE : 8 lettres, dont E deux fois.
+
+## Solution {.unlisted}
+
+MONS : 4 lettres différentes, $4! = 24$ anagrammes. BELGIQUE : 8 lettres, dont E deux fois : $\frac{8!}{2!} = 20 \, 160$ anagrammes. Commençant par B : on range les 7 autres lettres, dont E deux fois : $\frac{7!}{2!} = 2520$.
+
+## Pièges {.unlisted}
+
+- Oublier de diviser par $2!$ : échanger les deux E ne change pas le mot.
+:::
+:::
+
+::: {#exercice-1-18 data-sorte="exercice" data-num="1.18" data-page="15" data-phys="18" data-id="6UAA1.ex.018" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice 1.18]{.exo-titre} [[A5]{.exo-comp} ★☆☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Combien d’anagrammes des mots a) PROPORTION ; b) ANAGRAMME ; c) RECHERCHER ?
+
+::: {.rep-bloc}
+a) 10 lettres : O trois fois, P et R deux fois : $\frac{10!}{3! \cdot 2! \cdot 2!} = 151 \, 200$. b) 9 lettres : A trois fois, M deux fois : $\frac{9!}{3! \cdot 2!} = 30 \, 240$. c) 10 lettres : R et E trois fois, C et H deux fois : $\frac{10!}{3! \cdot 3! \cdot 2! \cdot 2!} = 25 \, 200$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [définition des permutations avec répétition](#definition-1-5) et la [propriété 1.6](#propriete-1-6).
+
+## Indice 2 {.unlisted}
+
+Combien de fois chaque lettre apparaît-elle ?
+
+## Indice 3 {.unlisted}
+
+PROPORTION : 10 lettres ; O trois fois, P deux fois, R deux fois.
+
+## Solution {.unlisted}
+
+a) PROPORTION : 10 lettres dont O trois fois, P et R deux fois : $\frac{10!}{3! \cdot 2! \cdot 2!} = 151 \, 200$. b) ANAGRAMME : 9 lettres dont A trois fois, M deux fois : $\frac{9!}{3! \cdot 2!} = 30 \, 240$. c) RECHERCHER : 10 lettres dont R et E trois fois, C et H deux fois : $\frac{10!}{3! \cdot 3! \cdot 2! \cdot 2!} = 25 \, 200$.
+
+## Pièges {.unlisted}
+
+- Compter les lettres trop vite : ANAGRAMME contient trois A et deux M.
+- Diviser par $3 \cdot 2$ au lieu de $3! \cdot 2!$.
+:::
+:::
+
+::: {#exercice-1-19 data-sorte="exercice" data-num="1.19" data-page="15" data-phys="18" data-id="6UAA1.ex.019" data-type="exercice" data-tags="maison" .exo}
+::: {.exo-tete}
+[✎ Exercice 1.19]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[A5]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Combien d’anagrammes du mot MISSISSIPPI ? Réponds par deux méthodes.
+
+::: {.rep-bloc}
+11 lettres : M une fois, I quatre fois, S quatre fois, P deux fois. Méthode 1 : $\frac{11!}{4! \cdot 4! \cdot 2!} = 34 \, 650$. Méthode 2 : places des I, $C_{11}^{4} = 330$ ; des S parmi les 7 restantes, $C_{7}^{4} = 35$ ; des P parmi les 3 restantes, $C_{3}^{2} = 3$ ; M à la dernière place : $330 \cdot 35 \cdot 3 = 34 \, 650$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [propriété des permutations avec répétition](#propriete-1-6) et l’[exemple URSULINES](#exemple-1-4).
+
+## Indice 2 {.unlisted}
+
+Combien de fois apparaît chaque lettre ?
+
+## Indice 3 {.unlisted}
+
+M : 1 ; I : 4 ; S : 4 ; P : 2 ; en tout 11 lettres.
+
+## Solution {.unlisted}
+
+Le mot compte 11 lettres : M une fois, I quatre fois, S quatre fois, P deux fois.
+
+Méthode 1 : $\frac{11!}{4! \cdot 4! \cdot 2!} = 34 \, 650$.
+
+Méthode 2 : on choisit les places des I ($C_{11}^{4} = 330$), puis celles des S parmi les 7 restantes ($C_{7}^{4} = 35$), puis celles des P parmi les 3 restantes ($C_{3}^{2} = 3$) ; M prend la dernière place. $330 \cdot 35 \cdot 3 = 34 \, 650$. Les deux méthodes concordent.
+
+## Pièges {.unlisted}
+
+- Compter 3 S ou 3 I : recompter les lettres une par une.
+:::
+:::
+
+::: {#exercice-1-20 data-sorte="exercice" data-num="1.20" data-page="15" data-phys="18" data-id="6UAA1.ex.020" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice 1.20]{.exo-titre} [[T1]{.exo-comp} ★★★]{.exo-meta}
+:::
+
+::: {.exo-corps}
+*Défi.* Sur un quadrillage, on va du coin inférieur gauche au coin supérieur droit d’un rectangle de 4 cases sur 3, en ne se déplaçant que d’une case vers la droite (D) ou vers le haut (H). Combien de chemins sont possibles ?
+
+::: {.rep-bloc}
+Un chemin est un mot de 7 lettres contenant 4 D et 3 H. Il suffit de choisir les places des H : $C_{7}^{3} = 35$ chemins.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [activité 1.7](#activite-1-7), méthode c) : choisir les places.
+
+## Indice 2 {.unlisted}
+
+Combien de pas vers la droite et vers le haut faut-il en tout ?
+
+## Indice 3 {.unlisted}
+
+Un chemin est un mot de 7 lettres formé de 4 D et 3 H.
+
+## Solution {.unlisted}
+
+Tout chemin compte 4 pas vers la droite et 3 vers le haut : c’est un mot de 7 lettres formé de 4 D et 3 H. Un tel mot est déterminé par les places des H : il y a $C_{7}^{3} = 35$ chemins.
+
+## Pièges {.unlisted}
+
+- Calculer $2^{7}$ : ce nombre compte aussi des mots qui n’ont pas exactement 4 D.
+:::
+:::
+
+::: {.ae-lien}
+[✔ S'autoévaluer sur cette section : test de 5 questions →](../autoeval.qmd#sections=sec-anagrammes)
+:::

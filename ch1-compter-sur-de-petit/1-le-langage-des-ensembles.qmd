@@ -1,0 +1,128 @@
+---
+title: "Le langage des ensembles"
+---
+
+<!-- GÉNÉRÉ par typweb à partir des notes Typst : NE PAS ÉDITER (les modifications seraient écrasées). -->
+
+Compter, puis calculer des probabilités, c’est parler d’ensembles : l’ensemble des résultats possibles, ceux qui ont une propriété, ceux qui en ont deux à la fois… Ce langage et ses symboles servent dans tout le cours.
+
+::: {#activite-1-1 data-sorte="activite" data-num="1.1" data-page="2" data-phys="5" data-id="6UAA1.deux-ensembles-nombres" data-type="activite" data-tags="" .theo .theo-activite}
+::: {.theo-head}
+**Activité 1.1** — deux ensembles de nombres
+:::
+
+::: {.theo-body}
+On considère l’ensemble $E$ des nombres entiers de 1 à 12, l’ensemble $A$ des diviseurs de 12 et l’ensemble $B$ des nombres pairs de $E$.
+
+a) Écris la liste des éléments de $A$ et celle des éléments de $B$, entre accolades.
+
+::: {.rep-bloc}
+$A = \{1, 2, 3, 4, 6, 12\}$ ; $B = \{2, 4, 6, 8, 10, 12\}$.
+:::
+
+b) Place les douze nombres de $E$ dans le diagramme.
+
+::: {.pb-fig .pb-venn data-n="2" data-inclus="0" data-disjoints="0" data-ombre="[]" data-activite="1"}
+::: {.pb-univers}
+$E$
+:::
+
+::: {.pb-nom data-i="0"}
+$A$
+:::
+
+::: {.pb-nom data-i="1"}
+$B$
+:::
+
+::: {.pb-z data-z="a"}
+[1, 3]{.rep data-v="1;3"}
+:::
+
+::: {.pb-z data-z="ab"}
+[2, 4, 6, 12]{.rep data-v="2;4;6;12"}
+:::
+
+::: {.pb-z data-z="b"}
+[8, 10]{.rep data-v="8;10"}
+:::
+
+::: {.pb-z data-z="dehors"}
+[5, 7, 9, 11]{.rep data-v="5;7;9;11"}
+:::
+:::
+
+c) Dans chaque cas, écris la liste des nombres de $E$ concernés et colorie la zone correspondante du diagramme : 1) dans $A$ et dans $B$ ; 2) dans $A$ ou dans $B$ (au moins dans l’un des deux) ; 3) dans $A$ mais pas dans $B$ ; 4) pas dans $A$ ; 5) à la fois impairs et dans $B$.
+
+::: {.rep-bloc}
+1) $\{2, 4, 6, 12\}$, la zone commune ; 2) $\{1, 2, 3, 4, 6, 8, 10, 12\}$, les deux cercles ; 3) $\{1, 3\}$ ; 4) $\{5, 7, 8, 9, 10, 11\}$, tout ce qui est hors du cercle $A$ ; 5) aucun nombre : la liste est vide.
+:::
+
+d) Combien d’éléments compte chacun des ensembles a) et c) ? Le nombre d’éléments de « dans $A$ ou dans $B$ » est-il la somme des nombres d’éléments de $A$ et de $B$ ?
+
+::: {.rep-bloc}
+$A$ : 6 ; $B$ : 6 ; 1) 4 ; 2) 8 ; 3) 2 ; 4) 6 ; 5) 0. Non : $6 + 6 = 12$, mais 2, 4, 6 et 12 seraient comptés deux fois ; $6 + 6 - 4 = 8$.
+:::
+:::
+:::
+
+::: {#cadre-notations .cadre-info}
+**Notations.** Pour des ensembles $A$ et $B$ contenus dans un ensemble $E$ :
+
+::: {.tableau}
+| **Notation** | **Se lit** | **Signifie (exemple de l’activité 1.1)** |
+|:---:|:---:|:---:|
+| $\{1, 3\}$ | « l’ensemble des éléments 1 et 3 » | ensemble écrit en extension, entre accolades |
+| $3 \in A$ | « 3 appartient à $A$ » | 3 est un élément de $A$ ; $5 \notin A$ |
+| $A \cap B$ | « $A$ inter $B$ » | éléments communs à $A$ et à $B$ : $\{2, 4, 6, 12\}$ |
+| $A \cup B$ | « $A$ union $B$ » | éléments de $A$ ou de $B$ (au moins de l’un) : 8 éléments |
+| $A \setminus B$ | « $A$ privé de $B$ » | éléments de $A$ qui ne sont pas dans $B$ : $\{1, 3\}$ |
+| $\overline{A}$ | « complémentaire de $A$ » | éléments de $E$ qui ne sont pas dans $A$ |
+| $\emptyset$ | « ensemble vide » | ensemble sans élément |
+| $\{2, 4\} \subset A$ | « $\{2, 4\}$ est inclus dans $A$ » | tout élément de $\{2, 4\}$ est dans $A$ |
+| $\#A$ | « cardinal de $A$ » | nombre d’éléments de $A$ : $\#A = 6$ |
+:::
+:::
+
+::: {#exercice-1-1 data-sorte="exercice" data-num="1.1" data-page="3" data-phys="6" data-id="6UAA1.ex.001" data-type="exercice" data-tags="maison" .exo}
+::: {.exo-tete}
+[✎ Exercice 1.1]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[C4]{.exo-comp} ★☆☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Dans l’ensemble $E$ des entiers de 1 à 20, on note $A$ l’ensemble des multiples de 4 et $B$ l’ensemble des diviseurs de 20. Écris en extension $A$, $B$, $A \cap B$, $A \cup B$ et $A \setminus B$, puis calcule $\#(A \cup B)$ et $\#\overline{B}$. Vrai ou faux : $5 \in A$ ; $\{4, 20\} \subset B$ ?
+
+::: {.rep-bloc}
+$A = \{4, 8, 12, 16, 20\}$ ; $B = \{1, 2, 4, 5, 10, 20\}$ ; $A \cap B = \{4, 20\}$ ; $A \cup B = \{1, 2, 4, 5, 8, 10, 12, 16, 20\}$ ; $A \setminus B = \{8, 12, 16\}$. $\#(A \cup B) = 9$ ; $\#\overline{B} = 20 - 6 = 14$. $5 \in A$ : faux ; $\{4, 20\} \subset B$ : vrai.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis l’[activité 1.1](#activite-1-1) et le cadre « Notations ».
+
+## Indice 2 {.unlisted}
+
+Quels nombres sont à la fois multiples de 4 et diviseurs de 20 ?
+
+## Indice 3 {.unlisted}
+
+Écris d’abord $A = \{4, 8, 12, 16, 20\}$, puis cherche les diviseurs de 20 un par un.
+
+## Solution {.unlisted}
+
+$A = \{4, 8, 12, 16, 20\}$ ; $B = \{1, 2, 4, 5, 10, 20\}$. $A \cap B = \{4, 20\}$ ; $A \cup B = \{1, 2, 4, 5, 8, 10, 12, 16, 20\}$ ; $A \setminus B = \{8, 12, 16\}$. $\#(A \cup B) = 9$ ($5 + 6 - 2$) ; $\#\overline{B} = 20 - 6 = 14$. $5 \in A$ est faux (5 n’est pas multiple de 4) ; $\{4, 20\} \subset B$ est vrai.
+
+## Pièges {.unlisted}
+
+- Écrire deux fois 4 et 20 dans $A \cup B$ : un ensemble ne contient chaque élément qu’une fois.
+- Oublier 1 et 20 parmi les diviseurs de 20.
+:::
+:::
+
+::: {.ae-lien}
+[✔ S'autoévaluer sur cette section : test de 2 questions →](../autoeval.qmd#sections=sec-ensembles)
+:::

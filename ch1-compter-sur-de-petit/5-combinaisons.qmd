@@ -1,0 +1,397 @@
+---
+title: "Combinaisons"
+---
+
+<!-- GÉNÉRÉ par typweb à partir des notes Typst : NE PAS ÉDITER (les modifications seraient écrasées). -->
+
+::: {#activite-1-6 data-sorte="activite" data-num="1.6" data-page="12" data-phys="15" data-id="6UAA1.regrouper-puis-diviser" data-type="activite" data-tags="" .theo .theo-activite}
+::: {.theo-head}
+**Activité 1.6** — regrouper puis diviser
+:::
+
+::: {.theo-body}
+On choisit une délégation de 3 élèves parmi A, B, C, D, E.
+
+a) Combien de suites de 3 élèves distincts peut-on former ?
+
+::: {.rep-bloc}
+$A_{5}^{3} = 5 \cdot 4 \cdot 3 = 60$.
+:::
+
+b) Le schéma range ces 60 suites en paquets : chaque paquet contient les suites formées des mêmes trois élèves. Complète-le.
+
+::: {.pb-fig .pb-partition}
+::: {.pb-part-titre}
+**les 60 suites**
+:::
+
+::: {.pb-paquets style="--n:5"}
+::: {.pb-paquet}
+::: {.rep-bloc}
+ABC \
+ACB \
+BAC \
+BCA \
+CAB \
+CBA
+:::
+:::
+
+::: {.pb-paquet}
+::: {.rep-bloc}
+ABD \
+ADB \
+BAD \
+BDA \
+DAB \
+DBA
+:::
+:::
+
+::: {.pb-paquet}
+::: {.rep-bloc}
+ABE \
+AEB \
+BAE \
+BEA \
+EAB \
+EBA
+:::
+:::
+
+::: {.pb-paquet}
+::: {.rep-bloc}
+ACD \
+ADC \
+CAD \
+CDA \
+DAC \
+DCA
+:::
+:::
+
+::: {.pb-paquet}
+::: {.rep-bloc}
+ACE \
+AEC \
+CAE \
+CEA \
+EAC \
+ECA
+:::
+:::
+
+::: {.pb-paquet}
+::: {.rep-bloc}
+ADE \
+AED \
+DAE \
+DEA \
+EAD \
+EDA
+:::
+:::
+
+::: {.pb-paquet}
+::: {.rep-bloc}
+BCD \
+BDC \
+CBD \
+CDB \
+DBC \
+DCB
+:::
+:::
+
+::: {.pb-paquet}
+::: {.rep-bloc}
+BCE \
+BEC \
+CBE \
+CEB \
+EBC \
+ECB
+:::
+:::
+
+::: {.pb-paquet}
+::: {.rep-bloc}
+BDE \
+BED \
+DBE \
+DEB \
+EBD \
+EDB
+:::
+:::
+
+::: {.pb-paquet}
+::: {.rep-bloc}
+CDE \
+CED \
+DCE \
+DEC \
+ECD \
+EDC
+:::
+:::
+:::
+:::
+
+Combien de suites contient chaque paquet ? Pourquoi ?
+
+::: {.rep-bloc}
+Chaque paquet contient $3! = 6$ suites : les 6 façons d’ordonner trois élèves donnés.
+:::
+
+c) Déduis-en le nombre de délégations sans les lister.
+
+::: {.rep-bloc}
+Une délégation correspond à un paquet. Les 60 suites se regroupent par paquets de 6 : $\frac{60}{6} = 10$ délégations.
+:::
+:::
+:::
+
+```{=html}
+<div class="pb-denombreur" data-cfg="{&quot;elements&quot;: [&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;, &quot;E&quot;], &quot;p&quot;: 3, &quot;ordre&quot;: true, &quot;repetition&quot;: false}"></div>
+```
+
+::: {#definition-1-4 data-sorte="definition" data-num="1.4" data-page="12" data-phys="15" data-id="6UAA1.combinaisons-2" data-type="definition" data-tags="" .theo .theo-definition}
+::: {.theo-head}
+**Définition 1.4** — combinaisons
+:::
+
+::: {.theo-body}
+Une *combinaison de $p$ éléments pris parmi $n$* est un groupe (sans ordre) de $p$ éléments distincts choisis parmi $n$. Il y en a
+
+$$
+C_{n}^{p} = \frac{A_{n}^{p}}{p!} = \frac{n!}{p! \, (n-p)!}.
+$$
+
+Seconde forme, lue directement : on range les $n$ éléments en ligne ($n!$ façons) ; les $p$ premiers forment le groupe. Changer l’ordre des $p$ premiers ($p!$ façons) ou celui des $n - p$ derniers ($(n-p)!$ façons) ne change pas le groupe : on divise par $p! \, (n-p)!$.
+:::
+:::
+
+::: {#remarque-1-4 data-sorte="remarque" data-num="1.4" data-page="12" data-phys="15" data-id="6UAA1.rem.004" data-type="remarque" data-tags="" .theo .theo-remarque}
+::: {.theo-head}
+**Remarque 1.4**
+:::
+
+::: {.theo-body}
+Les calculatrices (touche nCr) et beaucoup de manuels notent $\begin{pmatrix}n \\ p\end{pmatrix}$ au lieu de $C_{n}^{p}$ (attention : $n$ en haut, $p$ en bas).
+:::
+:::
+
+::: {#propriete-1-5 data-sorte="propriete" data-num="1.5" data-page="12" data-phys="15" data-id="6UAA1.symetrie" data-type="propriete" data-tags="" .theo .theo-propriete}
+::: {.theo-head}
+**Propriété 1.5** — symétrie
+:::
+
+::: {.theo-body}
+Pour $0 \leq p \leq n$ :
+
+$$
+C_{n}^{p} = C_{n}^{n-p}.
+$$
+:::
+:::
+
+::: {#preuve-1-2 data-sorte="preuve" data-num="1.2" .theo .theo-preuve}
+::: {.theo-head}
+**Démonstration 1.2**
+:::
+
+::: {.theo-body}
+Choisir le groupe $G$ des $p$ élèves qui partent revient à choisir le groupe des $n - p$ élèves qui restent : c’est la partie de l’ensemble $E$ des $n$ élèves hors de $G$.
+
+::: {.pb-fig .pb-venn data-n="1" data-inclus="0" data-disjoints="0" data-ombre="[&quot;dehors&quot;]" data-activite="0"}
+::: {.pb-univers}
+$E$
+:::
+
+::: {.pb-nom data-i="0"}
+$G$
+:::
+
+::: {.pb-z data-z="a"}
+$p$ élèves
+:::
+
+::: {.pb-z data-z="dehors"}
+$n - p$
+:::
+:::
+
+Chaque groupe de $p$ correspond à exactement un groupe de $n - p$, et inversement : il y a donc autant de groupes de $p$ élèves que de groupes de $n - p$ élèves.
+:::
+:::
+
+::: {#exemple-1-3 data-sorte="exemple" data-num="1.3" data-page="13" data-phys="16" data-id="6UAA1.lotto" data-type="exemple" data-tags="" .theo .theo-exemple}
+::: {.theo-head}
+**Exemple 1.3** — Lotto
+:::
+
+::: {.theo-body}
+Au Lotto belge, on coche 6 numéros parmi 45. Combien de grilles différentes ?
+
+Une grille est un groupe de 6 numéros distincts : l’ordre dans lequel on les coche ne compte pas. Il y a $C_{45}^{6} = \frac{45!}{6! \, 39!} = 8 \, 145 \, 060$ grilles. On retrouve la « chance sur 8 145 060 » de gagner le gros lot citée par la presse^[RTBF (13/12/2024). Lotto ou jeux à gratter : ce que les probabilités nous disent vraiment (analyse de F. Vrins, UCLouvain).].
+:::
+:::
+
+::: {#exercice-1-13 data-sorte="exercice" data-num="1.13" data-page="13" data-phys="16" data-id="6UAA1.ex.013" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice 1.13]{.exo-titre} [[A5]{.exo-comp} ★☆☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Une classe de 22 élèves choisit 3 délégués. Combien de choix sont possibles si les trois délégués ont le même rôle ? si l’un est délégué, le deuxième suppléant et le troisième secrétaire ?
+
+::: {.rep-bloc}
+Même rôle : un choix est un groupe de 3 élèves, $C_{22}^{3} = 1540$. Rôles différents : un choix est une suite de 3 élèves distincts, $A_{22}^{3} = 9240$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [définition des combinaisons](#definition-1-4) et celle des [arrangements](4-arrangements-et-permutations.qmd#definition-1-1).
+
+## Indice 2 {.unlisted}
+
+Dans chaque cas, le choix (Alice, Bilal, Chloé) diffère-t-il du choix (Bilal, Alice, Chloé) ?
+
+## Indice 3 {.unlisted}
+
+Même rôle : l’ordre ne compte pas, c’est un groupe.
+
+## Solution {.unlisted}
+
+Même rôle : un choix est un groupe de 3 élèves distincts, $C_{22}^{3} = \frac{22 \cdot 21 \cdot 20}{3!} = 1540$. Rôles différents : un choix est une suite de 3 élèves distincts, $A_{22}^{3} = 22 \cdot 21 \cdot 20 = 9240$. On retrouve $9240 = 1540 \cdot 3!$ : chaque groupe donne $3! = 6$ suites.
+
+## Pièges {.unlisted}
+
+- Donner la même réponse aux deux questions.
+:::
+:::
+
+::: {#exercice-1-14 data-sorte="exercice" data-num="1.14" data-page="13" data-phys="16" data-id="6UAA1.ex.014" data-type="exercice" data-tags="maison" .exo}
+::: {.exo-tete}
+[✎ Exercice 1.14]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[A5]{.exo-comp} ★☆☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Lors d’une réunion, 25 personnes se serrent toutes la main, une fois par paire. Combien de poignées de main sont échangées ?
+
+::: {.rep-bloc}
+Une poignée de main correspond à un groupe de 2 personnes (A serre la main de B = B serre la main de A) : $C_{25}^{2} = \frac{25 \cdot 24}{2} = 300$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [définition des combinaisons](#definition-1-4).
+
+## Indice 2 {.unlisted}
+
+La poignée de main entre A et B est-elle différente de celle entre B et A ?
+
+## Indice 3 {.unlisted}
+
+Une poignée de main correspond à un groupe de 2 personnes.
+
+## Solution {.unlisted}
+
+Une poignée de main correspond à un groupe de 2 personnes parmi 25 (A serre la main de B = B serre la main de A). Il y en a $C_{25}^{2} = \frac{25 \cdot 24}{2} = 300$.
+
+## Pièges {.unlisted}
+
+- Répondre $25 \cdot 24 = 600$ : chaque poignée de main est comptée deux fois.
+- Répondre $25 \cdot 25$ : une personne ne se serre pas la main.
+:::
+:::
+
+::: {#exercice-1-15 data-sorte="exercice" data-num="1.15" data-page="13" data-phys="16" data-id="6UAA1.ex.015" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice 1.15]{.exo-titre} [[A5]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Un comité de 5 personnes est formé de 3 filles choisies parmi 8 et de 2 garçons choisis parmi 6. Combien de comités sont possibles ?
+
+::: {.rep-bloc}
+Choisir les filles : $C_{8}^{3} = 56$ groupes. Choisir les garçons : $C_{6}^{2} = 15$ groupes. Tout groupe de filles peut être associé à tout groupe de garçons : $56 \cdot 15 = 840$ comités.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [définition des combinaisons](#definition-1-4) et le [principe multiplicatif](3-additionner-multiplier.qmd#propriete-1-1).
+
+## Indice 2 {.unlisted}
+
+Peut-on choisir d’abord les filles, puis les garçons ?
+
+## Indice 3 {.unlisted}
+
+Filles : $C_{8}^{3} = 56$ groupes.
+
+## Solution {.unlisted}
+
+On choisit les 3 filles parmi 8 : $C_{8}^{3} = 56$ groupes ; puis les 2 garçons parmi 6 : $C_{6}^{2} = 15$ groupes. Le nombre de groupes de garçons ne dépend pas des filles choisies ; par le principe multiplicatif, il y a $56 \cdot 15 = 840$ comités.
+
+## Pièges {.unlisted}
+
+- Additionner $56 + 15$ : un comité contient des filles *et* des garçons.
+- Calculer $C_{14}^{5}$ : on compte alors aussi les comités qui n’ont pas 3 filles.
+:::
+:::
+
+::: {#exercice-1-16 data-sorte="exercice" data-num="1.16" data-page="14" data-phys="17" data-id="6UAA1.ex.016" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice 1.16]{.exo-titre} [[T1]{.exo-comp} ★★★]{.exo-meta}
+:::
+
+::: {.exo-corps}
+*Défi.* On répartit 6 élèves en deux équipes de 3. Combien de répartitions si les équipes s’appellent « rouge » et « bleue » ? si elles ne portent pas de nom ?
+
+::: {.rep-bloc}
+Avec noms : choisir l’équipe rouge suffit (la bleue est formée des autres), $C_{6}^{3} = 20$. Sans nom : chaque répartition est comptée deux fois dans les 20 (rouge et bleue échangées) : $\frac{20}{2} = 10$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis l’[activité 1.6](#activite-1-6) : regrouper puis diviser.
+
+## Indice 2 {.unlisted}
+
+Quand on connaît l’équipe rouge, connaît-on l’équipe bleue ?
+
+## Indice 3 {.unlisted}
+
+Sans nom, la répartition « {A, B, C} et {D, E, F} » apparaît deux fois dans les 20 répartitions avec noms.
+
+## Solution {.unlisted}
+
+Avec noms : choisir l’équipe rouge suffit, l’équipe bleue est formée des 3 autres. Il y a $C_{6}^{3} = 20$ répartitions. Sans nom : chaque répartition correspond à 2 répartitions avec noms (on échange rouge et bleu). Il y a $\frac{20}{2} = 10$ répartitions.
+
+## Pièges {.unlisted}
+
+- Calculer $C_{6}^{3} \cdot C_{3}^{3}$ puis oublier de diviser par 2 dans le cas sans nom.
+:::
+:::
+
+::: {.ae-lien}
+[✔ S'autoévaluer sur cette section : test de 4 questions →](../autoeval.qmd#sections=sec-combinaisons)
+:::

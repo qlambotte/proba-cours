@@ -1,0 +1,52 @@
+---
+title: "Quoi de neuf ?"
+subtitle: "Ce qui a changé dans le cours en ligne"
+---
+
+<!-- GÉNÉRÉ par typweb à partir des notes Typst : NE PAS ÉDITER (les modifications seraient écrasées). -->
+
+## 16/10/2026
+
+- [Additionner, multiplier](ch1-compter-sur-de-petit/3-additionner-multiplier.qmd) — modifié : [Activité 1.3](ch1-compter-sur-de-petit/3-additionner-multiplier.qmd#activite-1-3), [Exemple 1.1](ch1-compter-sur-de-petit/3-additionner-multiplier.qmd#exemple-1-1)
+- [Combinaisons](ch1-compter-sur-de-petit/5-combinaisons.qmd) — modifié : [Exemple 1.3](ch1-compter-sur-de-petit/5-combinaisons.qmd#exemple-1-3)
+- [Fréquences et probabilité](ch2-modeliser-le-hasard/1-frequences-et-probabilite.qmd) — modifié : [Exemple 2.1](ch2-modeliser-le-hasard/1-frequences-et-probabilite.qmd#exemple-2-1), [Exercice 2.2](ch2-modeliser-le-hasard/1-frequences-et-probabilite.qmd#exercice-2-2)
+- [Probabilité conditionnelle](ch3-probabilite-conditio/1-probabilite-conditionnelle.qmd) — modifié : [Activité 3.1](ch3-probabilite-conditio/1-probabilite-conditionnelle.qmd#activite-3-1)
+- [Arbres de probabilités](ch3-probabilite-conditio/2-arbres-de-probabilites.qmd) — modifié : [Activité 3.2](ch3-probabilite-conditio/2-arbres-de-probabilites.qmd#activite-3-2), [Propriété 3.1](ch3-probabilite-conditio/2-arbres-de-probabilites.qmd#propriete-3-1), [Exercice 3.3](ch3-probabilite-conditio/2-arbres-de-probabilites.qmd#exercice-3-3)
+- [Lire un test de dépistage](ch3-probabilite-conditio/3-lire-un-test-de-depistage.qmd) — modifié : [Activité 3.3](ch3-probabilite-conditio/3-lire-un-test-de-depistage.qmd#activite-3-3)
+- [Indépendance](ch3-probabilite-conditio/4-independance.qmd) — modifié : [Exercice 3.9](ch3-probabilite-conditio/4-independance.qmd#exercice-3-9)
+- [Pour aller plus loin](ch3-probabilite-conditio/5-pour-aller-plus-loin.qmd) — modifié : [Activité 3.5](ch3-probabilite-conditio/5-pour-aller-plus-loin.qmd#activite-3-5), [Activité 3.6](ch3-probabilite-conditio/5-pour-aller-plus-loin.qmd#activite-3-6), [Activité 3.7](ch3-probabilite-conditio/5-pour-aller-plus-loin.qmd#activite-3-7), [Exercice 3.13](ch3-probabilite-conditio/5-pour-aller-plus-loin.qmd#exercice-3-13)
+
+## 01/10/2026
+
+- Nouvelle section : [Le langage des ensembles](ch1-compter-sur-de-petit/1-le-langage-des-ensembles.qmd)
+- Nouvelle section : [Lister avant de compter](ch1-compter-sur-de-petit/2-lister-avant-de-compter.qmd)
+- Nouvelle section : [Additionner, multiplier](ch1-compter-sur-de-petit/3-additionner-multiplier.qmd)
+- Nouvelle section : [Arrangements et permutations](ch1-compter-sur-de-petit/4-arrangements-et-permutations.qmd)
+- Nouvelle section : [Combinaisons](ch1-compter-sur-de-petit/5-combinaisons.qmd)
+- Nouvelle section : [Permutations avec répétition : les anagrammes](ch1-compter-sur-de-petit/6-permutations-avec-repetition-les-anagram.qmd)
+- Nouvelle section : [Choisir une méthode](ch1-compter-sur-de-petit/7-choisir-une-methode.qmd)
+- Nouvelle section : [Exercices supplémentaires](ch1-compter-sur-de-petit/8-exercices-supplementaires.qmd)
+- [Fréquences et probabilité](ch2-modeliser-le-hasard/1-frequences-et-probabilite.qmd) — modifié : [Définition 2.1](ch2-modeliser-le-hasard/1-frequences-et-probabilite.qmd#definition-2-1), [Exemple 2.1](ch2-modeliser-le-hasard/1-frequences-et-probabilite.qmd#exemple-2-1)
+- [Le modèle d’équiprobabilité](ch2-modeliser-le-hasard/3-le-modele-dequiprobabilite.qmd) — ajouté : [Définition 2.4](ch2-modeliser-le-hasard/3-le-modele-dequiprobabilite.qmd#definition-2-4), [Exemple 2.4](ch2-modeliser-le-hasard/3-le-modele-dequiprobabilite.qmd#exemple-2-4) ; modifié : [Activité 2.3](ch2-modeliser-le-hasard/3-le-modele-dequiprobabilite.qmd#activite-2-3), [Exemple 2.3](ch2-modeliser-le-hasard/3-le-modele-dequiprobabilite.qmd#exemple-2-3), [Exercice 2.7](ch2-modeliser-le-hasard/3-le-modele-dequiprobabilite.qmd#exercice-2-7), [Exercice 2.8](ch2-modeliser-le-hasard/3-le-modele-dequiprobabilite.qmd#exercice-2-8)
+- [Propriétés des probabilités](ch2-modeliser-le-hasard/4-proprietes-des-probabilites.qmd) — ajouté : [Exemple 2.5](ch2-modeliser-le-hasard/4-proprietes-des-probabilites.qmd#exemple-2-5) ; modifié : [Remarque 2.2](ch2-modeliser-le-hasard/4-proprietes-des-probabilites.qmd#remarque-2-2), [Exercice 2.11](ch2-modeliser-le-hasard/4-proprietes-des-probabilites.qmd#exercice-2-11) ; retiré : Exemple 2.4
+- [Dénombrer pour calculer](ch2-modeliser-le-hasard/5-denombrer-pour-calculer.qmd) — ajouté : [Exemple 2.7](ch2-modeliser-le-hasard/5-denombrer-pour-calculer.qmd#exemple-2-7), [Exercice 2.18](ch2-modeliser-le-hasard/5-denombrer-pour-calculer.qmd#exercice-2-18) ; modifié : [Exemple 2.6](ch2-modeliser-le-hasard/5-denombrer-pour-calculer.qmd#exemple-2-6), [Exercice 2.14](ch2-modeliser-le-hasard/5-denombrer-pour-calculer.qmd#exercice-2-14), [Exercice 2.15](ch2-modeliser-le-hasard/5-denombrer-pour-calculer.qmd#exercice-2-15), [Exercice 2.16](ch2-modeliser-le-hasard/5-denombrer-pour-calculer.qmd#exercice-2-16) ; retiré : Exemple 2.5
+- [Exercices supplémentaires](ch2-modeliser-le-hasard/6-exercices-supplementaires.qmd) — modifié : [Exercice S2.2](ch2-modeliser-le-hasard/6-exercices-supplementaires.qmd#exercice-S2-2), [Exercice S2.4](ch2-modeliser-le-hasard/6-exercices-supplementaires.qmd#exercice-S2-4)
+- [Arbres de probabilités](ch3-probabilite-conditio/2-arbres-de-probabilites.qmd) — modifié : [Propriété 3.1](ch3-probabilite-conditio/2-arbres-de-probabilites.qmd#propriete-3-1)
+- [Indépendance](ch3-probabilite-conditio/4-independance.qmd) — ajouté : [Exercice 3.12](ch3-probabilite-conditio/4-independance.qmd#exercice-3-12) ; modifié : [Exemple 3.1](ch3-probabilite-conditio/4-independance.qmd#exemple-3-1), [Exercice 3.9](ch3-probabilite-conditio/4-independance.qmd#exercice-3-9)
+- [Pour aller plus loin](ch3-probabilite-conditio/5-pour-aller-plus-loin.qmd) — ajouté : [Remarque 3.5](ch3-probabilite-conditio/5-pour-aller-plus-loin.qmd#remarque-3-5), [Activité 3.7](ch3-probabilite-conditio/5-pour-aller-plus-loin.qmd#activite-3-7), [Exercice 3.13](ch3-probabilite-conditio/5-pour-aller-plus-loin.qmd#exercice-3-13) ; modifié : [Activité 3.6](ch3-probabilite-conditio/5-pour-aller-plus-loin.qmd#activite-3-6) ; retiré : Exercice 3.12
+- Nouvelle section : [Exercices supplémentaires](ch3-probabilite-conditio/6-exercices-supplementaires.qmd)
+- Nouvelle section : [Références](ch3-probabilite-conditio/7-references.qmd)
+- Section retirée : ch1-compter-sur-de-petit/1-lister-avant-de-compter.qmd
+- Section retirée : ch1-compter-sur-de-petit/2-additionner-multiplier.qmd
+- Section retirée : ch1-compter-sur-de-petit/3-arrangements-et-permutations.qmd
+- Section retirée : ch1-compter-sur-de-petit/4-combinaisons.qmd
+- Section retirée : ch1-compter-sur-de-petit/5-permutations-avec-repetition-les-anagram.qmd
+- Section retirée : ch1-compter-sur-de-petit/6-choisir-une-methode.qmd
+- Section retirée : ch1-compter-sur-de-petit/7-exercices-supplementaires.qmd
+- Section retirée : ch3-probabilite-conditio/6-sources-des-donnees.qmd
+- Section retirée : ch3-probabilite-conditio/7-exercices-supplementaires.qmd
+
+## 30/09/2026
+
+- Première version en ligne du cours.
+

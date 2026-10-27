@@ -1,0 +1,394 @@
+---
+title: "Propriétés des probabilités"
+---
+
+<!-- GÉNÉRÉ par typweb à partir des notes Typst : NE PAS ÉDITER (les modifications seraient écrasées). -->
+
+::: {#activite-2-4 data-sorte="activite" data-num="2.4" data-page="25" data-phys="28" data-id="6UAA1.probabilite-reunion" data-type="activite" data-tags="" .theo .theo-activite}
+::: {.theo-head}
+**Activité 2.4** — probabilité d’une réunion
+:::
+
+::: {.theo-body}
+On lance un dé équilibré. $A$ : « obtenir un nombre pair » ; $B$ : « obtenir au moins 4 ».
+
+a) Écris $A$, $B$, $A \cap B$ et $A \cup B$ en extension, et place les issues dans le diagramme.
+
+::: {.pb-fig .pb-venn data-n="2" data-inclus="0" data-disjoints="0" data-ombre="[]" data-activite="1"}
+::: {.pb-univers}
+$\Omega$
+:::
+
+::: {.pb-nom data-i="0"}
+$A$
+:::
+
+::: {.pb-nom data-i="1"}
+$B$
+:::
+
+::: {.pb-z data-z="a"}
+[2]{.rep data-v="2"}
+:::
+
+::: {.pb-z data-z="ab"}
+[4, 6]{.rep data-v="4;6"}
+:::
+
+::: {.pb-z data-z="b"}
+[5]{.rep data-v="5"}
+:::
+
+::: {.pb-z data-z="dehors"}
+[1, 3]{.rep data-v="1;3"}
+:::
+:::
+
+::: {.rep-bloc}
+$A = \{2, 4, 6\}$, $B = \{4, 5, 6\}$, $A \cap B = \{4, 6\}$, $A \cup B = \{2, 4, 5, 6\}$.
+:::
+
+b) Compare $P(A \cup B)$ et $P(A) + P(B)$. D’où vient la différence ?
+
+::: {.rep-bloc}
+$P(A \cup B) = \frac{4}{6}$ et $P(A) + P(B) = \frac{3}{6} + \frac{3}{6} = \frac{6}{6}$. Les issues 4 et 6 sont comptées deux fois ; par le principe additif (propriété 1.2), $P(A \cup B) = \frac{3}{6} + \frac{3}{6} - \frac{2}{6} = \frac{4}{6}$.
+:::
+
+c) Que vaut $P(\overline{A})$ ?
+
+::: {.rep-bloc}
+$\overline{A} = \{1, 3, 5\}$ : $P(\overline{A}) = \frac{3}{6} = 1 - P(A)$.
+:::
+:::
+:::
+
+::: {#propriete-2-1 data-sorte="propriete" data-num="2.1" data-page="26" data-phys="29" data-id="6UAA1.proprietes-probabilites-2" data-type="propriete" data-tags="" .theo .theo-propriete}
+::: {.theo-head}
+**Propriété 2.1** — propriétés des probabilités
+:::
+
+::: {.theo-body}
+Pour tous événements $A$ et $B$ :
+
+- $0 \leq P(A) \leq 1$, $P(\Omega) = 1$, $P(\emptyset) = 0$ ;
+- $P(\overline{A}) = 1 - P(A)$ ;
+- $P(A \cup B) = P(A) + P(B) - P(A \cap B)$ ; si $A$ et $B$ sont disjoints, $P(A \cup B) = P(A) + P(B)$.
+:::
+:::
+
+::: {#remarque-2-2 data-sorte="remarque" data-num="2.2" data-page="26" data-phys="29" data-id="6UAA1.rem.007" data-type="remarque" data-tags="" .theo .theo-remarque}
+::: {.theo-head}
+**Remarque 2.2**
+:::
+
+::: {.theo-body}
+Ces propriétés viennent d’être obtenues en comptant, sous l’hypothèse d’équiprobabilité. Elles valent pour toute probabilité (définition 2.4) : $P(A \cup B)$ additionne les probabilités des issues de $A$ et celles de $B$, et celles de $A \cap B$ sont alors comptées deux fois. Les fréquences les vérifient aussi, donc les probabilités *a posteriori*.
+:::
+:::
+
+::: {#cadre-au-moins-un .cadre-info}
+**« Au moins un ».** Pour calculer la probabilité de « au moins un… », on passe souvent par le contraire « aucun… » : $P(\text{au moins un}) = 1 - P(\text{aucun})$.
+:::
+
+::: {#exemple-2-5 data-sorte="exemple" data-num="2.5" data-page="26" data-phys="29" data-id="6UAA1.paris-chevalier-mere" data-type="exemple" data-tags="" .theo .theo-exemple}
+::: {.theo-head}
+**Exemple 2.5** — les paris du chevalier de Méré
+:::
+
+::: {.theo-body}
+Le chevalier de Méré pensait que ces deux paris étaient favorables (probabilité de gagner supérieure à $\frac{1}{2}$) : obtenir au moins un 6 en lançant 4 fois un dé ; obtenir au moins un double six en lançant 24 fois deux dés. Pascal en discuta avec Fermat.
+
+*Premier pari.* Une issue est une suite de 4 résultats : on suppose les $6^{4} = 1296$ suites équiprobables. Contraire « aucun 6 » : $5^{4} = 625$ suites. $P(\text{au moins un 6}) = 1 - \frac{625}{1296} = \frac{671}{1296} \approx 0{,}518$ : le pari est favorable.
+
+*Second pari.* Une issue est une suite de 24 couples : $\#\Omega = 36^{24}$. Contraire « aucun double six » : $35^{24}$ suites. $P(\text{au moins un double six}) = 1 - \frac{35^{24}}{36^{24}} \approx 0{,}491$ : le pari est défavorable.
+:::
+:::
+
+**premier pari de Méré**
+
+```{=html}
+<div class="pb-sim" data-cfg="{&quot;experience&quot;: &quot;au-moins-un&quot;, &quot;des&quot;: 1, &quot;lancers&quot;: 4}"></div>
+```
+
+**second pari de Méré**
+
+```{=html}
+<div class="pb-sim" data-cfg="{&quot;experience&quot;: &quot;au-moins-un&quot;, &quot;des&quot;: 2, &quot;lancers&quot;: 24}"></div>
+```
+
+::: {#exercice-2-9 data-sorte="exercice" data-num="2.9" data-page="26" data-phys="29" data-id="6UAA1.ex.033" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice 2.9]{.exo-titre} [[A2]{.exo-comp} ★☆☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+On sait que $P(A) = 0{,}5$, $P(B) = 0{,}4$ et $P(A \cap B) = 0{,}1$. Complète le diagramme avec la probabilité de chaque zone, puis calcule $P(A \cup B)$ et la probabilité que ni $A$ ni $B$ ne soit réalisé.
+
+::: {.pb-fig .pb-venn data-n="2" data-inclus="0" data-disjoints="0" data-ombre="[]" data-activite="1"}
+::: {.pb-univers}
+$\Omega$
+:::
+
+::: {.pb-nom data-i="0"}
+$A$
+:::
+
+::: {.pb-nom data-i="1"}
+$B$
+:::
+
+::: {.pb-z data-z="a"}
+[$0{,}4$]{.rep data-v="0,4"}
+:::
+
+::: {.pb-z data-z="ab"}
+[$0{,}1$]{.rep data-v="0,1"}
+:::
+
+::: {.pb-z data-z="b"}
+[$0{,}3$]{.rep data-v="0,3"}
+:::
+
+::: {.pb-z data-z="dehors"}
+[$0{,}2$]{.rep data-v="0,2"}
+:::
+:::
+
+::: {.rep-bloc}
+Zones : $A$ seulement $0{,}5 - 0{,}1 = 0{,}4$ ; $B$ seulement $0{,}4 - 0{,}1 = 0{,}3$. $P(A \cup B) = 0{,}5 + 0{,}4 - 0{,}1 = 0{,}8$. « Ni $A$ ni $B$ » est le contraire de $A \cup B$ : $1 - 0{,}8 = 0{,}2$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [propriété 2.1](#propriete-2-1).
+
+## Indice 2 {.unlisted}
+
+Que vaut la zone « $A$ seulement » ?
+
+## Indice 3 {.unlisted}
+
+$A$ seulement : $0{,}5 - 0{,}1 = 0{,}4$.
+
+## Solution {.unlisted}
+
+Zones : $A$ seulement $0{,}5 - 0{,}1 = 0{,}4$ ; $A \cap B$ : $0{,}1$ ; $B$ seulement $0{,}4 - 0{,}1 = 0{,}3$ ; hors de $A$ et $B$ : $1 - (0{,}4 + 0{,}1 + 0{,}3) = 0{,}2$. $P(A \cup B) = 0{,}5 + 0{,}4 - 0{,}1 = 0{,}8$. « Ni $A$ ni $B$ » est le contraire de $A \cup B$ : sa probabilité vaut $1 - 0{,}8 = 0{,}2$.
+
+## Pièges {.unlisted}
+
+- Écrire $0{,}5$ dans la zone « $A$ seulement » : cette zone ne contient pas $A \cap B$.
+:::
+:::
+
+::: {#exercice-2-10 data-sorte="exercice" data-num="2.10" data-page="27" data-phys="30" data-id="6UAA1.ex.034" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice 2.10]{.exo-titre} [[A2]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+On choisit au hasard un nombre entier de 1 à 30. $A$ : « le nombre est multiple de 2 » ; $B$ : « le nombre est multiple de 3 ».
+
+a) Écris dans le diagramme le nombre d’issues de chaque zone, puis complète le tableau.
+
+::: {.grille style="--n:2"}
+::: {.cellule}
+::: {.pb-fig .pb-venn data-n="2" data-inclus="0" data-disjoints="0" data-ombre="[]" data-activite="1"}
+::: {.pb-univers}
+$\Omega$
+:::
+
+::: {.pb-nom data-i="0"}
+$A$
+:::
+
+::: {.pb-nom data-i="1"}
+$B$
+:::
+
+::: {.pb-z data-z="a"}
+[10]{.rep data-v="10"}
+:::
+
+::: {.pb-z data-z="ab"}
+[5]{.rep data-v="5"}
+:::
+
+::: {.pb-z data-z="b"}
+[5]{.rep data-v="5"}
+:::
+
+::: {.pb-z data-z="dehors"}
+[10]{.rep data-v="10"}
+:::
+:::
+:::
+
+::: {.cellule}
+::: {.tableau}
+|   | $B$ | $\overline{B}$ | **Total** |
+|:---:|:---:|:---:|:---:|
+| $A$ | [5]{.rep} | [10]{.rep} | [15]{.rep} |
+| $\overline{A}$ | [5]{.rep} | [10]{.rep} | [15]{.rep} |
+| **Total** | [10]{.rep} | [20]{.rep} | 30 |
+:::
+:::
+:::
+
+b) Quelle case du tableau correspond à chaque zone du diagramme ?
+
+c) Calcule $P(A \cap \overline{B})$, $P(\overline{A} \cap \overline{B})$ et $P(A \cup B)$.
+
+::: {.rep-bloc}
+a) Multiples de 2 : 15 ; de 3 : 10 ; des deux (multiples de 6) : 5. Zones : $A$ seulement $15 - 5 = 10$, $B$ seulement $10 - 5 = 5$, ni l’un ni l’autre $30 - 10 - 5 - 5 = 10$. b) $A \cap B$ : zone commune ; $A \cap \overline{B}$ : $A$ seulement ; $\overline{A} \cap B$ : $B$ seulement ; $\overline{A} \cap \overline{B}$ : hors des deux cercles. Les totaux des lignes et des colonnes donnent $\#A$, $\#\overline{A}$, $\#B$ et $\#\overline{B}$. c) Issues équiprobables : $P(A \cap \overline{B}) = \frac{10}{30} = \frac{1}{3}$ ; $P(\overline{A} \cap \overline{B}) = \frac{10}{30} = \frac{1}{3}$ ; $P(A \cup B) = \frac{10 + 5 + 5}{30} = \frac{2}{3}$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis le [tableau des événements](2-univers-et-evenements.qmd#exemple-2-2) et le [principe de la réunion](#propriete-2-1).
+
+## Indice 2 {.unlisted}
+
+Quels nombres sont à la fois multiples de 2 et de 3 ?
+
+## Indice 3 {.unlisted}
+
+Commence par la zone commune : les multiples de 6.
+
+## Solution {.unlisted}
+
+Multiples de 2 : 15 ; de 3 : 10 ; des deux (multiples de 6) : 5. Zones : $A$ seulement : $15 - 5 = 10$ ; $B$ seulement : $10 - 5 = 5$ ; ni l’un ni l’autre : $30 - 20 = 10$. Tableau : ligne $A$ : 5, 10 (total 15) ; ligne $\overline{A}$ : 5, 10 (total 15) ; totaux des colonnes : 10 et 20 ; total 30. Chaque case intérieure du tableau correspond à une zone du diagramme. Issues équiprobables : $P(A \cap \overline{B}) = \frac{10}{30} = \frac{1}{3}$ ; $P(\overline{A} \cap \overline{B}) = \frac{10}{30} = \frac{1}{3}$ ; $P(A \cup B) = \frac{20}{30} = \frac{2}{3}$.
+
+## Pièges {.unlisted}
+
+- Écrire 15 dans la zone « $A$ seulement » : les multiples de 6 sont déjà dans la zone commune.
+- Oublier la zone extérieure (ni multiple de 2 ni multiple de 3).
+:::
+:::
+
+::: {#exercice-2-11 data-sorte="exercice" data-num="2.11" data-page="27" data-phys="30" data-id="6UAA1.ex.035" data-type="exercice" data-tags="" .exo}
+::: {.exo-tete}
+[✎ Exercice 2.11]{.exo-titre} [[C5]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Un dé est truqué : la probabilité d’obtenir 6 vaut $\frac{1}{3}$ et les cinq autres faces ont la même probabilité. Calcule la probabilité a) d’obtenir 1 ; b) d’obtenir un nombre pair ; c) d’obtenir un nombre impair. Peut-on utiliser la règle de Laplace ?
+
+::: {.rep-bloc}
+Les six issues ne sont pas équiprobables : la règle de Laplace ne s’applique pas. On utilise $P(\Omega) = 1$. a) Les faces 1 à 5 se partagent $1 - \frac{1}{3} = \frac{2}{3}$ : $P(\text{obtenir 1}) = \frac{\frac{2}{3}}{5} = \frac{2}{15}$. b) $P(\{2, 4, 6\}) = \frac{2}{15} + \frac{2}{15} + \frac{1}{3} = \frac{9}{15} = \frac{3}{5}$. c) C’est le contraire de b) : $1 - \frac{3}{5} = \frac{2}{5}$ (contrôle : $3 \cdot \frac{2}{15} = \frac{2}{5}$).
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis les [propriétés des probabilités](#propriete-2-1) : que vaut $P(\Omega)$ ?
+
+## Indice 2 {.unlisted}
+
+Les six faces sont-elles équiprobables ? Que se partagent les faces 1 à 5 ?
+
+## Indice 3 {.unlisted}
+
+$P(\text{obtenir 1}) + \cdots + P(\text{obtenir 5}) = 1 - \frac{1}{3}$.
+
+## Solution {.unlisted}
+
+Les six issues ne sont pas équiprobables : la règle de Laplace ne s’applique pas. Comme $P(\Omega) = 1$, les faces 1 à 5 se partagent $\frac{2}{3}$ : $P(\text{obtenir 1}) = \frac{\frac{2}{3}}{5} = \frac{2}{15}$. $P(\text{pair}) = P(\text{obtenir 2}) + P(\text{obtenir 4}) + P(\text{obtenir 6}) = \frac{2}{15} + \frac{2}{15} + \frac{5}{15} = \frac{9}{15} = \frac{3}{5}$. $P(\text{impair}) = 1 - \frac{3}{5} = \frac{2}{5}$.
+
+## Pièges {.unlisted}
+
+- Répondre $P(\text{obtenir 1}) = \frac{1}{6}$ ou $P(\text{pair}) = \frac{1}{2}$ : le dé n’est pas équilibré.
+- Diviser $\frac{1}{3}$ par 5 au lieu de $\frac{2}{3}$.
+:::
+:::
+
+::: {#exercice-2-12 data-sorte="exercice" data-num="2.12" data-page="27" data-phys="30" data-id="6UAA1.ex.036" data-type="exercice" data-tags="maison" .exo}
+::: {.exo-tete}
+[✎ Exercice 2.12]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[C5]{.exo-comp} ★☆☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+On tire une carte d’un jeu de 52 cartes. $C$ : « tirer un cœur » ; $R$ : « tirer un roi ». $C$ et $R$ sont-ils disjoints ? Calcule $P(C \cup R)$ et $P(\overline{C})$.
+
+::: {.rep-bloc}
+On suppose les 52 cartes équiprobables. $C \cap R$ = {roi de cœur} : $C$ et $R$ ne sont pas disjoints. $P(C \cup R) = \frac{13}{52} + \frac{4}{52} - \frac{1}{52} = \frac{16}{52} = \frac{4}{13}$. $P(\overline{C}) = 1 - \frac{13}{52} = \frac{3}{4}$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis la [propriété 2.1](#propriete-2-1).
+
+## Indice 2 {.unlisted}
+
+Existe-t-il une carte qui est à la fois un cœur et un roi ?
+
+## Indice 3 {.unlisted}
+
+$P(C) = \frac{13}{52}$, $P(R) = \frac{4}{52}$, $P(C \cap R) = \frac{1}{52}$.
+
+## Solution {.unlisted}
+
+On suppose les 52 cartes équiprobables. $C \cap R$ = {roi de cœur} : $C$ et $R$ ne sont pas disjoints. $P(C \cup R) = P(C) + P(R) - P(C \cap R) = \frac{13}{52} + \frac{4}{52} - \frac{1}{52} = \frac{16}{52} = \frac{4}{13}$. $P(\overline{C}) = 1 - \frac{13}{52} = \frac{39}{52} = \frac{3}{4}$.
+
+## Pièges {.unlisted}
+
+- Calculer $P(C \cup R) = \frac{17}{52}$ : le roi de cœur est compté deux fois.
+:::
+:::
+
+::: {#exercice-2-13 data-sorte="exercice" data-num="2.13" data-page="27" data-phys="30" data-id="6UAA1.ex.037" data-type="exercice" data-tags="maison" .exo}
+::: {.exo-tete}
+[✎ Exercice 2.13]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[C5]{.exo-comp} ★★☆]{.exo-meta}
+:::
+
+::: {.exo-corps}
+Charlotte, Farid et Joseph sont les seuls participants à une course ; il y a un seul gagnant. Charlotte et Farid ont la même probabilité de gagner, et cette probabilité est le double de celle de Joseph. Quelle est la probabilité que Joseph gagne ? Qu’un garçon gagne ?
+
+::: {.rep-bloc}
+Notons $p$ la probabilité que Joseph gagne : Charlotte et Farid gagnent chacun avec la probabilité $2p$. Les trois événements sont disjoints et leur réunion est certaine : $p + 2p + 2p = 1$, donc $p = \frac{1}{5}$. Un garçon gagne (Farid ou Joseph) : $\frac{2}{5} + \frac{1}{5} = \frac{3}{5}$.
+:::
+:::
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+## Indice 1 {.unlisted}
+
+Relis les [propriétés des probabilités](#propriete-2-1) (événements disjoints, $P(\Omega) = 1$).
+
+## Indice 2 {.unlisted}
+
+Si on appelle $p$ la probabilité que Joseph gagne, que valent les deux autres ?
+
+## Indice 3 {.unlisted}
+
+$p + 2p + 2p = 1$.
+
+## Solution {.unlisted}
+
+Soit $p$ la probabilité que Joseph gagne ; Charlotte et Farid gagnent chacun avec la probabilité $2p$. Il y a un seul gagnant : les trois événements sont disjoints et leur réunion est certaine, donc $5p = 1$ et $p = \frac{1}{5}$. Un garçon gagne (Farid ou Joseph) : $\frac{2}{5} + \frac{1}{5} = \frac{3}{5}$.
+
+## Pièges {.unlisted}
+
+- Répondre $\frac{1}{3}$ : les trois coureurs n’ont pas la même probabilité de gagner.
+- Oublier que Charlotte n’est pas un garçon.
+:::
+:::
+
+::: {.ae-lien}
+[✔ S'autoévaluer sur cette section : test de 7 questions →](../autoeval.qmd#sections=sec-proprietes)
+:::

@@ -34,7 +34,7 @@ Erreurs fréquentes, à vérifier avant de rendre une réponse :
 
 ::: {#exercice-1-21 data-sorte="exercice" data-num="1.21" data-page="16" data-phys="19" data-id="6UAA1.ex.021" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice 1.21]{.exo-titre} [[C1]{.exo-comp} ★☆☆]{.exo-meta}
+[✎ Exercice 1.21]{.exo-titre} [[C1]{.exo-comp data-tip="C1 : Reconnaître en contexte, un groupement d’objets (arrangement, combinaison)." tabindex="0"} ★☆☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -75,7 +75,7 @@ a) L’ordre compte, sans répétition : $A_{12}^{3} = 1320$. b) L’ordre ne co
 
 ::: {#exercice-1-22 data-sorte="exercice" data-num="1.22" data-page="16" data-phys="19" data-id="6UAA1.ex.022" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice 1.22]{.exo-titre} [[C1]{.exo-comp} ★★☆]{.exo-meta}
+[✎ Exercice 1.22]{.exo-titre} [[C1]{.exo-comp data-tip="C1 : Reconnaître en contexte, un groupement d’objets (arrangement, combinaison)." tabindex="0"} ★★☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -115,7 +115,7 @@ a) $A_{5}^{3} = 60$ : on attribue aux 3 lettres, dans l’ordre, 3 boîtes disti
 
 ::: {#exercice-1-23 data-sorte="exercice" data-num="1.23" data-page="17" data-phys="20" data-id="6UAA1.ex.023" data-type="exercice" data-tags="maison" .exo}
 ::: {.exo-tete}
-[✎ Exercice 1.23]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[T1]{.exo-comp} ★★☆]{.exo-meta}
+[✎ Exercice 1.23]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[T1]{.exo-comp data-tip="T1 : Résoudre un problème d’analyse combinatoire / de probabilité." tabindex="0"} ★★☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -153,7 +153,7 @@ Placements : on range 6 élèves, $6! = 720$. Alice et Bilal côte à côte : on
 
 ::: {#exercice-1-24 data-sorte="exercice" data-num="1.24" data-page="17" data-phys="20" data-id="6UAA1.ex.024" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice 1.24]{.exo-titre} [[C1]{.exo-comp} ★★☆]{.exo-meta}
+[✎ Exercice 1.24]{.exo-titre} [[C1]{.exo-comp data-tip="C1 : Reconnaître en contexte, un groupement d’objets (arrangement, combinaison)." tabindex="0"} ★★☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}

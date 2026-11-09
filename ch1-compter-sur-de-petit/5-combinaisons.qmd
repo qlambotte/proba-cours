@@ -240,7 +240,7 @@ Une grille est un groupe de 6 numéros distincts : l’ordre dans lequel on les 
 
 ::: {#exercice-1-13 data-sorte="exercice" data-num="1.13" data-page="13" data-phys="16" data-id="6UAA1.ex.013" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice 1.13]{.exo-titre} [[A5]{.exo-comp} ★☆☆]{.exo-meta}
+[✎ Exercice 1.13]{.exo-titre} [[A5]{.exo-comp data-tip="A5 : Dénombrer les résultats d’une situation à l’aide d’une liste organisée, d’un arbre, d’un diagramme ou des formules d’analyse combinatoire, en justifiant le choix de la formule. †" tabindex="0"} ★☆☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -278,7 +278,7 @@ Même rôle : un choix est un groupe de 3 élèves distincts, $C_{22}^{3} = \fra
 
 ::: {#exercice-1-14 data-sorte="exercice" data-num="1.14" data-page="13" data-phys="16" data-id="6UAA1.ex.014" data-type="exercice" data-tags="maison" .exo}
 ::: {.exo-tete}
-[✎ Exercice 1.14]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[A5]{.exo-comp} ★☆☆]{.exo-meta}
+[✎ Exercice 1.14]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[A5]{.exo-comp data-tip="A5 : Dénombrer les résultats d’une situation à l’aide d’une liste organisée, d’un arbre, d’un diagramme ou des formules d’analyse combinatoire, en justifiant le choix de la formule. †" tabindex="0"} ★☆☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -317,7 +317,7 @@ Une poignée de main correspond à un groupe de 2 personnes parmi 25 (A serre la
 
 ::: {#exercice-1-15 data-sorte="exercice" data-num="1.15" data-page="13" data-phys="16" data-id="6UAA1.ex.015" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice 1.15]{.exo-titre} [[A5]{.exo-comp} ★★☆]{.exo-meta}
+[✎ Exercice 1.15]{.exo-titre} [[A5]{.exo-comp data-tip="A5 : Dénombrer les résultats d’une situation à l’aide d’une liste organisée, d’un arbre, d’un diagramme ou des formules d’analyse combinatoire, en justifiant le choix de la formule. †" tabindex="0"} ★★☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -356,7 +356,7 @@ On choisit les 3 filles parmi 8 : $C_{8}^{3} = 56$ groupes ; puis les 2 garçons
 
 ::: {#exercice-1-16 data-sorte="exercice" data-num="1.16" data-page="14" data-phys="17" data-id="6UAA1.ex.016" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice 1.16]{.exo-titre} [[T1]{.exo-comp} ★★★]{.exo-meta}
+[✎ Exercice 1.16]{.exo-titre} [[T1]{.exo-comp data-tip="T1 : Résoudre un problème d’analyse combinatoire / de probabilité." tabindex="0"} ★★★]{.exo-meta}
 :::
 
 ::: {.exo-corps}

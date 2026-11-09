@@ -106,7 +106,7 @@ Les 4 lancers d’un dé sont indépendants : $P(\text{aucun 6}) = (\frac{5}{6})
 
 ::: {#exercice-3-7 data-sorte="exercice" data-num="3.7" data-page="36" data-phys="39" data-id="6UAA1.ex.049" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice 3.7]{.exo-titre} [[A4]{.exo-comp} ★☆☆]{.exo-meta}
+[✎ Exercice 3.7]{.exo-titre} [[A4]{.exo-comp data-tip="A4 : Vérifier si 2 événements sont dépendants ou indépendants." tabindex="0"} ★☆☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -144,7 +144,7 @@ On suppose les 36 couples équiprobables. $P(A) = \frac{6}{36} = \frac{1}{6}$, $
 
 ::: {#exercice-3-8 data-sorte="exercice" data-num="3.8" data-page="37" data-phys="40" data-id="6UAA1.ex.050" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice 3.8]{.exo-titre} [[A4]{.exo-comp} ★★☆]{.exo-meta}
+[✎ Exercice 3.8]{.exo-titre} [[A4]{.exo-comp data-tip="A4 : Vérifier si 2 événements sont dépendants ou indépendants." tabindex="0"} ★★☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -182,7 +182,7 @@ $P(S \cap C) = \frac{203}{2201} \approx 0{,}092$ et $P(S) \cdot P(C) = \frac{711
 
 ::: {#exercice-3-9 data-sorte="exercice" data-num="3.9" data-page="37" data-phys="40" data-id="6UAA1.ex.051" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice 3.9]{.exo-titre} [[A6]{.exo-comp} ★★☆]{.exo-meta}
+[✎ Exercice 3.9]{.exo-titre} [[A6]{.exo-comp data-tip="A6 : Calculer une probabilité a posteriori à partir de données statistiques ou de simulations. †" tabindex="0"} ★★☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -227,7 +227,7 @@ a) $60 \, 282 + 57 \, 632 = 117 \, 914$ naissances : $P(F) \approx 57 \, \frac{6
 
 ::: {#exercice-3-10 data-sorte="exercice" data-num="3.10" data-page="37" data-phys="40" data-id="6UAA1.ex.052" data-type="exercice" data-tags="maison" .exo}
 ::: {.exo-tete}
-[✎ Exercice 3.10]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[A4]{.exo-comp} ★★☆]{.exo-meta}
+[✎ Exercice 3.10]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[A4]{.exo-comp data-tip="A4 : Vérifier si 2 événements sont dépendants ou indépendants." tabindex="0"} ★★☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -265,7 +265,7 @@ On suppose les 52 cartes équiprobables. $P(C \cap R) = \frac{1}{52}$ (roi de c�
 
 ::: {#exercice-3-11 data-sorte="exercice" data-num="3.11" data-page="37" data-phys="40" data-id="6UAA1.ex.053" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice 3.11]{.exo-titre} [[T1]{.exo-comp} ★★★]{.exo-meta}
+[✎ Exercice 3.11]{.exo-titre} [[T1]{.exo-comp data-tip="T1 : Résoudre un problème d’analyse combinatoire / de probabilité." tabindex="0"} ★★★]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -303,7 +303,7 @@ Sans remise : $P(R_{2}) = \frac{3}{5}$ (exercice 3.3) et $P(R_{2} | R_{1}) = \fr
 
 ::: {#exercice-3-12 data-sorte="exercice" data-num="3.12" data-page="37" data-phys="40" data-id="6UAA1.ex.054" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice 3.12]{.exo-titre} [[T2]{.exo-comp} ★★☆]{.exo-meta}
+[✎ Exercice 3.12]{.exo-titre} [[T2]{.exo-comp data-tip="T2 : Utiliser le calcul des probabilités pour analyser et critiquer des informations chiffrées (santé, presse, jeux de hasard). †" tabindex="0"} ★★☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}

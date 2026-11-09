@@ -8,7 +8,7 @@ title: "Exercices supplémentaires"
 
 ::: {#exercice-S1-1 data-sorte="exercice" data-num="S1.1" data-id="6UAA1.ex.056" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice S1.1]{.exo-titre} [[A5]{.exo-comp} ★☆☆]{.exo-meta}
+[✎ Exercice S1.1]{.exo-titre} [[A5]{.exo-comp data-tip="A5 : Dénombrer les résultats d’une situation à l’aide d’une liste organisée, d’un arbre, d’un diagramme ou des formules d’analyse combinatoire, en justifiant le choix de la formule. †" tabindex="0"} ★☆☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -46,7 +46,7 @@ Un code est une suite de 2 lettres puis 3 chiffres, avec répétition. Par le pr
 
 ::: {#exercice-S1-2 data-sorte="exercice" data-num="S1.2" data-id="6UAA1.ex.057" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice S1.2]{.exo-titre} [[C1]{.exo-comp} ★☆☆]{.exo-meta}
+[✎ Exercice S1.2]{.exo-titre} [[C1]{.exo-comp data-tip="C1 : Reconnaître en contexte, un groupement d’objets (arrangement, combinaison)." tabindex="0"} ★☆☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -86,7 +86,7 @@ a) Suite de 4 élèves distincts : $A_{10}^{4} = 5040$. b) Groupe de 4 élèves 
 
 ::: {#exercice-S1-3 data-sorte="exercice" data-num="S1.3" data-id="6UAA1.ex.058" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice S1.3]{.exo-titre} [[A5]{.exo-comp} ★★☆]{.exo-meta}
+[✎ Exercice S1.3]{.exo-titre} [[A5]{.exo-comp data-tip="A5 : Dénombrer les résultats d’une situation à l’aide d’une liste organisée, d’un arbre, d’un diagramme ou des formules d’analyse combinatoire, en justifiant le choix de la formule. †" tabindex="0"} ★★☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -156,7 +156,7 @@ $F$ : multiples de 5, $\#F = 200$. $S$ : multiples de 7, $\#S = 142$ ($7 \cdot 1
 
 ::: {#exercice-S1-4 data-sorte="exercice" data-num="S1.4" data-id="6UAA1.ex.059" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice S1.4]{.exo-titre} [[A5]{.exo-comp} ★★☆]{.exo-meta}
+[✎ Exercice S1.4]{.exo-titre} [[A5]{.exo-comp data-tip="A5 : Dénombrer les résultats d’une situation à l’aide d’une liste organisée, d’un arbre, d’un diagramme ou des formules d’analyse combinatoire, en justifiant le choix de la formule. †" tabindex="0"} ★★☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -194,7 +194,7 @@ Tous les mots de passe : suites de 4 lettres avec répétition, $26^{4} = 456 \,
 
 ::: {#exercice-S1-5 data-sorte="exercice" data-num="S1.5" data-id="6UAA1.ex.060" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice S1.5]{.exo-titre} [[T1]{.exo-comp} ★★★]{.exo-meta}
+[✎ Exercice S1.5]{.exo-titre} [[T1]{.exo-comp data-tip="T1 : Résoudre un problème d’analyse combinatoire / de probabilité." tabindex="0"} ★★★]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -234,7 +234,7 @@ On choisit 2 as parmi les 4 : $C_{4}^{2} = 6$ ; puis 3 cartes parmi les 48 qui n
 
 ::: {#exercice-S1-6 data-sorte="exercice" data-num="S1.6" data-id="6UAA1.ex.061" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice S1.6]{.exo-titre} [[A5]{.exo-comp} ★☆☆]{.exo-meta}
+[✎ Exercice S1.6]{.exo-titre} [[A5]{.exo-comp data-tip="A5 : Dénombrer les résultats d’une situation à l’aide d’une liste organisée, d’un arbre, d’un diagramme ou des formules d’analyse combinatoire, en justifiant le choix de la formule. †" tabindex="0"} ★☆☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -272,7 +272,7 @@ $\frac{12!}{10!} = 12 \cdot 11 = 132$ ; $\frac{6!}{3! \cdot 3!} = \frac{6 \cdot 
 
 ::: {#exercice-S1-7 data-sorte="exercice" data-num="S1.7" data-id="6UAA1.ex.062" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice S1.7]{.exo-titre} [[A5]{.exo-comp} ★☆☆]{.exo-meta}
+[✎ Exercice S1.7]{.exo-titre} [[A5]{.exo-comp data-tip="A5 : Dénombrer les résultats d’une situation à l’aide d’une liste organisée, d’un arbre, d’un diagramme ou des formules d’analyse combinatoire, en justifiant le choix de la formule. †" tabindex="0"} ★☆☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -310,7 +310,7 @@ a) $\frac{5!}{2! \cdot 2!} = 30$. b) ELEVE : E trois fois, $\frac{5!}{3!} = 20$.
 
 ::: {#exercice-S1-8 data-sorte="exercice" data-num="S1.8" data-id="6UAA1.ex.063" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice S1.8]{.exo-titre} [[A5]{.exo-comp} ★★☆]{.exo-meta}
+[✎ Exercice S1.8]{.exo-titre} [[A5]{.exo-comp data-tip="A5 : Dénombrer les résultats d’une situation à l’aide d’une liste organisée, d’un arbre, d’un diagramme ou des formules d’analyse combinatoire, en justifiant le choix de la formule. †" tabindex="0"} ★★☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -351,7 +351,7 @@ a) 4 enfants peuvent occuper la première chaise ; les 6 autres se rangent ensui
 
 ::: {#exercice-S1-9 data-sorte="exercice" data-num="S1.9" data-id="6UAA1.ex.064" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice S1.9]{.exo-titre} [[A5]{.exo-comp} ★★☆]{.exo-meta}
+[✎ Exercice S1.9]{.exo-titre} [[A5]{.exo-comp data-tip="A5 : Dénombrer les résultats d’une situation à l’aide d’une liste organisée, d’un arbre, d’un diagramme ou des formules d’analyse combinatoire, en justifiant le choix de la formule. †" tabindex="0"} ★★☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}

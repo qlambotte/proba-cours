@@ -156,7 +156,7 @@ Il faut choisir une probabilité de départ (*a priori*). Ici, elle vient d’un
 
 ::: {#exercice-3-13 data-sorte="exercice" data-num="3.13" data-page="40" data-phys="43" data-id="6UAA1.ex.055" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice 3.13]{.exo-titre} [[T1]{.exo-comp} ★★★]{.exo-meta}
+[✎ Exercice 3.13]{.exo-titre} [[T1]{.exo-comp data-tip="T1 : Résoudre un problème d’analyse combinatoire / de probabilité." tabindex="0"} ★★★]{.exo-meta}
 :::
 
 ::: {.exo-corps}

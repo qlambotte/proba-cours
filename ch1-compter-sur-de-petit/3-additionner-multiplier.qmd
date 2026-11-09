@@ -260,7 +260,7 @@ Un code est une suite de 4 chiffres, avec répétition : il y en a $10 \cdot 10 
 
 ::: {#exercice-1-4 data-sorte="exercice" data-num="1.4" data-page="8" data-phys="11" data-id="6UAA1.ex.004" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice 1.4]{.exo-titre} [[A5]{.exo-comp} ★☆☆]{.exo-meta}
+[✎ Exercice 1.4]{.exo-titre} [[A5]{.exo-comp data-tip="A5 : Dénombrer les résultats d’une situation à l’aide d’une liste organisée, d’un arbre, d’un diagramme ou des formules d’analyse combinatoire, en justifiant le choix de la formule. †" tabindex="0"} ★☆☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -298,7 +298,7 @@ Une tenue est un couple (pull, pantalon). L’arbre a 3 branches au premier nive
 
 ::: {#exercice-1-5 data-sorte="exercice" data-num="1.5" data-page="8" data-phys="11" data-id="6UAA1.ex.005" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice 1.5]{.exo-titre} [[A5]{.exo-comp} ★★☆]{.exo-meta}
+[✎ Exercice 1.5]{.exo-titre} [[A5]{.exo-comp data-tip="A5 : Dénombrer les résultats d’une situation à l’aide d’une liste organisée, d’un arbre, d’un diagramme ou des formules d’analyse combinatoire, en justifiant le choix de la formule. †" tabindex="0"} ★★☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -367,7 +367,7 @@ $Q$ : multiples de 4 ; $\#Q = 15$ ($4 \cdot 15 = 60$). $S$ : multiples de 6 ; $\
 
 ::: {#exercice-1-6 data-sorte="exercice" data-num="1.6" data-page="9" data-phys="12" data-id="6UAA1.ex.006" data-type="exercice" data-tags="maison" .exo}
 ::: {.exo-tete}
-[✎ Exercice 1.6]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[A5]{.exo-comp} ★★☆]{.exo-meta}
+[✎ Exercice 1.6]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[A5]{.exo-comp data-tip="A5 : Dénombrer les résultats d’une situation à l’aide d’une liste organisée, d’un arbre, d’un diagramme ou des formules d’analyse combinatoire, en justifiant le choix de la formule. †" tabindex="0"} ★★☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -405,7 +405,7 @@ Un code est une suite de 3 chiffres, avec répétition : $10^{3} = 1000$ codes. 
 
 ::: {#exercice-1-7 data-sorte="exercice" data-num="1.7" data-page="9" data-phys="12" data-id="6UAA1.ex.007" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice 1.7]{.exo-titre} [[T1]{.exo-comp} ★★★]{.exo-meta}
+[✎ Exercice 1.7]{.exo-titre} [[T1]{.exo-comp data-tip="T1 : Résoudre un problème d’analyse combinatoire / de probabilité." tabindex="0"} ★★★]{.exo-meta}
 :::
 
 ::: {.exo-corps}

@@ -190,7 +190,7 @@ $$
 
 ::: {#exercice-3-3 data-sorte="exercice" data-num="3.3" data-page="33" data-phys="36" data-id="6UAA1.ex.045" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice 3.3]{.exo-titre} [[A2]{.exo-comp} ★☆☆]{.exo-meta}
+[✎ Exercice 3.3]{.exo-titre} [[A2]{.exo-comp data-tip="A2 : Extraire d’un arbre, d’un tableau ou de diagrammes de Venn la probabilité d’un événement." tabindex="0"} ★☆☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -283,7 +283,7 @@ On suppose que chaque boule a la même chance d’être tirée. Branches du deux
 
 ::: {#exercice-3-4 data-sorte="exercice" data-num="3.4" data-page="33" data-phys="36" data-id="6UAA1.ex.046" data-type="exercice" data-tags="maison" .exo}
 ::: {.exo-tete}
-[✎ Exercice 3.4]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[A3]{.exo-comp} ★★☆]{.exo-meta}
+[✎ Exercice 3.4]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[A3]{.exo-comp data-tip="A3 : Calculer une probabilité (y compris une probabilité conditionnelle) en utilisant : des tableaux / des diagrammes de Venn / des arbres / des formules d’analyse combinatoire." tabindex="0"} ★★☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}

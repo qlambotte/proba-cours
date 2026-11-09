@@ -330,7 +330,7 @@ table.fixe th, table.fixe td { border: 1px solid var(--text) !important; padding
 .lp-inflab { fill: var(--text); font-weight: 600; font-size: 14px; font-family: $font-family-sans-serif; }
 .lp-a line { stroke: var(--cible); stroke-width: 1.6; stroke-dasharray: 6 4; }
 .lp-alab { fill: var(--cible); font-weight: 600; font-size: 13px; font-family: $font-family-sans-serif; paint-order: stroke; stroke: var(--page-bg); stroke-width: 3px; }
-.lp-asym line { stroke: var(--asym); stroke-width: 1.2; stroke-dasharray: 6 4; }
+.lp-asym line { stroke: var(--asym); stroke-width: 2.2; stroke-dasharray: 8 5; }
 .lp-courbe path { fill: none; stroke: var(--courbe); stroke-width: 2.4; stroke-linejoin: round; }
 .lp-hit { fill: none; stroke: transparent; stroke-width: 22; pointer-events: stroke; }
 .lp-creux { fill: var(--page-bg); stroke: var(--courbe); stroke-width: 2; }
@@ -462,6 +462,7 @@ span.rep { border-bottom: 1.5px dashed var(--muted); border-radius: 3px; cursor:
 span.rep * { color: transparent !important; }
 span.rep.vu { color: var(--accent); background: transparent; }
 span.rep.vu * { color: var(--accent) !important; }
+@media print { .rep:not(.vu), .rep:not(.vu) * { color: inherit !important; background: none !important; } }
 mjx-container .rep { cursor: pointer; background: var(--card-bg); color: transparent; border-bottom: 1.5px dashed var(--muted); }
 mjx-container .rep.vu { color: var(--accent); background: transparent; }
 .rep-bloc { display: block; cursor: pointer; border: 1.5px dashed var(--muted); border-radius: 6px; padding: .35rem .8rem;
@@ -496,6 +497,7 @@ span.rep:focus:not(:focus-visible), .rep-bloc:focus:not(:focus-visible) { outlin
 .lp-wrap.lp-replie { grid-template-columns: minmax(0, 520px); justify-content: center; }
 .lp-wrap.lp-replie .lp-side, .lp-wrap.lp-replie .lp-M, .lp-wrap.lp-replie .lp-trace,
 .lp-wrap.lp-replie .lp-a, .lp-wrap.lp-replie .lp-ecart { display: none !important; }
+.lp-wrap.lp-replie .lp-bord.on { stroke: transparent; }   /* outil fermé : pas de barre au bord ±∞ */
 .lp-wrap.lp-replie .lp-fig svg { cursor: default; }
 .lp-wrap:not(.lp-replie) .lp-mfixe { display: none; }
 .lp-wrap.lp-large { grid-template-columns: 1fr; }
@@ -723,8 +725,14 @@ main a { color: var(--accent); }
 .aides .tab-content { border: 0 !important; padding: .8rem .8rem .4rem !important; }
 
 /* réponses cachées */
-.rep { border: 1.5px dashed #9aa6b4 !important; border-radius: 14px !important; background: var(--q) !important; color: var(--muted) !important; }
-:root[data-theme="dark"] .rep { border-color: #6b7785 !important; }
+/* Réponse CACHÉE : pastille en tirets, texte invisible (y compris le texte hors formule :
+   « color: var(--muted) » le laissait lire avant le clic). Une fois dévoilée (.vu), les règles
+   de base s'appliquent (couleur d'accent, fond transparent). */
+.rep:not(.vu) { border: 1.5px dashed #9aa6b4 !important; border-radius: 14px !important; background: var(--q) !important; color: transparent !important; }
+.rep:not(.vu) * { color: transparent !important; }
+:root[data-theme="dark"] .rep:not(.vu) { border-color: #6b7785 !important; }
+.rep.vu { color: var(--accent) !important; background: transparent !important; }
+.rep.vu * { color: var(--accent) !important; }
 .lp-fig svg, .sp-canvas svg { border: 0 !important; border-radius: 16px !important; background: var(--carte) !important; box-shadow: 0 1px 2px var(--ombre), 0 6px 18px var(--ombre); }
 .lp-chip.on, .lp-btn2 { background: var(--ard) !important; border-color: var(--ard) !important; color: var(--carte) !important; border-radius: 99px !important; }
 .lp-chip, .lp-ain, .lp-btn { border-radius: 99px !important; }
@@ -750,3 +758,83 @@ main a { color: var(--accent); }
   .theo, .exo { border-radius: 18px !important; }
   .bulle-pdf { padding: .4rem .75rem !important; }
 }
+
+/* ---------- Ajustements « cartes contrastées » (variante C, 2026-10-28) ----------
+   Icônes d'en-tête regroupées dans une seule pastille (plus d'ovales séparés),
+   contour de chaque encadré dans la couleur de son type, remarque visible
+   (carte blanche + barre) au lieu d'être fondue dans le fond de page,
+   texte un peu plus aéré, menu latéral : page active en plein. */
+/* barre d'icônes : un peu d'air sous le titre du cours (le titre passe souvent sur deux lignes) */
+.sidebar-title .sidebar-tools-main { margin-top: .55rem !important; }
+.sidebar-tools-main { display: inline-flex !important; gap: 0 !important; background: var(--carte); border-radius: 99px; box-shadow: 0 1px 4px var(--ombre); padding: 2px 4px; }
+.imsv-tool { background: none !important; box-shadow: none !important; border-radius: 99px !important; width: 1.85rem !important; height: 1.85rem !important; margin: 0 !important; color: var(--ard) !important; }
+.imsv-tool:hover { background: var(--ard-t) !important; }
+.theo-head .imsv-tool, .exo-tete .imsv-tool { background: transparent !important; }
+body { line-height: 1.68; }
+/* Texte et cartes occupent la même largeur (plus de paragraphes étroits à côté de cartes larges). */
+/* Bande de titre d'un exercice : compétence et niveau tout à droite, le bouton « tableau » après eux. */
+.exo-tete { display: flex !important; align-items: center; gap: .6rem; }
+.exo-tete > p { margin: 0 !important; flex: 1; display: flex; align-items: center; gap: .9rem; }
+.exo-tete .exo-meta { margin-left: auto !important; white-space: nowrap; }
+.theo { border-radius: 18px !important; box-shadow: 0 1px 2px var(--ombre), 0 4px 14px var(--ombre) !important; }
+.theo-definition { background: var(--ard-t) !important; box-shadow: inset 0 0 0 1.5px var(--ard), 0 1px 2px var(--ombre) !important; }
+.theo-propriete { background: var(--cu-t) !important; box-shadow: inset 0 0 0 1.5px var(--cu), 0 1px 2px var(--ombre) !important; }
+.theo-exemple { box-shadow: inset 0 0 0 1.5px var(--ol), 0 1px 2px var(--ombre) !important; }
+.theo-remarque { background: var(--carte) !important; box-shadow: inset 0 0 0 1.5px var(--rule), 0 1px 2px var(--ombre) !important; border-left: 6px solid var(--muted) !important; }
+.theo-remarque .theo-head { color: var(--h) !important; }
+.theo-head::before { width: 12px; height: 12px; border-radius: 3px; transform: rotate(45deg); }
+.sidebar-navigation .sidebar-link.active, .sidebar-navigation .active { border-radius: 8px !important; background: var(--ard) !important; color: var(--carte) !important; padding: 3px 10px !important; }
+.sidebar-navigation .sidebar-item-text { font-size: .92rem; }
+.sidebar-navigation .active .sidebar-item-text { color: inherit; }
+/* Page active : texte clair sur fond ardoise, quel que soit le « style à l'essai » (menu Aa)
+   — certains forcent une couleur sombre sur .active, illisible sur ce fond. */
+html body .sidebar-navigation .sidebar-item .sidebar-link.active,
+html body .sidebar-navigation .sidebar-item .sidebar-link.active .sidebar-item-text { color: var(--carte) !important; }
+@media (max-width: 575.98px) { .theo { border-radius: 14px !important; } }
+
+
+/* ---------- Solutions : réponse finale puis « Je veux plus de détails » (format IMSV, 2026-10-29) ---------- */
+.aides .reponse { border-left: 3px solid var(--accent); background: var(--q); border-radius: 0 12px 12px 0;
+  padding: .55rem .9rem .6rem; margin: .1rem 0 .7rem; }
+.aides .reponse::before { content: "Réponse"; display: block; font: 700 .7rem $font-family-sans-serif; letter-spacing: .07em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: .2rem; }
+.aides .reponse > :last-child { margin-bottom: 0; }
+.aides .reponse ol, .aides .reponse ul { margin-bottom: 0; padding-left: 1.3rem; }
+details.tw-details { margin: .2rem 0 .4rem; }
+details.tw-details > summary { cursor: pointer; list-style: none; display: inline-block; font: 600 .9rem $font-family-sans-serif;
+  color: var(--accent); padding: .3rem .8rem; border-radius: 99px; background: var(--q); user-select: none; }
+details.tw-details > summary::-webkit-details-marker { display: none; }
+details.tw-details > summary::before { content: "▸ "; }
+details.tw-details[open] > summary::before { content: "▾ "; }
+details.tw-details > summary:hover { background: var(--hover-bg); }
+details.tw-details .tw-expl { padding: .6rem .2rem 0; }
+@media print { details.tw-details > summary { display: none; } details.tw-details .tw-expl { display: block !important; } }
+
+/* ---------- Menu « Télécharger » : il héritait de la police du titre du menu (Pagella, 1,35rem, gras) ---------- */
+.sidebar-title .imsv-dl-menu, .imsv-dl-menu { font: 400 .9rem/1.35 $font-family-sans-serif !important; letter-spacing: 0; text-transform: none;
+  min-width: 13rem; max-width: 15rem; white-space: normal; }
+.imsv-dl-menu a { font: 600 .9rem/1.3 $font-family-sans-serif !important; padding: .45rem .65rem !important; border: 0 !important; }
+.imsv-dl-menu a .imsv-dl-detail { font: 400 .76rem/1.3 $font-family-sans-serif !important; margin-top: .1rem; }
+.imsv-dl-menu .imsv-dl-head { font: 700 .68rem/1.2 $font-family-sans-serif !important; }
+
+/* ---------- Pastille de compétence : bulle avec l'intitulé de l'objectif (survol, ou toucher sur tablette) ---------- */
+.exo-comp[data-tip] { position: relative; cursor: help; }
+.exo-comp[data-tip]:focus { outline: 2px solid var(--cu-f); outline-offset: 1px; }
+.exo-comp[data-tip]:hover::after, .exo-comp[data-tip]:focus::after {
+  content: attr(data-tip); position: absolute; right: 0; top: calc(100% + 8px); z-index: 60;
+  width: max-content; max-width: min(24rem, 80vw); white-space: normal; text-align: left;
+  font: 500 .82rem/1.4 $font-family-sans-serif; letter-spacing: 0; text-transform: none;
+  color: #fff; background: #2f3a47; padding: .5rem .7rem; border-radius: 8px; box-shadow: 0 6px 18px rgba(0,0,0,.2); }
+:root[data-theme="dark"] .exo-comp[data-tip]:hover::after, :root[data-theme="dark"] .exo-comp[data-tip]:focus::after { background: #e8ebef; color: #1e242c; }
+.exo:has(.exo-comp[data-tip]:hover), .exo:has(.exo-comp[data-tip]:focus) { overflow: visible !important; }
+@media print { .exo-comp[data-tip]::after { display: none !important; } }
+
+/* ---------- « Aa » et crayon d'écriture dans la pastille d'icônes : ronds comme les autres, sans dépasser ---------- */
+.sidebar-tools-main .dans-outils { display: inline-flex !important; align-items: center; height: 1.85rem; margin: 0 !important; padding: 0 !important;
+  max-width: none !important; gap: 0 !important; flex-direction: row !important; }
+.sidebar-tools-main .dans-outils .st-btn, .sidebar-tools-main .dans-outils .an-ouvrir {
+  display: inline-flex !important; align-items: center; justify-content: center; width: 1.85rem !important; height: 1.85rem !important;
+  margin: 0 !important; padding: 0 !important; border: 0 !important; border-radius: 99px !important; box-shadow: none !important;
+  background: none !important; color: var(--ard) !important; line-height: 1 !important; }
+.sidebar-tools-main .dans-outils .st-btn:hover, .sidebar-tools-main .dans-outils .an-ouvrir:hover,
+.sidebar-tools-main .an-barre.ouverte.dans-outils .an-ouvrir { background: var(--ard-t) !important; color: var(--ard) !important; }

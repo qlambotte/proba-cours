@@ -118,7 +118,7 @@ Le chevalier de Méré pensait que ces deux paris étaient favorables (probabili
 
 ::: {#exercice-2-9 data-sorte="exercice" data-num="2.9" data-page="26" data-phys="29" data-id="6UAA1.ex.033" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice 2.9]{.exo-titre} [[A2]{.exo-comp} ★☆☆]{.exo-meta}
+[✎ Exercice 2.9]{.exo-titre} [[A2]{.exo-comp data-tip="A2 : Extraire d’un arbre, d’un tableau ou de diagrammes de Venn la probabilité d’un événement." tabindex="0"} ★☆☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -186,7 +186,7 @@ Zones : $A$ seulement $0{,}5 - 0{,}1 = 0{,}4$ ; $A \cap B$ : $0{,}1$ ; $B$ seule
 
 ::: {#exercice-2-10 data-sorte="exercice" data-num="2.10" data-page="27" data-phys="30" data-id="6UAA1.ex.034" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice 2.10]{.exo-titre} [[A2]{.exo-comp} ★★☆]{.exo-meta}
+[✎ Exercice 2.10]{.exo-titre} [[A2]{.exo-comp data-tip="A2 : Extraire d’un arbre, d’un tableau ou de diagrammes de Venn la probabilité d’un événement." tabindex="0"} ★★☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -275,7 +275,7 @@ Multiples de 2 : 15 ; de 3 : 10 ; des deux (multiples de 6) : 5. Zones : $A$ seu
 
 ::: {#exercice-2-11 data-sorte="exercice" data-num="2.11" data-page="27" data-phys="30" data-id="6UAA1.ex.035" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice 2.11]{.exo-titre} [[C5]{.exo-comp} ★★☆]{.exo-meta}
+[✎ Exercice 2.11]{.exo-titre} [[C5]{.exo-comp data-tip="C5 : Citer les propriétés des probabilités." tabindex="0"} ★★☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -314,7 +314,7 @@ Les six issues ne sont pas équiprobables : la règle de Laplace ne s’applique
 
 ::: {#exercice-2-12 data-sorte="exercice" data-num="2.12" data-page="27" data-phys="30" data-id="6UAA1.ex.036" data-type="exercice" data-tags="maison" .exo}
 ::: {.exo-tete}
-[✎ Exercice 2.12]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[C5]{.exo-comp} ★☆☆]{.exo-meta}
+[✎ Exercice 2.12]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[C5]{.exo-comp data-tip="C5 : Citer les propriétés des probabilités." tabindex="0"} ★☆☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -352,7 +352,7 @@ On suppose les 52 cartes équiprobables. $C \cap R$ = {roi de cœur} : $C$ et $R
 
 ::: {#exercice-2-13 data-sorte="exercice" data-num="2.13" data-page="27" data-phys="30" data-id="6UAA1.ex.037" data-type="exercice" data-tags="maison" .exo}
 ::: {.exo-tete}
-[✎ Exercice 2.13]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[C5]{.exo-comp} ★★☆]{.exo-meta}
+[✎ Exercice 2.13]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[C5]{.exo-comp data-tip="C5 : Citer les propriétés des probabilités." tabindex="0"} ★★☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}

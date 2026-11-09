@@ -107,7 +107,7 @@ Avec $p = n$, la formule donne $A_{n}^{n} = \frac{n!}{0!}$. Pour retrouver $n!$,
 
 ::: {#exercice-1-8 data-sorte="exercice" data-num="1.8" data-page="10" data-phys="13" data-id="6UAA1.ex.008" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice 1.8]{.exo-titre} [[A5]{.exo-comp} ★☆☆]{.exo-meta}
+[✎ Exercice 1.8]{.exo-titre} [[A5]{.exo-comp data-tip="A5 : Dénombrer les résultats d’une situation à l’aide d’une liste organisée, d’un arbre, d’un diagramme ou des formules d’analyse combinatoire, en justifiant le choix de la formule. †" tabindex="0"} ★☆☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -170,7 +170,7 @@ Un code est une suite de 4 chiffres (l’ordre compte). Avec répétition : $10^
 
 ::: {#exercice-1-9 data-sorte="exercice" data-num="1.9" data-page="11" data-phys="14" data-id="6UAA1.ex.009" data-type="exercice" data-tags="maison" .exo}
 ::: {.exo-tete}
-[✎ Exercice 1.9]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[A5]{.exo-comp} ★☆☆]{.exo-meta}
+[✎ Exercice 1.9]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[A5]{.exo-comp data-tip="A5 : Dénombrer les résultats d’une situation à l’aide d’une liste organisée, d’un arbre, d’un diagramme ou des formules d’analyse combinatoire, en justifiant le choix de la formule. †" tabindex="0"} ★☆☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -208,7 +208,7 @@ Un podium est une suite de 3 coureurs distincts : $A_{12}^{3} = 12 \cdot 11 \cdo
 
 ::: {#exercice-1-10 data-sorte="exercice" data-num="1.10" data-page="11" data-phys="14" data-id="6UAA1.ex.010" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice 1.10]{.exo-titre} [[A5]{.exo-comp} ★★☆]{.exo-meta}
+[✎ Exercice 1.10]{.exo-titre} [[A5]{.exo-comp data-tip="A5 : Dénombrer les résultats d’une situation à l’aide d’une liste organisée, d’un arbre, d’un diagramme ou des formules d’analyse combinatoire, en justifiant le choix de la formule. †" tabindex="0"} ★★☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -248,7 +248,7 @@ $10! = 10 \cdot 9 \cdot 8!$.
 
 ::: {#exercice-1-11 data-sorte="exercice" data-num="1.11" data-page="11" data-phys="14" data-id="6UAA1.ex.011" data-type="exercice" data-tags="maison" .exo}
 ::: {.exo-tete}
-[✎ Exercice 1.11]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[A5]{.exo-comp} ★☆☆]{.exo-meta}
+[✎ Exercice 1.11]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[A5]{.exo-comp data-tip="A5 : Dénombrer les résultats d’une situation à l’aide d’une liste organisée, d’un arbre, d’un diagramme ou des formules d’analyse combinatoire, en justifiant le choix de la formule. †" tabindex="0"} ★☆☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -287,7 +287,7 @@ $6! = 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 = 720$ ; $\frac{9!}{7!} = \frac{
 
 ::: {#exercice-1-12 data-sorte="exercice" data-num="1.12" data-page="11" data-phys="14" data-id="6UAA1.ex.012" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice 1.12]{.exo-titre} [[A5]{.exo-comp} ★★☆]{.exo-meta}
+[✎ Exercice 1.12]{.exo-titre} [[A5]{.exo-comp data-tip="A5 : Dénombrer les résultats d’une situation à l’aide d’une liste organisée, d’un arbre, d’un diagramme ou des formules d’analyse combinatoire, en justifiant le choix de la formule. †" tabindex="0"} ★★☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}

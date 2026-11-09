@@ -76,7 +76,7 @@ c) La proportion vaut $0{,}068 \%$ en Hainaut et $0{,}053 \%$ dans le Limbourg^[
 
 ::: {#exercice-2-1 data-sorte="exercice" data-num="2.1" data-page="20" data-phys="23" data-id="6UAA1.ex.025" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice 2.1]{.exo-titre} [[A6]{.exo-comp} ★☆☆]{.exo-meta}
+[✎ Exercice 2.1]{.exo-titre} [[A6]{.exo-comp data-tip="A6 : Calculer une probabilité a posteriori à partir de données statistiques ou de simulations. †" tabindex="0"} ★☆☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -115,7 +115,7 @@ On estime la probabilité par la fréquence relative de la somme 7 sur l’ensem
 
 ::: {#exercice-2-2 data-sorte="exercice" data-num="2.2" data-page="20" data-phys="23" data-id="6UAA1.ex.026" data-type="exercice" data-tags="maison" .exo}
 ::: {.exo-tete}
-[✎ Exercice 2.2]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[A6]{.exo-comp} ★☆☆]{.exo-meta}
+[✎ Exercice 2.2]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[A6]{.exo-comp data-tip="A6 : Calculer une probabilité a posteriori à partir de données statistiques ou de simulations. †" tabindex="0"} ★☆☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -153,7 +153,7 @@ $10 \, 000 \cdot 0{,}00068 = 6{,}8$ : on peut s’attendre à trouver environ 7 
 
 ::: {#exercice-2-3 data-sorte="exercice" data-num="2.3" data-page="20" data-phys="23" data-id="6UAA1.ex.027" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice 2.3]{.exo-titre} [[C2]{.exo-comp} ★★☆]{.exo-meta}
+[✎ Exercice 2.3]{.exo-titre} [[C2]{.exo-comp data-tip="C2 : Associer une probabilité au calcul de fréquences à partir d’un exemple d’expérience aléatoire." tabindex="0"} ★★☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}

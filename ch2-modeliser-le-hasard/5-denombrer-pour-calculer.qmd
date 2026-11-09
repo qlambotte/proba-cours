@@ -46,7 +46,7 @@ Une issue est la suite des 25 anniversaires : $\#\Omega = 365^{25}$. Contraire �
 
 ::: {#exercice-2-14 data-sorte="exercice" data-num="2.14" data-page="28" data-phys="31" data-id="6UAA1.ex.038" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice 2.14]{.exo-titre} [[A3]{.exo-comp} ★★☆]{.exo-meta}
+[✎ Exercice 2.14]{.exo-titre} [[A3]{.exo-comp data-tip="A3 : Calculer une probabilité (y compris une probabilité conditionnelle) en utilisant : des tableaux / des diagrammes de Venn / des arbres / des formules d’analyse combinatoire." tabindex="0"} ★★☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -84,7 +84,7 @@ Une issue est le groupe des 6 numéros tirés ; on suppose les $C_{45}^{6}$ tira
 
 ::: {#exercice-2-15 data-sorte="exercice" data-num="2.15" data-page="28" data-phys="31" data-id="6UAA1.ex.039" data-type="exercice" data-tags="maison" .exo}
 ::: {.exo-tete}
-[✎ Exercice 2.15]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[T1]{.exo-comp} ★★☆]{.exo-meta}
+[✎ Exercice 2.15]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[T1]{.exo-comp data-tip="T1 : Résoudre un problème d’analyse combinatoire / de probabilité." tabindex="0"} ★★☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -122,7 +122,7 @@ On suppose les 365 jours équiprobables. Une issue est la suite des 20 anniversa
 
 ::: {#exercice-2-16 data-sorte="exercice" data-num="2.16" data-page="29" data-phys="32" data-id="6UAA1.ex.040" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice 2.16]{.exo-titre} [[T1]{.exo-comp} ★★★]{.exo-meta}
+[✎ Exercice 2.16]{.exo-titre} [[T1]{.exo-comp data-tip="T1 : Résoudre un problème d’analyse combinatoire / de probabilité." tabindex="0"} ★★★]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -160,7 +160,7 @@ Une issue est un groupe de 5 personnes parmi 14 : $C_{14}^{5} = 2002$ groupes, s
 
 ::: {#exercice-2-17 data-sorte="exercice" data-num="2.17" data-page="29" data-phys="32" data-id="6UAA1.ex.041" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice 2.17]{.exo-titre} [[T2]{.exo-comp} ★★☆]{.exo-meta}
+[✎ Exercice 2.17]{.exo-titre} [[T2]{.exo-comp data-tip="T2 : Utiliser le calcul des probabilités pour analyser et critiquer des informations chiffrées (santé, presse, jeux de hasard). †" tabindex="0"} ★★☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -198,7 +198,7 @@ Non. Si le tirage se fait au hasard, les $C_{45}^{6} = 8 \, 145 \, 060$ tirages 
 
 ::: {#exercice-2-18 data-sorte="exercice" data-num="2.18" data-page="29" data-phys="32" data-id="6UAA1.ex.042" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice 2.18]{.exo-titre} [[C5]{.exo-comp} ★★☆]{.exo-meta}
+[✎ Exercice 2.18]{.exo-titre} [[C5]{.exo-comp data-tip="C5 : Citer les propriétés des probabilités." tabindex="0"} ★★☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}

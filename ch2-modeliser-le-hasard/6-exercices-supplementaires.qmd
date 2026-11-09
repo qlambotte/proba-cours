@@ -8,7 +8,7 @@ title: "Exercices supplémentaires"
 
 ::: {#exercice-S2-1 data-sorte="exercice" data-num="S2.1" data-id="6UAA1.ex.065" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice S2.1]{.exo-titre} [[C3]{.exo-comp} ★☆☆]{.exo-meta}
+[✎ Exercice S2.1]{.exo-titre} [[C3]{.exo-comp data-tip="C3 : Citer, pour une expérience aléatoire donnée, la catégorie d’épreuve, deux événements disjoints, un événement et son contraire, un événement certain et un événement impossible." tabindex="0"} ★☆☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -46,7 +46,7 @@ $\Omega = \{(1{,}1), (1{,}2), (1{,}3), (2{,}1), (2{,}2), (2{,}3), (3{,}1), (3{,}
 
 ::: {#exercice-S2-2 data-sorte="exercice" data-num="S2.2" data-id="6UAA1.ex.066" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice S2.2]{.exo-titre} [[C6]{.exo-comp} ★☆☆]{.exo-meta}
+[✎ Exercice S2.2]{.exo-titre} [[C6]{.exo-comp data-tip="C6 : Citer la règle de calcul d’une probabilité d’un événement dans le cas d’événements équiprobables." tabindex="0"} ★☆☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -84,7 +84,7 @@ On suppose les 37 cases équiprobables. $P(\text{rouge}) = \frac{18}{37} \approx
 
 ::: {#exercice-S2-3 data-sorte="exercice" data-num="S2.3" data-id="6UAA1.ex.067" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice S2.3]{.exo-titre} [[A3]{.exo-comp} ★★☆]{.exo-meta}
+[✎ Exercice S2.3]{.exo-titre} [[A3]{.exo-comp data-tip="A3 : Calculer une probabilité (y compris une probabilité conditionnelle) en utilisant : des tableaux / des diagrammes de Venn / des arbres / des formules d’analyse combinatoire." tabindex="0"} ★★☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -124,7 +124,7 @@ On suppose les 36 couples équiprobables. Le produit est impair si et seulement 
 
 ::: {#exercice-S2-4 data-sorte="exercice" data-num="S2.4" data-id="6UAA1.ex.068" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice S2.4]{.exo-titre} [[A6]{.exo-comp} ★★☆]{.exo-meta}
+[✎ Exercice S2.4]{.exo-titre} [[A6]{.exo-comp data-tip="A6 : Calculer une probabilité a posteriori à partir de données statistiques ou de simulations. †" tabindex="0"} ★★☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -166,7 +166,7 @@ Les fréquences observées sont proches de $\frac{25}{216} \approx 0{,}116$ pour
 
 ::: {#exercice-S2-5 data-sorte="exercice" data-num="S2.5" data-id="6UAA1.ex.069" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice S2.5]{.exo-titre} [[T1]{.exo-comp} ★★★]{.exo-meta}
+[✎ Exercice S2.5]{.exo-titre} [[T1]{.exo-comp data-tip="T1 : Résoudre un problème d’analyse combinatoire / de probabilité." tabindex="0"} ★★★]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -210,7 +210,7 @@ On suppose les 365 jours équiprobables. Pour $n$ personnes, $P(\text{au moins d
 
 ::: {#exercice-S2-6 data-sorte="exercice" data-num="S2.6" data-id="6UAA1.ex.070" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice S2.6]{.exo-titre} [[C6]{.exo-comp} ★☆☆]{.exo-meta}
+[✎ Exercice S2.6]{.exo-titre} [[C6]{.exo-comp data-tip="C6 : Citer la règle de calcul d’une probabilité d’un événement dans le cas d’événements équiprobables." tabindex="0"} ★☆☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -248,7 +248,7 @@ On suppose les 100 cases équiprobables. Les bateaux occupent 20 cases. a) $\fra
 
 ::: {#exercice-S2-7 data-sorte="exercice" data-num="S2.7" data-id="6UAA1.ex.071" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice S2.7]{.exo-titre} [[T1]{.exo-comp} ★★☆]{.exo-meta}
+[✎ Exercice S2.7]{.exo-titre} [[T1]{.exo-comp data-tip="T1 : Résoudre un problème d’analyse combinatoire / de probabilité." tabindex="0"} ★★☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
@@ -287,7 +287,7 @@ On suppose les 48 couples équiprobables. Sam gagne si son nombre $s$ est plus p
 
 ::: {#exercice-S2-8 data-sorte="exercice" data-num="S2.8" data-id="6UAA1.ex.072" data-type="exercice" data-tags="" .exo}
 ::: {.exo-tete}
-[✎ Exercice S2.8]{.exo-titre} [[T1]{.exo-comp} ★★★]{.exo-meta}
+[✎ Exercice S2.8]{.exo-titre} [[T1]{.exo-comp data-tip="T1 : Résoudre un problème d’analyse combinatoire / de probabilité." tabindex="0"} ★★★]{.exo-meta}
 :::
 
 ::: {.exo-corps}

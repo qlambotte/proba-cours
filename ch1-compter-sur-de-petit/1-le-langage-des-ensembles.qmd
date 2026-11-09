@@ -86,7 +86,7 @@ $A$ : 6 ; $B$ : 6 ; 1) 4 ; 2) 8 ; 3) 2 ; 4) 6 ; 5) 0. Non : $6 + 6 = 12$, mais 2
 
 ::: {#exercice-1-1 data-sorte="exercice" data-num="1.1" data-page="3" data-phys="6" data-id="6UAA1.ex.001" data-type="exercice" data-tags="maison" .exo}
 ::: {.exo-tete}
-[✎ Exercice 1.1]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[C4]{.exo-comp} ★☆☆]{.exo-meta}
+[✎ Exercice 1.1]{.exo-titre} [⟵ à faire à la maison]{.exo-maison} [[C4]{.exo-comp data-tip="C4 : Représenter l’union, l’intersection, la différence de deux événements à l’aide des diagrammes de Venn et les exprimer en langage courant." tabindex="0"} ★☆☆]{.exo-meta}
 :::
 
 ::: {.exo-corps}
